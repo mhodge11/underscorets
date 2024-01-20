@@ -9,6 +9,7 @@ export default {
 			[
 				"build",
 				"chore",
+				"chore(release)",
 				"ci",
 				"docs",
 				"feat",
