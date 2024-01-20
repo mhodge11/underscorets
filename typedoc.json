@@ -1,0 +1,15 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "includeVersion": true,
+  "entryPoints": ["src/index.ts"],
+  "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
+  "exclude": [
+    "**/test/**/*",
+    "**/node_modules/**/*",
+    "**/coverage/**/*",
+    "**/internal/**/*"
+  ],
+  "out": "./docs",
+  "excludeReferences": true,
+  "logLevel": "Verbose"
+}

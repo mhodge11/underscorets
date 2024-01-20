@@ -1,0 +1,47 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+  "formatter": {
+    "ignore": [
+      "**/coverage/**/*",
+      "**/dist/**/*",
+      "**/docs/**/*",
+      "**/node_modules/**/*"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "noBannedTypes": "off"
+      },
+      "correctness": {
+        "noSwitchDeclarations": "off"
+      },
+      "nursery": {
+        "noUnusedImports": "error",
+        "useGroupedTypeImport": "error"
+      },
+      "style": {
+        "noCommaOperator": "off",
+        "noInferrableTypes": "off",
+        "noParameterAssign": "off",
+        "useShorthandAssign": "error",
+        "useShorthandArrayType": "error"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off",
+        "noConfusingVoidType": "off",
+        "noExplicitAny": "off",
+        "noFallthroughSwitchClause": "off",
+        "noSelfCompare": "off",
+        "noShadowRestrictedNames": "off",
+        "noSparseArray": "off"
+      }
+    },
+    "ignore": [
+      "**/coverage/**/*",
+      "**/dist/**/*",
+      "**/docs/**/*",
+      "**/node_modules/**/*"
+    ]
+  }
+}

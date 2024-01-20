@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "types": ["node", "vitest/globals"],
+
+    "lib": ["ESNext", "DOM"],
+    "module": "esnext",
+    "target": "esnext",
+
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+
+    "baseUrl": "./"
+  },
+  "include": ["./**/*.ts", "./**/*.js"],
+  "exclude": ["./**/coverage/**/*", "./**/node_modules/**/*", "./**/dist/**/*"]
+}

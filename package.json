@@ -1,0 +1,91 @@
+{
+  "name": "underscorets",
+  "description": "A utility library for modern TypeScript that can run on the edge.",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@8.14.1",
+  "engines": {
+    "node": ">=18.19.0",
+    "pnpm": ">=8.14.1"
+  },
+  "engineStrict": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "build:docs": "typedoc",
+    "check": "biome check ./src",
+    "check:apply": "biome check ./src --apply",
+    "format": "biome format ./src",
+    "format:write": "biome format ./src --write",
+    "lint": "biome lint ./src",
+    "lint:apply": "biome lint ./src --apply",
+    "prepare": "husky install",
+    "test": "vitest run --coverage",
+    "test:dev": "vitest --ui"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "pnpm run check:apply",
+      "pnpm run format:write",
+      "pnpm run lint:apply"
+    ]
+  },
+  "dependencies": {
+    "hotscript": "^1.0.13"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.2",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@edge-runtime/vm": "^3.1.7",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "@vitest/ui": "^1.2.1",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "tsup": "^8.0.1",
+    "typedoc": "^0.25.7",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-mdn-links": "^3.1.12",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhodge11/underscorets.git",
+    "directory": "packages/core"
+  },
+  "author": "Micah Hodge <micahhodgeutk@icloud.com> (https://github.com/mhodge11)",
+  "license": "MIT",
+  "keywords": [
+    "lodash",
+    "moderndash",
+    "utility",
+    "helpers",
+    "underscore",
+    "esm",
+    "typescript",
+    "ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "browserslist": [
+    ">2% and not dead"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ]
+}
