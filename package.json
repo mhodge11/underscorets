@@ -69,7 +69,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "@mhodge11:registry": "https://npm.pkg.github.com"
   },
   "browserslist": [
     ">2% and not dead"
