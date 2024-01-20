@@ -1,7 +1,7 @@
 {
   "name": "underscorets",
   "description": "A utility library for modern TypeScript that can run on the edge.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "packageManager": "pnpm@8.14.1",
   "engines": {
