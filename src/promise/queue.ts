@@ -10,6 +10,8 @@
  * - `isPaused` - Returns whether the queue is paused.
  * - `done` - Returns a promise resolving when all added tasks are finished. Individual rejections don't affect the done() promise.
  *
+ * *Based on [moderndash.queue](https://moderndash.io/docs/queue).*
+ *
  * @example
  * ```ts
  * // Create a queue that can run 3 tasks concurrently

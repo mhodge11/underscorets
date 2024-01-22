@@ -3,6 +3,8 @@ import type { PlainObject } from "../types/PlainObject.ts";
 /**
  * Creates an object composed of the picked `object` properties.
  *
+ * *Based on [moderndash.pick](https://moderndash.io/docs/pick).*
+ *
  * @example
  * ```ts
  * const object = { 'a': 1, 'b': '2', 'c': 3 }

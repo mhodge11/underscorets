@@ -5,6 +5,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  * with the `this` binding of the created function, where each successive
  * invocation is supplied the return value of the previous.
  *
+ * *Based on [lodash.flow](https://lodash.com/docs/4.17.15#flow).*
+ *
  * @example
  * ```ts
  * function add(a, b) {

@@ -1,10 +1,7 @@
-import type { $, O } from "hotscript";
+import type { ObjectFlatKeys } from "../types/ObjectFlatKeys.ts";
 import type { PlainObject } from "../types/PlainObject.ts";
 
 import { isPlainObject } from "../validator/isPlainObject.ts";
-
-type StringIfNever<T> = [T] extends [never] ? string : T;
-type Paths<T> = StringIfNever<$<O.AllPaths, T>>;
 
 const addToResult = (
 	prefix: string,
@@ -26,6 +23,8 @@ const addToResult = (
  *
  * These keys can be used with `{@link at}`, `{@link get}` and `{@link set}`.
  *
+ * *Based on [moderndash.flatKeys](https://moderndash.io/docs/flatKeys).*
+ *
  * @example
  * ```ts
  * const obj = { a: { b: 2, c: [{ d: 3 }, { d: 4 }] } };
@@ -39,10 +38,8 @@ const addToResult = (
  *
  * @category Object
  */
-export function flatKeys<T extends PlainObject>(
-	object: T,
-): Record<Paths<T>, unknown> {
-	const flatObject: Record<string, unknown> = {};
+export function flatKeys<T extends PlainObject>(object: T): ObjectFlatKeys<T> {
+	const flatObject = {} as ObjectFlatKeys<T>;
 	for (const [k, v] of Object.entries(object)) addToResult(k, v, flatObject);
 	return flatObject;
 }

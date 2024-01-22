@@ -1,4 +1,4 @@
-import type { $, O } from "hotscript";
+import type { ObjectKeys } from "../types/ObjectKeys.ts";
 import type { PlainObject } from "../types/PlainObject.ts";
 
 /**
@@ -16,8 +16,8 @@ import type { PlainObject } from "../types/PlainObject.ts";
  *
  * @category Object
  */
-export function keys<T extends PlainObject>(object: T): $<O.Keys, T>[] {
+export function keys<T extends PlainObject>(object: T): ObjectKeys<T> {
 	const keys: string[] = [];
 	for (const key in object) keys.push(key);
-	return keys as $<O.Keys, T>[];
+	return keys as ObjectKeys<T>;
 }

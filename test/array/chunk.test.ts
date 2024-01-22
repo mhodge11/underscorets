@@ -1,9 +1,9 @@
-import { array } from "../../src/index.ts";
+import { chunk } from "../../src/index.ts";
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-test("array.chunk an arr", () => {
-	expect(array.chunk(arr, 2)).toEqual([
+test("chunk an arr", () => {
+	expect(chunk(arr, 2)).toEqual([
 		[1, 2],
 		[3, 4],
 		[5, 6],
@@ -12,12 +12,12 @@ test("array.chunk an arr", () => {
 	]);
 });
 
-test("return the last array.chunk as remaining elements", () => {
-	expect(array.chunk(arr, 3)).toEqual([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]);
+test("return the last chunk as remaining elements", () => {
+	expect(chunk(arr, 3)).toEqual([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]);
 });
 
 test("coerce `size` to an integer", () => {
-	expect(array.chunk(arr, arr.length / 4)).toEqual([
+	expect(chunk(arr, arr.length / 4)).toEqual([
 		[1, 2],
 		[3, 4],
 		[5, 6],
@@ -27,9 +27,9 @@ test("coerce `size` to an integer", () => {
 });
 
 test("empty arr on negative size", () => {
-	expect(array.chunk(arr, -1)).toEqual([]);
+	expect(chunk(arr, -1)).toEqual([]);
 });
 
 test("empty arr", () => {
-	expect(array.chunk([], 2)).toEqual([]);
+	expect(chunk([], 2)).toEqual([]);
 });

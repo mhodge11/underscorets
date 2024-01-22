@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / DoublyLinkedList
+[underscorets - v0.1.5](../README.md) / DoublyLinkedList
 
 # Class: DoublyLinkedList\<T\>
 
@@ -305,7 +305,7 @@ list.reverse();
 
 #### Defined in
 
-util/doublyLinkedList.ts:292
+[util/doublyLinkedList.ts:292](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L292)
 
 ## Properties
 
@@ -317,7 +317,7 @@ First node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:244
+[util/doublyLinkedList.ts:244](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L244)
 
 ___
 
@@ -329,7 +329,7 @@ Number of nodes in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:240
+[util/doublyLinkedList.ts:240](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L240)
 
 ___
 
@@ -341,7 +341,7 @@ Last node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:248
+[util/doublyLinkedList.ts:248](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L248)
 
 ## Accessors
 
@@ -357,7 +357,7 @@ The DoublyLinkedList tag.
 
 #### Defined in
 
-util/doublyLinkedList.ts:274
+[util/doublyLinkedList.ts:274](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L274)
 
 ___
 
@@ -373,7 +373,7 @@ First node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:260
+[util/doublyLinkedList.ts:260](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L260)
 
 ___
 
@@ -389,7 +389,7 @@ Number of nodes in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:253
+[util/doublyLinkedList.ts:253](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L253)
 
 ___
 
@@ -405,7 +405,7 @@ Last node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:267
+[util/doublyLinkedList.ts:267](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L267)
 
 ## Methods
 
@@ -419,7 +419,7 @@ util/doublyLinkedList.ts:267
 
 #### Defined in
 
-util/doublyLinkedList.ts:285
+[util/doublyLinkedList.ts:285](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L285)
 
 ___
 
@@ -435,7 +435,7 @@ An iterator for the DoublyLinkedList to use with `for...of` loops.
 
 #### Defined in
 
-util/doublyLinkedList.ts:281
+[util/doublyLinkedList.ts:281](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L281)
 
 ___
 
@@ -456,7 +456,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:479
+[util/doublyLinkedList.ts:479](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L479)
 
 ___
 
@@ -476,7 +476,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:337
+[util/doublyLinkedList.ts:337](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L337)
 
 ___
 
@@ -496,7 +496,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:391
+[util/doublyLinkedList.ts:391](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L391)
 
 ___
 
@@ -512,7 +512,7 @@ A copy of the DoublyLinkedList
 
 #### Defined in
 
-util/doublyLinkedList.ts:554
+[util/doublyLinkedList.ts:554](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L554)
 
 ___
 
@@ -536,7 +536,7 @@ Node at index
 
 #### Defined in
 
-util/doublyLinkedList.ts:434
+[util/doublyLinkedList.ts:434](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L434)
 
 ___
 
@@ -561,7 +561,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:469
+[util/doublyLinkedList.ts:469](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L469)
 
 ___
 
@@ -579,7 +579,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:358
+[util/doublyLinkedList.ts:358](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L358)
 
 ___
 
@@ -603,7 +603,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:331
+[util/doublyLinkedList.ts:331](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L331)
 
 ___
 
@@ -627,7 +627,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:500
+[util/doublyLinkedList.ts:500](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L500)
 
 ___
 
@@ -645,7 +645,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:525
+[util/doublyLinkedList.ts:525](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L525)
 
 ___
 
@@ -670,7 +670,7 @@ Node at index
 
 #### Defined in
 
-util/doublyLinkedList.ts:456
+[util/doublyLinkedList.ts:456](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L456)
 
 ___
 
@@ -688,7 +688,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:412
+[util/doublyLinkedList.ts:412](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L412)
 
 ___
 
@@ -706,7 +706,7 @@ The DoublyLinkedList as an array
 
 #### Defined in
 
-util/doublyLinkedList.ts:586
+[util/doublyLinkedList.ts:586](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L586)
 
 ___
 
@@ -724,7 +724,7 @@ The DoublyLinkedList as JSON
 
 #### Defined in
 
-util/doublyLinkedList.ts:577
+[util/doublyLinkedList.ts:577](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L577)
 
 ___
 
@@ -747,7 +747,7 @@ The DoublyLinkedList as a string.
 
 #### Defined in
 
-util/doublyLinkedList.ts:561
+[util/doublyLinkedList.ts:561](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L561)
 
 ___
 
@@ -771,7 +771,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:385
+[util/doublyLinkedList.ts:385](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L385)
 
 ___
 
@@ -801,7 +801,7 @@ DoublyLinkedList created from array
 
 #### Defined in
 
-util/doublyLinkedList.ts:302
+[util/doublyLinkedList.ts:302](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L302)
 
 ___
 
@@ -831,4 +831,4 @@ DoublyLinkedList created from string
 
 #### Defined in
 
-util/doublyLinkedList.ts:312
+[util/doublyLinkedList.ts:312](https://github.com/mhodge11/underscorets/blob/471b259/src/util/doublyLinkedList.ts#L312)

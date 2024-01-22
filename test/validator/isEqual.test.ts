@@ -1,66 +1,66 @@
-import { validator } from "../../src/index.ts";
+import { isEqual } from "../../src/index.ts";
 
 test("numbers", () => {
-	expect(validator.isEqual(1, 1)).toBe(true);
-	expect(validator.isEqual(1, 2)).toBe(false);
+	expect(isEqual(1, 1)).toBe(true);
+	expect(isEqual(1, 2)).toBe(false);
 });
 
 test("strings", () => {
-	expect(validator.isEqual("a", "a")).toBe(true);
-	expect(validator.isEqual("a", "b")).toBe(false);
+	expect(isEqual("a", "a")).toBe(true);
+	expect(isEqual("a", "b")).toBe(false);
 });
 
 test("booleans", () => {
-	expect(validator.isEqual(true, true)).toBe(true);
-	expect(validator.isEqual(true, false)).toBe(false);
+	expect(isEqual(true, true)).toBe(true);
+	expect(isEqual(true, false)).toBe(false);
 });
 
 test("null", () => {
-	expect(validator.isEqual(null, null)).toBe(true);
-	expect(validator.isEqual(null, undefined)).toBe(false);
+	expect(isEqual(null, null)).toBe(true);
+	expect(isEqual(null, undefined)).toBe(false);
 });
 
 test("undefined", () => {
-	expect(validator.isEqual(undefined, undefined)).toBe(true);
-	expect(validator.isEqual(undefined, null)).toBe(false);
+	expect(isEqual(undefined, undefined)).toBe(true);
+	expect(isEqual(undefined, null)).toBe(false);
 });
 
 test("objects", () => {
-	expect(validator.isEqual({ a: 1 }, { a: 1 })).toBe(true);
-	expect(validator.isEqual({ a: 1 }, { a: 2 })).toBe(false);
+	expect(isEqual({ a: 1 }, { a: 1 })).toBe(true);
+	expect(isEqual({ a: 1 }, { a: 2 })).toBe(false);
 });
 
 test("dates", () => {
-	expect(validator.isEqual(new Date(1), new Date(1))).toBe(true);
-	expect(validator.isEqual(new Date(1), new Date(2))).toBe(false);
+	expect(isEqual(new Date(1), new Date(1))).toBe(true);
+	expect(isEqual(new Date(1), new Date(2))).toBe(false);
 });
 
 test("arrays", () => {
-	expect(validator.isEqual([1, 2, 3], [1, 2, 3])).toBe(true);
-	expect(validator.isEqual([1, 2, 3], [1, 2, 4])).toBe(false);
+	expect(isEqual([1, 2, 3], [1, 2, 3])).toBe(true);
+	expect(isEqual([1, 2, 3], [1, 2, 4])).toBe(false);
 });
 
 test("nested objects", () => {
-	expect(validator.isEqual({ a: { b: 1 } }, { a: { b: 1 } })).toBe(true);
-	expect(validator.isEqual({ a: { b: 1 } }, { a: { b: 2 } })).toBe(false);
+	expect(isEqual({ a: { b: 1 } }, { a: { b: 1 } })).toBe(true);
+	expect(isEqual({ a: { b: 1 } }, { a: { b: 2 } })).toBe(false);
 });
 
 test("nested arrays", () => {
-	expect(validator.isEqual([[1], [2], [3]], [[1], [2], [3]])).toBe(true);
-	expect(validator.isEqual([[1], [2], [3]], [[1], [2], [4]])).toBe(false);
+	expect(isEqual([[1], [2], [3]], [[1], [2], [3]])).toBe(true);
+	expect(isEqual([[1], [2], [3]], [[1], [2], [4]])).toBe(false);
 });
 
 test("nested objects and arrays", () => {
-	expect(validator.isEqual({ a: { b: [1] } }, { a: { b: [1] } })).toBe(true);
-	expect(validator.isEqual({ a: { b: [1] } }, { a: { b: [2] } })).toBe(false);
+	expect(isEqual({ a: { b: [1] } }, { a: { b: [1] } })).toBe(true);
+	expect(isEqual({ a: { b: [1] } }, { a: { b: [2] } })).toBe(false);
 });
 
 test("objects with different keys", () => {
-	expect(validator.isEqual({ a: 1 }, { b: 1 })).toBe(false);
+	expect(isEqual({ a: 1 }, { b: 1 })).toBe(false);
 });
 
 test("arrays with different lengths", () => {
-	expect(validator.isEqual([1, 2, 3], [1, 2])).toBe(false);
+	expect(isEqual([1, 2, 3], [1, 2])).toBe(false);
 });
 
 // eslint-disable-next-line unicorn/consistent-function-scoping
@@ -69,7 +69,7 @@ const testFunction = () => {
 };
 test("functions", () => {
 	expect(
-		validator.isEqual(
+		isEqual(
 			() => {
 				return 1;
 			},
@@ -78,26 +78,24 @@ test("functions", () => {
 			},
 		),
 	).toBe(false);
-	expect(validator.isEqual(testFunction, testFunction)).toBe(true);
+	expect(isEqual(testFunction, testFunction)).toBe(true);
 });
 
 test("objects with functions", () => {
-	expect(validator.isEqual({ a: () => 1 }, { a: () => 1 })).toBe(false);
-	expect(validator.isEqual({ a: testFunction }, { a: testFunction })).toBe(
-		true,
-	);
+	expect(isEqual({ a: () => 1 }, { a: () => 1 })).toBe(false);
+	expect(isEqual({ a: testFunction }, { a: testFunction })).toBe(true);
 });
 
 test("regExp", () => {
-	expect(validator.isEqual(/a(.*)/, /a(.*)/)).toBe(true);
-	expect(validator.isEqual(/a/, /b.*/)).toBe(false);
+	expect(isEqual(/a(.*)/, /a(.*)/)).toBe(true);
+	expect(isEqual(/a/, /b.*/)).toBe(false);
 });
 
 test("deepEquals with Error objects", () => {
 	const error1 = new Error("test error");
 	const error2 = new Error("test error");
-	expect(validator.isEqual(error1, error1)).toBe(true);
-	expect(validator.isEqual(error1, error2)).toBe(false);
+	expect(isEqual(error1, error1)).toBe(true);
+	expect(isEqual(error1, error2)).toBe(false);
 });
 
 test("array buffers", () => {
@@ -115,21 +113,21 @@ test("array buffers", () => {
 
 	const buffer4 = new ArrayBuffer(3);
 
-	expect(validator.isEqual(buffer1, buffer2)).toBe(true);
-	expect(validator.isEqual(buffer1, buffer3)).toBe(false);
-	expect(validator.isEqual(buffer1, buffer4)).toBe(false);
+	expect(isEqual(buffer1, buffer2)).toBe(true);
+	expect(isEqual(buffer1, buffer3)).toBe(false);
+	expect(isEqual(buffer1, buffer4)).toBe(false);
 });
 
 test("typed arrays", () => {
-	expect(
-		validator.isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 3])),
-	).toBe(true);
-	expect(
-		validator.isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2])),
-	).toBe(false);
-	expect(
-		validator.isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 4])),
-	).toBe(false);
+	expect(isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 3]))).toBe(
+		true,
+	);
+	expect(isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2]))).toBe(
+		false,
+	);
+	expect(isEqual(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 4]))).toBe(
+		false,
+	);
 });
 
 test("data views", () => {
@@ -147,8 +145,8 @@ test("data views", () => {
 	view2.setUint8(0, 42);
 	view2.setUint8(1, 43);
 
-	expect(validator.isEqual(view1, view2)).toBe(true);
-	expect(validator.isEqual(view1, view3)).toBe(false);
+	expect(isEqual(view1, view2)).toBe(true);
+	expect(isEqual(view1, view3)).toBe(false);
 });
 
 test("buffers", () => {
@@ -156,8 +154,8 @@ test("buffers", () => {
 	const buffer2 = Buffer.from([1, 2, 3]);
 	const buffer3 = Buffer.from([1, 2]);
 
-	expect(validator.isEqual(buffer1, buffer2)).toBe(true);
-	expect(validator.isEqual(buffer1, buffer3)).toBe(false);
+	expect(isEqual(buffer1, buffer2)).toBe(true);
+	expect(isEqual(buffer1, buffer3)).toBe(false);
 });
 
 test("maps", () => {
@@ -173,8 +171,8 @@ test("maps", () => {
 	map3.set("a", 1);
 	map3.set("b", 3);
 
-	expect(validator.isEqual(map1, map2)).toBe(true);
-	expect(validator.isEqual(map1, map3)).toBe(false);
+	expect(isEqual(map1, map2)).toBe(true);
+	expect(isEqual(map1, map3)).toBe(false);
 });
 
 test("sets", () => {
@@ -190,6 +188,6 @@ test("sets", () => {
 	set3.add(1);
 	set3.add(3);
 
-	expect(validator.isEqual(set1, set2)).toBe(true);
-	expect(validator.isEqual(set1, set3)).toBe(false);
+	expect(isEqual(set1, set2)).toBe(true);
+	expect(isEqual(set1, set3)).toBe(false);
 });

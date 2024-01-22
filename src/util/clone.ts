@@ -13,6 +13,8 @@ import { clone as _clone } from "../helpers/clone.ts";
  * returned for uncloneable values such as error objects, functions, DOM nodes,
  * and WeakMaps.
  *
+ * *Based on [lodash.clone](https://lodash.com/docs/#clone).*
+ *
  * @example
  * ```ts
  * const objects = [{ 'a': 1 }, { 'b': 2 }]

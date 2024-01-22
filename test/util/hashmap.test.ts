@@ -1,13 +1,13 @@
-import { util } from "../../src/index.ts";
+import { HashMap } from "../../src/index.ts";
 
 test("should create an empty hashmap", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	expect(map).toBeDefined();
 	expect(map.size).toBe(0);
 });
 
 test("should create a hashmap from an object", () => {
-	const map = util.HashMap.from({ a: 1, b: 2, c: 3 });
+	const map = HashMap.from({ a: 1, b: 2, c: 3 });
 	expect(map).toBeDefined();
 	expect(map.size).toBe(3);
 	expect(map.get("a")).toBe(1);
@@ -16,7 +16,7 @@ test("should create a hashmap from an object", () => {
 });
 
 test("should create a hashmap from an object with a size", () => {
-	const map = util.HashMap.from({ a: 1, b: 2, c: 3 }, 10);
+	const map = HashMap.from({ a: 1, b: 2, c: 3 }, 10);
 	expect(map).toBeDefined();
 	expect(map.get("a")).toBe(1);
 	expect(map.get("b")).toBe(2);
@@ -24,34 +24,34 @@ test("should create a hashmap from an object with a size", () => {
 });
 
 test("should create a hashmap from a string", () => {
-	const map = util.HashMap.fromString('{"a":1,"b":2,"c":3}');
+	const map = HashMap.fromString('{"a":1,"b":2,"c":3}');
 	expect(map).toBeDefined();
 	expect(map.size).toBe(3);
 	expect(map.get("a")).toBe(1);
 	expect(map.get("b")).toBe(2);
 	expect(map.get("c")).toBe(3);
 
-	const map1 = util.HashMap.fromString('{"a":1,"b":2,"c":3}', 3);
+	const map1 = HashMap.fromString('{"a":1,"b":2,"c":3}', 3);
 	expect(map1).toBeDefined();
 	expect(map1.size).toBe(3);
 	expect(map1.get("a")).toBe(1);
 	expect(map1.get("b")).toBe(2);
 	expect(map1.get("c")).toBe(3);
 
-	const map2 = util.HashMap.fromString("{}");
+	const map2 = HashMap.fromString("{}");
 	expect(map2).toBeDefined();
 	expect(map2.size).toBe(0);
 
-	const map3 = util.HashMap.fromString("HashMap {}");
+	const map3 = HashMap.fromString("HashMap {}");
 	expect(map3).toBeDefined();
 	expect(map3.size).toBe(0);
 
-	expect(() => util.HashMap.fromString("foo")).toThrow(Error);
-	expect(() => util.HashMap.fromString("[]")).toThrow(Error);
+	expect(() => HashMap.fromString("foo")).toThrow(Error);
+	expect(() => HashMap.fromString("[]")).toThrow(Error);
 });
 
 test("should set a value", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -59,7 +59,7 @@ test("should set a value", () => {
 });
 
 test("should set a value with a hash collision", () => {
-	const map = new util.HashMap(1);
+	const map = new HashMap(1);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -67,7 +67,7 @@ test("should set a value with a hash collision", () => {
 });
 
 test("should set a value with a hash collision and a size of 2", () => {
-	const map = new util.HashMap(2);
+	const map = new HashMap(2);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -75,7 +75,7 @@ test("should set a value with a hash collision and a size of 2", () => {
 });
 
 test("should set a value with a hash collision and a size of 3", () => {
-	const map = new util.HashMap(3);
+	const map = new HashMap(3);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -83,7 +83,7 @@ test("should set a value with a hash collision and a size of 3", () => {
 });
 
 test("should set a value with a hash collision and a size of 4", () => {
-	const map = new util.HashMap(4);
+	const map = new HashMap(4);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -91,7 +91,7 @@ test("should set a value with a hash collision and a size of 4", () => {
 });
 
 test("should set a value with a hash collision and a size of 5", () => {
-	const map = new util.HashMap(5);
+	const map = new HashMap(5);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -99,7 +99,7 @@ test("should set a value with a hash collision and a size of 5", () => {
 });
 
 test("should set a value with a hash collision and a size of 6", () => {
-	const map = new util.HashMap(6);
+	const map = new HashMap(6);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -107,7 +107,7 @@ test("should set a value with a hash collision and a size of 6", () => {
 });
 
 test("should set a value with a hash collision and a size of 7", () => {
-	const map = new util.HashMap(7);
+	const map = new HashMap(7);
 	expect(map.set("a", 1)).toEqual(["a", 1]);
 	expect(map.set("b", 2)).toEqual(["b", 2]);
 	expect(map.set("c", 3)).toEqual(["c", 3]);
@@ -115,7 +115,7 @@ test("should set a value with a hash collision and a size of 7", () => {
 });
 
 test("should get a value", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -126,7 +126,7 @@ test("should get a value", () => {
 });
 
 test("should remove a value", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -139,7 +139,7 @@ test("should remove a value", () => {
 });
 
 test("should check if a key exists", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -150,7 +150,7 @@ test("should check if a key exists", () => {
 });
 
 test("should get all the keys", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -162,7 +162,7 @@ test("should get all the keys", () => {
 });
 
 test("should copy the hashmap", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -172,7 +172,7 @@ test("should copy the hashmap", () => {
 });
 
 test("should copy the hashmap with a size", () => {
-	const map = new util.HashMap();
+	const map = new HashMap();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -181,7 +181,7 @@ test("should copy the hashmap with a size", () => {
 });
 
 test("should convert the hashmap to an array", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -193,7 +193,7 @@ test("should convert the hashmap to an array", () => {
 });
 
 test("should convert the hashmap to a string", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -201,7 +201,7 @@ test("should convert the hashmap to a string", () => {
 });
 
 test("should convert the hashmap to an object", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -209,7 +209,7 @@ test("should convert the hashmap to an object", () => {
 });
 
 test("should convert the hashmap to JSON", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -218,7 +218,7 @@ test("should convert the hashmap to JSON", () => {
 });
 
 test("should be able to get raw data", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -226,7 +226,7 @@ test("should be able to get raw data", () => {
 });
 
 test("should be able to set a hash function", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.hash = (key) => key.length;
 	map.set("a", 1);
 	map.set("b", 2);
@@ -239,7 +239,7 @@ test("should be able to set a hash function", () => {
 });
 
 test("can set a value to a key that already has a value", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	map.set("a", 1);
 	map.set("b", 2);
 	map.set("c", 3);
@@ -248,6 +248,6 @@ test("can set a value to a key that already has a value", () => {
 });
 
 test("toArray returns empty array if hashmap is empty", () => {
-	const map = new util.HashMap<number>();
+	const map = new HashMap<number>();
 	expect(map.toArray()).toEqual([]);
 });

@@ -9,6 +9,8 @@
     "**/coverage/**/*",
     "**/internal/**/*"
   ],
+  "cleanOutputDir": true,
+  "readme": "none",
   "out": "./docs",
   "excludeReferences": true,
   "logLevel": "Verbose"

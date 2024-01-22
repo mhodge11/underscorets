@@ -7,6 +7,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  *
  * This function can be used as a decorator with {@link decMaxCalls}.
  *
+ * *Based on [moderndash.maxCalls](https://moderndash.io/docs/maxCalls).*
+ *
  * @example
  * ```ts
  * let count = 0;

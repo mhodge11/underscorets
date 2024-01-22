@@ -8,6 +8,8 @@ import { toDecorator } from "./toDecorator.ts";
  *
  * *Requires the [experimentalDecorators](https://www.typescriptlang.org/tsconfig#experimentalDecorators) flag to be set.*
  *
+ * *Based on [moderndash.decThrottle](https://moderndash.io/docs/decThrottle).*
+ *
  * @example
  * ```ts
  * class TestClass {

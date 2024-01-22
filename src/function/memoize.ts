@@ -17,6 +17,8 @@ const defaultResolver = (...args: unknown[]) => JSON.stringify(args);
  *
  * This function can be used as a decorator with {@link decMemoize}.
  *
+ * *Based on [moderndash.memoize](https://moderndash.io/docs/memoize).*
+ *
  * @example
  * ```ts
  * function fibonacci(n: number) {

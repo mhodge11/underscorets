@@ -8,6 +8,8 @@ import {
  * Converts the HTML entities `&amp;`, `&lt;`, `&gt;`, `&quot;` and `&#39;`
  * in a string to their corresponding characters.
  *
+ * *Based on [moderndash.unescapeHtml](https://moderndash.io/docs/unescapeHtml).*
+ *
  * @example
  * ```ts
  * unescapeHtml('fred, barney, &amp; pebbles')

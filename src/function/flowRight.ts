@@ -6,6 +6,8 @@ import { flow } from "./flow.ts";
  * This method is like `{@link flow}` except that it composes a function that
  * invokes the given functions from right to left.
  *
+ * *Based on [lodash.flowRight](https://lodash.com/docs/4.17.15#flowRight).*
+ *
  * @example
  * ```ts
  * function add(a, b) {

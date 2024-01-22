@@ -2,6 +2,8 @@
  * Similar to [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race?retiredLocale=de)
  * but allows to specify how many promises to wait for.
  *
+ * *Based on [moderndash.races](https://moderndash.io/docs/races).*
+ *
  * @example
  * ```ts
  * const prom1 = Promise.resolve(1);

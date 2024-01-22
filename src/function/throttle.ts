@@ -6,6 +6,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  *
  * This function can be used as a decorator with {@link decThrottle}.
  *
+ * *Based on [moderndash.throttle](https://moderndash.io/docs/throttle).*
+ *
  * @example
  * ```ts
  * const throttled = throttle(() => console.log("Throttled!"), 1000);

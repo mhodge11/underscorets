@@ -1,3 +1,8 @@
+/**
+ * This type is a union of all typed arrays.
+ *
+ * @category Type
+ */
 export type TypedArray =
 	| Int8Array
 	| Uint8Array

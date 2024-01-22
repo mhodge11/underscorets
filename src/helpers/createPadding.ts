@@ -1,6 +1,6 @@
 import { ceil } from "../number/ceil.ts";
 import { repeat } from "../string/repeat.ts";
-import { stringSize } from "../string/size.ts";
+import { stringSize } from "../string/stringSize.ts";
 import { toString } from "../util/toString.ts";
 import { castSlice } from "./castSlice.ts";
 import { hasUnicode } from "./hasUnicode.ts";

@@ -1,4 +1,4 @@
-import { validator } from "../../src/index.ts";
+import { isNavigator } from "../../src/index.ts";
 
 beforeEach(() => {
 	vi.unstubAllGlobals();
@@ -6,10 +6,10 @@ beforeEach(() => {
 
 test("return true if `globalThis.navigator` is defined", () => {
 	vi.stubGlobal("navigator", {});
-	expect(validator.isNavigator()).toBe(true);
+	expect(isNavigator()).toBe(true);
 });
 
 test("return false if `globalThis.navigator` is undefined", () => {
 	vi.stubGlobal("navigator", undefined);
-	expect(validator.isNavigator()).toBe(false);
+	expect(isNavigator()).toBe(false);
 });

@@ -3,6 +3,8 @@ import { MAX_SAFE_INTEGER } from "../config/constants.ts";
 /**
  * Repeats the given string `n` times.
  *
+ * *Based on [lodash.repeat](https://lodash.com/docs/4.17.15#repeat).*
+ *
  * @example
  * ```ts
  * repeat('*', 3)

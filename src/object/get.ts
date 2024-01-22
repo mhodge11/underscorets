@@ -1,4 +1,4 @@
-import type { $, O } from "hotscript";
+import type { ObjectGet } from "../types/ObjectGet.ts";
 import type { ObjectPaths } from "../types/ObjectPaths.ts";
 import type { PlainObject } from "../types/PlainObject.ts";
 
@@ -7,8 +7,6 @@ import {
 	pathSplitRegex,
 	validPathRegex,
 } from "../config/regex.ts";
-
-type GetObj<T extends PlainObject, P extends string> = $<O.Get<P>, T>;
 
 /**
  * Gets the value at path of object. If the value doesn't exist, it returns `undefined`.
@@ -37,7 +35,7 @@ type GetObj<T extends PlainObject, P extends string> = $<O.Get<P>, T>;
 export function get<T extends PlainObject, P extends ObjectPaths<T>>(
 	object: T,
 	path: P,
-): GetObj<T, P> {
+): ObjectGet<T, P> {
 	if (!validPathRegex.test(path))
 		throw new Error(
 			`Invalid path: ${path}. Look at the examples for the correct format.`,
@@ -58,5 +56,5 @@ export function get<T extends PlainObject, P extends ObjectPaths<T>>(
 		currentObj = currentObj[key] as PlainObject;
 	}
 
-	return value as GetObj<T, P>;
+	return value as ObjectGet<T, P>;
 }

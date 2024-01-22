@@ -7,6 +7,8 @@ import type { Jsonifiable } from "../types/Jsonifiable.ts";
  *
  * *Note: If you need a secure hash use a specialized library like [crypto-js](https://www.npmjs.com/package/crypto-js) instead.*
  *
+ * *Based on [moderndash.hash](https://moderndash.io/docs/hash).*
+ *
  * @example
  * ```ts
  * // Hash a string using the default algorithm (SHA-256)

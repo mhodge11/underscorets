@@ -1,4 +1,4 @@
-import { decorator } from "../../src/index.ts";
+import { decThrottle } from "../../src/index.ts";
 
 const addOneMock = vi.fn((input: number) => input + 1);
 
@@ -12,7 +12,7 @@ beforeEach(() => {
 
 test("decorator", () => {
 	class TestClass {
-		@decorator.throttle(100)
+		@decThrottle(100)
 		testMethod() {
 			return addOneMock(1);
 		}

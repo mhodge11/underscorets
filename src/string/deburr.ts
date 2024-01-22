@@ -7,6 +7,8 @@ import { accentControlRegex } from "../config/regex.ts";
  * letters to basic Latin letters and removing
  * [combining diacritical marks](https://en.wikipedia.org/wiki/Combining_Diacritical_Marks).
  *
+ * *Based on [moderndash.deburr](https://moderndash.io/docs/deburr).*
+ *
  * @example
  * ```ts
  * deburr('déjà vu')

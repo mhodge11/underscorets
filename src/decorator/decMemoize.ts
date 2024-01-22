@@ -13,6 +13,8 @@ import { toDecorator } from "./toDecorator.ts";
  *
  * *Requires the [experimentalDecorators](https://www.typescriptlang.org/tsconfig#experimentalDecorators) flag to be set.*
  *
+ * *Based on [moderndash.decMemoize](https://moderndash.io/docs/decMemoize).*
+ *
  * @example
  * ```ts
  * class TestClass {

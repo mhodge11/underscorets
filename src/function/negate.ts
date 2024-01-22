@@ -3,6 +3,8 @@
  * `func` predicate is invoked with the `this` binding and arguments of the
  * created function.
  *
+ * *Based on [lodash.negate](https://lodash.com/docs/4.17.15#negate).*
+ *
  * @example
  * ```ts
  * function isEven(n) {

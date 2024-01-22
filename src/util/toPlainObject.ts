@@ -24,9 +24,9 @@ import type { PlainObject } from "../types/PlainObject.ts";
  *
  * @category Util
  */
-export function toPlainObject<T>(value: unknown): PlainObject<T> {
+export function toPlainObject(value: unknown): PlainObject {
 	const object = Object(value);
-	const plainObject: PlainObject<T> = {};
+	const plainObject: PlainObject = {};
 
 	for (const key in object) plainObject[key] = object[key];
 

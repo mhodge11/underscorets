@@ -1,5 +1,3 @@
-import type { PlainObject } from "../types/PlainObject.ts";
-
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { copyArray } from "../helpers/copyArray.ts";
 import { iteratorToArray } from "../helpers/iteratorToArray.ts";
@@ -17,7 +15,7 @@ type Item<T> = T extends ArrayLike<infer U>
 		  ? [K, V]
 		  : T extends Set<infer U>
 			  ? U
-			  : T extends PlainObject<infer V>
+			  : T extends Record<PropertyKey, infer V>
 				  ? V
 				  : T extends Iterable<[unknown, infer U]>
 					  ? U

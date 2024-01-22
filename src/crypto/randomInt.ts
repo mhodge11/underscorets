@@ -3,6 +3,8 @@
  *
  * It uses `crypto.getRandomValues` to generate the random number.
  *
+ * *Based on [moderndash.randomInt](https://moderndash.io/docs/randomInt).
+ *
  * @example
  * ```ts
  * randomInt(1, 10)

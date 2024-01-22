@@ -1,6 +1,8 @@
 /**
  * Returns a new promise that will reject with an error after a specified timeout.
  *
+ * *Based on [moderndash.timeout](https://moderndash.io/docs/timeout).*
+ *
  * @example
  * ```ts
  * try {

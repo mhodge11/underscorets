@@ -83,6 +83,8 @@ const fromParts = (
  * - `string` - The KSUID as a string.
  * - `[Symbol.toStringTag]` - The KSUID tag.
  *
+ * *Based on [ksuid](https://github.com/segmentio/ksuid).*
+ *
  * @example
  * ```ts
  * const ksuidFromSync = KSUID.random();

@@ -1,5 +1,5 @@
-import type { $, O } from "hotscript";
 import type { ObjectPaths } from "../types/ObjectPaths.ts";
+import type { ObjectSet } from "../types/ObjectSet.ts";
 import type { PlainObject } from "../types/PlainObject.ts";
 
 import {
@@ -9,13 +9,10 @@ import {
 } from "../config/regex.ts";
 import { isPlainObject } from "../validator/isPlainObject.ts";
 
-type UpdateObj<T extends PlainObject, P extends string, V> = $<
-	O.Update<P, V>,
-	T
->;
-
 /**
  * Sets the value at path of object. If a portion of path doesn’t exist, it’s created.
+ *
+ * *Based on [moderndash.set](https://moderndash.io/docs/set).*
  *
  * @example
  * ```ts
@@ -51,7 +48,7 @@ export function set<T extends PlainObject, P extends ObjectPaths<T>, V>(
 	object: T,
 	path: P,
 	value: V,
-): UpdateObj<T, P, V> {
+): ObjectSet<T, P, V> {
 	if (!validPathRegex.test(path))
 		throw new Error(
 			`Invalid path: ${path}. Look at the examples for the correct format.`,
@@ -80,5 +77,5 @@ export function set<T extends PlainObject, P extends ObjectPaths<T>, V>(
 		currentObj = currentObj[key] as PlainObject;
 	}
 
-	return object as UpdateObj<T, P, V>;
+	return object as ObjectSet<T, P, V>;
 }

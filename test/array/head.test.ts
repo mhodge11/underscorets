@@ -1,14 +1,14 @@
-import { array } from "../../src/index.ts";
+import { head } from "../../src/index.ts";
 
-test("array.head returns the first element of an array", () => {
-	expect(array.head([1, 2, 3, 4])).toBe(1);
+test("head returns the first element of an array", () => {
+	expect(head([1, 2, 3, 4])).toBe(1);
 });
 
-test("array.head returns undefined for an empty array", () => {
-	expect(array.head([])).toBe(undefined);
+test("head returns undefined for an empty array", () => {
+	expect(head([])).toBe(undefined);
 });
 
-test("array.head returns the first element of an array like", () => {
+test("head returns the first element of an array like", () => {
 	const arrayLike = { 0: 1, 1: 2, 2: 3, 3: 4, length: 4 };
-	expect(array.head(arrayLike)).toBe(1);
+	expect(head(arrayLike)).toBe(1);
 });

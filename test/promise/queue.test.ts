@@ -1,11 +1,11 @@
 import type { Mock } from "vitest";
 
-import { promise } from "../../src/index.ts";
+import { Queue, sleep } from "../../src/index.ts";
 
-let queue: promise.Queue;
+let queue: Queue;
 
 const createAsync = (mockFn: Mock<[], string>) => async () => {
-	await promise.sleep(20);
+	await sleep(20);
 	return mockFn();
 };
 
@@ -14,7 +14,7 @@ const callbackMock2 = vi.fn(() => "resolved2");
 const callbackMock3 = vi.fn(() => "resolved3");
 
 beforeEach(() => {
-	queue = new promise.Queue(2);
+	queue = new Queue(2);
 	callbackMock.mockClear();
 	callbackMock2.mockClear();
 	callbackMock3.mockClear();
@@ -32,11 +32,11 @@ test("add an array of async to the queue", async () => {
 		createAsync(callbackMock2),
 	]);
 
-	await promise.sleep(10);
+	await sleep(10);
 	expect(callbackMock).not.toHaveBeenCalledOnce();
 	expect(callbackMock2).not.toHaveBeenCalledOnce();
 
-	await promise.sleep(10);
+	await sleep(10);
 	expect(callbackMock).toHaveBeenCalledOnce();
 	expect(callbackMock2).toHaveBeenCalledOnce();
 	expect(await results).toEqual(["resolved1", "resolved2"]);
@@ -44,11 +44,11 @@ test("add an array of async to the queue", async () => {
 test("pause the execution of the promises in the queue", async () => {
 	queue.pause();
 	void queue.add(createAsync(callbackMock));
-	await promise.sleep(20);
+	await sleep(20);
 	expect(queue.isPaused()).toBe(true);
 	expect(callbackMock).not.toHaveBeenCalled();
 	queue.resume();
-	await promise.sleep(20);
+	await sleep(20);
 	expect(callbackMock).toHaveBeenCalled();
 });
 test("clear the queue", async () => {
@@ -59,7 +59,7 @@ test("clear the queue", async () => {
 		.catch(() => {});
 	queue.clear();
 
-	await promise.sleep(20);
+	await sleep(20);
 	expect(callbackMock).not.toHaveBeenCalled();
 	expect(callbackMock2).not.toHaveBeenCalled();
 });
@@ -78,13 +78,13 @@ test("do not run more then the specified number of tasks", async () => {
 	void queue.add(createAsync(callbackMock2));
 	void queue.add(createAsync(callbackMock3));
 	expect(queue.getQueue().length).toBe(1);
-	await promise.sleep(20);
+	await sleep(20);
 
 	expect(callbackMock).toHaveBeenCalledOnce();
 	expect(callbackMock2).toHaveBeenCalledOnce();
 	expect(callbackMock3).not.toHaveBeenCalled();
 
-	await promise.sleep(20);
+	await sleep(20);
 	expect(callbackMock3).toHaveBeenCalledOnce();
 });
 

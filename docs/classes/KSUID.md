@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / KSUID
+[underscorets - v0.1.5](../README.md) / KSUID
 
 # Class: KSUID
 
@@ -27,6 +27,8 @@ It is composed of a timestamp and a payload.
 - `string` - The KSUID as a string.
 - `[Symbol.toStringTag]` - The KSUID tag.
 
+*Based on [ksuid](https://github.com/segmentio/ksuid).*
+
 **`Example`**
 
 ```ts
@@ -45,41 +47,41 @@ https://github.com/novemberborn/ksuid
 
 ### Constructors
 
-- [constructor](KSUID-1.md#constructor)
+- [constructor](KSUID.md#constructor)
 
 ### Properties
 
-- [view](KSUID-1.md#view)
-- [MAX\_STRING\_ENCODED](KSUID-1.md#max_string_encoded)
-- [MIN\_STRING\_ENCODED](KSUID-1.md#min_string_encoded)
+- [view](KSUID.md#view)
+- [MAX\_STRING\_ENCODED](KSUID.md#max_string_encoded)
+- [MIN\_STRING\_ENCODED](KSUID.md#min_string_encoded)
 
 ### Accessors
 
-- [[toStringTag]](KSUID-1.md#[tostringtag])
-- [date](KSUID-1.md#date)
-- [length](KSUID-1.md#length)
-- [payload](KSUID-1.md#payload)
-- [raw](KSUID-1.md#raw)
-- [string](KSUID-1.md#string)
-- [timestamp](KSUID-1.md#timestamp)
+- [[toStringTag]](KSUID.md#[tostringtag])
+- [date](KSUID.md#date)
+- [length](KSUID.md#length)
+- [payload](KSUID.md#payload)
+- [raw](KSUID.md#raw)
+- [string](KSUID.md#string)
+- [timestamp](KSUID.md#timestamp)
 
 ### Methods
 
-- [compare](KSUID-1.md#compare)
-- [equals](KSUID-1.md#equals)
-- [toJSON](KSUID-1.md#tojson)
-- [toString](KSUID-1.md#tostring)
-- [fromParts](KSUID-1.md#fromparts)
-- [isValid](KSUID-1.md#isvalid)
-- [parse](KSUID-1.md#parse)
-- [random](KSUID-1.md#random)
-- [randomAsync](KSUID-1.md#randomasync)
+- [compare](KSUID.md#compare)
+- [equals](KSUID.md#equals)
+- [toJSON](KSUID.md#tojson)
+- [toString](KSUID.md#tostring)
+- [fromParts](KSUID.md#fromparts)
+- [isValid](KSUID.md#isvalid)
+- [parse](KSUID.md#parse)
+- [random](KSUID.md#random)
+- [randomAsync](KSUID.md#randomasync)
 
 ## Constructors
 
 ### constructor
 
-• **new KSUID**(`buffer`): [`KSUID`](KSUID-1.md)
+• **new KSUID**(`buffer`): [`KSUID`](KSUID.md)
 
 Creates a new KSUID from an ArrayBufferLike.
 
@@ -91,11 +93,11 @@ Creates a new KSUID from an ArrayBufferLike.
 
 #### Returns
 
-[`KSUID`](KSUID-1.md)
+[`KSUID`](KSUID.md)
 
 #### Defined in
 
-ksuid/ksuid.ts:112
+[ksuid/ksuid.ts:114](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L114)
 
 ## Properties
 
@@ -105,7 +107,7 @@ ksuid/ksuid.ts:112
 
 #### Defined in
 
-ksuid/ksuid.ts:105
+[ksuid/ksuid.ts:107](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L107)
 
 ___
 
@@ -117,7 +119,7 @@ A string-encoded maximum value for a KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:101
+[ksuid/ksuid.ts:103](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L103)
 
 ___
 
@@ -129,7 +131,7 @@ A string-encoded minimum value for a KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:103
+[ksuid/ksuid.ts:105](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L105)
 
 ## Accessors
 
@@ -145,7 +147,7 @@ The KSUID tag
 
 #### Defined in
 
-ksuid/ksuid.ts:151
+[ksuid/ksuid.ts:153](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L153)
 
 ___
 
@@ -161,7 +163,7 @@ The date the KSUID was created
 
 #### Defined in
 
-ksuid/ksuid.ts:128
+[ksuid/ksuid.ts:130](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L130)
 
 ___
 
@@ -177,7 +179,7 @@ The byte length of the KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:123
+[ksuid/ksuid.ts:125](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L125)
 
 ___
 
@@ -193,7 +195,7 @@ The payload of the KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:138
+[ksuid/ksuid.ts:140](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L140)
 
 ___
 
@@ -209,7 +211,7 @@ A copy of the underlying buffer
 
 #### Defined in
 
-ksuid/ksuid.ts:118
+[ksuid/ksuid.ts:120](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L120)
 
 ___
 
@@ -225,7 +227,7 @@ The KSUID as a string
 
 #### Defined in
 
-ksuid/ksuid.ts:143
+[ksuid/ksuid.ts:145](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L145)
 
 ___
 
@@ -241,7 +243,7 @@ The timestamp of the KSUID in milliseconds since the epoch
 
 #### Defined in
 
-ksuid/ksuid.ts:133
+[ksuid/ksuid.ts:135](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L135)
 
 ## Methods
 
@@ -255,7 +257,7 @@ Compares this KSUID to another.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `other` | [`KSUID`](KSUID-1.md) | KSUID to compare to |
+| `other` | [`KSUID`](KSUID.md) | KSUID to compare to |
 
 #### Returns
 
@@ -267,7 +269,7 @@ Compares this KSUID to another.
 
 #### Defined in
 
-ksuid/ksuid.ts:163
+[ksuid/ksuid.ts:165](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L165)
 
 ___
 
@@ -281,7 +283,7 @@ Checks if this KSUID is equal to another.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `other` | [`KSUID`](KSUID-1.md) | KSUID to compare to |
+| `other` | [`KSUID`](KSUID.md) | KSUID to compare to |
 
 #### Returns
 
@@ -291,7 +293,7 @@ Checks if this KSUID is equal to another.
 
 #### Defined in
 
-ksuid/ksuid.ts:185
+[ksuid/ksuid.ts:187](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L187)
 
 ___
 
@@ -309,7 +311,7 @@ The KSUID as a string
 
 #### Defined in
 
-ksuid/ksuid.ts:194
+[ksuid/ksuid.ts:196](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L196)
 
 ___
 
@@ -327,13 +329,13 @@ The KSUID as a string
 
 #### Defined in
 
-ksuid/ksuid.ts:203
+[ksuid/ksuid.ts:205](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L205)
 
 ___
 
 ### fromParts
 
-▸ **fromParts**(`timestamp`, `payload`): [`KSUID`](KSUID-1.md)
+▸ **fromParts**(`timestamp`, `payload`): [`KSUID`](KSUID.md)
 
 Generates a new KSUID with a custom payload.
 
@@ -346,13 +348,13 @@ Generates a new KSUID with a custom payload.
 
 #### Returns
 
-[`KSUID`](KSUID-1.md)
+[`KSUID`](KSUID.md)
 
 A KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:234
+[ksuid/ksuid.ts:236](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L236)
 
 ___
 
@@ -376,13 +378,13 @@ Checks if a buffer is a valid KSUID.
 
 #### Defined in
 
-ksuid/ksuid.ts:256
+[ksuid/ksuid.ts:258](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L258)
 
 ___
 
 ### parse
 
-▸ **parse**(`data`): [`KSUID`](KSUID-1.md)
+▸ **parse**(`data`): [`KSUID`](KSUID.md)
 
 Parses a string-encoded KSUID.
 
@@ -394,19 +396,19 @@ Parses a string-encoded KSUID.
 
 #### Returns
 
-[`KSUID`](KSUID-1.md)
+[`KSUID`](KSUID.md)
 
 A KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:266
+[ksuid/ksuid.ts:268](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L268)
 
 ___
 
 ### random
 
-▸ **random**(`timestamp?`): [`KSUID`](KSUID-1.md)
+▸ **random**(`timestamp?`): [`KSUID`](KSUID.md)
 
 Generates a new KSUID.
 
@@ -418,19 +420,19 @@ Generates a new KSUID.
 
 #### Returns
 
-[`KSUID`](KSUID-1.md)
+[`KSUID`](KSUID.md)
 
 A KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:213
+[ksuid/ksuid.ts:215](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L215)
 
 ___
 
 ### randomAsync
 
-▸ **randomAsync**(`timestamp?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`KSUID`](KSUID-1.md)\>
+▸ **randomAsync**(`timestamp?`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`KSUID`](KSUID.md)\>
 
 Generates a new KSUID asynchronously.
 
@@ -442,10 +444,10 @@ Generates a new KSUID asynchronously.
 
 #### Returns
 
-[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`KSUID`](KSUID-1.md)\>
+[`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<[`KSUID`](KSUID.md)\>
 
 A KSUID
 
 #### Defined in
 
-ksuid/ksuid.ts:223
+[ksuid/ksuid.ts:225](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/ksuid.ts#L225)

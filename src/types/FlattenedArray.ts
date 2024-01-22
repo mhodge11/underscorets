@@ -1,4 +1,17 @@
-export type FlattenedArray<A, D extends number> = {
+/**
+ * A type that represents a flattened array.
+ *
+ * @example
+ * ```ts
+ * let arr = ["a", ["b", ["c"]]];
+ * let flattened: FlattenedArray<typeof arr, 3> = ["a", "b", "c"];
+ * ```
+ *
+ * @template A The type of the array
+ *
+ * @category Type
+ */
+export type FlattenedArray<A extends unknown[], D extends number> = {
 	done: A;
 	recur: A extends ReadonlyArray<infer InnerArr>
 		? FlatArray<

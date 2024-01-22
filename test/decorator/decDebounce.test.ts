@@ -1,4 +1,4 @@
-import { decorator } from "../../src/index.ts";
+import { decDebounce } from "../../src/index.ts";
 
 const testFn = vi.fn((x: number) => x * 2);
 
@@ -12,7 +12,7 @@ afterEach(() => {
 
 test("decorator", () => {
 	class TestClass {
-		@decorator.debounce(100)
+		@decDebounce(100)
 		testMethod(x: number) {
 			return testFn(x);
 		}

@@ -4,6 +4,8 @@ import { reHasRegExpChar, reRegExpChar } from "../config/regex.ts";
  * Escapes the `RegExp` special characters `^`, `$`, `\`, `.`, `*`, `+`,
  * `?`, `(`, `)`, `[`, `]`, `{`, `}`, and `|` in a string.
  *
+ * *Based on [moderndash.escapeRegex](https://moderndash.io/docs/escapeRegex).*
+ *
  * @example
  * ```ts
  * escapeRegExp('[hello](https://helloworld.io/)')

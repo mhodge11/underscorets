@@ -1,28 +1,28 @@
 import type { PlainObject } from "../../src/types/index.ts";
 
-import { obj } from "../../src/index.ts";
+import { flatKeys } from "../../src/index.ts";
 
 test("correct flattened keys", () => {
 	const object = { a: 1, b: { c: 2, d: { e: 3 } } };
-	expect(obj.flatKeys(object)).toEqual({ a: 1, "b.c": 2, "b.d.e": 3 });
+	expect(flatKeys(object)).toEqual({ a: 1, "b.c": 2, "b.d.e": 3 });
 });
 
 test("correct flattened keys", () => {
 	const object = { a: 1, b: { c: 2, d: { e: 3 } } };
-	const flat = obj.flatKeys(object);
-	const flatGeneric = obj.flatKeys(object as PlainObject);
+	const flat = flatKeys(object);
+	const flatGeneric = flatKeys(object as PlainObject);
 
 	expectTypeOf(flat).toEqualTypeOf<
 		Record<"a" | "b" | "b.c" | "b.d" | "b.d.e", unknown>
 	>();
 	expectTypeOf(flatGeneric).toEqualTypeOf<Record<string, unknown>>();
 
-	expect(obj.flatKeys(object)).toEqual({ a: 1, "b.c": 2, "b.d.e": 3 });
+	expect(flatKeys(object)).toEqual({ a: 1, "b.c": 2, "b.d.e": 3 });
 });
 
 test("correct flattened keys with arrays", () => {
 	const object = { a: 1, b: { c: 2, d: [{ e: 3 }, { e: 4, f: { g: 5 } }] } };
-	const flat = obj.flatKeys(object);
+	const flat = flatKeys(object);
 	expectTypeOf(flat).toEqualTypeOf<
 		Record<
 			| "a"
@@ -47,7 +47,7 @@ test("correct flattened keys with arrays", () => {
 
 test("simple array", () => {
 	const object = { a: [1, 2, 3, 4] };
-	expect(obj.flatKeys(object)).toEqual({
+	expect(flatKeys(object)).toEqual({
 		"a[0]": 1,
 		"a[1]": 2,
 		"a[2]": 3,

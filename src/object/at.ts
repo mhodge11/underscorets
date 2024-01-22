@@ -1,25 +1,9 @@
-import type { $, O } from "hotscript";
+import type { ObjectAt } from "../types/ObjectAt.ts";
 import type { ObjectPaths } from "../types/ObjectPaths.ts";
 import type { PlainObject } from "../types/PlainObject.ts";
 
 import { validPathRegex } from "../config/regex.ts";
 import { get } from "./get.ts";
-
-type BuildAtObj<
-	T extends PlainObject,
-	P extends string[],
-	Acc extends unknown[] = [],
-> = P["length"] extends 0
-	? Acc
-	: P extends [infer Path, ...infer Rest]
-	  ? BuildAtObj<
-				T,
-				Rest extends string[] ? Rest : [],
-				Path extends string ? [...Acc, $<O.Get<Path>, T>] : Acc
-		  >
-	  : never;
-
-type AtObj<T extends PlainObject, P extends string[]> = BuildAtObj<T, P>;
 
 /**
  * Gets the values at each of the `paths`. If a value at a path doesn't exist, it returns `undefined` for that path.
@@ -48,7 +32,7 @@ type AtObj<T extends PlainObject, P extends string[]> = BuildAtObj<T, P>;
 export function at<T extends PlainObject, P extends ObjectPaths<T>>(
 	object: T,
 	paths: P[],
-): AtObj<T, P[]> {
+): ObjectAt<T, P[]> {
 	const values: any[] = [];
 
 	for (const path of paths) {
@@ -60,5 +44,5 @@ export function at<T extends PlainObject, P extends ObjectPaths<T>>(
 		values.push(get(object, path));
 	}
 
-	return values as AtObj<T, P[]>;
+	return values as ObjectAt<T, P[]>;
 }

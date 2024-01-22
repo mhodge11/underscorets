@@ -4,7 +4,7 @@ import { uuidUrlAlphabet } from "./uuidUrlAlphabet.ts";
 /**
  * Generates a UUID.
  *
- * *Based on the [nanoid](https://github.com/ai/nanoid) package.*
+ * *Based on [nanoid](https://github.com/ai/nanoid).*
  *
  * @example
  * ```ts
@@ -15,8 +15,10 @@ import { uuidUrlAlphabet } from "./uuidUrlAlphabet.ts";
  * //=> "01a2b3c4d5"
  * ```
  *
- * @param size Size of the UUID.
- * @returns A UUID.
+ * @param size Size of the UUID
+ * @returns A UUID
+ *
+ * @category UUID
  */
 export function generateUuid(size = 21) {
 	// `-=` convert `size` to number to prevent `valueOf` abusing

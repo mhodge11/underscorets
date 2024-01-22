@@ -3,6 +3,8 @@
  *
  * It uses `crypto.getRandomValues` to generate the random number.
  *
+ * *Based on [moderndash.randomFloat](https://moderndash.io/docs/randomFloat).
+ *
  * @example
  * ```ts
  * randomFloat(1, 10)

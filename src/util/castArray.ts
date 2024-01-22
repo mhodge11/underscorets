@@ -1,4 +1,4 @@
-type CastedArray<T> = T extends unknown[] ? T : T[];
+import type { CastedArray } from "../types/CastedArray.ts";
 
 /**
  * Casts `value` as an array if it's not one.

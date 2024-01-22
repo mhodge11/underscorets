@@ -9,6 +9,8 @@ import { toDecorator } from "./toDecorator.ts";
  *
  * *Requires the [experimentalDecorators](https://www.typescriptlang.org/tsconfig#experimentalDecorators) flag to be set.*
  *
+ * *Based on [moderndash.decMaxCalls](https://moderndash.io/docs/decMaxCalls).*
+ *
  * @example
  * ```ts
  * class TestClass {

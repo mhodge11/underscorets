@@ -1,6 +1,6 @@
-import { validator } from "../../src/index.ts";
+import { isUrl } from "../../src/index.ts";
 
-test("validator.isUrl", () => {
-	expect(validator.isUrl("https://google.com")).toBe(true);
-	expect(validator.isUrl("google.com")).toBe(false);
+test("isUrl", () => {
+	expect(isUrl("https://google.com")).toBe(true);
+	expect(isUrl("google.com")).toBe(false);
 });

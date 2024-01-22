@@ -1,7 +1,7 @@
-import { util } from "../../src/index.ts";
+import { BinarySearchTree } from "../../src/index.ts";
 
 function initTree() {
-	const tree = new util.BinarySearchTree<number>();
+	const tree = new BinarySearchTree<number>();
 	tree.insert(10);
 	tree.insert(5);
 	tree.insert(15);
@@ -17,17 +17,17 @@ const nodeToString =
 	'BinarySearchTreeNode {"value":10,"count":1,"left":{"value":5,"count":1,"left":{"value":2,"count":1},"right":{"value":7,"count":1}},"right":{"value":15,"count":1,"left":{"value":12,"count":1},"right":{"value":17,"count":1}}}';
 
 test("creates a new tree", () => {
-	const tree = new util.BinarySearchTree();
-	expect(tree).toBeInstanceOf(util.BinarySearchTree);
+	const tree = new BinarySearchTree();
+	expect(tree).toBeInstanceOf(BinarySearchTree);
 });
 
 test("creates a new tree with initial values", () => {
-	const tree = new util.BinarySearchTree({ values: [10] });
+	const tree = new BinarySearchTree({ values: [10] });
 	expect(tree.raw?.value).toBe(10);
 });
 
 test("creates a new tree with initial values and a custom comparator", () => {
-	const tree = new util.BinarySearchTree({
+	const tree = new BinarySearchTree({
 		values: [10],
 		compare: (a, b) => (a > b ? -1 : a < b ? 1 : 0),
 	});
@@ -38,33 +38,33 @@ test("creates a new tree with initial values and a custom comparator", () => {
 });
 
 test("creates a new tree using the from method", () => {
-	const tree = util.BinarySearchTree.from([10]);
+	const tree = BinarySearchTree.from([10]);
 	expect(tree.raw?.value).toBe(10);
 });
 
 test("creates a new tree using the fromString method", () => {
-	const tree = util.BinarySearchTree.fromString("10");
+	const tree = BinarySearchTree.fromString("10");
 	expect(tree.raw?.value).toBe(10);
 
-	const tree1 = util.BinarySearchTree.fromString("[10,5,15,2,7,12,17]");
+	const tree1 = BinarySearchTree.fromString("[10,5,15,2,7,12,17]");
 	expect(tree1.raw?.value).toBe(10);
 
-	const tree2 = util.BinarySearchTree.fromString("[]");
+	const tree2 = BinarySearchTree.fromString("[]");
 	expect(tree2.raw).toBeUndefined();
 
-	const tree3 = util.BinarySearchTree.fromString("[10]");
+	const tree3 = BinarySearchTree.fromString("[10]");
 	expect(tree3.raw?.value).toBe(10);
 
-	const tree4 = util.BinarySearchTree.fromString(
+	const tree4 = BinarySearchTree.fromString(
 		"BinarySearchTree [10,5,15,2,7,12,17]",
 	);
 	expect(tree4.raw?.value).toBe(10);
 
-	expect(() => util.BinarySearchTree.fromString("foo")).toThrow(Error);
+	expect(() => BinarySearchTree.fromString("foo")).toThrow(Error);
 });
 
 test("creates a new tree which allows duplicates", () => {
-	const tree = new util.BinarySearchTree({
+	const tree = new BinarySearchTree({
 		values: [10],
 		allowDuplicates: true,
 	});
@@ -73,7 +73,7 @@ test("creates a new tree which allows duplicates", () => {
 });
 
 test("ignores duplicates if the allowDuplicates option is not set", () => {
-	const tree = new util.BinarySearchTree({ values: [10, 10, 10, 4, 3, 2, 3] });
+	const tree = new BinarySearchTree({ values: [10, 10, 10, 4, 3, 2, 3] });
 	expect(tree.size).toBe(4);
 	expect(tree.raw?.count).toBe(1);
 	expect(tree.raw?.left?.count).toBe(1);
@@ -82,7 +82,7 @@ test("ignores duplicates if the allowDuplicates option is not set", () => {
 });
 
 test("allows duplicates if the allowDuplicates option is set to true", () => {
-	const tree = new util.BinarySearchTree({
+	const tree = new BinarySearchTree({
 		values: [10, 10, 10, 4, 3, 2, 3],
 		allowDuplicates: true,
 	});
@@ -94,7 +94,7 @@ test("allows duplicates if the allowDuplicates option is set to true", () => {
 });
 
 test("compare function can be set after initialization", () => {
-	const tree = new util.BinarySearchTree({
+	const tree = new BinarySearchTree({
 		values: [10],
 	});
 	expect(tree.raw?.value).toBe(10);
@@ -282,7 +282,7 @@ test("node is jsonifiable", () => {
 });
 
 test("breaks out if root is undefined", () => {
-	const tree = new util.BinarySearchTree<number>();
+	const tree = new BinarySearchTree<number>();
 	expect(tree.contains(10)).toBe(false);
 	expect(tree.get(10)).toBeUndefined();
 	expect(tree.minValueNode()).toBeUndefined();

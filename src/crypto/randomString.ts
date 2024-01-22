@@ -6,6 +6,8 @@ import { randomInt } from "./randomInt.ts";
  *
  * It uses `crypto.getRandomValues` to generate the random string.
  *
+ * *Based on [moderndash.randomString](https://moderndash.io/docs/randomString).*
+ *
  * @example
  * ```ts
  * randomString(8);

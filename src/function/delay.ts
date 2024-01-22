@@ -4,6 +4,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  * Invokes `func` after `wait` milliseconds. Any additional arguments are
  * provided to `func` when it's invoked.
  *
+ * *Based on [lodash.delay](https://lodash.com/docs/4.17.15#delay).
+ *
  * @example
  * ```ts
  * delay(text => console.log(text), 1000, 'later')

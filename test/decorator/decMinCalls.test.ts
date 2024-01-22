@@ -1,8 +1,8 @@
-import { decorator } from "../../src/index.ts";
+import { decMinCalls } from "../../src/index.ts";
 
 test("decorator", () => {
 	class TestClass {
-		@decorator.minCalls(2)
+		@decMinCalls(2)
 		testMethod() {
 			return 1;
 		}

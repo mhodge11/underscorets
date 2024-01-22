@@ -6,6 +6,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  *
  * This function can be used as a decorator with {@link decMinCalls}.
  *
+ * *Based on [moderndash.minCalls](https://moderndash.io/docs/minCalls).*
+ *
  * @example
  * ```ts
  * const caution = () => console.log("Caution!");

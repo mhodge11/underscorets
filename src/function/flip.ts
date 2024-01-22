@@ -4,6 +4,8 @@ import type { ReversedArray } from "../types/ReversedArray.ts";
 /**
  * Creates a function that invokes `func` with arguments reversed.
  *
+ * *Based on [lodash.flip](https://lodash.com/docs/4.17.15#flip).*
+ *
  * @example
  * ```ts
  * const flipped = flip((...args) => args)
@@ -15,6 +17,8 @@ import type { ReversedArray } from "../types/ReversedArray.ts";
  * @param func The function to flip arguments for
  * @template T The type of the function
  * @returns The new flipped function
+ *
+ * @category Function
  */
 export function flip<T extends GenericFunction<T>>(
 	func: T,

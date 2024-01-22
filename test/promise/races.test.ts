@@ -1,4 +1,4 @@
-import { promise } from "../../src/index.ts";
+import { races } from "../../src/index.ts";
 
 const delayedPromise = (delay: number) =>
 	new Promise((resolve) => {
@@ -8,7 +8,7 @@ const delayedPromise = (delay: number) =>
 	});
 
 test("resolve the first 2 promises", async () => {
-	const result = await promise.races(
+	const result = await races(
 		2,
 		delayedPromise(20),
 		delayedPromise(40),
@@ -18,7 +18,7 @@ test("resolve the first 2 promises", async () => {
 });
 
 test("handle higher waitFor then promises", async () => {
-	const result = await promise.races(2, delayedPromise(20));
+	const result = await races(2, delayedPromise(20));
 	expect(result).toEqual([20]);
 });
 
@@ -27,6 +27,6 @@ test("rejected promise", async () => {
 		setTimeout(() => reject("rejected"), 20);
 	});
 	await expect(
-		promise.races(2, delayedPromise(20), rejectedPromise, delayedPromise(60)),
+		races(2, delayedPromise(20), rejectedPromise, delayedPromise(60)),
 	).rejects.toBe("rejected");
 });

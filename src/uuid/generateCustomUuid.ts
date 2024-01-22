@@ -3,7 +3,7 @@ import { random } from "./utils.ts";
 /**
  * Generates a UUID using a custom alphabet.
  *
- * *Based on the [nanoid](https://github.com/ai/nanoid) package.*
+ * *Based on [nanoid](https://github.com/ai/nanoid).*
  *
  * @example
  * ```ts
@@ -19,6 +19,8 @@ import { random } from "./utils.ts";
  * @param alphabet Custom alphabet to generate the UUID from
  * @param defaultSize Default size of the UUID. Defaults to 21
  * @returns A function that generates a UUID
+ *
+ * @category UUID
  */
 export function generateCustomUuid(alphabet: string, defaultSize = 21) {
 	// First, a bitmask is necessary to generate the ID. The bitmask makes bytes

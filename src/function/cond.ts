@@ -6,6 +6,8 @@ import { map } from "../array/map.ts";
  * pairs are invoked with the `this` binding and arguments of the created
  * function.
  *
+ * *Based on [lodash.cond](https://lodash.com/docs/4.17.15#cond).*
+ *
  * @example
  * ```ts
  * const func = cond([

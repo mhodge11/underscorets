@@ -1,16 +1,16 @@
-import { validator } from "../../src/index.ts";
+import { isNil } from "../../src/index.ts";
 
 test("return true if `value` is null or undefined", () => {
-	expect(validator.isNil(null)).toBe(true);
-	expect(validator.isNil(undefined)).toBe(true);
+	expect(isNil(null)).toBe(true);
+	expect(isNil(undefined)).toBe(true);
 });
 
 test("return false if `value` is not null or undefined", () => {
-	expect(validator.isNil([1, 2, 3])).toBe(false);
-	expect(validator.isNil(Function)).toBe(false);
-	expect(validator.isNil({})).toBe(false);
-	expect(validator.isNil("abc")).toBe(false);
-	expect(validator.isNil(1)).toBe(false);
-	expect(validator.isNil(true)).toBe(false);
-	expect(validator.isNil(Symbol())).toBe(false);
+	expect(isNil([1, 2, 3])).toBe(false);
+	expect(isNil(Function)).toBe(false);
+	expect(isNil({})).toBe(false);
+	expect(isNil("abc")).toBe(false);
+	expect(isNil(1)).toBe(false);
+	expect(isNil(true)).toBe(false);
+	expect(isNil(Symbol())).toBe(false);
 });

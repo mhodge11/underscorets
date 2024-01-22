@@ -1,4 +1,4 @@
-import { stringSize } from "../string/size.ts";
+import { stringSize } from "../string/stringSize.ts";
 import { isArrayLike } from "../validator/isArrayLike.ts";
 import { isMap } from "../validator/isMap.ts";
 import { isSet } from "../validator/isSet.ts";
@@ -22,6 +22,8 @@ import { isString } from "../validator/isString.ts";
  *
  * @param value The collection to inspect
  * @returns The `value` size
+ *
+ * @category Util
  */
 export function size(value: object | string): number {
 	if (value == null) return 0;

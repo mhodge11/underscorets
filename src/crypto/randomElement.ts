@@ -9,6 +9,8 @@ import { randomInt } from "./randomInt.ts";
  *
  * It uses `crypto.getRandomValues` to get the random element.
  *
+ * *Based on [moderndash.randomElement](https://moderndash.io/docs/randomElement).*
+ *
  * @example
  * ```ts
  * randomElement([1, 2, 3, 4])

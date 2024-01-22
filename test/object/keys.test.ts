@@ -1,21 +1,21 @@
-import { obj } from "../../src/index.ts";
+import { keys } from "../../src/index.ts";
 
-test("obj.keys returns an array of keys", () => {
+test("keys returns an array of keys", () => {
 	const object = { a: 1, b: 2, c: 3 };
-	const keys = obj.keys(object);
-	expect(keys.length).toBe(3);
-	expect(keys).toContain("a");
-	expect(keys).toContain("b");
-	expect(keys).toContain("c");
+	const k = keys(object);
+	expect(k.length).toBe(3);
+	expect(k).toContain("a");
+	expect(k).toContain("b");
+	expect(k).toContain("c");
 });
 
-test("obj.keys returns an empty array if the obj is empty", () => {
-	expect(obj.keys({})).toEqual([]);
+test("keys returns an empty array if the obj is empty", () => {
+	expect(keys({})).toEqual([]);
 });
 
-test("obj.keys returns an empty array if obj is null or undefined", () => {
+test("keys returns an empty array if obj is null or undefined", () => {
 	// @ts-expect-error - Testing invalid input
-	expect(obj.keys(null)).toEqual([]);
+	expect(keys(null)).toEqual([]);
 	// @ts-expect-error - Testing invalid input
-	expect(obj.keys(undefined)).toEqual([]);
+	expect(keys(undefined)).toEqual([]);
 });

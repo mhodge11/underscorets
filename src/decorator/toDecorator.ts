@@ -4,6 +4,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
 /**
  * Transforms a function into a decorator function.
  *
+ * *Based on [moderndash.toDecorator](https://moderndash.io/docs/todecorator).*
+ *
  * @example
  * ```ts
  * function log(func: Function, message: string) {

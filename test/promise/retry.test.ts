@@ -1,18 +1,18 @@
-import { promise } from "../../src/index.ts";
+import { retry } from "../../src/index.ts";
 
-test("promise.retry until successful", async () => {
+test("retry until successful", async () => {
 	const mockFn = vi
 		.fn()
 		.mockRejectedValueOnce(new Error("error 1"))
 		.mockResolvedValueOnce("success");
 
-	const result = await promise.retry(mockFn);
+	const result = await retry(mockFn);
 
 	expect(mockFn).toHaveBeenCalledTimes(2);
 	expect(result).toEqual("success");
 });
 
-test("promise.retry with custom backoff function", async () => {
+test("retry with custom backoff function", async () => {
 	const mockFn = vi
 		.fn()
 		.mockRejectedValueOnce(new Error("error 1"))
@@ -20,7 +20,7 @@ test("promise.retry with custom backoff function", async () => {
 		.mockResolvedValueOnce("success");
 
 	const backoff = vi.fn().mockImplementation((retries) => retries * 10);
-	const result = await promise.retry(mockFn, { maxRetries: 2, backoff });
+	const result = await retry(mockFn, { maxRetries: 2, backoff });
 
 	expect(result).toEqual("success");
 
@@ -32,7 +32,7 @@ test("promise.retry with custom backoff function", async () => {
 test("stop retrying after reaching max retries", async () => {
 	const mockFailFn = vi.fn().mockRejectedValue(new Error("error"));
 	await expect(
-		promise.retry(mockFailFn, { maxRetries: 1, backoff: () => 10 }),
+		retry(mockFailFn, { maxRetries: 1, backoff: () => 10 }),
 	).rejects.toThrow("error");
 
 	expect(mockFailFn).toHaveBeenCalledTimes(2);
@@ -46,7 +46,7 @@ test("call onRetry callback when retrying", async () => {
 		.mockResolvedValueOnce("success");
 
 	const onRetry = vi.fn();
-	const result = await promise.retry(mockFn, {
+	const result = await retry(mockFn, {
 		maxRetries: 2,
 		onRetry,
 		backoff: () => 10,

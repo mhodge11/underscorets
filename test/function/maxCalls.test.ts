@@ -1,8 +1,8 @@
-import { fn } from "../../src/index.ts";
+import { maxCalls } from "../../src/index.ts";
 
 test("only calls 3 times", () => {
 	const testFn = vi.fn();
-	const beforeFn = fn.maxCalls(testFn, 3);
+	const beforeFn = maxCalls(testFn, 3);
 
 	beforeFn();
 	beforeFn();
@@ -14,5 +14,5 @@ test("only calls 3 times", () => {
 });
 
 test("throws an error when func is not a function", () => {
-	expect(() => fn.maxCalls(undefined as any, 1)).toThrow(TypeError);
+	expect(() => maxCalls(undefined as any, 1)).toThrow(TypeError);
 });

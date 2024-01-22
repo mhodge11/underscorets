@@ -1,4 +1,4 @@
-let types: any;
+let types: any = null;
 
 try {
 	({ types } = await import("node:util"));

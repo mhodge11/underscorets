@@ -1,4 +1,4 @@
-import { decorator } from "../../src/index.ts";
+import { toDecorator } from "../../src/index.ts";
 
 test("decorator", () => {
 	function addToReturn(func: (...args: unknown[]) => number, number: number) {
@@ -8,7 +8,7 @@ test("decorator", () => {
 		};
 	}
 
-	const adder = decorator.toDecorator(addToReturn);
+	const adder = toDecorator(addToReturn);
 
 	class TestClass {
 		private count = "5";

@@ -5,6 +5,8 @@ import { clone as _clone } from "../helpers/clone.ts";
  * This method is like `{@link clone}` except that it recursively clones `value`.
  * Object inheritance is preserved.
  *
+ * *Based on [lodash.cloneDeep](https://lodash.com/docs/#cloneDeep).*
+ *
  * @example
  * ```ts
  * const objects = [{ 'a': 1 }, { 'b': 2 }]

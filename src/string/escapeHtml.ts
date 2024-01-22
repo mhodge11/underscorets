@@ -7,6 +7,8 @@ import {
 /**
  * Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.
  *
+ * *Based on [moderndash.escapeHtml](https://moderndash.io/docs/escapeHtml).*
+ *
  * @example
  * ```ts
  * escapeHtml('fred, barney, & pebbles')

@@ -6,6 +6,8 @@ import { pick } from "./pick.ts";
 /**
  * Omit specified keys from an object
  *
+ * *Based on [moderndash.omit](https://moderndash.io/docs/omit).*
+ *
  * @example
  * ```ts
  * const obj = {a: 1, b: 2, c: 3};
