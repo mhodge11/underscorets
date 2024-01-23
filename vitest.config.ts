@@ -19,9 +19,10 @@ export default defineProject({
 		globals: true,
 		environment: "edge-runtime",
 		coverage: {
-			include: ["**/src/**/*.{js,cjs,ts,cts}"],
+			include: ["**/src/**/*.ts"],
 			exclude: [
 				"**/dist/**/*.{js,cjs,ts}",
+				"**/lib/**/*.{js,cjs,ts}",
 				"**/test/**/*.ts",
 				"**/helpers/**/*.ts",
 				"**/shims/**/*.ts",
