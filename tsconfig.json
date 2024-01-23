@@ -55,14 +55,11 @@
       "@validate/*": ["src/validate/*"]
     }
   },
-  "include": [
-    "./**/*.ts",
-    "./**/*.js",
-    "shims/buffer.js",
-    "shims/buffer.cjs",
-    "shims/crypto.cjs",
-    "shims/types.cjs",
-    "shims/index.cjs"
-  ],
-  "exclude": ["./**/coverage/**/*", "./**/node_modules/**/*", "./**/dist/**/*"]
+  "include": ["./**/*.ts", "./**/*.js", "./shims/**/*.{cjs,js}"],
+  "exclude": [
+    "./**/coverage/**/*",
+    "./**/node_modules/**/*",
+    "./**/dist/**/*",
+    "./**/lib/**/*"
+  ]
 }
