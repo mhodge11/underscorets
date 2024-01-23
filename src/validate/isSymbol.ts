@@ -1,5 +1,5 @@
-import { hasSymbolTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasSymbolTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.

@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { sortCompare } from "../helpers/sortCompare.js";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.
@@ -44,17 +44,13 @@ export function bubbleSort<T>(
 	for (let i = sortedArray.length - 1; i > 0; i--)
 		for (let j = 0; j < i; j++) {
 			const compareResult = sortCompare(...criteria)(
-				// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-				sortedArray[j]!,
-				// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-				sortedArray[j + 1]!,
+				sortedArray[j] as T,
+				sortedArray[j + 1] as T,
 			);
 
 			if (compareResult > 0) {
-				// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-				const temp = sortedArray[j]!;
-				// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-				sortedArray[j] = sortedArray[j + 1]!;
+				const temp = sortedArray[j] as T;
+				sortedArray[j] = sortedArray[j + 1] as T;
 				sortedArray[j + 1] = temp;
 			}
 		}

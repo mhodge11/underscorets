@@ -1,5 +1,5 @@
-import { hasFloat32Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasFloat32Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Float32Array` object.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isFloat32Array(value: unknown): value is Float32Array {
-	return (
-		types?.isFloat32Array?.(value) ||
-		(isObjectLike(value) && hasFloat32Tag(value))
-	);
+	return isObjectLike(value) && hasFloat32Tag(value);
 }

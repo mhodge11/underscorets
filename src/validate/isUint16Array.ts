@@ -1,5 +1,5 @@
-import { hasUint16Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasUint16Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Uint16Array` typed array.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isUint16Array(value: unknown): value is Uint16Array {
-	return (
-		types?.isUint16Array?.(value) ||
-		(isObjectLike(value) && hasUint16Tag(value))
-	);
+	return isObjectLike(value) && hasUint16Tag(value);
 }

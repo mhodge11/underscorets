@@ -1,9 +1,9 @@
-import type { Jsonifiable } from "../type/Jsonifiable.ts";
-import type { Primitive } from "../type/Primitive.ts";
-
-import { HASH_UNDEFINED } from "../config/constants.ts";
+import type { Jsonifiable } from "../type/Jsonifiable.js";
+import type { Primitive } from "../type/Primitive.js";
 
 type Key = Jsonifiable | Primitive;
+
+const HASH_UNDEFINED = "__hash_undefined__";
 
 function toKey(value: Key): string {
 	if (typeof value === "string") return value;

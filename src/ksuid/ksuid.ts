@@ -1,4 +1,4 @@
-import { base62, debase62 } from "../helpers/base62.ts";
+import { base62, debase62 } from "../helpers/base62.js";
 
 const EPOCH_IN_MS = 14e11;
 
@@ -170,10 +170,8 @@ export class KSUID {
 		const b = new Uint8Array(other.view.buffer);
 
 		for (let offset = 0; offset < a.length; offset++) {
-			// biome-ignore lint/style/noNonNullAssertion: This will always be defined
-			if (a[offset]! < b[offset]!) return -1;
-			// biome-ignore lint/style/noNonNullAssertion: This will always be defined
-			if (a[offset]! > b[offset]!) return 1;
+			if ((a[offset] as number) < (b[offset] as number)) return -1;
+			if ((a[offset] as number) > (b[offset] as number)) return 1;
 		}
 
 		return 0;

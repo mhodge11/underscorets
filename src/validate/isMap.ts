@@ -1,5 +1,5 @@
-import { hasMapTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasMapTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Map` object.
@@ -25,9 +25,5 @@ export function isMap<T>(
 		? never
 		: ReadonlyMap<any, any>
 	: Map<unknown, unknown> {
-	return (
-		types?.isMap?.(value) ||
-		value instanceof Map ||
-		(isObjectLike(value) && hasMapTag(value))
-	);
+	return value instanceof Map || (isObjectLike(value) && hasMapTag(value));
 }

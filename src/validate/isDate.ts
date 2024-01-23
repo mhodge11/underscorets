@@ -1,5 +1,5 @@
-import { hasDateTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasDateTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Date` object.
@@ -19,9 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isDate(value: unknown): value is Date {
-	return (
-		types?.isDate?.(value) ||
-		value instanceof Date ||
-		(isObjectLike(value) && hasDateTag(value))
-	);
+	return value instanceof Date || (isObjectLike(value) && hasDateTag(value));
 }

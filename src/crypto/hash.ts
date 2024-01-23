@@ -1,4 +1,4 @@
-import type { Jsonifiable } from "../type/Jsonifiable.ts";
+import type { Jsonifiable } from "../type/Jsonifiable.js";
 
 type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";
 

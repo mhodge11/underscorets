@@ -1,5 +1,8 @@
-import { CLONE_DEEP_FLAG, CLONE_SYMBOLS_FLAG } from "../config/flags.ts";
-import { clone as _clone } from "../helpers/clone.ts";
+import {
+	CLONE_DEEP_FLAG,
+	CLONE_SYMBOLS_FLAG,
+	clone as _clone,
+} from "../helpers/clone.js";
 
 /**
  * This method is like `{@link clone}` except that it recursively clones `value`.

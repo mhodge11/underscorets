@@ -1,4 +1,6 @@
 function warnNoCrypto() {
+  if (process.env.NODE_ENV === "production") return;
+
   const needsCrypto = [
     "`KSUID`",
     "`compareKsuids`",
@@ -27,7 +29,11 @@ exports.crypto = globalThis.crypto ?? globalThis.window?.crypto;
 
 if (typeof exports.crypto === "undefined")
   try {
-    exports.crypto = require("node:crypto");
+    ({ webcrypto: exports.crypto } = require("node:crypto"));
   } catch {
-    warnNoCrypto();
+    try {
+      ({ webcrypto: exports.crypto } = require("node:crypto"));
+    } catch {
+      warnNoCrypto();
+    }
   }

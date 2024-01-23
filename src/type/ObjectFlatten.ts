@@ -1,6 +1,6 @@
-import type { PlainObject } from "./PlainObject.ts";
-import type { AllPaths } from "./helpers/objects.ts";
-import type { $ } from "./helpers/utils.ts";
+import type { PlainObject } from "./PlainObject.js";
+import type { AllPaths } from "./helpers/objects.js";
+import type { $ } from "./helpers/utils.js";
 
 type StringIfNever<T> = [T] extends [never] ? string : T;
 

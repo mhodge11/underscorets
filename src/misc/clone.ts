@@ -1,5 +1,4 @@
-import { CLONE_SYMBOLS_FLAG } from "../config/flags.ts";
-import { clone as _clone } from "../helpers/clone.ts";
+import { CLONE_SYMBOLS_FLAG, clone as _clone } from "../helpers/clone.js";
 
 /**
  * Creates a shallow clone of `value`.

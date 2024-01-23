@@ -1,5 +1,5 @@
-import { once } from "../function/once.ts";
-import { toDecorator } from "./toDecorator.ts";
+import { once } from "../function/once.js";
+import { toDecorator } from "./toDecorator.js";
 
 /**
  * Only invokes the decorated function once.

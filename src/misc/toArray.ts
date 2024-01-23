@@ -1,13 +1,21 @@
-import type { ToArray } from "../type/ToArray.ts";
+import type { ToArray } from "../type/ToArray.js";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { copyArray } from "../helpers/copyArray.ts";
-import { iteratorToArray } from "../helpers/iteratorToArray.ts";
-import { stringToArray } from "../helpers/stringToArray.ts";
-import { values as objectValues } from "../object/values.ts";
-import { isArrayLike } from "../validate/isArrayLike.ts";
-import { isPlainObject } from "../validate/isPlainObject.ts";
-import { isString } from "../validate/isString.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { copyArray } from "../helpers/copyArray.js";
+import { stringToArray } from "../helpers/stringToArray.js";
+import { values as objectValues } from "../object/values.js";
+import { isArrayLike } from "../validate/isArrayLike.js";
+import { isPlainObject } from "../validate/isPlainObject.js";
+import { isString } from "../validate/isString.js";
+
+function iteratorToArray<T>(iterator: Iterator<T> | IterableIterator<T>): T[] {
+	let data: IteratorResult<T>;
+	const array: T[] = [];
+
+	while (!(data = iterator.next()).done) array.push(data.value);
+
+	return array;
+}
 
 /**
  * Converts `value` to an array.

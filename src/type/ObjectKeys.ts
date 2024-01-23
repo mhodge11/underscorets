@@ -1,6 +1,6 @@
-import type { PlainObject } from "./PlainObject.ts";
-import type { Keys } from "./helpers/objects.ts";
-import type { $ } from "./helpers/utils.ts";
+import type { PlainObject } from "./PlainObject.js";
+import type { Keys } from "./helpers/objects.js";
+import type { $ } from "./helpers/utils.js";
 
 /**
  * This type is used to get the keys of an object.

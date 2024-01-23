@@ -251,3 +251,11 @@ test("toArray returns empty array if hashmap is empty", () => {
 	const map = new HashMap<number>();
 	expect(map.toArray()).toEqual([]);
 });
+
+test("is concat spreadable", () => {
+	const map = new HashMap<number>();
+	map.set("a", 1);
+	map.set("b", 2);
+	map.set("c", 3);
+	expect(map[Symbol.isConcatSpreadable]()).toBe(true);
+});

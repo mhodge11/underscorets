@@ -1,5 +1,5 @@
-import { hasNumberTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasNumberTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Number` primitive or object.
@@ -27,7 +27,6 @@ import { isObjectLike } from "./isObjectLike.ts";
 export function isNumber(value: unknown): value is number | Number {
 	return (
 		typeof value === "number" ||
-		types?.isNumberObject?.(value) ||
 		value instanceof Number ||
 		(isObjectLike(value) && hasNumberTag(value))
 	);

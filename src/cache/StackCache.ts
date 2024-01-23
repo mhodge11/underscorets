@@ -1,6 +1,7 @@
-import { LARGE_ARRAY_SIZE } from "../config/constants.ts";
-import { ListCache } from "./ListCache.ts";
-import { MapCache } from "./MapCache.ts";
+import { ListCache } from "./ListCache.js";
+import { MapCache } from "./MapCache.js";
+
+const LARGE_ARRAY_SIZE = 200;
 
 export class StackCache {
 	data: ListCache | MapCache;

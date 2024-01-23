@@ -1,6 +1,15 @@
-import { asciiSize } from "../helpers/asciiSize.ts";
-import { hasUnicode } from "../helpers/hasUnicode.ts";
-import { unicodeSize } from "../helpers/unicodeSize.ts";
+import { hasUnicode } from "../helpers/hasUnicode.js";
+import { reUnicode } from "../helpers/reUnicode.js";
+
+function asciiSize(string: string): number {
+	return string.length;
+}
+
+function unicodeSize(string: string): number {
+	let result: number = (reUnicode.lastIndex = 0);
+	while (reUnicode.test(string)) ++result;
+	return result;
+}
 
 /**
  * Gets the size of `string`, supporting a string with unicode.

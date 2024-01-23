@@ -1,5 +1,5 @@
-import { hasWeakSetTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasWeakSetTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `WeakSet` object.
@@ -20,8 +20,6 @@ import { isObjectLike } from "./isObjectLike.ts";
  */
 export function isWeakSet(value: unknown): value is WeakSet<object> {
 	return (
-		types?.isWeakSet?.(value) ||
-		value instanceof WeakSet ||
-		(isObjectLike(value) && hasWeakSetTag(value))
+		value instanceof WeakSet || (isObjectLike(value) && hasWeakSetTag(value))
 	);
 }

@@ -31,6 +31,7 @@
       "suspicious": {
         "noAssignInExpressions": "off",
         "noConfusingVoidType": "off",
+        "noControlCharactersInRegex": "off",
         "noExplicitAny": "off",
         "noFallthroughSwitchClause": "off",
         "noSelfCompare": "off",

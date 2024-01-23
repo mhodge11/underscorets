@@ -55,7 +55,7 @@
       "@validate/*": ["src/validate/*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.js", "./shims/**/*.{cjs,js}"],
+  "include": ["./**/*.ts", "./**/*.js", "shims/**/*.{cjs,js}"],
   "exclude": [
     "./**/coverage/**/*",
     "./**/node_modules/**/*",

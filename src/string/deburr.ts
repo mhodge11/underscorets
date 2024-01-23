@@ -1,5 +1,3 @@
-import { accentControlRegex } from "../config/regex.ts";
-
 /**
  * Deburrs a string by converting
  * [Latin-1 Supplement](https://en.wikipedia.org/wiki/Latin-1_Supplement_(Unicode_block)#Character_table)
@@ -24,5 +22,5 @@ export function deburr(string: string): string {
 	string ??= "";
 	if (string.length === 0) return string;
 
-	return string.normalize("NFD").replace(accentControlRegex, "");
+	return string.normalize("NFD").replace(/[\u0300-\u036F]/g, "");
 }

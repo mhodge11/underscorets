@@ -1,5 +1,5 @@
-import { hasDomExceptionTag, hasErrorTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasDomExceptionTag, hasErrorTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
@@ -23,7 +23,6 @@ export function isError(value: unknown): value is DOMException | Error {
 	if (!isObjectLike(value)) return false;
 
 	return (
-		types?.isNativeError?.(value) ||
 		value instanceof Error ||
 		value instanceof DOMException ||
 		hasDomExceptionTag(value) ||

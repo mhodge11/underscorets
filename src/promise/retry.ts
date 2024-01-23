@@ -1,5 +1,5 @@
-import { assertUnreachable } from "../helpers/assertUnreachable.ts";
-import { sleep } from "./sleep.ts";
+import { assertUnreachable } from "../helpers/assertUnreachable.js";
+import { sleep } from "./sleep.js";
 
 /**
  * Retry a function until it succeeds or the maximum number of retries is reached.

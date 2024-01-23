@@ -1,5 +1,6 @@
-import { MAX_ARRAY_LENGTH } from "../config/constants.ts";
-import { toInteger } from "./toInteger.ts";
+import { toInteger } from "./toInteger.js";
+
+const MAX_ARRAY_LENGTH = 4294967295;
 
 /**
  * Converts `value` to an integer suitable for use as the length of an

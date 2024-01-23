@@ -1,8 +1,8 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { copyArray } from "../helpers/copyArray.ts";
-import { toInteger } from "../misc/toInteger.ts";
-import { floor } from "../number/floor.ts";
-import { slice } from "./slice.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { copyArray } from "../helpers/copyArray.js";
+import { toInteger } from "../misc/toInteger.js";
+import { floor } from "../number/floor.js";
+import { slice } from "./slice.js";
 
 /**
  * Gets a random element from `array`.

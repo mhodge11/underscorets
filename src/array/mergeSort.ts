@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { sortCompare } from "../helpers/sortCompare.js";
 
 function merge<T>(
 	array1: T[],
@@ -15,15 +15,15 @@ function merge<T>(
 	let j = 0;
 
 	while (i < array1.length && j < array2.length) {
-		// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-		const compareResult = sortCompare(...criteria)(array1[i]!, array2[j]!);
+		const compareResult = sortCompare(...criteria)(
+			array1[i] as T,
+			array2[j] as T,
+		);
 		if (compareResult < 0) {
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			combined.push(array1[i]!);
+			combined.push(array1[i] as T);
 			i++;
 		} else {
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			combined.push(array2[j]!);
+			combined.push(array2[j] as T);
 			j++;
 		}
 	}

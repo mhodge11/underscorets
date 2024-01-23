@@ -1,4 +1,4 @@
-import { eq } from "./eq.ts";
+import { eq } from "./eq.js";
 
 export function baseAssignValue(
 	object: object,

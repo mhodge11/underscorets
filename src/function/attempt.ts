@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../type/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.js";
 
 /**
  * Attempts to invoke `func`, returning a tuple of [result, error].

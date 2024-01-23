@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
 
 /**
  * Creates a slice of `array` from `start` up to, but not including, `end`.

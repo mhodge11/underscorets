@@ -1,4 +1,4 @@
-import { map } from "../array/map.ts";
+import { map } from "../array/map.js";
 
 /**
  * Converts `value` to a property path array.

@@ -1,7 +1,7 @@
-import type { TypedArray } from "../type/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.js";
 
-import { assertUnreachable } from "./assertUnreachable.ts";
-import { cloneArrayBuffer } from "./cloneArrayBuffer.ts";
+import { assertUnreachable } from "./assertUnreachable.js";
+import { cloneArrayBuffer } from "./cloneArrayBuffer.js";
 
 export function cloneTypedArray<T extends TypedArray>(
 	typedArray: T,

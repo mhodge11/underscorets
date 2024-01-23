@@ -1,6 +1,6 @@
-import type { ArrayReduce } from "../type/ArrayReduce.ts";
+import type { ArrayReduce } from "../type/ArrayReduce.js";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
 
 /**
  * Reduces an array to a single value by invoking the callback function for each element in the array.

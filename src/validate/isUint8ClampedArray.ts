@@ -1,5 +1,5 @@
-import { hasUint8ClampedTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasUint8ClampedTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Uint8ClampedArray` object.
@@ -21,8 +21,5 @@ import { isObjectLike } from "./isObjectLike.ts";
 export function isUint8ClampedArray(
 	value: unknown,
 ): value is Uint8ClampedArray {
-	return (
-		types?.isUint8ClampedArray?.(value) ||
-		(isObjectLike(value) && hasUint8ClampedTag(value))
-	);
+	return isObjectLike(value) && hasUint8ClampedTag(value);
 }

@@ -1,4 +1,4 @@
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.js";
 
 /**
  * Converts `value` to a plain object flattening inherited enumerable string

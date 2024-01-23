@@ -1,6 +1,17 @@
-import { reIsBadHex, reIsBinary, reIsOctal, reTrim } from "../config/regex.ts";
-import { isObject } from "../validate/isObject.ts";
-import { isSymbol } from "../validate/isSymbol.ts";
+import { isObject } from "../validate/isObject.js";
+import { isSymbol } from "../validate/isSymbol.js";
+
+/** Used to match leading and trailing whitespace. */
+const reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+const reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+const reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+const reIsOctal = /^0o[0-7]+$/i;
 
 /**
  * Converts `value` to a number.

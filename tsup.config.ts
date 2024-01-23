@@ -1,9 +1,14 @@
 import { defineConfig } from "tsup";
 
+const env = process.env.NODE_ENV;
+
 export default defineConfig({
 	entryPoints: ["src/index.ts"],
+	entry: ["src/**/*.ts"],
 	format: ["esm", "cjs"],
-	outDir: "dist",
+	outDir: env === "production" ? "dist" : "lib",
+	minify: env === "production" ? "terser" : false,
+	bundle: env === "production",
 	splitting: true,
 	treeshake: true,
 	sourcemap: true,
@@ -12,16 +17,8 @@ export default defineConfig({
 	skipNodeModulesBundle: true,
 	esbuildOptions(options, context) {
 		if (context.format === "esm")
-			options.inject = [
-				"./shims/buffer.js",
-				"./shims/crypto.js",
-				"./shims/types.js",
-			];
+			options.inject = ["./shims/buffer.js", "./shims/crypto.js"];
 		else if (context.format === "cjs")
-			options.inject = [
-				"./shims/buffer.cjs",
-				"./shims/crypto.cjs",
-				"./shims/types.cjs",
-			];
+			options.inject = ["./shims/buffer.cjs", "./shims/crypto.cjs"];
 	},
 });

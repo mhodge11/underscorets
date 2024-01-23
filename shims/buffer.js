@@ -1,4 +1,6 @@
 function warnNoBuffer() {
+	if (process.env.NODE_ENV === "production") return;
+
 	const needsBuffer = [
 		"`KSUID`",
 		"`compareKsuids`",
@@ -25,7 +27,11 @@ if (typeof buffer === "undefined")
 	try {
 		({ Buffer: buffer } = await import("node:buffer"));
 	} catch {
-		warnNoBuffer();
+		try {
+			({ Buffer: buffer } = await import("buffer"));
+		} catch {
+			warnNoBuffer();
+		}
 	}
 
 export { buffer as Buffer };

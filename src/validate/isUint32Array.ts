@@ -1,5 +1,5 @@
-import { hasUint32Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasUint32Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Uint32Array` typed array.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isUint32Array(value: unknown): value is Uint32Array {
-	return (
-		types?.isUint32Array?.(value) ||
-		(isObjectLike(value) && hasUint32Tag(value))
-	);
+	return isObjectLike(value) && hasUint32Tag(value);
 }

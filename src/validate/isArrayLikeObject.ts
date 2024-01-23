@@ -1,5 +1,5 @@
-import { isArrayLike } from "./isArrayLike.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { isArrayLike } from "./isArrayLike.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * This method is like `isArrayLike` except that it also checks if `value`

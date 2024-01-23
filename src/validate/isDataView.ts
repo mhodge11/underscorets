@@ -1,5 +1,5 @@
-import { hasDataViewTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasDataViewTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `DataView` object.
@@ -20,8 +20,6 @@ import { isObjectLike } from "./isObjectLike.ts";
  */
 export function isDataView(value: unknown): value is DataView {
 	return (
-		types?.isDataView?.(value) ||
-		value instanceof DataView ||
-		(isObjectLike(value) && hasDataViewTag(value))
+		value instanceof DataView || (isObjectLike(value) && hasDataViewTag(value))
 	);
 }

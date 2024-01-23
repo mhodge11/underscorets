@@ -1,5 +1,5 @@
-import { hasUint8Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasUint8Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Uint8Array` object.
@@ -19,7 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isUint8Array(value: unknown): value is Uint8Array {
-	return (
-		types?.isUint8Array?.(value) || (isObjectLike(value) && hasUint8Tag(value))
-	);
+	return isObjectLike(value) && hasUint8Tag(value);
 }

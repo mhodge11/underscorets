@@ -1,7 +1,7 @@
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.js";
 
-import { isEqual } from "../validate/isEqual.ts";
-import { isPlainObject } from "../validate/isPlainObject.ts";
+import { isEqual } from "../validate/isEqual.js";
+import { isPlainObject } from "../validate/isPlainObject.js";
 
 export function isEqualObjects(a: PlainObject, b: PlainObject): boolean {
 	if (!isPlainObject(a) || !isPlainObject(b)) return false;

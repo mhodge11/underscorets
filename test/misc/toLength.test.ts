@@ -1,5 +1,6 @@
-import { MAX_ARRAY_LENGTH } from "@config/constants.ts";
 import { toLength } from "@misc/index.ts";
+
+const MAX_ARRAY_LENGTH = 4294967295;
 
 test("toLength converts a number to a length", () => {
 	expect(toLength(3.2)).toBe(3);

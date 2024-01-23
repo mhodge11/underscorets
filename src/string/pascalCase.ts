@@ -1,5 +1,5 @@
-import { deburr } from "./deburr.ts";
-import { splitWords } from "./splitWords.ts";
+import { deburr } from "./deburr.js";
+import { splitWords } from "./splitWords.js";
 
 /**
  * Converts a string to PascalCase.

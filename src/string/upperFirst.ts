@@ -1,4 +1,4 @@
-import { createCaseFirst } from "../helpers/createCaseFirst.ts";
+import { createCaseFirst } from "../helpers/createCaseFirst.js";
 
 /**
  * Converts the first character of `string` to upper case.

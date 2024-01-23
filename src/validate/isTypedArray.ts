@@ -1,7 +1,7 @@
-import type { TypedArray } from "../type/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.js";
 
-import { hasTypedArrayTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasTypedArrayTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a typed array.
@@ -21,8 +21,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isTypedArray(value: unknown): value is TypedArray {
-	return (
-		types?.isTypedArray?.(value) ||
-		(isObjectLike(value) && hasTypedArrayTag(value))
-	);
+	return isObjectLike(value) && hasTypedArrayTag(value);
 }

@@ -1,5 +1,5 @@
-import { hasStringTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasStringTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `String` primitive or object.
@@ -22,7 +22,6 @@ export function isString(value: unknown): value is string | String {
 	const type = typeof value;
 	return (
 		type === "string" ||
-		types?.isStringObject?.(value) ||
 		value instanceof String ||
 		(isObjectLike(value) && !Array.isArray(value) && hasStringTag(value))
 	);

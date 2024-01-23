@@ -1,6 +1,6 @@
-import type { TypedArray } from "../type/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.js";
 
-import { isEqual } from "../validate/isEqual.ts";
+import { isEqual } from "../validate/isEqual.js";
 
 export function isEqualArrays<A extends unknown[] | TypedArray>(
 	a: A,

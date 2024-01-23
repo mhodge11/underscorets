@@ -1,5 +1,5 @@
-import { memoize } from "../function/memoize.ts";
-import { toDecorator } from "./toDecorator.ts";
+import { memoize } from "../function/memoize.js";
+import { toDecorator } from "./toDecorator.js";
 
 /**
  * Memoizes the decorated function.

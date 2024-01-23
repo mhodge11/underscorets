@@ -1,5 +1,5 @@
-import { hasFloat64Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasFloat64Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Float64Array` object.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isFloat64Array(value: unknown): value is Float64Array {
-	return (
-		types?.isFloat64Array?.(value) ||
-		(isObjectLike(value) && hasFloat64Tag(value))
-	);
+	return isObjectLike(value) && hasFloat64Tag(value);
 }

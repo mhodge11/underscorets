@@ -1,5 +1,5 @@
-import { copyObject } from "./copyObject.ts";
-import { getSymbols } from "./getSymbols.ts";
+import { copyObject } from "./copyObject.js";
+import { getSymbols } from "./getSymbols.js";
 
 export function copySymbols<T extends object>(
 	source: T,

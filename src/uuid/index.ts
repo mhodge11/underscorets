@@ -1,5 +1,5 @@
-export { generateCustomUuid } from "./generateCustomUuid.ts";
-export { generateCustomUuidAsync } from "./generateCustomUuidAsync.ts";
-export { generateUuid } from "./generateUuid.ts";
-export { generateUuidAsync } from "./generateUuidAsync.ts";
-export { uuidUrlAlphabet } from "./uuidUrlAlphabet.ts";
+export { generateCustomUuid } from "./generateCustomUuid.js";
+export { generateCustomUuidAsync } from "./generateCustomUuidAsync.js";
+export { generateUuid } from "./generateUuid.js";
+export { generateUuidAsync } from "./generateUuidAsync.js";
+export { uuidUrlAlphabet } from "./uuidUrlAlphabet.js";

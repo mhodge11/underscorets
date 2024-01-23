@@ -154,50 +154,30 @@
  * @category Misc
  */
 export class LinkedList<T> {
-	/**
-	 * Number of nodes in linked list.
-	 */
 	_size = 0;
-	/**
-	 * First node in linked list.
-	 */
 	_head: Node<T> | undefined;
-	/**
-	 * Last node in linked list.
-	 */
 	_tail: Node<T> | undefined;
 
-	/**
-	 * Number of nodes in linked list.
-	 */
+	/** Number of nodes in linked list. */
 	get size() {
 		return this._size;
 	}
 
-	/**
-	 * First node in linked list.
-	 */
+	/** First node in linked list. */
 	get head() {
 		return this._head;
 	}
 
-	/**
-	 * Last node in linked list.
-	 */
+	/** Last node in linked list. */
 	get tail() {
 		return this._tail;
 	}
 
-	/**
-	 * The LinkedList tag.
-	 */
+	/** The LinkedList tag. */
 	get [Symbol.toStringTag]() {
 		return "LinkedList";
 	}
 
-	/**
-	 * An iterator for the LinkedList to use with `for...of` loops.
-	 */
 	[Symbol.iterator]() {
 		return this.toArray()[Symbol.iterator]();
 	}
@@ -207,6 +187,7 @@ export class LinkedList<T> {
 	}
 
 	/**
+	 * @constructor
 	 * @param values Values to initialize the list
 	 */
 	constructor(values?: T[]) {
@@ -219,7 +200,7 @@ export class LinkedList<T> {
 	 * @param values Values to create LinkedList from
 	 * @returns LinkedList created from array
 	 */
-	static from<T>(values: T[]) {
+	static from<V>(values: V[]): LinkedList<V> {
 		return new LinkedList(values);
 	}
 
@@ -229,7 +210,7 @@ export class LinkedList<T> {
 	 * @param str String to create LinkedList from
 	 * @returns LinkedList created from string
 	 */
-	static fromString<V>(str: string) {
+	static fromString<V>(str: string): LinkedList<V> {
 		str = str.replace(/LinkedList/g, "").trim();
 		let values: V[] = [];
 		try {
@@ -246,9 +227,9 @@ export class LinkedList<T> {
 	 * Add value to end of list.
 	 *
 	 * @param value Value to add to end of list
-	 * @returns Entire linked list
+	 * @returns Entire linked list object
 	 */
-	push(...value: T[]) {
+	push(...value: T[]): this {
 		if (value.length === 0) return this;
 		for (const item of value) this._push(item);
 		return this;
@@ -269,12 +250,8 @@ export class LinkedList<T> {
 		this._size++;
 	}
 
-	/**
-	 * Remove node from end of list.
-	 *
-	 * @returns Removed node
-	 */
-	pop() {
+	/** Removes a node from the end of the LinkedList and returns it. */
+	pop(): Node<T> | undefined {
 		if (!this._head) return undefined;
 
 		let temp = this._head;
@@ -302,9 +279,9 @@ export class LinkedList<T> {
 	 * Add value to beginning of list.
 	 *
 	 * @param value Value to add to beginning of list
-	 * @returns Entire linked list
+	 * @returns The entire linked list object
 	 */
-	unshift(...value: T[]) {
+	unshift(...value: T[]): this {
 		if (value.length === 0) return this;
 		for (const item of [...value].reverse()) this._unshift(item);
 		return this;
@@ -324,12 +301,8 @@ export class LinkedList<T> {
 		this._size++;
 	}
 
-	/**
-	 * Remove node from beginning of list.
-	 *
-	 * @returns Removed node
-	 */
-	shift() {
+	/** Removes a Node from the beginning of the list and returns it. */
+	shift(): Node<T> | undefined {
 		if (!this._head) return undefined;
 
 		const temp = this._head;
@@ -389,8 +362,7 @@ export class LinkedList<T> {
 
 	private _insert(index: number, value: T) {
 		const newNode = new Node(value);
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		const temp = this.get(index - 1)!;
+		const temp = this.get(index - 1) as Node<T>;
 
 		newNode.next = temp.next;
 		temp.next = newNode;
@@ -409,10 +381,8 @@ export class LinkedList<T> {
 		if (index === this._size - 1) return this.pop();
 		if (index < 0 || index >= this._size) return undefined;
 
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		const before = this.get(index - 1)!;
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		const temp = before.next!;
+		const before = this.get(index - 1) as Node<T>;
+		const temp = before.next as Node<T>;
 
 		before.next = temp.next;
 		temp.next = undefined;
@@ -422,43 +392,33 @@ export class LinkedList<T> {
 		return temp;
 	}
 
-	/**
-	 * Reverse the linked list.
-	 *
-	 * @returns Entire reversed linked list
-	 */
+	/** Returns the reversed LinkedList. */
 	reverse() {
 		if (this._size <= 1) return this;
 
-		let temp = this._head;
+		let temp = this._head as Node<T>;
 		this._head = this._tail;
 		this._tail = temp;
 
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		let next = temp!.next;
+		let next = temp.next;
 		let prev = undefined;
 
 		for (let i = 0; i < this._size; i++) {
 			next = temp?.next;
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			temp!.next = prev;
+			temp.next = prev;
 			prev = temp;
-			temp = next;
+			temp = next as Node<T>;
 		}
 
 		return this;
 	}
 
-	/**
-	 * @returns A copy of the LinkedList
-	 */
+	/** Creates a copy of the LinkedList. */
 	copy() {
 		return new LinkedList(this.toArray());
 	}
 
-	/**
-	 * @returns The LinkedList as a string.
-	 */
+	/** Converts the LinkedList to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -470,20 +430,12 @@ export class LinkedList<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the LinkedList to a string used by `JSON.stringify()`.
-	 *
-	 * @returns The LinkedList as a string
-	 */
+	/** Converts the LinkedList to JSON. */
 	toJSON() {
 		return this.toArray();
 	}
 
-	/**
-	 * Converts the LinkedList to an array.
-	 *
-	 * @returns The LinkedList as an array
-	 */
+	/** Converts the LinkedList to an array. */
 	toArray() {
 		const values: T[] = [];
 		let temp = this._head;
@@ -519,9 +471,7 @@ class Node<T> {
 	value: T;
 	next: Node<T> | undefined;
 
-	/**
-	 * The Node tag.
-	 */
+	/** The Node tag. */
 	get [Symbol.toStringTag]() {
 		return "LinkedListNode";
 	}
@@ -530,9 +480,7 @@ class Node<T> {
 		this.value = value;
 	}
 
-	/**
-	 * @returns The Node as a string.
-	 */
+	/** Converts the Node to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -544,11 +492,7 @@ class Node<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the Node to JSON.
-	 *
-	 * @returns The Node as JSON
-	 */
+	/** Converts the Node to JSON. */
 	toJSON() {
 		return {
 			value: this.value,

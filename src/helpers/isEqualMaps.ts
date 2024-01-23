@@ -1,6 +1,6 @@
-import { PlainObject } from "../type/PlainObject.ts";
+import { PlainObject } from "../type/PlainObject.js";
 
-import { isEqualObjects } from "./isEqualObjects.ts";
+import { isEqualObjects } from "./isEqualObjects.js";
 
 export function isEqualMaps(
 	a: Map<unknown, unknown>,

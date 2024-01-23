@@ -1,4 +1,4 @@
-import { isLength } from "./isLength.ts";
+import { isLength } from "./isLength.js";
 
 /**
  * Checks if `value` is array.

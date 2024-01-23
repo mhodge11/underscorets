@@ -4,17 +4,11 @@
 import { URL, fileURLToPath } from "node:url";
 import { defineProject } from "vitest/config";
 
-// @ts-ignore
-import { types } from "./shims/types.cjs";
-
 function getPath(path: string) {
 	return fileURLToPath(new URL(path, import.meta.url));
 }
 
 export default defineProject({
-	define: {
-		types,
-	},
 	test: {
 		globals: true,
 		environment: "edge-runtime",

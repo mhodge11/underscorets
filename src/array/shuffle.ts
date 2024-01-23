@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { floor } from "../number/floor.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { floor } from "../number/floor.js";
 
 /**
  * Creates a new array of shuffled values, using the Fisher-Yates-Durstenfeld Shuffle algorithm.

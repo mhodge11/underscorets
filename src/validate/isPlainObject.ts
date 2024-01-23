@@ -1,7 +1,7 @@
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.js";
 
-import { hasObjectTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasObjectTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if the value is a plain object.

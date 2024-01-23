@@ -1,4 +1,6 @@
 function warnNoBuffer() {
+  if (process.env.NODE_ENV === "production") return;
+
   const needsBuffer = [
     "`KSUID`",
     "`compareKsuids`",
@@ -25,5 +27,9 @@ if (typeof exports.Buffer === "undefined")
   try {
     ({ Buffer: exports.Buffer } = require("node:buffer"));
   } catch {
-    warnNoBuffer();
+    try {
+      ({ Buffer: exports.Buffer } = require("buffer"));
+    } catch {
+      warnNoBuffer();
+    }
   }

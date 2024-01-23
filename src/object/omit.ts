@@ -1,7 +1,7 @@
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.js";
 
-import { difference } from "../array/difference.ts";
-import { pick } from "./pick.ts";
+import { difference } from "../array/difference.js";
+import { pick } from "./pick.js";
 
 /**
  * Omit specified keys from an object

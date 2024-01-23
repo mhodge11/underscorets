@@ -1,6 +1,6 @@
-import { castSlice } from "./castSlice.ts";
-import { hasUnicode } from "./hasUnicode.ts";
-import { stringToArray } from "./stringToArray.ts";
+import { castSlice } from "./castSlice.js";
+import { hasUnicode } from "./hasUnicode.js";
+import { stringToArray } from "./stringToArray.js";
 
 export function createCaseFirst(
 	methodName: "toUpperCase" | "toLowerCase",

@@ -1,12 +1,10 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { sortCompare } from "../helpers/sortCompare.js";
 
 function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
-	const temp = array[firstIndex];
-	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-	array[firstIndex] = array[secondIndex]!;
-	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-	array[secondIndex] = temp!;
+	const temp = array[firstIndex] as T;
+	array[firstIndex] = array[secondIndex] as T;
+	array[secondIndex] = temp;
 }
 
 function pivot<T>(
@@ -22,10 +20,8 @@ function pivot<T>(
 
 	for (let i = pivotIndex + 1; i <= endIndex; i++) {
 		const compareResult = sortCompare(...criteria)(
-			// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-			array[i]!,
-			// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-			array[pivotIndex]!,
+			array[i] as T,
+			array[pivotIndex] as T,
 		);
 		if (compareResult < 0) {
 			swapIndex++;

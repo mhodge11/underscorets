@@ -1,5 +1,5 @@
-import { toInteger } from "../misc/toInteger.ts";
-import { slice } from "./slice.ts";
+import { toInteger } from "../misc/toInteger.js";
+import { slice } from "./slice.js";
 
 /**
  * Creates a slice of `array` excluding `n` elements dropped from the beginning.

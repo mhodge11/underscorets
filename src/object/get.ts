@@ -1,12 +1,12 @@
-import type { ObjectGet } from "../type/ObjectGet.ts";
-import type { ObjectPaths } from "../type/ObjectPaths.ts";
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { ObjectGet } from "../type/ObjectGet.js";
+import type { ObjectPaths } from "../type/ObjectPaths.js";
+import type { PlainObject } from "../type/PlainObject.js";
 
 import {
 	matchBracketsRegex,
 	pathSplitRegex,
 	validPathRegex,
-} from "../config/regex.ts";
+} from "../helpers/rePath.js";
 
 /**
  * Gets the value at path of object. If the value doesn't exist, it returns `undefined`.

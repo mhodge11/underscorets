@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../type/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.js";
 
 const defaultResolver = (...args: unknown[]) => JSON.stringify(args);
 

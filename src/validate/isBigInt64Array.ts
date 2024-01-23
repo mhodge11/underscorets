@@ -1,5 +1,5 @@
-import { hasBigInt64Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasBigInt64Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `BigInt64Array` object.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isBigInt64Array(value: unknown): value is BigInt64Array {
-	return (
-		types?.isBigInt64Array?.(value) ||
-		(isObjectLike(value) && hasBigInt64Tag(value))
-	);
+	return isObjectLike(value) && hasBigInt64Tag(value);
 }

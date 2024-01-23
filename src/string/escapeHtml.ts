@@ -1,8 +1,14 @@
-import {
-	reHasUnescapedHtml,
-	reUnescapedHtml,
-	unhtmlEntityMap,
-} from "../config/regex.ts";
+const unhtmlEntityMap = new Map([
+	["&", "&amp;"],
+	["<", "&lt;"],
+	[">", "&gt;"],
+	['"', "&quot;"],
+	["'", "&#39;"],
+]);
+
+const reUnescapedHtml = /[&<>"']/g;
+
+const reHasUnescapedHtml = RegExp(reUnescapedHtml.source);
 
 /**
  * Converts the characters `&`, `<`, `>`, `"` and `'` in a string to their corresponding HTML entities.
@@ -26,6 +32,6 @@ export function escapeHtml(string: string): string {
 
 	return string.replace(
 		reUnescapedHtml,
-		(entity: string) => unhtmlEntityMap.get(entity) ?? "",
+		(entity: string) => unhtmlEntityMap.get(entity) as string,
 	);
 }

@@ -1,5 +1,5 @@
-import { hasArrayBufferTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasArrayBufferTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as an `ArrayBuffer` object.
@@ -20,7 +20,6 @@ import { isObjectLike } from "./isObjectLike.ts";
  */
 export function isArrayBuffer(value: unknown): value is ArrayBuffer {
 	return (
-		types?.isArrayBuffer?.(value) ||
 		value instanceof ArrayBuffer ||
 		(isObjectLike(value) && hasArrayBufferTag(value))
 	);

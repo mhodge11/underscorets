@@ -1,5 +1,5 @@
-import { isValidKsuid } from "./isValidKsuid.ts";
-import { KSUID } from "./ksuid.ts";
+import { isValidKsuid } from "./isValidKsuid.js";
+import { KSUID } from "./ksuid.js";
 
 /**
  * Compare two KSUID strings.

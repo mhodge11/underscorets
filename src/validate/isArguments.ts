@@ -1,5 +1,5 @@
-import { hasArgsTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasArgsTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is likely an `arguments` object.
@@ -19,8 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isArguments(value: unknown): value is IArguments {
-	return (
-		types?.isArgumentsObject?.(value) ||
-		(isObjectLike(value) && hasArgsTag(value))
-	);
+	return isObjectLike(value) && hasArgsTag(value);
 }

@@ -1,5 +1,5 @@
-import { hasInt8Tag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasInt8Tag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as an `Int8Array` object.
@@ -19,7 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isInt8Array(value: unknown): value is Int8Array {
-	return (
-		types?.isInt8Array?.(value) || (isObjectLike(value) && hasInt8Tag(value))
-	);
+	return isObjectLike(value) && hasInt8Tag(value);
 }

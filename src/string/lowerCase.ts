@@ -1,6 +1,5 @@
-import { reQuotes } from "../config/regex.ts";
-import { toString } from "../misc/toString.ts";
-import { splitWords } from "./splitWords.ts";
+import { toString } from "../misc/toString.js";
+import { splitWords } from "./splitWords.js";
 
 /**
  * Converts `string`, as space separated words, to lower case.
@@ -23,7 +22,7 @@ import { splitWords } from "./splitWords.ts";
  * @category String
  */
 export function lowerCase(string: string): string {
-	return splitWords(toString(string).replace(reQuotes, "")).reduce(
+	return splitWords(toString(string).replace(/['\u2019]/g, "")).reduce(
 		(result, word, index) => result + (index ? " " : "") + word.toLowerCase(),
 		"",
 	);

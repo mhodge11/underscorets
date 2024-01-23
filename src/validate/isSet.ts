@@ -1,5 +1,5 @@
-import { hasSetTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasSetTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Set` object.
@@ -19,9 +19,5 @@ import { isObjectLike } from "./isObjectLike.ts";
  * @category Validate
  */
 export function isSet(value: unknown): value is Set<unknown> {
-	return (
-		types?.isSet?.(value) ||
-		value instanceof Set ||
-		(isObjectLike(value) && hasSetTag(value))
-	);
+	return value instanceof Set || (isObjectLike(value) && hasSetTag(value));
 }

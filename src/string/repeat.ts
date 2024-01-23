@@ -1,5 +1,3 @@
-import { MAX_SAFE_INTEGER } from "../config/constants.ts";
-
 /**
  * Repeats the given string `n` times.
  *
@@ -21,7 +19,7 @@ export function repeat(string: string, n?: number): string {
 	n ??= 1;
 
 	let result: string = "";
-	if (!string || n < 1 || n > MAX_SAFE_INTEGER) return result;
+	if (!string || n < 1 || n > Number.MAX_SAFE_INTEGER) return result;
 
 	// Leverage the exponentiation by squaring algorithm for a faster repeat.
 	// See https://en.wikipedia.org/wiki/Exponentiation_by_squaring for more details.

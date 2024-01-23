@@ -1,9 +1,9 @@
-import { isArray } from "./isArray.ts";
-import { isMap } from "./isMap.ts";
-import { isNil } from "./isNil.ts";
-import { isObjectLike } from "./isObjectLike.ts";
-import { isSet } from "./isSet.ts";
-import { isString } from "./isString.ts";
+import { isArray } from "./isArray.js";
+import { isMap } from "./isMap.js";
+import { isNil } from "./isNil.js";
+import { isObjectLike } from "./isObjectLike.js";
+import { isSet } from "./isSet.js";
+import { isString } from "./isString.js";
 
 /**
  * Checks if a value is empty.

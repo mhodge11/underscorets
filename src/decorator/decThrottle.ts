@@ -1,5 +1,5 @@
-import { throttle } from "../function/throttle.ts";
-import { toDecorator } from "./toDecorator.ts";
+import { throttle } from "../function/throttle.js";
+import { toDecorator } from "./toDecorator.js";
 
 /**
  * The decorated function is invoked at most once per every `wait` milliseconds.

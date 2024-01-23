@@ -72,37 +72,26 @@ export class BinarySearchTree<T> {
 	private _allowDuplicates = false;
 	private _size = 0;
 
-	/**
-	 * The raw data of the binary search tree.
-	 */
+	/** The raw data of the binary search tree. */
 	get raw() {
 		return this._root;
 	}
 
-	/**
-	 * Whether the binary search tree allows duplicate values.
-	 */
+	/** Whether the binary search tree allows duplicate values. */
 	get allowDuplicates() {
 		return this._allowDuplicates;
 	}
 
-	/**
-	 * The number of nodes in the binary search tree.
-	 */
+	/** The number of nodes in the binary search tree. */
 	get size() {
 		return this._size;
 	}
 
-	/**
-	 * The BinarySearchTree tag.
-	 */
+	/** The BinarySearchTree tag. */
 	get [Symbol.toStringTag]() {
 		return "BinarySearchTree";
 	}
 
-	/**
-	 * An iterator for the BinarySearchTree to use with `for...of` loops.
-	 */
 	[Symbol.iterator]() {
 		return this.bfs()[Symbol.iterator]();
 	}
@@ -132,8 +121,7 @@ export class BinarySearchTree<T> {
 	}
 
 	/**
-	 * Creates a new BinarySearchTree.
-	 *
+	 * @constructor
 	 * @param allowDuplicates Whether the binary search tree allows duplicate values
 	 * @param compare The compare function of the binary search tree used to choose left or right
 	 */
@@ -168,7 +156,7 @@ export class BinarySearchTree<T> {
 			allowDuplicates?: boolean | undefined;
 			compare?: ((a: V, b: V) => -1 | 0 | 1) | undefined;
 		},
-	) {
+	): BinarySearchTree<V> {
 		return new BinarySearchTree<V>({ ...options, values });
 	}
 
@@ -187,7 +175,7 @@ export class BinarySearchTree<T> {
 			allowDuplicates?: boolean | undefined;
 			compare?: ((a: V, b: V) => -1 | 0 | 1) | undefined;
 		},
-	) {
+	): BinarySearchTree<V> {
 		str = str.replace(/BinarySearchTree/g, "").trim();
 		let values: V[] = [];
 		try {
@@ -206,7 +194,7 @@ export class BinarySearchTree<T> {
 	 * @param value The value to insert
 	 * @returns The binary search tree
 	 */
-	insert(value: T) {
+	insert(value: T): this {
 		const newNode = new Node(value);
 
 		if (!this._root) {
@@ -252,7 +240,7 @@ export class BinarySearchTree<T> {
 	 * @param value The value to check
 	 * @returns `true` if the binary search tree contains the value, `false` otherwise
 	 */
-	contains(value: T) {
+	contains(value: T): boolean {
 		if (!this._root) return false;
 
 		let temp: Node<T> | undefined = this._root;
@@ -272,7 +260,7 @@ export class BinarySearchTree<T> {
 	 * @param value The value to find
 	 * @returns The node containing the value or `undefined` if the value doesn't exist
 	 */
-	get(value: T) {
+	get(value: T): Node<T> | undefined {
 		if (!this._root) return undefined;
 
 		let temp: Node<T> | undefined = this._root;
@@ -292,7 +280,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The minimum value node
 	 */
-	minValueNode(currentNode = this._root) {
+	minValueNode(currentNode = this._root): Node<T> | undefined {
 		if (!currentNode) return undefined;
 		while (currentNode.left) currentNode = currentNode.left;
 		return currentNode;
@@ -304,7 +292,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The maximum value node
 	 */
-	maxValueNode(currentNode = this._root) {
+	maxValueNode(currentNode = this._root): Node<T> | undefined {
 		if (!currentNode) return undefined;
 		while (currentNode.right) currentNode = currentNode.right;
 		return currentNode;
@@ -316,7 +304,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The values of the binary search tree in pre-order
 	 */
-	dfsPreOrder(currentNode = this._root) {
+	dfsPreOrder(currentNode = this._root): T[] {
 		const results: T[] = [];
 		if (!currentNode) return results;
 		this._dfsPreOrder(currentNode, results);
@@ -336,7 +324,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The values of the binary search tree in post-order
 	 */
-	dfsPostOrder(currentNode = this._root) {
+	dfsPostOrder(currentNode = this._root): T[] {
 		const results: T[] = [];
 		if (!currentNode) return results;
 		this._dfsPostOrder(currentNode, results);
@@ -359,7 +347,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The values of the binary search tree in in-order
 	 */
-	dfsInOrder(currentNode = this._root) {
+	dfsInOrder(currentNode = this._root): T[] {
 		const results: T[] = [];
 		if (!currentNode) return results;
 		this._dfsInOrder(currentNode, results);
@@ -384,7 +372,7 @@ export class BinarySearchTree<T> {
 	 * @param currentNode The node to start at, defaults to the root
 	 * @returns The values of the binary search tree in breadth-first order
 	 */
-	bfs(currentNode = this._root) {
+	bfs(currentNode = this._root): T[] {
 		if (!currentNode) return [] as T[];
 
 		const queue = [];
@@ -402,10 +390,8 @@ export class BinarySearchTree<T> {
 		return results;
 	}
 
-	/**
-	 * @returns A copy of the BinarySearchTree
-	 */
-	copy() {
+	/** Creates a copy of the BinarySearchTree. */
+	copy(): BinarySearchTree<T> {
 		const tree = new BinarySearchTree<T>({
 			values: this.bfs(),
 			allowDuplicates: this._allowDuplicates,
@@ -415,13 +401,11 @@ export class BinarySearchTree<T> {
 		return tree;
 	}
 
-	/**
-	 * @returns The BinarySearchTree as a string.
-	 */
+	/** Converts the BinarySearchTree to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
-	) {
+	): string {
 		return `${this[Symbol.toStringTag]} ${JSON.stringify(
 			this.toJSON(),
 			replacer,
@@ -429,21 +413,13 @@ export class BinarySearchTree<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the BinarySearchTree to JSON.
-	 *
-	 * @returns The BinarySearchTree as JSON
-	 */
-	toJSON() {
+	/** Converts the BinarySearchTree to JSON. */
+	toJSON(): T[] {
 		return this.bfs();
 	}
 
-	/**
-	 * Converts the BinarySearchTree to an object.
-	 *
-	 * @returns The BinarySearchTree as an object
-	 */
-	toObject() {
+	/** Converts the BinarySearchTree to an object. */
+	toObject(): NodeObject<T> | undefined {
 		return this._root?.toObject();
 	}
 }
@@ -477,9 +453,7 @@ class Node<T> {
 	left: Node<T> | undefined;
 	right: Node<T> | undefined;
 
-	/**
-	 * The Node tag.
-	 */
+	/** The Node tag. */
 	get [Symbol.toStringTag]() {
 		return "BinarySearchTreeNode";
 	}
@@ -488,13 +462,11 @@ class Node<T> {
 		this.value = value;
 	}
 
-	/**
-	 * @returns The Node as a string.
-	 */
+	/** Converts the Node to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
-	) {
+	): string {
 		return `${this[Symbol.toStringTag]} ${JSON.stringify(
 			this.toJSON(),
 			replacer,
@@ -502,20 +474,12 @@ class Node<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the Node to a string used by `JSON.stringify()`.
-	 *
-	 * @returns The Node as a string
-	 */
-	toJSON() {
+	/** Converts the Node to JSON. */
+	toJSON(): NodeObject<T> {
 		return this.toObject();
 	}
 
-	/**
-	 * Converts the node to an object.
-	 *
-	 * @returns The object representation of the node
-	 */
+	/** Converts the Node to an object. */
 	toObject(): NodeObject<T> {
 		return {
 			value: this.value,

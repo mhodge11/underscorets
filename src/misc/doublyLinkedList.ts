@@ -234,50 +234,30 @@
  * @category Misc
  */
 export class DoublyLinkedList<T> {
-	/**
-	 * Number of nodes in linked list.
-	 */
 	private _size = 0;
-	/**
-	 * First node in linked list.
-	 */
 	private _head: Node<T> | undefined;
-	/**
-	 * Last node in linked list.
-	 */
 	private _tail: Node<T> | undefined;
 
-	/**
-	 * Number of nodes in linked list.
-	 */
+	/** Number of nodes in linked list. */
 	get size() {
 		return this._size;
 	}
 
-	/**
-	 * First node in linked list.
-	 */
+	/** First node in linked list. */
 	get head() {
 		return this._head;
 	}
 
-	/**
-	 * Last node in linked list.
-	 */
+	/** Last node in linked list. */
 	get tail() {
 		return this._tail;
 	}
 
-	/**
-	 * The DoublyLinkedList tag.
-	 */
+	/** The DoublyLinkedList tag. */
 	get [Symbol.toStringTag]() {
 		return "DoublyLinkedList";
 	}
 
-	/**
-	 * An iterator for the DoublyLinkedList to use with `for...of` loops.
-	 */
 	[Symbol.iterator]() {
 		return this.toArray()[Symbol.iterator]();
 	}
@@ -287,6 +267,7 @@ export class DoublyLinkedList<T> {
 	}
 
 	/**
+	 * @constructor
 	 * @param values Values to initialize the list
 	 */
 	constructor(values?: T[]) {
@@ -365,10 +346,8 @@ export class DoublyLinkedList<T> {
 			this._tail = undefined;
 		} else {
 			this._tail = this._tail?.prev;
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			this._tail!.next = undefined;
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			temp!.prev = undefined;
+			(this._tail as Node<T>).next = undefined;
+			(temp as Node<T>).prev = undefined;
 		}
 
 		this._size--;
@@ -396,8 +375,7 @@ export class DoublyLinkedList<T> {
 			this._tail = newNode;
 		} else {
 			newNode.next = this._head;
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			this._head!.prev = newNode;
+			(this._head as Node<T>).prev = newNode;
 			this._head = newNode;
 		}
 
@@ -415,10 +393,8 @@ export class DoublyLinkedList<T> {
 
 		const temp = this._head;
 		this._head = this._head?.next;
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		this._head!.prev = undefined;
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		temp!.next = undefined;
+		(this._head as Node<T>).prev = undefined;
+		(temp as Node<T>).next = undefined;
 
 		this._size--;
 
@@ -481,12 +457,10 @@ export class DoublyLinkedList<T> {
 		const before = this.get(index - 1);
 		const after = before?.next;
 
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		before!.next = newNode;
+		(before as Node<T>).next = newNode;
 		newNode.prev = before;
 		newNode.next = after;
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		after!.prev = newNode;
+		(after as Node<T>).prev = newNode;
 
 		this._size++;
 	}
@@ -502,13 +476,10 @@ export class DoublyLinkedList<T> {
 		if (index === this._size - 1) return this.pop();
 		if (index < 0 || index >= this._size) return undefined;
 
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		const temp = this.get(index)!;
+		const temp = this.get(index) as Node<T>;
 
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		temp.prev!.next = temp?.next;
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		temp.next!.prev = temp?.prev;
+		(temp.prev as Node<T>).next = temp?.next;
+		(temp.next as Node<T>).prev = temp?.prev;
 		temp.next = undefined;
 		temp.prev = undefined;
 
@@ -525,39 +496,30 @@ export class DoublyLinkedList<T> {
 	reverse() {
 		if (this._size <= 1) return this;
 
-		let temp = this._head;
+		let temp = this._head as Node<T>;
 		this._head = this._tail;
 		this._tail = temp;
 
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		let next = temp!.next;
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		let prev = temp!.prev;
+		let next = temp.next;
+		let prev = temp.prev;
 
 		for (let i = 0; i < this._size; i++) {
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			next = temp!.next;
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			temp!.next = prev;
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			temp!.prev = next;
+			next = temp.next;
+			temp.next = prev;
+			temp.prev = next;
 			prev = temp;
-			temp = next;
+			temp = next as Node<T>;
 		}
 
 		return this;
 	}
 
-	/**
-	 * @returns A copy of the DoublyLinkedList
-	 */
+	/** Creates a copy of the DoublyLinkedList. */
 	copy() {
 		return new DoublyLinkedList(this.toArray());
 	}
 
-	/**
-	 * @returns The DoublyLinkedList as a string.
-	 */
+	/** Converts the DoublyLinkedList to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -569,20 +531,12 @@ export class DoublyLinkedList<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the DoublyLinkedList to JSON.
-	 *
-	 * @returns The DoublyLinkedList as JSON
-	 */
+	/** Converts the DoublyLinkedList to JSON. */
 	toJSON() {
 		return this.toArray();
 	}
 
-	/**
-	 * Converts the DoublyLinkedList to an array.
-	 *
-	 * @returns The DoublyLinkedList as an array
-	 */
+	/** Converts the DoublyLinkedList to an array. */
 	toArray() {
 		const values: T[] = [];
 		let temp = this._head;
@@ -620,9 +574,7 @@ class Node<T> {
 	prev: Node<T> | undefined;
 	next: Node<T> | undefined;
 
-	/**
-	 * The Node tag.
-	 */
+	/** The Node tag. */
 	get [Symbol.toStringTag]() {
 		return "DoublyLinkedListNode";
 	}
@@ -631,9 +583,7 @@ class Node<T> {
 		this.value = value;
 	}
 
-	/**
-	 * @returns The Node as a string.
-	 */
+	/** Converts the Node to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -645,11 +595,7 @@ class Node<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the Node to JSON.
-	 *
-	 * @returns The Node as JSON
-	 */
+	/** Converts the Node to JSON. */
 	toJSON() {
 		return {
 			value: this.value,

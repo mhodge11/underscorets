@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { sortCompare } from "../helpers/sortCompare.js";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.
@@ -46,16 +46,15 @@ export function selectionSort<T>(
 		min = i;
 
 		for (let j = i + 1; j < sortedArray.length; j++) {
-			// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-			if (sortCompare(...criteria)(sortedArray[j]!, sortedArray[min]!) < 0)
+			if (
+				sortCompare(...criteria)(sortedArray[j] as T, sortedArray[min] as T) < 0
+			)
 				min = j;
 		}
 
 		if (i !== min) {
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			const temp = sortedArray[i]!;
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			sortedArray[i] = sortedArray[min]!;
+			const temp = sortedArray[i] as T;
+			sortedArray[i] = sortedArray[min] as T;
 			sortedArray[min] = temp;
 		}
 	}

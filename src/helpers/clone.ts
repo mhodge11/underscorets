@@ -1,12 +1,21 @@
-import type { TypedArray } from "../type/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.js";
 
-import { each } from "../array/each.ts";
-import { StackCache } from "../cache/StackCache.ts";
-import {
-	CLONE_DEEP_FLAG,
-	CLONE_FLAT_FLAG,
-	CLONE_SYMBOLS_FLAG,
-} from "../config/flags.ts";
+import { each } from "../array/each.js";
+import { StackCache } from "../cache/StackCache.js";
+import { isBuffer } from "../validate/isBuffer.js";
+import { isObject } from "../validate/isObject.js";
+import { isTypedArray } from "../validate/isTypedArray.js";
+import { assertUnreachable } from "./assertUnreachable.js";
+import { assignValue } from "./assignValue.js";
+import { cloneArrayBuffer } from "./cloneArrayBuffer.js";
+import { cloneBuffer } from "./cloneBuffer.js";
+import { cloneDataView } from "./cloneDataView.js";
+import { cloneRegExp } from "./cloneRegExp.js";
+import { cloneSymbol } from "./cloneSymbol.js";
+import { cloneTypedArray } from "./cloneTypedArray.js";
+import { copyArray } from "./copyArray.js";
+import { copySymbols } from "./copySymbols.js";
+import { getAllKeys } from "./getAllKeys.js";
 import {
 	argsTag,
 	arrayBufferTag,
@@ -16,6 +25,7 @@ import {
 	dateTag,
 	float32Tag,
 	float64Tag,
+	getTag,
 	int8Tag,
 	int16Tag,
 	int32Tag,
@@ -30,27 +40,21 @@ import {
 	uint8Tag,
 	uint16Tag,
 	uint32Tag,
-} from "../config/tags.ts";
-import { isBuffer } from "../validate/isBuffer.ts";
-import { isObject } from "../validate/isObject.ts";
-import { isTypedArray } from "../validate/isTypedArray.ts";
-import { assertUnreachable } from "./assertUnreachable.ts";
-import { assignValue } from "./assignValue.ts";
-import { cloneArrayBuffer } from "./cloneArrayBuffer.ts";
-import { cloneBuffer } from "./cloneBuffer.ts";
-import { cloneDataView } from "./cloneDataView.ts";
-import { cloneRegExp } from "./cloneRegExp.ts";
-import { cloneSymbol } from "./cloneSymbol.ts";
-import { cloneTypedArray } from "./cloneTypedArray.ts";
-import { copyArray } from "./copyArray.ts";
-import { copyObject } from "./copyObject.ts";
-import { copySymbols } from "./copySymbols.ts";
-import { copySymbolsIn } from "./copySymbolsIn.ts";
-import { getAllKeys } from "./getAllKeys.ts";
-import { getAllKeysIn } from "./getAllKeysIn.ts";
-import { getTag } from "./getTag.ts";
-import { isPrototype } from "./isPrototype.ts";
-import { keysIn } from "./keysIn.ts";
+} from "./getTag.js";
+
+/** Clone flags */
+export const CLONE_DEEP_FLAG = 1;
+export const CLONE_SYMBOLS_FLAG = 4;
+
+function isPrototype(value: unknown): boolean {
+	if (value == null) return false;
+
+	const Ctor: Function = value?.constructor;
+	const proto: Function =
+		(typeof Ctor === "function" && Ctor.prototype) || Object.prototype;
+
+	return value === proto;
+}
 
 function initCloneByTag<T>(object: T, tag: string, isDeep?: boolean): T {
 	const Ctor = (object as any).constructor;
@@ -128,7 +132,6 @@ export function clone<T>(
 
 	let result: T | undefined;
 	const isDeep = bitmask & CLONE_DEEP_FLAG;
-	const isFlat = bitmask & CLONE_FLAT_FLAG;
 	const isFull = bitmask & CLONE_SYMBOLS_FLAG;
 
 	if (customizer)
@@ -148,17 +151,11 @@ export function clone<T>(
 
 		const isFunc = typeof value === "function";
 		if (tag === objectTag || tag === argsTag || (isFunc && !object)) {
-			result = isFlat || isFunc ? ({} as T) : initCloneObject(value);
+			// result = isFlat || isFunc ? ({} as T) : initCloneObject(value);
+			result = isFunc ? ({} as T) : initCloneObject(value);
 
 			if (!isDeep)
-				return (
-					isFlat
-						? copySymbolsIn(
-								value,
-								copyObject(value, keysIn(value), result as {}),
-						  )
-						: copySymbols(value, Object.assign(result as {}, value))
-				) as T;
+				return copySymbols(value, Object.assign(result as {}, value)) as T;
 		} else {
 			if (isFunc || !cloneableTags[tag]) return (object ? value : {}) as T;
 			result = initCloneByTag(value, tag, !!isDeep);
@@ -207,14 +204,7 @@ export function clone<T>(
 
 	if (isTypedArray(value)) return result as T;
 
-	const keysFunc = isFull
-		? isFlat
-			? getAllKeysIn
-			: getAllKeys
-		: isFlat
-		  ? keysIn
-		  : Object.keys;
-
+	const keysFunc = isFull ? getAllKeys : Object.keys;
 	const props = isArr ? undefined : keysFunc(value as any);
 
 	each(props || (value as (keyof T)[]), (subValue, key) => {

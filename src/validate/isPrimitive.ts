@@ -1,4 +1,4 @@
-import type { Primitive } from "../type/Primitive.ts";
+import type { Primitive } from "../type/Primitive.js";
 
 /**
  * Checks if `value` is primitive.

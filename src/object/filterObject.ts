@@ -1,4 +1,4 @@
-import type { PlainObject } from "../type/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.js";
 
 /**
  * Iterates over properties of `object`, returning an object with all elements

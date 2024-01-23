@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../type/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.js";
 
 /**
  * Invokes `func` after `wait` milliseconds. Any additional arguments are

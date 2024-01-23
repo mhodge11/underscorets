@@ -1,5 +1,4 @@
-import { MAX_INTEGER } from "../config/constants.ts";
-import { toNumber } from "./toNumber.ts";
+import { toNumber } from "./toNumber.js";
 
 /**
  * Converts `value` to a finite number.
@@ -31,7 +30,7 @@ export function toFinite(value: unknown): number {
 
 	if (number === Infinity || number === -Infinity) {
 		const sign = number < 0 ? -1 : 1;
-		return sign * MAX_INTEGER;
+		return sign * Number.MAX_VALUE;
 	}
 
 	return number;

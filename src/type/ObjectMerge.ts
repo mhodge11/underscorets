@@ -1,4 +1,4 @@
-import type { PlainObject } from "./PlainObject.ts";
+import type { PlainObject } from "./PlainObject.js";
 
 type OptionalPropertyNames<T> = {
 	[K in keyof T]-?: PlainObject extends { [P in K]: T[K] } ? K : never;

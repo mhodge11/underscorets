@@ -1,4 +1,4 @@
-import { createRound } from "../helpers/createRound.ts";
+import { createRound } from "../helpers/createRound.js";
 
 /**
  * Rounds a number to the given precision.

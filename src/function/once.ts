@@ -1,6 +1,6 @@
-import type { GenericFunction } from "../type/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.js";
 
-import { maxCalls } from "./maxCalls.ts";
+import { maxCalls } from "./maxCalls.js";
 
 /**
  * Creates a function that invokes the given function as long as it's called once.

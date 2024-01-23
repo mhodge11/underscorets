@@ -1,4 +1,6 @@
 function warnNoCrypto() {
+	if (process.env.NODE_ENV === "production") return;
+
 	const needsCrypto = [
 		"`KSUID`",
 		"`compareKsuids`",
@@ -27,10 +29,15 @@ let webcrypto = globalThis.crypto ?? globalThis.window?.crypto;
 
 if (typeof webcrypto === "undefined")
 	try {
-		// @ts-expect-error: node:crypto is a valid import
-		webcrypto = await import("node:crypto");
+		// @ts-ignore
+		({ webcrypto } = await import("node:crypto"));
 	} catch {
-		warnNoCrypto();
+		try {
+			// @ts-ignore
+			({ webcrypto } = await import("crypto"));
+		} catch {
+			warnNoCrypto();
+		}
 	}
 
 export { webcrypto as crypto };

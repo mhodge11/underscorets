@@ -1,8 +1,19 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { isNaN } from "../helpers/isNaN.ts";
-import { strictLastIndexOf } from "../helpers/strictLastIndexOf.ts";
-import { toInteger } from "../misc/toInteger.ts";
-import { findIndex } from "./findIndex.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { toInteger } from "../misc/toInteger.js";
+import { findIndex } from "./findIndex.js";
+
+function strictLastIndexOf<T>(
+	array: readonly T[] | ArrayLike<T>,
+	value: T,
+	fromIndex: number,
+): number {
+	const arr = arrayLikeValues(array);
+
+	let i: number = fromIndex + 1;
+	while (i--) if (arr[i] === value) return i;
+
+	return i;
+}
 
 /**
  * This method is like `{@link indexOf}` except that it iterates over elements of `array` from right to left.
@@ -26,10 +37,9 @@ export function lastIndexOf<T>(
 	value: T,
 	fromIndex?: number,
 ) {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return -1;
+	if (!array?.length) return -1;
 
-	const { length } = arr;
+	const { length } = array;
 	let i: number = length;
 
 	if (fromIndex !== undefined) {
@@ -38,6 +48,6 @@ export function lastIndexOf<T>(
 	}
 
 	return value === value
-		? strictLastIndexOf(arr, value, i)
-		: findIndex(arr, isNaN, i, true);
+		? strictLastIndexOf(array, value, i)
+		: findIndex(array, (value) => value !== value, i, true);
 }

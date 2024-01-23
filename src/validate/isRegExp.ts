@@ -1,5 +1,5 @@
-import { hasRegExpTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasRegExpTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `RegExp` object.
@@ -20,8 +20,6 @@ import { isObjectLike } from "./isObjectLike.ts";
  */
 export function isRegExp(value: unknown): value is RegExp {
 	return (
-		types?.isRegExp?.(value) ||
-		value instanceof RegExp ||
-		(isObjectLike(value) && hasRegExpTag(value))
+		value instanceof RegExp || (isObjectLike(value) && hasRegExpTag(value))
 	);
 }

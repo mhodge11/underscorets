@@ -292,6 +292,14 @@ export class XYZ {
 		);
 	}
 
+	/**
+	 * Creates an XYZ object from x, y, and z coordinates.
+	 *
+	 * @param x The x coordinate
+	 * @param y The y coordinate
+	 * @param z The z coordinate
+	 * @returns A new XYZ object
+	 */
 	static from(x = 0, y = 0, z = 0): XYZ {
 		return new XYZ(x, y, z);
 	}
@@ -566,27 +574,33 @@ export class XYZ {
 		const visitedKeys = new Set<string>(); // XYZ strings, also maybe combined with iteration strings?
 		const visitedPoints = new Set<string>(); // used just for returning info, not used during the BFS algorithm
 		const queue: IBfsQueueItem[] = [{ point: this, iteration: 0 }];
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		visitedKeys.add(o.getVisitedKey!(this, 0));
+		visitedKeys.add(
+			(o.getVisitedKey as (p: XYZ, iteration: number) => string)(this, 0),
+		);
 		visitedPoints.add(this.toString());
-		let current: IBfsQueueItem;
+		let current: IBfsQueueItem | undefined;
 		while (queue.length > 0) {
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			current = queue.pop()!;
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			if (o.shouldStop!(current.point)) break;
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			for (const p of o.getNeighbors!(current.point).filter(
+			current = queue.pop() as IBfsQueueItem;
+			if (o.shouldStop?.(current.point)) break;
+			for (const p of (o.getNeighbors as (p: XYZ) => XYZ[])(
+				current.point,
+			).filter(
 				(n) =>
-					// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-					o.canVisitNeighbor!(n, current.point) &&
-					// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-					!visitedKeys.has(o.getVisitedKey!(n, current.iteration + 1)),
+					o.canVisitNeighbor?.(n, (current as IBfsQueueItem).point) &&
+					!visitedKeys.has(
+						(o.getVisitedKey as (p: XYZ, iteration: number) => string)(
+							n,
+							(current as IBfsQueueItem).iteration + 1,
+						),
+					),
 			)) {
-				// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-				o.tap!(p, current.iteration + 1);
-				// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-				visitedKeys.add(o.getVisitedKey!(p, current.iteration + 1));
+				o.tap?.(p, current.iteration + 1);
+				visitedKeys.add(
+					(o.getVisitedKey as (p: XYZ, iteration: number) => string)(
+						p,
+						current.iteration + 1,
+					),
+				);
 				visitedPoints.add(p.toString());
 				queue.unshift({ point: p, iteration: current.iteration + 1 });
 			}
@@ -594,10 +608,8 @@ export class XYZ {
 		return {
 			visitedKeys: visitedKeys,
 			visitedPoints: [...visitedPoints.values()].map((p) => XYZ.fromString(p)),
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			endPoint: current!.point,
-			// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-			pathLength: current!.iteration,
+			endPoint: (current as IBfsQueueItem).point,
+			pathLength: (current as IBfsQueueItem).iteration,
 		};
 	}
 }

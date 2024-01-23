@@ -1,4 +1,4 @@
-import { generateUuid } from "./generateUuid.ts";
+import { generateUuid } from "./generateUuid.js";
 
 /**
  * Asynchronously generates a UUID.

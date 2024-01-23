@@ -1,5 +1,5 @@
-import { hasBoolTag } from "../helpers/getTag.ts";
-import { isObjectLike } from "./isObjectLike.ts";
+import { hasBoolTag } from "../helpers/getTag.js";
+import { isObjectLike } from "./isObjectLike.js";
 
 /**
  * Checks if `value` is classified as a `Boolean` primitive or object.
@@ -26,7 +26,6 @@ export function isBoolean(value: unknown): value is boolean | Boolean {
 		value === true ||
 		value === false ||
 		typeof value === "boolean" ||
-		types?.isBooleanObject?.(value) ||
 		value instanceof Boolean ||
 		(isObjectLike(value) && hasBoolTag(value))
 	);

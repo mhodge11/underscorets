@@ -1,4 +1,4 @@
-import { floor } from "../number/floor.ts";
+import { floor } from "../number/floor.js";
 
 /**
  * Creates an array from start to end (inclusive), stepping by step.

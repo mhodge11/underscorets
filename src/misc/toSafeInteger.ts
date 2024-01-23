@@ -1,5 +1,4 @@
-import { MAX_SAFE_INTEGER } from "../config/constants.ts";
-import { toInteger } from "./toInteger.ts";
+import { toInteger } from "./toInteger.js";
 
 /**
  * Converts `value` to a safe integer. A safe integer can be compared and
@@ -30,7 +29,7 @@ export function toSafeInteger(value: unknown): number {
 
 	const number = toInteger(value);
 
-	if (number < -MAX_SAFE_INTEGER) return -MAX_SAFE_INTEGER;
-	if (number > MAX_SAFE_INTEGER) return MAX_SAFE_INTEGER;
+	if (number < -Number.MAX_SAFE_INTEGER) return -Number.MAX_SAFE_INTEGER;
+	if (number > Number.MAX_SAFE_INTEGER) return Number.MAX_SAFE_INTEGER;
 	return number;
 }

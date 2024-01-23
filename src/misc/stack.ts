@@ -48,30 +48,21 @@ export class Stack<T> {
 	private _top: Node<T> | undefined;
 	private _size = 0;
 
-	/**
-	 * The top node of the stack.
-	 */
+	/** The top node of the stack. */
 	get top() {
 		return this._top;
 	}
 
-	/**
-	 * The size of the stack.
-	 */
+	/** The size of the stack. */
 	get size() {
 		return this._size;
 	}
 
-	/**
-	 * The Stack tag.
-	 */
+	/** The Stack tag. */
 	get [Symbol.toStringTag]() {
 		return "Stack";
 	}
 
-	/**
-	 * An iterator for the stack to use with `for...of` loops.
-	 */
 	[Symbol.iterator]() {
 		return this.toArray()[Symbol.iterator]();
 	}
@@ -80,6 +71,10 @@ export class Stack<T> {
 		return true;
 	}
 
+	/**
+	 * @constructor
+	 * @param values The values to create the stack from
+	 */
 	constructor(values?: T[]) {
 		if (values?.length) this.push(...values);
 	}
@@ -119,7 +114,7 @@ export class Stack<T> {
 	 * @param value The value to push to the stack.
 	 * @returns The stack, or `undefined` if no value was provided.
 	 */
-	push(...value: T[]) {
+	push(...value: T[]): this | undefined {
 		if (value.length === 0) return undefined;
 		for (const v of value) this._push(v);
 		return this;
@@ -134,48 +129,33 @@ export class Stack<T> {
 		this._size++;
 	}
 
-	/**
-	 * Pops a value from the stack.
-	 *
-	 * @returns The popped value, or `undefined` if the stack is empty.
-	 */
-	pop() {
+	/** Removes a Node from the end of the Stack and returns it. */
+	pop(): Node<T> | undefined {
 		if (this._size === 0) return undefined;
 
-		const temp = this._top;
+		const temp = this._top as Node<T>;
 		this._top = this._top?.next;
-		// biome-ignore lint/style/noNonNullAssertion: guaranteed to be defined
-		temp!.next = undefined;
+		temp.next = undefined;
 
 		this._size--;
 
 		return temp;
 	}
 
-	/**
-	 * Clears the stack.
-	 *
-	 * @returns The stack before it was cleared.
-	 */
-	clear() {
+	/** Removes all Nodes from the stack and returns a copy of the old Stack. */
+	clear(): Stack<T> {
 		const current = this.copy();
 		this._top = undefined;
 		this._size = 0;
 		return current;
 	}
 
-	/**
-	 * Constructs a new stack with the same values as the current stack.
-	 *
-	 * @returns The new stack.
-	 */
+	/** Creates a copy of the Stack. */
 	copy() {
 		return new Stack<T>(this.toArray().reverse());
 	}
 
-	/**
-	 * @returns The Stack as a string.
-	 */
+	/** Converts the Stack to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -187,20 +167,12 @@ export class Stack<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the Stack to a string used by `JSON.stringify()`.
-	 *
-	 * @returns The Stack as a string
-	 */
+	/** Converts the stack to JSON. */
 	toJSON() {
 		return this.toArray();
 	}
 
-	/**
-	 * Converts the Stack to an array.
-	 *
-	 * @returns The Stack as an array
-	 */
+	/** Converts the Stack to an array. */
 	toArray() {
 		const array: T[] = [];
 		let current = this._top;
@@ -238,9 +210,7 @@ class Node<T> {
 	value: T;
 	next: Node<T> | undefined;
 
-	/**
-	 * The Node tag.
-	 */
+	/** The Node tag. */
 	get [Symbol.toStringTag]() {
 		return "StackNode";
 	}
@@ -249,9 +219,7 @@ class Node<T> {
 		this.value = value;
 	}
 
-	/**
-	 * @returns The Node as a string.
-	 */
+	/** Converts the Node to a string. */
 	toString(
 		replacer?: ((this: any, key: string, value: any) => any) | undefined,
 		space?: string | number | undefined,
@@ -263,11 +231,7 @@ class Node<T> {
 		)}`;
 	}
 
-	/**
-	 * Converts the Node to JSON.
-	 *
-	 * @returns The Node as JSON
-	 */
+	/** Converts the Node to JSON. */
 	toJSON() {
 		return {
 			value: this.value,

@@ -1,8 +1,8 @@
-import { stringSize } from "../string/stringSize.ts";
-import { isArrayLike } from "../validate/isArrayLike.ts";
-import { isMap } from "../validate/isMap.ts";
-import { isSet } from "../validate/isSet.ts";
-import { isString } from "../validate/isString.ts";
+import { stringSize } from "../string/stringSize.js";
+import { isArrayLike } from "../validate/isArrayLike.js";
+import { isMap } from "../validate/isMap.js";
+import { isSet } from "../validate/isSet.js";
+import { isString } from "../validate/isString.js";
 
 /**
  * Gets the size of `collection` by returning its length for array-like
