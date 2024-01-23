@@ -1,5 +1,5 @@
-import { debase62 } from "../helpers/base62.js";
-import { KSUID } from "./ksuid.js";
+import { debase62 } from "../helpers/base62";
+import { KSUID } from "./ksuid";
 
 /**
  * Checks if a KSUID string is a valid KSUID.

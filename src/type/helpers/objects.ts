@@ -1,4 +1,4 @@
-import type { Primitive } from "../Primitive.js";
+import type { Primitive } from "../Primitive";
 import type {
 	$,
 	Equal,
@@ -8,7 +8,7 @@ import type {
 	UnionToIntersection,
 	_,
 	unset,
-} from "./utils.js";
+} from "./utils";
 
 interface ToNumber extends Fn {
 	return: this["arg0"] extends `${infer n extends number | bigint}` ? n : never;

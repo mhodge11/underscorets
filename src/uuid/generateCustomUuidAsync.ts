@@ -1,4 +1,4 @@
-import { generateCustomUuid } from "./generateCustomUuid.js";
+import { generateCustomUuid } from "./generateCustomUuid";
 
 /**
  * Asynchronously generates a UUID using a custom alphabet.

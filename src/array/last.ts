@@ -1,6 +1,6 @@
-import type { ArrayLast } from "../type/ArrayLast.js";
+import type { ArrayLast } from "../type/ArrayLast";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Gets the last element of `array`.

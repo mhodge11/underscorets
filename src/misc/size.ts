@@ -1,8 +1,8 @@
-import { stringSize } from "../string/stringSize.js";
-import { isArrayLike } from "../validate/isArrayLike.js";
-import { isMap } from "../validate/isMap.js";
-import { isSet } from "../validate/isSet.js";
-import { isString } from "../validate/isString.js";
+import { stringSize } from "../string/stringSize";
+import { isArrayLike } from "../validate/isArrayLike";
+import { isMap } from "../validate/isMap";
+import { isSet } from "../validate/isSet";
+import { isString } from "../validate/isString";
 
 /**
  * Gets the size of `collection` by returning its length for array-like

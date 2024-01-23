@@ -1,4 +1,4 @@
-import { base62, debase62 } from "../helpers/base62.js";
+import { base62, debase62 } from "../helpers/base62";
 
 const EPOCH_IN_MS = 14e11;
 
@@ -35,7 +35,7 @@ const VALID_BUFFER_ASSERTION = `Valid KSUID buffers are ${BYTE_LENGTH} bytes`;
 const VALID_PAYLOAD_ASSERTION = `Valid KSUID payloads are ${PAYLOAD_BYTE_LENGTH} bytes`;
 
 function randomBytes(): Uint8Array {
-	return crypto.getRandomValues(new Uint8Array(16));
+	return crypto?.getRandomValues(new Uint8Array(16));
 }
 
 function fromParts(
@@ -242,7 +242,10 @@ export class KSUID {
 		)
 			throw new TypeError(TIME_IN_MS_ASSERTION);
 
-		if (!Buffer.isBuffer(payload) || payload.byteLength !== PAYLOAD_BYTE_LENGTH)
+		if (
+			!Buffer?.isBuffer(payload) ||
+			payload.byteLength !== PAYLOAD_BYTE_LENGTH
+		)
 			throw new TypeError(VALID_PAYLOAD_ASSERTION);
 
 		return new KSUID(fromParts(timestamp, payload));

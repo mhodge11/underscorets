@@ -1,4 +1,4 @@
-import { toNumber } from "./toNumber.js";
+import { toNumber } from "./toNumber";
 
 /**
  * Converts `value` to a finite number.

@@ -1,5 +1,5 @@
-import { hasStringTag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasStringTag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a `String` primitive or object.

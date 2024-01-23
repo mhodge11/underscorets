@@ -1,5 +1,5 @@
-import type { ArrayReverse } from "../type/ArrayReverse.js";
-import type { GenericFunction } from "../type/GenericFunction.js";
+import type { ArrayReverse } from "../type/ArrayReverse";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Creates a function that invokes `func` with arguments reversed.

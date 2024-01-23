@@ -1,4 +1,4 @@
-import { randomInt } from "./randomInt.js";
+import { randomInt } from "./randomInt";
 
 function getSingleElement<T>(array: T[]): T {
 	const randomIndex = randomInt(0, array.length - 1);

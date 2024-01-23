@@ -1,5 +1,5 @@
-import { fastArrayFlat } from "../helpers/fastArrayFlat.js";
-import { isPlainObject } from "../validate/isPlainObject.js";
+import { fastArrayFlat } from "../helpers/fastArrayFlat";
+import { isPlainObject } from "../validate/isPlainObject";
 
 function defaultHashFn(length = 7) {
 	return (key: string) => {

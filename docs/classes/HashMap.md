@@ -1,4 +1,4 @@
-[underscorets - v0.1.6](../README.md) / HashMap
+[underscorets - v0.1.8](../README.md) / HashMap
 
 # Class: HashMap\<T\>
 
@@ -75,6 +75,7 @@ map.has("foo");
 
 ### Methods
 
+- [[isConcatSpreadable]](HashMap.md#[isconcatspreadable])
 - [[iterator]](HashMap.md#[iterator])
 - [copy](HashMap.md#copy)
 - [get](HashMap.md#get)
@@ -114,7 +115,7 @@ map.has("foo");
 
 #### Defined in
 
-[misc/hashmap.ts:97](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L97)
+[misc/hashmap.ts:99](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L99)
 
 ## Properties
 
@@ -124,7 +125,7 @@ map.has("foo");
 
 #### Defined in
 
-[misc/hashmap.ts:56](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L56)
+[misc/hashmap.ts:64](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L64)
 
 ___
 
@@ -148,7 +149,7 @@ ___
 
 #### Defined in
 
-[misc/hashmap.ts:57](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L57)
+[misc/hashmap.ts:65](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L65)
 
 ## Accessors
 
@@ -164,7 +165,7 @@ The HashMap tag.
 
 #### Defined in
 
-[misc/hashmap.ts:76](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L76)
+[misc/hashmap.ts:78](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L78)
 
 ___
 
@@ -186,7 +187,7 @@ The hash function of the hashmap.
 
 #### Defined in
 
-[misc/hashmap.ts:83](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L83)
+[misc/hashmap.ts:83](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L83)
 
 ___
 
@@ -202,7 +203,7 @@ readonly [`string`, `T`][][]
 
 #### Defined in
 
-[misc/hashmap.ts:62](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L62)
+[misc/hashmap.ts:68](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L68)
 
 ___
 
@@ -218,15 +219,27 @@ The size of the hashmap.
 
 #### Defined in
 
-[misc/hashmap.ts:69](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L69)
+[misc/hashmap.ts:73](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L73)
 
 ## Methods
+
+### [isConcatSpreadable]
+
+▸ **[isConcatSpreadable]**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[misc/hashmap.ts:91](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L91)
+
+___
 
 ### [iterator]
 
 ▸ **[iterator]**(): `IterableIterator`\<[`string`, `T`]\>
-
-An iterator for the hashmap to use with `for...of` loops.
 
 #### Returns
 
@@ -234,7 +247,7 @@ An iterator for the hashmap to use with `for...of` loops.
 
 #### Defined in
 
-[misc/hashmap.ts:90](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L90)
+[misc/hashmap.ts:87](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L87)
 
 ___
 
@@ -258,7 +271,7 @@ A copy of the hashmap
 
 #### Defined in
 
-[misc/hashmap.ts:219](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L219)
+[misc/hashmap.ts:225](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L225)
 
 ___
 
@@ -282,7 +295,7 @@ The value of the key or `undefined` if the key doesn't exist
 
 #### Defined in
 
-[misc/hashmap.ts:166](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L166)
+[misc/hashmap.ts:174](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L174)
 
 ___
 
@@ -306,7 +319,7 @@ Checks if the hashmap has a key.
 
 #### Defined in
 
-[misc/hashmap.ts:198](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L198)
+[misc/hashmap.ts:206](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L206)
 
 ___
 
@@ -314,15 +327,15 @@ ___
 
 ▸ **keys**(): `string`[]
 
+Returns the keys of the hashmap.
+
 #### Returns
 
 `string`[]
 
-All the keys in the hashmap
-
 #### Defined in
 
-[misc/hashmap.ts:209](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L209)
+[misc/hashmap.ts:215](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L215)
 
 ___
 
@@ -334,9 +347,9 @@ Removes a key from the hashmap.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `key` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `key` | `string` | The key to remove |
 
 #### Returns
 
@@ -346,13 +359,13 @@ The value of the removed key or `undefined` if the key doesn't exist
 
 #### Defined in
 
-[misc/hashmap.ts:179](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L179)
+[misc/hashmap.ts:188](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L188)
 
 ___
 
 ### set
 
-▸ **set**(`key`, `value`): readonly [`string`, `T`]
+▸ **set**(`key`, `value`): [`string`, `T`]
 
 Sets the value of a key in the hashmap.
 
@@ -365,7 +378,7 @@ Sets the value of a key in the hashmap.
 
 #### Returns
 
-readonly [`string`, `T`]
+[`string`, `T`]
 
 The key and value as a tuple
 
@@ -375,25 +388,23 @@ Throws an error if the index generated by the hash function is out of bounds
 
 #### Defined in
 
-[misc/hashmap.ts:135](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L135)
+[misc/hashmap.ts:144](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L144)
 
 ___
 
 ### toArray
 
-▸ **toArray**(): readonly [`string`, `T`][]
+▸ **toArray**(): [`string`, `T`][]
 
 Converts the hashmap to an array.
 
 #### Returns
 
-readonly [`string`, `T`][]
-
-The hashmap as an array
+[`string`, `T`][]
 
 #### Defined in
 
-[misc/hashmap.ts:265](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L265)
+[misc/hashmap.ts:260](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L260)
 
 ___
 
@@ -401,17 +412,15 @@ ___
 
 ▸ **toJSON**(): `Object`
 
-Converts the hashmap to a string used by `JSON.stringify()`.
+Converts the hashmap to JSON.
 
 #### Returns
 
 `Object`
 
-The hashmap as a string
-
 #### Defined in
 
-[misc/hashmap.ts:245](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L245)
+[misc/hashmap.ts:244](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L244)
 
 ___
 
@@ -425,17 +434,17 @@ Converts the hashmap to an object.
 
 `Object`
 
-The hashmap as an object
-
 #### Defined in
 
-[misc/hashmap.ts:254](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L254)
+[misc/hashmap.ts:251](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L251)
 
 ___
 
 ### toString
 
 ▸ **toString**(`replacer?`, `space?`): `string`
+
+Converts the hashmap to a string.
 
 #### Parameters
 
@@ -448,11 +457,9 @@ ___
 
 `string`
 
-The hashmap as a string.
-
 #### Defined in
 
-[misc/hashmap.ts:229](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L229)
+[misc/hashmap.ts:232](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L232)
 
 ___
 
@@ -483,13 +490,15 @@ Hashmap created from object
 
 #### Defined in
 
-[misc/hashmap.ts:109](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L109)
+[misc/hashmap.ts:111](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L111)
 
 ___
 
 ### fromString
 
 ▸ **fromString**\<`V`\>(`str`, `size?`): [`HashMap`](HashMap.md)\<`V`\>
+
+Creates a hashmap from a string.
 
 #### Type parameters
 
@@ -499,15 +508,17 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `str` | `string` | `undefined` |
-| `size` | `number` | `7` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `str` | `string` | `undefined` | The string to create hashmap from |
+| `size` | `number` | `7` | The size of the hashmap. Defaults to 7 |
 
 #### Returns
 
 [`HashMap`](HashMap.md)\<`V`\>
 
+A new hashmap created from the string
+
 #### Defined in
 
-[misc/hashmap.ts:115](https://github.com/mhodge11/underscorets/blob/f879ca6/src/misc/hashmap.ts#L115)
+[misc/hashmap.ts:124](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/hashmap.ts#L124)

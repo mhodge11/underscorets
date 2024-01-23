@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Iterates over elements of `array` and invokes `callback` for each element.

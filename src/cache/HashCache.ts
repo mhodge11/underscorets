@@ -1,5 +1,5 @@
-import type { Jsonifiable } from "../type/Jsonifiable.js";
-import type { Primitive } from "../type/Primitive.js";
+import type { Jsonifiable } from "../type/Jsonifiable";
+import type { Primitive } from "../type/Primitive";
 
 type Key = Jsonifiable | Primitive;
 

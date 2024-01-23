@@ -1,4 +1,4 @@
-import { isEqual } from "../validate/isEqual.js";
+import { isEqual } from "../validate/isEqual";
 
 function assocIndexOf(array: [any, any][], key: any): number {
 	if (!array?.length) return -1;

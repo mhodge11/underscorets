@@ -1,5 +1,5 @@
-import { createPadding } from "../helpers/createPadding.js";
-import { stringSize } from "./stringSize.js";
+import { createPadding } from "../helpers/createPadding";
+import { stringSize } from "./stringSize";
 
 /**
  * Pads `string` on the right side if it's shorter than `length`.

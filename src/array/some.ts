@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Checks if `predicate` returns truthy for **any** element of `array`.

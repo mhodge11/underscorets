@@ -1,5 +1,5 @@
-import { hasFloat64Tag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasFloat64Tag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a `Float64Array` object.

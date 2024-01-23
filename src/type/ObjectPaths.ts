@@ -1,6 +1,6 @@
-import type { PlainObject } from "./PlainObject.js";
-import type { AllPaths } from "./helpers/objects.js";
-import type { $ } from "./helpers/utils.js";
+import type { PlainObject } from "./PlainObject";
+import type { AllPaths } from "./helpers/objects";
+import type { $ } from "./helpers/utils";
 
 /**
  * This type defines all the paths of an object, including nested objects.

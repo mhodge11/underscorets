@@ -1,4 +1,4 @@
-import { isEqualDataViews } from "./isEqualDataViews.js";
+import { isEqualDataViews } from "./isEqualDataViews";
 
 export function isEqualArrayBuffers(a: ArrayBuffer, b: ArrayBuffer): boolean {
 	if (!(a instanceof ArrayBuffer) || !(b instanceof ArrayBuffer)) return false;

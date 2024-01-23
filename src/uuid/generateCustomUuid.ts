@@ -1,4 +1,4 @@
-import { random } from "./utils.js";
+import { random } from "./utils";
 
 /**
  * Generates a UUID using a custom alphabet.

@@ -1,6 +1,6 @@
-import type { PlainObject } from "./PlainObject.js";
-import type { Update } from "./helpers/objects.js";
-import type { $ } from "./helpers/utils.js";
+import type { PlainObject } from "./PlainObject";
+import type { Update } from "./helpers/objects";
+import type { $ } from "./helpers/utils";
 
 /**
  * This type is used to set the type of a property of an object.

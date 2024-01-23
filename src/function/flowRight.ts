@@ -1,6 +1,6 @@
-import type { GenericFunction } from "../type/GenericFunction.js";
+import type { GenericFunction } from "../type/GenericFunction";
 
-import { flow } from "./flow.js";
+import { flow } from "./flow";
 
 /**
  * This method is like `{@link flow}` except that it composes a function that

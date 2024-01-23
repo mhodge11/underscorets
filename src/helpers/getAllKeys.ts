@@ -1,10 +1,10 @@
-import type { PlainObject } from "../type/PlainObject.js";
+import type { PlainObject } from "../type/PlainObject";
 
-import { isArguments } from "../validate/isArguments.js";
-import { isArrayLike } from "../validate/isArrayLike.js";
-import { isBuffer } from "../validate/isBuffer.js";
-import { isTypedArray } from "../validate/isTypedArray.js";
-import { getSymbols } from "./getSymbols.js";
+import { isArguments } from "../validate/isArguments";
+import { isArrayLike } from "../validate/isArrayLike";
+import { isBuffer } from "../validate/isBuffer";
+import { isTypedArray } from "../validate/isTypedArray";
+import { getSymbols } from "./getSymbols";
 
 const reIsUint = /^(?:0|[1-9]\d*)$/;
 

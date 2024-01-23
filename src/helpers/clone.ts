@@ -1,21 +1,21 @@
-import type { TypedArray } from "../type/TypedArray.js";
+import type { TypedArray } from "../type/TypedArray";
 
-import { each } from "../array/each.js";
-import { StackCache } from "../cache/StackCache.js";
-import { isBuffer } from "../validate/isBuffer.js";
-import { isObject } from "../validate/isObject.js";
-import { isTypedArray } from "../validate/isTypedArray.js";
-import { assertUnreachable } from "./assertUnreachable.js";
-import { assignValue } from "./assignValue.js";
-import { cloneArrayBuffer } from "./cloneArrayBuffer.js";
-import { cloneBuffer } from "./cloneBuffer.js";
-import { cloneDataView } from "./cloneDataView.js";
-import { cloneRegExp } from "./cloneRegExp.js";
-import { cloneSymbol } from "./cloneSymbol.js";
-import { cloneTypedArray } from "./cloneTypedArray.js";
-import { copyArray } from "./copyArray.js";
-import { copySymbols } from "./copySymbols.js";
-import { getAllKeys } from "./getAllKeys.js";
+import { each } from "../array/each";
+import { StackCache } from "../cache/StackCache";
+import { isBuffer } from "../validate/isBuffer";
+import { isObject } from "../validate/isObject";
+import { isTypedArray } from "../validate/isTypedArray";
+import { assertUnreachable } from "./assertUnreachable";
+import { assignValue } from "./assignValue";
+import { cloneArrayBuffer } from "./cloneArrayBuffer";
+import { cloneBuffer } from "./cloneBuffer";
+import { cloneDataView } from "./cloneDataView";
+import { cloneRegExp } from "./cloneRegExp";
+import { cloneSymbol } from "./cloneSymbol";
+import { cloneTypedArray } from "./cloneTypedArray";
+import { copyArray } from "./copyArray";
+import { copySymbols } from "./copySymbols";
+import { getAllKeys } from "./getAllKeys";
 import {
 	argsTag,
 	arrayBufferTag,
@@ -40,7 +40,7 @@ import {
 	uint8Tag,
 	uint16Tag,
 	uint32Tag,
-} from "./getTag.js";
+} from "./getTag";
 
 /** Clone flags */
 export const CLONE_DEEP_FLAG = 1;

@@ -1,5 +1,5 @@
-import { hasUnicode } from "./hasUnicode.js";
-import { reUnicode } from "./reUnicode.js";
+import { hasUnicode } from "./hasUnicode";
+import { reUnicode } from "./reUnicode";
 
 function asciiToArray(string: string): string[] {
 	if (string == null) return [];

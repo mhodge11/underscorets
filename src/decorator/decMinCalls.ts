@@ -1,5 +1,5 @@
-import { minCalls } from "../function/minCalls.js";
-import { toDecorator } from "./toDecorator.js";
+import { minCalls } from "../function/minCalls";
+import { toDecorator } from "./toDecorator";
 
 /**
  * Only invokes the decorated function after it's called more than `n` times.

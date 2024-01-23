@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../type/GenericFunction.js";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Defers invoking the `func` until the current call stack has cleared. Any

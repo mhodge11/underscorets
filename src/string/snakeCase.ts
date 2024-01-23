@@ -1,5 +1,5 @@
-import { deburr } from "./deburr.js";
-import { splitWords } from "./splitWords.js";
+import { deburr } from "./deburr";
+import { splitWords } from "./splitWords";
 
 /**
  * Converts a string to snake_case.

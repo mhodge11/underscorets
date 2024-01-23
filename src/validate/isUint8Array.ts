@@ -1,5 +1,5 @@
-import { hasUint8Tag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasUint8Tag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a `Uint8Array` object.

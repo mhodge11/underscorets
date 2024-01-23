@@ -1,9 +1,9 @@
-import type { ObjectAt } from "../type/ObjectAt.js";
-import type { ObjectPaths } from "../type/ObjectPaths.js";
-import type { PlainObject } from "../type/PlainObject.js";
+import type { ObjectAt } from "../type/ObjectAt";
+import type { ObjectPaths } from "../type/ObjectPaths";
+import type { PlainObject } from "../type/PlainObject";
 
-import { validPathRegex } from "../helpers/rePath.js";
-import { get } from "./get.js";
+import { validPathRegex } from "../helpers/rePath";
+import { get } from "./get";
 
 /**
  * Gets the values at each of the `paths`. If a value at a path doesn't exist, it returns `undefined` for that path.

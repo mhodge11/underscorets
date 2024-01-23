@@ -1,4 +1,4 @@
-import { map } from "../array/map.js";
+import { map } from "../array/map";
 
 /**
  * Creates a function that iterates over `pairs` and invokes the corresponding

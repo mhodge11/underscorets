@@ -1,7 +1,7 @@
-import type { ObjectFlatten } from "../type/ObjectFlatten.js";
-import type { PlainObject } from "../type/PlainObject.js";
+import type { ObjectFlatten } from "../type/ObjectFlatten";
+import type { PlainObject } from "../type/PlainObject";
 
-import { isPlainObject } from "../validate/isPlainObject.js";
+import { isPlainObject } from "../validate/isPlainObject";
 
 function addToResult(
 	prefix: string,

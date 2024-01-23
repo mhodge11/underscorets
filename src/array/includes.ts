@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Checks if `value` is in `array` based on [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero) comparison.

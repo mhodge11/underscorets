@@ -1,10 +1,10 @@
-import { toString } from "../misc/toString.js";
-import { ceil } from "../number/ceil.js";
-import { repeat } from "../string/repeat.js";
-import { stringSize } from "../string/stringSize.js";
-import { castSlice } from "./castSlice.js";
-import { hasUnicode } from "./hasUnicode.js";
-import { stringToArray } from "./stringToArray.js";
+import { toString } from "../misc/toString";
+import { ceil } from "../number/ceil";
+import { repeat } from "../string/repeat";
+import { stringSize } from "../string/stringSize";
+import { castSlice } from "./castSlice";
+import { hasUnicode } from "./hasUnicode";
+import { stringToArray } from "./stringToArray";
 
 export function createPadding(length: number, chars?: string): string {
 	chars = chars === undefined ? " " : toString(chars);

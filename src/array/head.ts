@@ -1,6 +1,6 @@
-import type { ArrayHead } from "../type/ArrayHead.js";
+import type { ArrayHead } from "../type/ArrayHead";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Gets the first element of `array`.

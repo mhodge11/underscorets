@@ -71,7 +71,7 @@ export function base62(view: DataView, fixedLength?: number): string {
 }
 
 /**
- * @see https://github.com/novemberborn/ksuid/blob/90ca4c1508f216e03923de610291786a0d6a868c/base62.js#L13C40-L21C85
+ * @see https://github.com/novemberborn/ksuid/blob/90ca4c1508f216e03923de610291786a0d6a868c/base62#L13C40-L21C85
  */
 export function debase62(data: string, fixedLength?: number): ArrayBufferLike {
 	const input = Array.from(data, (char) => {

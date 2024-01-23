@@ -1,4 +1,4 @@
-import { slice } from "../array/slice.js";
+import { slice } from "../array/slice";
 
 export function castSlice<T>(array: T[], start: number, end?: number): T[] {
 	if (!array?.length) return [];

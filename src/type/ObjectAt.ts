@@ -1,5 +1,5 @@
-import type { ObjectGet } from "./ObjectGet.js";
-import type { PlainObject } from "./PlainObject.js";
+import type { ObjectGet } from "./ObjectGet";
+import type { PlainObject } from "./PlainObject";
 
 type BuildObjectAt<
 	T extends PlainObject,

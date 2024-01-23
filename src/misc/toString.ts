@@ -1,4 +1,4 @@
-import { isSymbol } from "../validate/isSymbol.js";
+import { isSymbol } from "../validate/isSymbol";
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`

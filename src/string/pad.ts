@@ -1,7 +1,7 @@
-import { createPadding } from "../helpers/createPadding.js";
-import { ceil } from "../number/ceil.js";
-import { floor } from "../number/floor.js";
-import { stringSize } from "./stringSize.js";
+import { createPadding } from "../helpers/createPadding";
+import { ceil } from "../number/ceil";
+import { floor } from "../number/floor";
+import { stringSize } from "./stringSize";
 
 /**
  * Pads `string` on the left and right sides if it's shorter than `length`.

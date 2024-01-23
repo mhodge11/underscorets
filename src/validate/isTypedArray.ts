@@ -1,7 +1,7 @@
-import type { TypedArray } from "../type/TypedArray.js";
+import type { TypedArray } from "../type/TypedArray";
 
-import { hasTypedArrayTag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasTypedArrayTag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a typed array.

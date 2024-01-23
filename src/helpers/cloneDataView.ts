@@ -1,4 +1,4 @@
-import { cloneArrayBuffer } from "./cloneArrayBuffer.js";
+import { cloneArrayBuffer } from "./cloneArrayBuffer";
 
 export function cloneDataView<T extends DataView>(
 	dataView: T,

@@ -1,6 +1,6 @@
-import type { PlainObject } from "./PlainObject.js";
-import type { Get } from "./helpers/objects.js";
-import type { $ } from "./helpers/utils.js";
+import type { PlainObject } from "./PlainObject";
+import type { Get } from "./helpers/objects";
+import type { $ } from "./helpers/utils";
 
 /**
  * This type is used to get the type of a property of an object.

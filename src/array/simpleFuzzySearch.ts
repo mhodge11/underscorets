@@ -1,4 +1,4 @@
-import { fuzzySearchMatch } from "./fuzzySearch.js";
+import { fuzzySearchMatch } from "./fuzzySearch";
 
 /**
  * Test if a string matches a pattern for simple fuzzy searching.

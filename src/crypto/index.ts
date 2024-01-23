@@ -1,5 +1,5 @@
-export { hash } from "./hash.js";
-export { randomElement } from "./randomElement.js";
-export { randomFloat } from "./randomFloat.js";
-export { randomInt } from "./randomInt.js";
-export { randomString } from "./randomString.js";
+export { hash } from "./hash";
+export { randomElement } from "./randomElement";
+export { randomFloat } from "./randomFloat";
+export { randomInt } from "./randomInt";
+export { randomString } from "./randomString";

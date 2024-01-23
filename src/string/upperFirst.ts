@@ -1,4 +1,4 @@
-import { createCaseFirst } from "../helpers/createCaseFirst.js";
+import { createCaseFirst } from "../helpers/createCaseFirst";
 
 /**
  * Converts the first character of `string` to upper case.

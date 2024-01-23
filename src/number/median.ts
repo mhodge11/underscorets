@@ -1,5 +1,5 @@
-import { map } from "../array/map.js";
-import { floor } from "./floor.js";
+import { map } from "../array/map";
+import { floor } from "./floor";
 
 /**
  * Calculates the median of an array of numbers

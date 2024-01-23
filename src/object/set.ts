@@ -1,13 +1,13 @@
-import type { ObjectPaths } from "../type/ObjectPaths.js";
-import type { ObjectSet } from "../type/ObjectSet.js";
-import type { PlainObject } from "../type/PlainObject.js";
+import type { ObjectPaths } from "../type/ObjectPaths";
+import type { ObjectSet } from "../type/ObjectSet";
+import type { PlainObject } from "../type/PlainObject";
 
 import {
 	matchBracketsRegex,
 	pathSplitRegex,
 	validPathRegex,
-} from "../helpers/rePath.js";
-import { isPlainObject } from "../validate/isPlainObject.js";
+} from "../helpers/rePath";
+import { isPlainObject } from "../validate/isPlainObject";
 
 /**
  * Sets the value at path of object. If a portion of path doesn’t exist, it’s created.

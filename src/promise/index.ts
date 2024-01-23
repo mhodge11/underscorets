@@ -1,6 +1,6 @@
-export { Queue } from "./queue.js";
-export { races } from "./races.js";
-export { retry } from "./retry.js";
-export { sleep } from "./sleep.js";
-export { timeout } from "./timeout.js";
-export { tryCatch } from "./tryCatch.js";
+export { Queue } from "./queue";
+export { races } from "./races";
+export { retry } from "./retry";
+export { sleep } from "./sleep";
+export { timeout } from "./timeout";
+export { tryCatch } from "./tryCatch";

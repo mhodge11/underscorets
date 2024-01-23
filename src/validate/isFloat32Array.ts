@@ -1,5 +1,5 @@
-import { hasFloat32Tag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasFloat32Tag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a `Float32Array` object.

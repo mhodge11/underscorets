@@ -1,4 +1,4 @@
-import type { Jsonifiable } from "../type/Jsonifiable.js";
+import type { Jsonifiable } from "../type/Jsonifiable";
 
 type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";
 
@@ -41,7 +41,7 @@ export async function hash(
 			? textEncoder.encode(data)
 			: textEncoder.encode(JSON.stringify(data));
 
-	const hashBuffer = await crypto.subtle.digest(algorithm, dataBuffer);
+	const hashBuffer = await crypto?.subtle.digest(algorithm, dataBuffer);
 	const hashArray = [...new Uint8Array(hashBuffer)];
 	const hexValues = hashArray.map((b) => b.toString(16).padStart(2, "0"));
 	return hexValues.join("");

@@ -1,5 +1,5 @@
-import { toInteger } from "../misc/toInteger.js";
-import { slice } from "./slice.js";
+import { toInteger } from "../misc/toInteger";
+import { slice } from "./slice";
 
 /**
  * Creates a slice of `array` with `n` elements taken from the end.

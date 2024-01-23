@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../type/GenericFunction.js";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Composes a function that returns the result of invoking the given functions

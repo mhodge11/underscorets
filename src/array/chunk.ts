@@ -1,6 +1,6 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 import { toInteger } from "../misc/toInteger";
-import { ceil } from "../number/ceil.js";
+import { ceil } from "../number/ceil";
 
 /**
  * Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.

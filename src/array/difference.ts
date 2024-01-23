@@ -1,9 +1,9 @@
-import type { ArrayMinLength } from "../type/ArrayMinLength.js";
-import type { CompareFunction } from "../type/CompareFunction.js";
-import type { PullOutArray } from "../type/PullOutArray.js";
+import type { ArrayMinLength } from "../type/ArrayMinLength";
+import type { CompareFunction } from "../type/CompareFunction";
+import type { PullOutArray } from "../type/PullOutArray";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
-import { fastArrayFlat } from "../helpers/fastArrayFlat.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { fastArrayFlat } from "../helpers/fastArrayFlat";
 
 /**
  * Create a new array with values from the first array that are not present in the other arrays.

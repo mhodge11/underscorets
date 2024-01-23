@@ -1,5 +1,5 @@
-import { hasArgsTag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasArgsTag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is likely an `arguments` object.

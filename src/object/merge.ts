@@ -1,8 +1,8 @@
-import type { ArrayMinLength } from "../type/ArrayMinLength.js";
-import type { ObjectMerge } from "../type/ObjectMerge.js";
-import type { PlainObject } from "../type/PlainObject.js";
+import type { ArrayMinLength } from "../type/ArrayMinLength";
+import type { ObjectMerge } from "../type/ObjectMerge";
+import type { PlainObject } from "../type/PlainObject";
 
-import { isPlainObject } from "../validate/isPlainObject.js";
+import { isPlainObject } from "../validate/isPlainObject";
 
 /**
  * This function combines two or more objects into a single new object. Arrays and other types are overwritten.

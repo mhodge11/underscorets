@@ -1,6 +1,6 @@
-import type { ArrayTail } from "../type/ArrayTail.js";
+import type { ArrayTail } from "../type/ArrayTail";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Gets all but the first element of `array`.

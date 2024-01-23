@@ -26,7 +26,7 @@ export function randomFloat(min: number, max: number): number {
 
 	// TODO: Switch to UInt64Array when safari support is better (https://caniuse.com/mdn-javascript_builtins_bigint64array)
 	const randomBuffer = new Uint32Array(2);
-	crypto.getRandomValues(randomBuffer);
+	crypto?.getRandomValues(randomBuffer);
 
 	// keep all 32 bits of the the first, top 21 of the second for 53 random bits
 	const randomBigInt =

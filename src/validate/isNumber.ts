@@ -1,5 +1,5 @@
-import { hasNumberTag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasNumberTag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as a `Number` primitive or object.

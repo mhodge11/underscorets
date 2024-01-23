@@ -1,4 +1,4 @@
-import { toInteger } from "./toInteger.js";
+import { toInteger } from "./toInteger";
 
 /**
  * Converts `value` to a safe integer. A safe integer can be compared and

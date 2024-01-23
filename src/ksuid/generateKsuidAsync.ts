@@ -1,4 +1,4 @@
-import { KSUID } from "./ksuid.js";
+import { KSUID } from "./ksuid";
 
 /**
  * Asynchronously generates a new KSUID.

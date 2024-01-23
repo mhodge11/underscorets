@@ -2,7 +2,7 @@ import {
 	CLONE_DEEP_FLAG,
 	CLONE_SYMBOLS_FLAG,
 	clone as _clone,
-} from "../helpers/clone.js";
+} from "../helpers/clone";
 
 /**
  * This method is like `{@link clone}` except that it recursively clones `value`.

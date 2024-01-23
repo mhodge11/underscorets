@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
-import { sortCompare } from "../helpers/sortCompare.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { sortCompare } from "../helpers/sortCompare";
 
 function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
 	const temp = array[firstIndex] as T;

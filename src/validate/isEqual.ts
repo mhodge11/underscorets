@@ -1,19 +1,19 @@
-import { isEqualArrayBuffers } from "../helpers/isEqualArrayBuffers.js";
-import { isEqualArrays } from "../helpers/isEqualArrays.js";
-import { isEqualDataViews } from "../helpers/isEqualDataViews.js";
-import { isEqualDates } from "../helpers/isEqualDates.js";
-import { isEqualMaps } from "../helpers/isEqualMaps.js";
-import { isEqualObjects } from "../helpers/isEqualObjects.js";
-import { isEqualRegExps } from "../helpers/isEqualRegExps.js";
-import { isEqualSets } from "../helpers/isEqualSets.js";
-import { isArrayBuffer } from "./isArrayBuffer.js";
-import { isDataView } from "./isDataView.js";
-import { isDate } from "./isDate.js";
-import { isMap } from "./isMap.js";
-import { isPlainObject } from "./isPlainObject.js";
-import { isRegExp } from "./isRegExp.js";
-import { isSet } from "./isSet.js";
-import { isTypedArray } from "./isTypedArray.js";
+import { isEqualArrayBuffers } from "../helpers/isEqualArrayBuffers";
+import { isEqualArrays } from "../helpers/isEqualArrays";
+import { isEqualDataViews } from "../helpers/isEqualDataViews";
+import { isEqualDates } from "../helpers/isEqualDates";
+import { isEqualMaps } from "../helpers/isEqualMaps";
+import { isEqualObjects } from "../helpers/isEqualObjects";
+import { isEqualRegExps } from "../helpers/isEqualRegExps";
+import { isEqualSets } from "../helpers/isEqualSets";
+import { isArrayBuffer } from "./isArrayBuffer";
+import { isDataView } from "./isDataView";
+import { isDate } from "./isDate";
+import { isMap } from "./isMap";
+import { isPlainObject } from "./isPlainObject";
+import { isRegExp } from "./isRegExp";
+import { isSet } from "./isSet";
+import { isTypedArray } from "./isTypedArray";
 
 /**
  * Performs a deep comparison between two values to determine if they are

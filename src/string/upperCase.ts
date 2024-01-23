@@ -1,5 +1,5 @@
-import { toString } from "../misc/toString.js";
-import { splitWords } from "./splitWords.js";
+import { toString } from "../misc/toString";
+import { splitWords } from "./splitWords";
 
 /**
  * Converts `string`, as space separated words, to upper case.

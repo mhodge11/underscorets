@@ -1,4 +1,4 @@
-[underscorets - v0.1.6](../README.md) / Queue
+[underscorets - v0.1.8](../README.md) / Queue
 
 # Class: Queue
 
@@ -85,7 +85,7 @@ await queue.add([
 
 #### Defined in
 
-[promise/queue.ts:52](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L52)
+[promise/queue.ts:52](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L52)
 
 ## Properties
 
@@ -95,7 +95,7 @@ await queue.add([
 
 #### Defined in
 
-[promise/queue.ts:45](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L45)
+[promise/queue.ts:45](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L45)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:46](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L46)
+[promise/queue.ts:46](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L46)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:42](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L42)
+[promise/queue.ts:42](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L42)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:43](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L43)
+[promise/queue.ts:43](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L43)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:44](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L44)
+[promise/queue.ts:44](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L44)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:41](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L41)
+[promise/queue.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L41)
 
 ## Methods
 
@@ -176,7 +176,7 @@ A promise that resolves when the added function(s) finishes.
 
 #### Defined in
 
-[promise/queue.ts:62](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L62)
+[promise/queue.ts:62](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L62)
 
 ▸ **add**\<`P`, `T`\>(`asyncFn`): [`Promise`]( https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise )\<`P`[]\>
 
@@ -199,7 +199,7 @@ A promise that resolves when the added function(s) finishes.
 
 #### Defined in
 
-[promise/queue.ts:63](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L63)
+[promise/queue.ts:63](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L63)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:114](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L114)
+[promise/queue.ts:114](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L114)
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:146](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L146)
+[promise/queue.ts:146](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L146)
 
 ___
 
@@ -255,7 +255,7 @@ Removes all the tasks from the queue
 
 #### Defined in
 
-[promise/queue.ts:75](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L75)
+[promise/queue.ts:75](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L75)
 
 ___
 
@@ -271,7 +271,7 @@ Returns a shared promise that resolves when the queue is empty and all tasks hav
 
 #### Defined in
 
-[promise/queue.ts:103](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L103)
+[promise/queue.ts:103](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L103)
 
 ___
 
@@ -287,7 +287,7 @@ Return the tasks added to the queue
 
 #### Defined in
 
-[promise/queue.ts:93](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L93)
+[promise/queue.ts:93](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L93)
 
 ___
 
@@ -303,7 +303,7 @@ Returns whether the queue is paused
 
 #### Defined in
 
-[promise/queue.ts:98](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L98)
+[promise/queue.ts:98](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L98)
 
 ___
 
@@ -319,7 +319,7 @@ Pauses the execution of the queue
 
 #### Defined in
 
-[promise/queue.ts:82](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L82)
+[promise/queue.ts:82](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L82)
 
 ___
 
@@ -335,7 +335,7 @@ Resumes the execution of the tasks in the queue
 
 #### Defined in
 
-[promise/queue.ts:87](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L87)
+[promise/queue.ts:87](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L87)
 
 ___
 
@@ -349,4 +349,4 @@ ___
 
 #### Defined in
 
-[promise/queue.ts:121](https://github.com/mhodge11/underscorets/blob/f879ca6/src/promise/queue.ts#L121)
+[promise/queue.ts:121](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/queue.ts#L121)

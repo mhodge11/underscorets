@@ -4,21 +4,28 @@ const env = process.env.NODE_ENV;
 
 export default defineConfig({
 	entryPoints: ["src/index.ts"],
-	entry: ["src/**/*.ts"],
 	format: ["esm", "cjs"],
-	outDir: env === "production" ? "dist" : "lib",
+	outDir: "dist",
+	clean: env !== "production",
 	minify: env === "production" ? "terser" : false,
-	bundle: env === "production",
 	splitting: true,
 	treeshake: true,
 	sourcemap: true,
-	clean: true,
-	dts: true,
+	dts: env !== "production",
 	skipNodeModulesBundle: true,
+	outExtension({ format }) {
+		const prefix = env === "production" ? ".min" : "";
+		const jsSuffix = format === "cjs" ? ".cjs" : ".js";
+		const js = `${prefix}${jsSuffix}`;
+		return { js };
+	},
 	esbuildOptions(options, context) {
 		if (context.format === "esm")
 			options.inject = ["./shims/buffer.js", "./shims/crypto.js"];
 		else if (context.format === "cjs")
-			options.inject = ["./shims/buffer.cjs", "./shims/crypto.cjs"];
+			options.inject = [
+				"./shims/buffer.require.js",
+				"./shims/crypto.require.js",
+			];
 	},
 });

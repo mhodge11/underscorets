@@ -1,6 +1,6 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
-import { toInteger } from "../misc/toInteger.js";
-import { findIndex } from "./findIndex.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { toInteger } from "../misc/toInteger";
+import { findIndex } from "./findIndex";
 
 function strictLastIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,

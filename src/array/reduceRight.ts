@@ -1,6 +1,6 @@
-import type { ArrayReduce } from "../type/ArrayReduce.js";
+import type { ArrayReduce } from "../type/ArrayReduce";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Like `{@link reduce}`, but iterates from right to left.

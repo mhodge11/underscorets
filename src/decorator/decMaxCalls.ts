@@ -1,5 +1,5 @@
-import { maxCalls } from "../function/maxCalls.js";
-import { toDecorator } from "./toDecorator.js";
+import { maxCalls } from "../function/maxCalls";
+import { toDecorator } from "./toDecorator";
 
 /**
  * Only invokes the decorated function as long as it's called `<= n` times.

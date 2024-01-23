@@ -1,4 +1,4 @@
-import type { CastArray } from "../type/CastArray.js";
+import type { CastArray } from "../type/CastArray";
 
 /**
  * Casts `value` as an array if it's not one.

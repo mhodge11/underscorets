@@ -1,7 +1,7 @@
-import type { Jsonifiable } from "../type/Jsonifiable.js";
+import type { Jsonifiable } from "../type/Jsonifiable";
 
-import { isEqual } from "../validate/isEqual.js";
-import { HashCache } from "./HashCache.js";
+import { isEqual } from "../validate/isEqual";
+import { HashCache } from "./HashCache";
 
 interface Data {
 	hash: HashCache;

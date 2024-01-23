@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
-import { findIndex } from "./findIndex.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { findIndex } from "./findIndex";
 
 function strictIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,

@@ -1,5 +1,5 @@
-export { KSUID } from "./ksuid.js";
-export { compareKsuids } from "./compareKsuids.js";
-export { generateKsuid } from "./generateKsuid.js";
-export { generateKsuidAsync } from "./generateKsuidAsync.js";
-export { isValidKsuid } from "./isValidKsuid.js";
+export { KSUID } from "./ksuid";
+export { compareKsuids } from "./compareKsuids";
+export { generateKsuid } from "./generateKsuid";
+export { generateKsuidAsync } from "./generateKsuidAsync";
+export { isValidKsuid } from "./isValidKsuid";

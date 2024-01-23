@@ -1,7 +1,7 @@
-import type { ObjectValues } from "../type/ObjectValues.js";
-import type { PlainObject } from "../type/PlainObject.js";
+import type { ObjectValues } from "../type/ObjectValues";
+import type { PlainObject } from "../type/PlainObject";
 
-import { keys } from "./keys.js";
+import { keys } from "./keys";
 
 /**
  * Creates an array of the own enumerable string keyed property values of `object`.

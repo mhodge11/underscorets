@@ -1,5 +1,5 @@
-import { fillPool, pool, poolOffset } from "./utils.js";
-import { uuidUrlAlphabet } from "./uuidUrlAlphabet.js";
+import { fillPool, pool, poolOffset } from "./utils";
+import { uuidUrlAlphabet } from "./uuidUrlAlphabet";
 
 /**
  * Generates a UUID.

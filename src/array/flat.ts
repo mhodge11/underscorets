@@ -1,9 +1,9 @@
-import type { ArrayFlat } from "../type/ArrayFlat.js";
+import type { ArrayFlat } from "../type/ArrayFlat";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.js";
-import { fastArrayFlat } from "../helpers/fastArrayFlat.js";
-import { floor } from "../number/floor.js";
-import { isArguments } from "../validate/isArguments.js";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { fastArrayFlat } from "../helpers/fastArrayFlat";
+import { floor } from "../number/floor";
+import { isArguments } from "../validate/isArguments";
 
 function isFlattenable(value: unknown): boolean {
 	return (

@@ -10,11 +10,11 @@ export let poolOffset: number;
 
 export function fillPool(bytes: number): void {
 	if (!pool || pool.length < bytes) {
-		pool = Buffer.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
-		crypto.getRandomValues(pool);
+		pool = Buffer?.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
+		crypto?.getRandomValues(pool);
 		poolOffset = 0;
 	} else if (poolOffset + bytes > pool.length) {
-		crypto.getRandomValues(pool);
+		crypto?.getRandomValues(pool);
 		poolOffset = 0;
 	}
 

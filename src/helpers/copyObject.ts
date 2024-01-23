@@ -1,4 +1,4 @@
-import { assignValue, baseAssignValue } from "./assignValue.js";
+import { assignValue, baseAssignValue } from "./assignValue";
 
 export function copyObject<T extends object, K extends keyof T>(
 	source: T,

@@ -1,4 +1,4 @@
-import { randomInt } from "./randomInt.js";
+import { randomInt } from "./randomInt";
 
 const DEFAULT_CHARSET =
 	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

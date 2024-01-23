@@ -1,4 +1,4 @@
-import { isEqualArrays } from "./isEqualArrays.js";
+import { isEqualArrays } from "./isEqualArrays";
 
 export function isEqualSets(a: Set<unknown>, b: Set<unknown>): boolean {
 	if (Object.is(a, b)) return true;

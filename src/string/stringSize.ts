@@ -1,5 +1,5 @@
-import { hasUnicode } from "../helpers/hasUnicode.js";
-import { reUnicode } from "../helpers/reUnicode.js";
+import { hasUnicode } from "../helpers/hasUnicode";
+import { reUnicode } from "../helpers/reUnicode";
 
 function asciiSize(string: string): number {
 	return string.length;

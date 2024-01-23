@@ -1,4 +1,4 @@
-import { CLONE_SYMBOLS_FLAG, clone as _clone } from "../helpers/clone.js";
+import { CLONE_SYMBOLS_FLAG, clone as _clone } from "../helpers/clone";
 
 /**
  * Creates a shallow clone of `value`.

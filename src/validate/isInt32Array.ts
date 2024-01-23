@@ -1,5 +1,5 @@
-import { hasInt32Tag } from "../helpers/getTag.js";
-import { isObjectLike } from "./isObjectLike.js";
+import { hasInt32Tag } from "../helpers/getTag";
+import { isObjectLike } from "./isObjectLike";
 
 /**
  * Checks if `value` is classified as an `Int32Array` object.

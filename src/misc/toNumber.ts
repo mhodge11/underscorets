@@ -1,5 +1,5 @@
-import { isObject } from "../validate/isObject.js";
-import { isSymbol } from "../validate/isSymbol.js";
+import { isObject } from "../validate/isObject";
+import { isSymbol } from "../validate/isSymbol";
 
 /** Used to match leading and trailing whitespace. */
 const reTrim = /^\s+|\s+$/g;

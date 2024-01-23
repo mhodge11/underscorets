@@ -1,4 +1,4 @@
-import { toInteger } from "./toInteger.js";
+import { toInteger } from "./toInteger";
 
 const MAX_ARRAY_LENGTH = 4294967295;
 

@@ -1,4 +1,4 @@
-import type { PlainObject } from "../type/PlainObject.js";
+import type { PlainObject } from "../type/PlainObject";
 
 /**
  * Converts `value` to a plain object flattening inherited enumerable string
