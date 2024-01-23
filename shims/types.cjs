@@ -1,3 +1,4 @@
+// @ts-ignore
 exports.types = null;
 
 try {

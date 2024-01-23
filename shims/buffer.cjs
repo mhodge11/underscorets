@@ -1,7 +1,21 @@
 function warnNoBuffer() {
+  const needsBuffer = [
+    "`KSUID`",
+    "`compareKsuids`",
+    "`generateCustomUuid`",
+    "`generateCustomUuidAsync`",
+    "`generateKsuid`",
+    "`generateKsuidAsync`",
+    "`generateUuid`",
+    "`generateUuidAsync`",
+    "`isBuffer`",
+  ];
+
   console.warn(
     "Buffer API not available:",
-    "`isBuffer` will not work. Use `isUint8Array` instead."
+    `${needsBuffer.slice(0, needsBuffer.length - 1).join(", ")} and ${
+      needsBuffer[needsBuffer.length - 1]
+    } will not work.`
   );
 }
 
