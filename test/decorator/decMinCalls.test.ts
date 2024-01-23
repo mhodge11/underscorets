@@ -1,4 +1,4 @@
-import { decMinCalls } from "../../src/index.ts";
+import { decMinCalls } from "@decorator/index.ts";
 
 test("decorator", () => {
 	class TestClass {

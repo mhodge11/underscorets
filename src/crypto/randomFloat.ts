@@ -18,7 +18,6 @@
  *
  * @category Crypto
  */
-
 export function randomFloat(min: number, max: number): number {
 	if (min >= max)
 		throw new Error(

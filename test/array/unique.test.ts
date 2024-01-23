@@ -1,4 +1,5 @@
-import { isEqual, unique } from "../../src/index.ts";
+import { unique } from "@array/index.ts";
+import { isEqual } from "@validate/isEqual.ts";
 
 test("return an array with only unique values", () => {
 	const input = [1, 2, 3, 3, 4, 5, 5, 6];

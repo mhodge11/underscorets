@@ -1,4 +1,4 @@
-import { difference } from "../../src/index.ts";
+import { difference } from "@array/index.ts";
 
 test("return the difference between two arrays", () => {
 	const array1 = [1, undefined, null, NaN, 3, 4, 5];

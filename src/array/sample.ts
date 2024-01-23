@@ -1,7 +1,7 @@
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { copyArray } from "../helpers/copyArray.ts";
+import { toInteger } from "../misc/toInteger.ts";
 import { floor } from "../number/floor.ts";
-import { toInteger } from "../util/toInteger.ts";
 import { slice } from "./slice.ts";
 
 /**

@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 import { flow } from "./flow.ts";
 

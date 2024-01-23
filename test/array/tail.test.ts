@@ -1,4 +1,4 @@
-import { tail } from "../../src/index.ts";
+import { tail } from "@array/index.ts";
 
 test("tail returns all but the first element of an array", () => {
 	const arr = [1, 2, 3];

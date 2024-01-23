@@ -1,4 +1,4 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 /**
  * Creates an object composed of the picked `object` properties.

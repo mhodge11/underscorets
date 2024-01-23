@@ -1,6 +1,6 @@
-import { isEqual } from "../validator/isEqual.ts";
+import { isEqual } from "../validate/isEqual.ts";
 
-const assocIndexOf = (array: [any, any][], key: any): number => {
+function assocIndexOf(array: [any, any][], key: any): number {
 	if (!array?.length) return -1;
 
 	let { length } = array;
@@ -10,7 +10,7 @@ const assocIndexOf = (array: [any, any][], key: any): number => {
 	}
 
 	return -1;
-};
+}
 
 export class ListCache {
 	data: [any, any][] = [];

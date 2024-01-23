@@ -1,4 +1,4 @@
-import { findKey } from "../../src/index.ts";
+import { findKey } from "@object/index.ts";
 
 test("findKey finds a key in an obj", () => {
 	const object = { a: 1, b: 2, c: 3 };

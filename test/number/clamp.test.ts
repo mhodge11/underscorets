@@ -1,4 +1,4 @@
-import { clamp } from "../../src/index.ts";
+import { clamp } from "@number/index.ts";
 
 test("clamp returns the input when it is within the range", () => {
 	expect(clamp(1, 0, 2)).toBe(1);

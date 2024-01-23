@@ -106,7 +106,7 @@ stack.toArray();
 
 #### Defined in
 
-[util/stack.ts:83](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L83)
+misc/stack.ts:83
 
 ## Properties
 
@@ -116,7 +116,7 @@ stack.toArray();
 
 #### Defined in
 
-[util/stack.ts:49](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L49)
+misc/stack.ts:49
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[util/stack.ts:48](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L48)
+misc/stack.ts:48
 
 ## Accessors
 
@@ -142,7 +142,7 @@ The Stack tag.
 
 #### Defined in
 
-[util/stack.ts:68](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L68)
+misc/stack.ts:68
 
 ___
 
@@ -158,7 +158,7 @@ The size of the stack.
 
 #### Defined in
 
-[util/stack.ts:61](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L61)
+misc/stack.ts:61
 
 ___
 
@@ -174,7 +174,7 @@ The top node of the stack.
 
 #### Defined in
 
-[util/stack.ts:54](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L54)
+misc/stack.ts:54
 
 ## Methods
 
@@ -188,7 +188,7 @@ The top node of the stack.
 
 #### Defined in
 
-[util/stack.ts:79](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L79)
+misc/stack.ts:79
 
 ___
 
@@ -204,7 +204,7 @@ An iterator for the stack to use with `for...of` loops.
 
 #### Defined in
 
-[util/stack.ts:75](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L75)
+misc/stack.ts:75
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[util/stack.ts:128](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L128)
+misc/stack.ts:128
 
 ___
 
@@ -242,7 +242,7 @@ The stack before it was cleared.
 
 #### Defined in
 
-[util/stack.ts:160](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L160)
+misc/stack.ts:160
 
 ___
 
@@ -260,7 +260,7 @@ The new stack.
 
 #### Defined in
 
-[util/stack.ts:172](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L172)
+misc/stack.ts:172
 
 ___
 
@@ -278,7 +278,7 @@ The popped value, or `undefined` if the stack is empty.
 
 #### Defined in
 
-[util/stack.ts:142](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L142)
+misc/stack.ts:142
 
 ___
 
@@ -302,7 +302,7 @@ The stack, or `undefined` if no value was provided.
 
 #### Defined in
 
-[util/stack.ts:122](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L122)
+misc/stack.ts:122
 
 ___
 
@@ -320,7 +320,7 @@ The Stack as an array
 
 #### Defined in
 
-[util/stack.ts:204](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L204)
+misc/stack.ts:204
 
 ___
 
@@ -338,7 +338,7 @@ The Stack as a string
 
 #### Defined in
 
-[util/stack.ts:195](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L195)
+misc/stack.ts:195
 
 ___
 
@@ -361,7 +361,7 @@ The Stack as a string.
 
 #### Defined in
 
-[util/stack.ts:179](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L179)
+misc/stack.ts:179
 
 ___
 
@@ -391,7 +391,7 @@ The stack.
 
 #### Defined in
 
-[util/stack.ts:93](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L93)
+misc/stack.ts:93
 
 ___
 
@@ -421,4 +421,4 @@ Stack created from string
 
 #### Defined in
 
-[util/stack.ts:103](https://github.com/mhodge11/underscorets/blob/471b259/src/util/stack.ts#L103)
+misc/stack.ts:103

@@ -1,4 +1,4 @@
-import { trimStart } from "../../src/index.ts";
+import { trimStart } from "@string/index.ts";
 
 test("trim characters", () => {
 	expect(trimStart("abc", "a")).toBe("bc");

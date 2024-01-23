@@ -1,4 +1,4 @@
-import { ceil } from "../../src/index.ts";
+import { ceil } from "@number/index.ts";
 
 test("ceil returns the ceiling of a positive num", () => {
 	expect(ceil(1.5)).toBe(2);

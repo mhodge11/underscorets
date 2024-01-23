@@ -1,4 +1,4 @@
-import { toDecorator } from "../../src/index.ts";
+import { toDecorator } from "@decorator/index.ts";
 
 test("decorator", () => {
 	function addToReturn(func: (...args: unknown[]) => number, number: number) {

@@ -1,4 +1,4 @@
-import { findLastIndex } from "../../src/index.ts";
+import { findLastIndex } from "@array/index.ts";
 
 test("findLastIndex returns the index of the last element that passes the predicate check", () => {
 	expect(findLastIndex([1, 2, 3, 4], (n) => n < 3)).toBe(1);

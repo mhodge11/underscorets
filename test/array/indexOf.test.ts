@@ -1,4 +1,4 @@
-import { indexOf } from "../../src/index.ts";
+import { indexOf } from "@array/index.ts";
 
 test("indexOf returns the index of the first matching element", () => {
 	expect(indexOf([1, 2, 3, 4], 3)).toBe(2);

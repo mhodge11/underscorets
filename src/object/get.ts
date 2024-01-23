@@ -1,6 +1,6 @@
-import type { ObjectGet } from "../types/ObjectGet.ts";
-import type { ObjectPaths } from "../types/ObjectPaths.ts";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectGet } from "../type/ObjectGet.ts";
+import type { ObjectPaths } from "../type/ObjectPaths.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 import {
 	matchBracketsRegex,

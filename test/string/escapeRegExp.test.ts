@@ -1,4 +1,4 @@
-import { escapeRegExp } from "../../src/index.ts";
+import { escapeRegExp } from "@string/index.ts";
 
 test("escapes special characters in a str", () => {
 	expect(escapeRegExp("hello.world*")).toBe("hello\\.world\\*");

@@ -1,4 +1,4 @@
-import { flow } from "../../src/index.ts";
+import { flow } from "@function/index.ts";
 
 test("calls the functions in order", () => {
 	const square = vi.fn((n: number) => n * n);

@@ -1,4 +1,4 @@
-import { KSUID, compareKsuids } from "../../src/index.ts";
+import { KSUID, compareKsuids } from "@ksuid/index.ts";
 
 beforeAll(() => {
 	vi.useFakeTimers({ now: 14e11, toFake: ["Date"] });

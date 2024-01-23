@@ -1,4 +1,4 @@
-import { startsWith } from "../../src/index.ts";
+import { startsWith } from "@string/index.ts";
 
 test("startsWith a str", () => {
 	expect(startsWith("abc", "a")).toBe(true);

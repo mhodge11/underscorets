@@ -1,4 +1,4 @@
-import type { ArrayLast } from "../types/ArrayLast.ts";
+import type { ArrayLast } from "../type/ArrayLast.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 

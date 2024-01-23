@@ -1,8 +1,8 @@
-import type { ArrayMinLength } from "../types/ArrayMinLength.ts";
-import type { ObjectMerge } from "../types/ObjectMerge.ts";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ArrayMinLength } from "../type/ArrayMinLength.ts";
+import type { ObjectMerge } from "../type/ObjectMerge.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
-import { isPlainObject } from "../validator/isPlainObject.ts";
+import { isPlainObject } from "../validate/isPlainObject.ts";
 
 /**
  * This function combines two or more objects into a single new object. Arrays and other types are overwritten.

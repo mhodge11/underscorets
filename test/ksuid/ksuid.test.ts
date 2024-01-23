@@ -1,11 +1,11 @@
 import { randomBytes } from "crypto";
 
 function runBase62Import() {
-	return import("../../src/helpers/base62.ts");
+	return import("@helpers/base62.ts");
 }
 
 function runImport() {
-	return import("../../src/index.ts");
+	return import("@ksuid/index.ts");
 }
 
 function toArrayBuffer(buffer: Buffer) {
@@ -27,7 +27,7 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
-	vi.doUnmock("../../src/helpers/base62.ts");
+	vi.doUnmock("@ksuid/helpers/base62.ts");
 	vi.resetModules();
 });
 
@@ -279,7 +279,7 @@ test("KSUID.fromParts() returns a new instance", async () => {
 });
 
 test("KSUID.parse() creates a new KSUID if debased byte length is not the normal byte length", async () => {
-	vi.doMock("../../src/helpers/base62.ts", () => ({
+	vi.doMock("@ksuid/helpers/base62.ts", () => ({
 		debase62: () => new Uint8Array(1).buffer,
 	}));
 

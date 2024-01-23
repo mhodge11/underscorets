@@ -1,4 +1,4 @@
-import { quickSort } from "../../src/index.ts";
+import { quickSort } from "@array/index.ts";
 
 test("quick sort the array in ascending order based on the iteratee function", () => {
 	const numbers = [3, 1, 2];

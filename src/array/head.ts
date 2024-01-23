@@ -1,4 +1,4 @@
-import type { ArrayHead } from "../types/ArrayHead.ts";
+import type { ArrayHead } from "../type/ArrayHead.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 

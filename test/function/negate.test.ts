@@ -1,4 +1,4 @@
-import { negate } from "../../src/index.ts";
+import { negate } from "@function/index.ts";
 
 test("should negate `predicate`", () => {
 	const func = negate((n: number) => n > 5);

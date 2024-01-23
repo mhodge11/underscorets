@@ -1,4 +1,4 @@
-import { pick } from "../../src/index.ts";
+import { pick } from "@object/index.ts";
 
 test("pick the specified keys from an obj", () => {
 	const object = { a: 1, b: 2, c: 3 };

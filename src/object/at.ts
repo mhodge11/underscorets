@@ -1,6 +1,6 @@
-import type { ObjectAt } from "../types/ObjectAt.ts";
-import type { ObjectPaths } from "../types/ObjectPaths.ts";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectAt } from "../type/ObjectAt.ts";
+import type { ObjectPaths } from "../type/ObjectPaths.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 import { validPathRegex } from "../config/regex.ts";
 import { get } from "./get.ts";

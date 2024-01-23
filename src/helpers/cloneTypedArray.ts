@@ -1,12 +1,12 @@
-import type { TypedArray } from "../types/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.ts";
 
 import { assertUnreachable } from "./assertUnreachable.ts";
 import { cloneArrayBuffer } from "./cloneArrayBuffer.ts";
 
-export const cloneTypedArray = <T extends TypedArray>(
+export function cloneTypedArray<T extends TypedArray>(
 	typedArray: T,
 	isDeep?: boolean,
-): T => {
+): T {
 	const buffer = isDeep
 		? cloneArrayBuffer(typedArray.buffer)
 		: typedArray.buffer;
@@ -78,4 +78,4 @@ export const cloneTypedArray = <T extends TypedArray>(
 		) as T;
 
 	assertUnreachable("TypedArray is invalid");
-};
+}

@@ -1,4 +1,4 @@
-import { decThrottle } from "../../src/index.ts";
+import { decThrottle } from "@decorator/index.ts";
 
 const addOneMock = vi.fn((input: number) => input + 1);
 

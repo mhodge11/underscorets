@@ -1,4 +1,4 @@
-import { keys } from "../../src/index.ts";
+import { keys } from "@object/index.ts";
 
 test("keys returns an array of keys", () => {
 	const object = { a: 1, b: 2, c: 3 };

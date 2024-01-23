@@ -1,6 +1,6 @@
 import type { Mock } from "vitest";
 
-import { Queue, sleep } from "../../src/index.ts";
+import { Queue, sleep } from "@promise/index.ts";
 
 let queue: Queue;
 

@@ -1,4 +1,4 @@
-import { generateCustomUuidAsync } from "../../src/index.ts";
+import { generateCustomUuidAsync } from "@uuid/index.ts";
 
 test("generates a uuid with a custom alphabet", async () => {
 	const uid = generateCustomUuidAsync("a", 5);

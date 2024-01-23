@@ -1,4 +1,4 @@
-import { lowerFirst } from "../../src/index.ts";
+import { lowerFirst } from "@string/index.ts";
 
 test("should uppercase only the first character", () => {
 	expect(lowerFirst("fred")).toBe("fred");

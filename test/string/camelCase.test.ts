@@ -1,4 +1,4 @@
-import { camelCase } from "../../src/index.ts";
+import { camelCase } from "@string/index.ts";
 
 test("convert a str to camel case", () => {
 	expect(camelCase("Foo Bar")).toBe("fooBar");

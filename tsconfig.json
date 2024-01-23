@@ -11,7 +11,6 @@
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "checkJs": true,
     "declaration": true,
     "declarationMap": true,
     "downlevelIteration": true,
@@ -34,8 +33,35 @@
     "strict": true,
     "strictNullChecks": true,
 
-    "baseUrl": "./"
+    "baseUrl": "./",
+
+    "paths": {
+      "@array/*": ["src/array/*"],
+      "@cache/*": ["src/cache/*"],
+      "@config/*": ["src/config/*"],
+      "@crypto/*": ["src/crypto/*"],
+      "@decorator/*": ["src/decorator/*"],
+      "@function/*": ["src/function/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@ksuid/*": ["src/ksuid/*"],
+      "@misc/*": ["src/misc/*"],
+      "@number/*": ["src/number/*"],
+      "@object/*": ["src/object/*"],
+      "@promise/*": ["src/promise/*"],
+      "@string/*": ["src/string/*"],
+      "@type/*": ["src/type/*"],
+      "@uuid/*": ["src/uuid/*"],
+      "@validate/*": ["src/validate/*"]
+    }
   },
-  "include": ["./**/*.ts", "./**/*.js"],
+  "include": [
+    "./**/*.ts",
+    "./**/*.js",
+    "shims/buffer.js",
+    "shims/buffer.cjs",
+    "shims/crypto.cjs",
+    "shims/types.cjs",
+    "shims/index.cjs"
+  ],
   "exclude": ["./**/coverage/**/*", "./**/node_modules/**/*", "./**/dist/**/*"]
 }

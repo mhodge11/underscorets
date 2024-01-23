@@ -15,17 +15,19 @@
 
 ### Type Aliases
 
+- [ArrayFlat](README.md#arrayflat)
 - [ArrayHead](README.md#arrayhead)
 - [ArrayLast](README.md#arraylast)
 - [ArrayMinLength](README.md#arrayminlength)
+- [ArrayReduce](README.md#arrayreduce)
+- [ArrayReverse](README.md#arrayreverse)
 - [ArrayTail](README.md#arraytail)
-- [CastedArray](README.md#castedarray)
+- [CastArray](README.md#castarray)
 - [CompareFunction](README.md#comparefunction)
-- [FlattenedArray](README.md#flattenedarray)
 - [GenericFunction](README.md#genericfunction)
 - [Jsonifiable](README.md#jsonifiable)
 - [ObjectAt](README.md#objectat)
-- [ObjectFlatKeys](README.md#objectflatkeys)
+- [ObjectFlatten](README.md#objectflatten)
 - [ObjectGet](README.md#objectget)
 - [ObjectKeys](README.md#objectkeys)
 - [ObjectMerge](README.md#objectmerge)
@@ -35,8 +37,6 @@
 - [PlainObject](README.md#plainobject)
 - [Primitive](README.md#primitive)
 - [PullOutArray](README.md#pulloutarray)
-- [ReducedArray](README.md#reducedarray)
-- [ReversedArray](README.md#reversedarray)
 - [TypedArray](README.md#typedarray)
 
 ### Variables
@@ -50,7 +50,7 @@
 - [average](README.md#average)
 - [bubbleSort](README.md#bubblesort)
 - [camelCase](README.md#camelcase)
-- [castArray](README.md#castarray)
+- [castArray](README.md#castarray-1)
 - [ceil](README.md#ceil)
 - [chunk](README.md#chunk)
 - [clamp](README.md#clamp)
@@ -89,7 +89,7 @@
 - [findLastIndex](README.md#findlastindex)
 - [findLastKey](README.md#findlastkey)
 - [flat](README.md#flat)
-- [flatKeys](README.md#flatkeys)
+- [flatten](README.md#flatten)
 - [flip](README.md#flip)
 - [floor](README.md#floor)
 - [flow](README.md#flow)
@@ -278,7 +278,7 @@ bubbleSort(array,
 
 #### Defined in
 
-[array/bubbleSort.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/array/bubbleSort.ts#L31)
+[array/bubbleSort.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/bubbleSort.ts#L31)
 
 ___
 
@@ -319,7 +319,7 @@ chunk(['a', 'b', 'c', 'd'], 3)
 
 #### Defined in
 
-[array/chunk.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/array/chunk.ts#L24)
+[array/chunk.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/chunk.ts#L24)
 
 ___
 
@@ -357,7 +357,7 @@ compact([0, 1, false, 2, '', 3])
 
 #### Defined in
 
-[array/compact.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/array/compact.ts#L21)
+[array/compact.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/compact.ts#L21)
 
 ___
 
@@ -405,7 +405,7 @@ count(users, value => value.age);
 
 #### Defined in
 
-[array/count.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/array/count.ts#L29)
+[array/count.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/count.ts#L29)
 
 ___
 
@@ -455,7 +455,7 @@ difference(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/difference.ts:37](https://github.com/mhodge11/underscorets/blob/471b259/src/array/difference.ts#L37)
+[array/difference.ts:37](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/difference.ts#L37)
 
 ▸ **difference**\<`T`\>(`...arraysOrCompareFn`): [`PullOutArray`](README.md#pulloutarray)\<[...T]\>
 
@@ -477,7 +477,7 @@ difference(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/difference.ts:40](https://github.com/mhodge11/underscorets/blob/471b259/src/array/difference.ts#L40)
+[array/difference.ts:40](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/difference.ts#L40)
 
 ___
 
@@ -521,7 +521,7 @@ drop(users, 2)
 
 #### Defined in
 
-[array/drop.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/drop.ts#L26)
+[array/drop.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/drop.ts#L26)
 
 ___
 
@@ -565,7 +565,7 @@ dropRight(users, 2)
 
 #### Defined in
 
-[array/dropRight.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/dropRight.ts#L26)
+[array/dropRight.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/dropRight.ts#L26)
 
 ___
 
@@ -610,7 +610,7 @@ dropRightWhile(users, user => user.active)
 
 #### Defined in
 
-[array/dropRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/dropRightWhile.ts#L26)
+[array/dropRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/dropRightWhile.ts#L26)
 
 ___
 
@@ -655,7 +655,7 @@ dropWhile(users, user => user.active)
 
 #### Defined in
 
-[array/dropWhile.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/dropWhile.ts#L26)
+[array/dropWhile.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/dropWhile.ts#L26)
 
 ___
 
@@ -692,7 +692,7 @@ each([1, 2], value => console.log(value))
 
 #### Defined in
 
-[array/each.ts:19](https://github.com/mhodge11/underscorets/blob/471b259/src/array/each.ts#L19)
+[array/each.ts:19](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/each.ts#L19)
 
 ___
 
@@ -728,7 +728,7 @@ each([1, 2], value => console.log(value))
 
 #### Defined in
 
-[array/eachRight.ts:18](https://github.com/mhodge11/underscorets/blob/471b259/src/array/eachRight.ts#L18)
+[array/eachRight.ts:18](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/eachRight.ts#L18)
 
 ___
 
@@ -772,7 +772,7 @@ every([true, 1, null, 'yes'], Boolean)
 
 #### Defined in
 
-[array/every.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/array/every.ts#L25)
+[array/every.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/every.ts#L25)
 
 ___
 
@@ -819,7 +819,7 @@ filter(users, ({ active }) => active)
 
 #### Defined in
 
-[array/filter.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/filter.ts#L26)
+[array/filter.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/filter.ts#L26)
 
 ___
 
@@ -866,7 +866,7 @@ findIndex(users, ({ user }) => user === 'pebbles')
 
 #### Defined in
 
-[array/findIndex.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/array/findIndex.ts#L28)
+[array/findIndex.ts:28](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/findIndex.ts#L28)
 
 ___
 
@@ -911,13 +911,13 @@ findLastIndex(users, ({ user }) => user === 'pebbles')
 
 #### Defined in
 
-[array/findLastIndex.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/array/findLastIndex.ts#L28)
+[array/findLastIndex.ts:28](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/findLastIndex.ts#L28)
 
 ___
 
 ### flat
 
-▸ **flat**\<`T`, `D`\>(`array`, `depth?`): [`FlattenedArray`](README.md#flattenedarray)\<`T`[], `D`\>[]
+▸ **flat**\<`T`, `D`\>(`array`, `depth?`): [`ArrayFlat`](README.md#arrayflat)\<`T`[], `D`\>[]
 
 Flattens an array of arrays into a single array.
 `Array.flat()` is much slower than this on Node >= 19.
@@ -938,7 +938,7 @@ Flattens an array of arrays into a single array.
 
 #### Returns
 
-[`FlattenedArray`](README.md#flattenedarray)\<`T`[], `D`\>[]
+[`ArrayFlat`](README.md#arrayflat)\<`T`[], `D`\>[]
 
 Returns the flattened array
 
@@ -954,7 +954,7 @@ flat([1, [2, [3, [4]], 5]], 2)
 
 #### Defined in
 
-[array/flat.ts:54](https://github.com/mhodge11/underscorets/blob/471b259/src/array/flat.ts#L54)
+[array/flat.ts:54](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/flat.ts#L54)
 
 ___
 
@@ -1004,7 +1004,7 @@ fuzzySearch("abc", ["abc", "acb", "bac", "bca", "cab", "cba"])
 
 #### Defined in
 
-[array/fuzzySearch.ts:95](https://github.com/mhodge11/underscorets/blob/471b259/src/array/fuzzySearch.ts#L95)
+[array/fuzzySearch.ts:95](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/fuzzySearch.ts#L95)
 
 ___
 
@@ -1046,7 +1046,7 @@ group([6.1, 4.2, 6.3], value => value > 5 ? '>5' : '<=5')
 
 #### Defined in
 
-[array/group.ts:22](https://github.com/mhodge11/underscorets/blob/471b259/src/array/group.ts#L22)
+[array/group.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/group.ts#L22)
 
 ___
 
@@ -1086,7 +1086,7 @@ head([]);
 
 #### Defined in
 
-[array/head.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/array/head.ts#L23)
+[array/head.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/head.ts#L23)
 
 ___
 
@@ -1129,7 +1129,7 @@ includes([1, 2, 3], 1, (a, b) => a === b);
 
 #### Defined in
 
-[array/includes.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/array/includes.ts#L24)
+[array/includes.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/includes.ts#L24)
 
 ___
 
@@ -1175,7 +1175,7 @@ indexOf([1, 2, 1, 2], 2, 2)
 
 #### Defined in
 
-[array/indexOf.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/array/indexOf.ts#L29)
+[array/indexOf.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/indexOf.ts#L29)
 
 ___
 
@@ -1222,7 +1222,7 @@ insertionSort(array,
 
 #### Defined in
 
-[array/insertionSort.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/array/insertionSort.ts#L31)
+[array/insertionSort.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/insertionSort.ts#L31)
 
 ___
 
@@ -1275,7 +1275,7 @@ intersection(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/intersection.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/array/intersection.ts#L41)
+[array/intersection.ts:41](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/intersection.ts#L41)
 
 ▸ **intersection**\<`T`\>(`...arraysOrCompareFn`): [`PullOutArray`](README.md#pulloutarray)\<[...T]\>
 
@@ -1297,7 +1297,7 @@ intersection(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/intersection.ts:44](https://github.com/mhodge11/underscorets/blob/471b259/src/array/intersection.ts#L44)
+[array/intersection.ts:44](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/intersection.ts#L44)
 
 ___
 
@@ -1334,7 +1334,7 @@ last([1, 2, 3])
 
 #### Defined in
 
-[array/last.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/array/last.ts#L20)
+[array/last.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/last.ts#L20)
 
 ___
 
@@ -1373,7 +1373,7 @@ lastIndexOf([1, 2, 1, 2], 2)
 
 #### Defined in
 
-[array/lastIndexOf.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/array/lastIndexOf.ts#L24)
+[array/lastIndexOf.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/lastIndexOf.ts#L24)
 
 ___
 
@@ -1412,7 +1412,7 @@ map([4, 8], n => n * n)
 
 #### Defined in
 
-[array/map.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/array/map.ts#L20)
+[array/map.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/map.ts#L20)
 
 ___
 
@@ -1459,7 +1459,7 @@ mergeSort(array,
 
 #### Defined in
 
-[array/mergeSort.ts:64](https://github.com/mhodge11/underscorets/blob/471b259/src/array/mergeSort.ts#L64)
+[array/mergeSort.ts:64](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/mergeSort.ts#L64)
 
 ___
 
@@ -1502,7 +1502,7 @@ If index is out of bounds
 
 #### Defined in
 
-[array/move.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/array/move.ts#L21)
+[array/move.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/move.ts#L21)
 
 ___
 
@@ -1549,7 +1549,7 @@ quickSort(array,
 
 #### Defined in
 
-[array/quickSort.ts:86](https://github.com/mhodge11/underscorets/blob/471b259/src/array/quickSort.ts#L86)
+[array/quickSort.ts:86](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/quickSort.ts#L86)
 
 ___
 
@@ -1597,13 +1597,13 @@ If range is negative or step is 0
 
 #### Defined in
 
-[array/range.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/array/range.ts#L31)
+[array/range.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/range.ts#L31)
 
 ___
 
 ### reduce
 
-▸ **reduce**\<`T`, `Acc`\>(`array`, `callback`, `accumulator?`, `initAccum?`): [`ReducedArray`](README.md#reducedarray)\<`T`[], `Acc`\>
+▸ **reduce**\<`T`, `Acc`\>(`array`, `callback`, `accumulator?`, `initAccum?`): [`ArrayReduce`](README.md#arrayreduce)\<`T`[], `Acc`\>
 
 Reduces an array to a single value by invoking the callback function for each element in the array.
 
@@ -1625,7 +1625,7 @@ Reduces an array to a single value by invoking the callback function for each el
 
 #### Returns
 
-[`ReducedArray`](README.md#reducedarray)\<`T`[], `Acc`\>
+[`ArrayReduce`](README.md#arrayreduce)\<`T`[], `Acc`\>
 
 The reduced value
 
@@ -1642,13 +1642,13 @@ If accumulator is nullish and initAccum is false
 
 #### Defined in
 
-[array/reduce.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/array/reduce.ts#L25)
+[array/reduce.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/reduce.ts#L25)
 
 ___
 
 ### reduceRight
 
-▸ **reduceRight**\<`T`, `Acc`\>(`array`, `iteratee`, `accumulator?`, `initAccum?`): [`ReducedArray`](README.md#reducedarray)\<`T`[], `Acc`\>
+▸ **reduceRight**\<`T`, `Acc`\>(`array`, `iteratee`, `accumulator?`, `initAccum?`): [`ArrayReduce`](README.md#arrayreduce)\<`T`[], `Acc`\>
 
 Like `{@link reduce}`, but iterates from right to left.
 
@@ -1670,7 +1670,7 @@ Like `{@link reduce}`, but iterates from right to left.
 
 #### Returns
 
-[`ReducedArray`](README.md#reducedarray)\<`T`[], `Acc`\>
+[`ArrayReduce`](README.md#arrayreduce)\<`T`[], `Acc`\>
 
 The reduced value
 
@@ -1687,7 +1687,7 @@ If accumulator is nullish and initAccum is false
 
 #### Defined in
 
-[array/reduceRight.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/array/reduceRight.ts#L25)
+[array/reduceRight.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/reduceRight.ts#L25)
 
 ___
 
@@ -1729,7 +1729,7 @@ sample([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[array/sample.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/array/sample.ts#L27)
+[array/sample.ts:27](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/sample.ts#L27)
 
 ___
 
@@ -1776,7 +1776,7 @@ selectionSort(array,
 
 #### Defined in
 
-[array/selectionSort.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/array/selectionSort.ts#L31)
+[array/selectionSort.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/selectionSort.ts#L31)
 
 ___
 
@@ -1813,7 +1813,7 @@ shuffle([1, 2, 3, 4])
 
 #### Defined in
 
-[array/shuffle.ts:19](https://github.com/mhodge11/underscorets/blob/471b259/src/array/shuffle.ts#L19)
+[array/shuffle.ts:19](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/shuffle.ts#L19)
 
 ___
 
@@ -1849,7 +1849,7 @@ simpleFuzzySearch("abc", ["abc", "acb", "bac", "bca", "cab", "cba"])
 
 #### Defined in
 
-array/simpleFuzzySearch.ts:33
+[array/simpleFuzzySearch.ts:34](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/simpleFuzzySearch.ts#L34)
 
 ___
 
@@ -1888,7 +1888,7 @@ slice([1, 2, 3, 4], 1, 3)
 
 #### Defined in
 
-[array/slice.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/array/slice.ts#L20)
+[array/slice.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/slice.ts#L20)
 
 ___
 
@@ -1927,7 +1927,7 @@ some([null, 0, 'yes', false], Boolean)
 
 #### Defined in
 
-[array/some.ts:19](https://github.com/mhodge11/underscorets/blob/471b259/src/array/some.ts#L19)
+[array/some.ts:19](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/some.ts#L19)
 
 ___
 
@@ -1974,7 +1974,7 @@ sort(array,
 
 #### Defined in
 
-[array/sort.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/array/sort.ts#L31)
+[array/sort.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/sort.ts#L31)
 
 ___
 
@@ -2011,7 +2011,7 @@ tail([1, 2, 3])
 
 #### Defined in
 
-[array/tail.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/array/tail.ts#L20)
+[array/tail.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/tail.ts#L20)
 
 ___
 
@@ -2055,7 +2055,7 @@ take(users, 2)
 
 #### Defined in
 
-[array/take.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/take.ts#L26)
+[array/take.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/take.ts#L26)
 
 ___
 
@@ -2099,7 +2099,7 @@ takeRight(users, 2)
 
 #### Defined in
 
-[array/takeRight.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/takeRight.ts#L26)
+[array/takeRight.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/takeRight.ts#L26)
 
 ___
 
@@ -2144,7 +2144,7 @@ takeRightWhile(users, user => user.active)
 
 #### Defined in
 
-[array/takeRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/takeRightWhile.ts#L26)
+[array/takeRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/takeRightWhile.ts#L26)
 
 ___
 
@@ -2189,7 +2189,7 @@ takeWhile(users, user => user.active)
 
 #### Defined in
 
-[array/takeWhile.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/array/takeWhile.ts#L26)
+[array/takeWhile.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/takeWhile.ts#L26)
 
 ___
 
@@ -2243,7 +2243,7 @@ unique(users, (a, b) => a.name === b.name)
 
 #### Defined in
 
-[array/unique.ts:35](https://github.com/mhodge11/underscorets/blob/471b259/src/array/unique.ts#L35)
+[array/unique.ts:35](https://github.com/mhodge11/underscorets/blob/0c75560/src/array/unique.ts#L35)
 
 ## Crypto
 
@@ -2290,7 +2290,7 @@ If the specified algorithm is not supported by the Web Crypto API
 
 #### Defined in
 
-[crypto/hash.ts:30](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/hash.ts#L30)
+[crypto/hash.ts:34](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/hash.ts#L34)
 
 ___
 
@@ -2338,7 +2338,7 @@ randomElement([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[crypto/randomElement.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/randomElement.ts#L31)
+[crypto/randomElement.ts:35](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/randomElement.ts#L35)
 
 ▸ **randomElement**\<`T`\>(`array`, `multi`): `T`[]
 
@@ -2361,7 +2361,7 @@ randomElement([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[crypto/randomElement.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/randomElement.ts#L32)
+[crypto/randomElement.ts:36](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/randomElement.ts#L36)
 
 ___
 
@@ -2401,7 +2401,7 @@ If `min` is greater than or equal to `max`
 
 #### Defined in
 
-[crypto/randomFloat.ts:22](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/randomFloat.ts#L22)
+[crypto/randomFloat.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/randomFloat.ts#L21)
 
 ___
 
@@ -2445,7 +2445,7 @@ If `min` is greater than or equal to `max`
 
 #### Defined in
 
-[crypto/randomInt.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/randomInt.ts#L23)
+[crypto/randomInt.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/randomInt.ts#L22)
 
 ___
 
@@ -2485,7 +2485,7 @@ randomString(16, 'abc');
 
 #### Defined in
 
-[crypto/randomString.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/crypto/randomString.ts#L27)
+[crypto/randomString.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/crypto/randomString.ts#L29)
 
 ## Decorator
 
@@ -2543,7 +2543,7 @@ instance.testMethod("World");
 
 #### Defined in
 
-decorator/decDebounce.ts:32
+[decorator/decDebounce.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decDebounce.ts#L32)
 
 ___
 
@@ -2604,7 +2604,7 @@ instance.testMethod(); // => 2
 
 #### Defined in
 
-decorator/decMaxCalls.ts:35
+[decorator/decMaxCalls.ts:35](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decMaxCalls.ts#L35)
 
 ___
 
@@ -2669,7 +2669,7 @@ instance.testMethod(1, 2); // => 3 (cache miss)
 
 #### Defined in
 
-decorator/decMemoize.ts:41
+[decorator/decMemoize.ts:41](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decMemoize.ts#L41)
 
 ___
 
@@ -2727,7 +2727,7 @@ instance.testMethod(); // => 1
 
 #### Defined in
 
-decorator/decMinCalls.ts:32
+[decorator/decMinCalls.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decMinCalls.ts#L32)
 
 ___
 
@@ -2780,7 +2780,7 @@ instance.testMethod(); // => 1
 
 #### Defined in
 
-decorator/decOnce.ts:31
+[decorator/decOnce.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decOnce.ts#L31)
 
 ___
 
@@ -2837,7 +2837,7 @@ instance.testMethod(); // nothing happens
 
 #### Defined in
 
-decorator/decThrottle.ts:31
+[decorator/decThrottle.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/decThrottle.ts#L31)
 
 ___
 
@@ -2919,7 +2919,7 @@ instance.testMethod();
 
 #### Defined in
 
-[decorator/toDecorator.ts:38](https://github.com/mhodge11/underscorets/blob/471b259/src/decorator/toDecorator.ts#L38)
+[decorator/toDecorator.ts:38](https://github.com/mhodge11/underscorets/blob/0c75560/src/decorator/toDecorator.ts#L38)
 
 ## Function
 
@@ -2964,7 +2964,7 @@ if (error) {
 
 #### Defined in
 
-[function/attempt.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/function/attempt.ts#L25)
+[function/attempt.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/attempt.ts#L25)
 
 ___
 
@@ -3032,7 +3032,7 @@ func({ 'a': '1', 'b': '2' })
 
 #### Defined in
 
-[function/cond.ts:36](https://github.com/mhodge11/underscorets/blob/471b259/src/function/cond.ts#L36)
+[function/cond.ts:36](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/cond.ts#L36)
 
 ___
 
@@ -3083,7 +3083,7 @@ debouncedSayHello("Jane");
 
 #### Defined in
 
-[function/debounce.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/function/debounce.ts#L32)
+[function/debounce.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/debounce.ts#L32)
 
 ___
 
@@ -3124,7 +3124,7 @@ defer(text => console.log(text), 'deferred')
 
 #### Defined in
 
-[function/defer.ts:22](https://github.com/mhodge11/underscorets/blob/471b259/src/function/defer.ts#L22)
+[function/defer.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/defer.ts#L22)
 
 ___
 
@@ -3166,13 +3166,13 @@ delay(text => console.log(text), 1000, 'later')
 
 #### Defined in
 
-[function/delay.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/function/delay.ts#L23)
+[function/delay.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/delay.ts#L23)
 
 ___
 
 ### flip
 
-▸ **flip**\<`T`\>(`func`): (`this`: `any`, ...`unknown`: [...Parameters\<T\>]) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ReversedArray`](README.md#reversedarray)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
+▸ **flip**\<`T`\>(`func`): (`this`: `any`, ...`unknown`: [...Parameters\<T\>]) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ArrayReverse`](README.md#arrayreverse)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
 
 Creates a function that invokes `func` with arguments reversed.
 
@@ -3196,7 +3196,7 @@ Creates a function that invokes `func` with arguments reversed.
 
 The new flipped function
 
-▸ (`this`, `...unknown`): [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ReversedArray`](README.md#reversedarray)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
+▸ (`this`, `...unknown`): [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ArrayReverse`](README.md#arrayreverse)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
 
 ##### Parameters
 
@@ -3207,7 +3207,7 @@ The new flipped function
 
 ##### Returns
 
-[`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ReversedArray`](README.md#reversedarray)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
+[`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<(...`args`: [`ArrayReverse`](README.md#arrayreverse)\<[...Parameters\<T\>]\>) => [`ReturnType`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype )\<`T`\>\>
 
 **`Example`**
 
@@ -3220,7 +3220,7 @@ flipped('a', 'b', 'c', 'd')
 
 #### Defined in
 
-[function/flip.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/function/flip.ts#L23)
+[function/flip.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/flip.ts#L23)
 
 ___
 
@@ -3283,7 +3283,7 @@ addSquare(1, 2)
 
 #### Defined in
 
-[function/flow.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/function/flow.ts#L31)
+[function/flow.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/flow.ts#L31)
 
 ___
 
@@ -3345,7 +3345,7 @@ addSquare(1, 2)
 
 #### Defined in
 
-[function/flowRight.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/function/flowRight.ts#L32)
+[function/flowRight.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/flowRight.ts#L32)
 
 ___
 
@@ -3397,7 +3397,7 @@ limitAddCount() // => 2
 
 #### Defined in
 
-[function/maxCalls.ts:33](https://github.com/mhodge11/underscorets/blob/471b259/src/function/maxCalls.ts#L33)
+[function/maxCalls.ts:33](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/maxCalls.ts#L33)
 
 ___
 
@@ -3468,7 +3468,7 @@ const defaultResolver = (...args: unknown[]) => JSON.stringify(args)
 
 #### Defined in
 
-[function/memoize.ts:54](https://github.com/mhodge11/underscorets/blob/471b259/src/function/memoize.ts#L54)
+[function/memoize.ts:54](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/memoize.ts#L54)
 
 ___
 
@@ -3529,7 +3529,7 @@ limitedCaution()
 
 #### Defined in
 
-[function/minCalls.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/function/minCalls.ts#L29)
+[function/minCalls.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/minCalls.ts#L29)
 
 ___
 
@@ -3587,7 +3587,7 @@ filter([1, 2, 3, 4, 5, 6], negate(isEven))
 
 #### Defined in
 
-[function/negate.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/function/negate.ts#L24)
+[function/negate.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/negate.ts#L24)
 
 ___
 
@@ -3649,7 +3649,7 @@ limitAddCount() // => 1
 
 #### Defined in
 
-[function/once.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/function/once.ts#L32)
+[function/once.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/once.ts#L32)
 
 ___
 
@@ -3695,7 +3695,7 @@ throttled();
 
 #### Defined in
 
-[function/throttle.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/function/throttle.ts#L27)
+[function/throttle.ts:27](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/throttle.ts#L27)
 
 ___
 
@@ -3740,7 +3740,7 @@ times(() => 0, 4)
 
 #### Defined in
 
-[function/times.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/function/times.ts#L24)
+[function/times.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/function/times.ts#L24)
 
 ## KSUID
 
@@ -3783,7 +3783,7 @@ compareKsuids(ksuid1, ksuid1);
 
 #### Defined in
 
-[ksuid/compareKsuids.ts:30](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/compareKsuids.ts#L30)
+[ksuid/compareKsuids.ts:30](https://github.com/mhodge11/underscorets/blob/0c75560/src/ksuid/compareKsuids.ts#L30)
 
 ___
 
@@ -3813,7 +3813,7 @@ const ksuid = generateKsuid();
 
 #### Defined in
 
-[ksuid/generateKsuid.ts:16](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/generateKsuid.ts#L16)
+[ksuid/generateKsuid.ts:16](https://github.com/mhodge11/underscorets/blob/0c75560/src/ksuid/generateKsuid.ts#L16)
 
 ___
 
@@ -3843,7 +3843,7 @@ const ksuid = await generateKsuidAsync();
 
 #### Defined in
 
-[ksuid/generateKsuidAsync.ts:16](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/generateKsuidAsync.ts#L16)
+[ksuid/generateKsuidAsync.ts:16](https://github.com/mhodge11/underscorets/blob/0c75560/src/ksuid/generateKsuidAsync.ts#L16)
 
 ___
 
@@ -3877,7 +3877,565 @@ isValidKsuid("notaKSUID");
 
 #### Defined in
 
-[ksuid/isValidKsuid.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/ksuid/isValidKsuid.ts#L21)
+[ksuid/isValidKsuid.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/ksuid/isValidKsuid.ts#L21)
+
+## Misc
+
+### castArray
+
+▸ **castArray**\<`T`\>(`value`): [`CastArray`](README.md#castarray)\<`T`\>
+
+Casts `value` as an array if it's not one.
+
+#### Type parameters
+
+| Name | Description |
+| :------ | :------ |
+| `T` | The type of the value |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `T` | The value to cast |
+
+#### Returns
+
+[`CastArray`](README.md#castarray)\<`T`\>
+
+The casted array
+
+**`Example`**
+
+```ts
+castArray(1)
+// => [1]
+
+castArray({ 'a': 1 })
+// => [{ 'a': 1 }]
+
+castArray('abc')
+// => ['abc']
+
+castArray(null)
+// => [null]
+
+castArray(undefined)
+// => [undefined]
+
+castArray()
+// => []
+
+const array = [1, 2, 3]
+console.log(castArray(array) === array)
+// => true
+```
+
+#### Defined in
+
+misc/castArray.ts:37
+
+___
+
+### clone
+
+▸ **clone**\<`T`\>(`value`): `T`
+
+Creates a shallow clone of `value`.
+
+**Note:** This method is loosely based on the
+[structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
+and supports cloning arrays, array buffers, booleans, date objects, maps,
+numbers, `Object` objects, regexes, sets, strings, symbols, and typed
+arrays. The own enumerable properties of `arguments` objects are cloned
+as plain objects. Object inheritance is preserved. An empty object is
+returned for uncloneable values such as error objects, functions, DOM nodes,
+and WeakMaps.
+
+*Based on [lodash.clone](https://lodash.com/docs/#clone).*
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `T` | The value to clone |
+
+#### Returns
+
+`T`
+
+The cloned value
+
+**`Example`**
+
+```ts
+const objects = [{ 'a': 1 }, { 'b': 2 }]
+
+const shallow = clone(objects)
+console.log(shallow[0] === objects[0])
+// => true
+```
+
+#### Defined in
+
+misc/clone.ts:32
+
+___
+
+### cloneDeep
+
+▸ **cloneDeep**\<`T`\>(`value`): `T`
+
+This method is like `{@link clone}` except that it recursively clones `value`.
+Object inheritance is preserved.
+
+*Based on [lodash.cloneDeep](https://lodash.com/docs/#cloneDeep).*
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `T` | The value to recursively clone |
+
+#### Returns
+
+`T`
+
+The deep cloned value
+
+**`Example`**
+
+```ts
+const objects = [{ 'a': 1 }, { 'b': 2 }]
+
+const deep = cloneDeep(objects)
+console.log(deep[0] === objects[0])
+// => false
+```
+
+#### Defined in
+
+misc/cloneDeep.ts:24
+
+___
+
+### size
+
+▸ **size**(`value`): `number`
+
+Gets the size of `collection` by returning its length for array-like
+values or the number of own enumerable string keyed properties for objects.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `string` \| `object` | The collection to inspect |
+
+#### Returns
+
+`number`
+
+The `value` size
+
+**`Example`**
+
+```ts
+size([1, 2, 3])
+// => 3
+
+size({ 'a': 1, 'b': 2 })
+// => 2
+
+size('pebbles')
+// => 7
+```
+
+#### Defined in
+
+misc/size.ts:28
+
+___
+
+### toArray
+
+▸ **toArray**\<`T`\>(`value`): `ToArray`\<`T`\>
+
+Converts `value` to an array.
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `T` | The value to convert |
+
+#### Returns
+
+`ToArray`\<`T`\>
+
+The converted array
+
+**`Example`**
+
+```ts
+toArray({ 'a': 1, 'b': 2 })
+// => [1, 2]
+
+toArray('abc')
+// => ['a', 'b', 'c']
+
+toArray(1)
+// => []
+
+toArray(null)
+// => []
+```
+
+#### Defined in
+
+misc/toArray.ts:35
+
+___
+
+### toFinite
+
+▸ **toFinite**(`value`): `number`
+
+Converts `value` to a finite number.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`number`
+
+The converted number
+
+**`Example`**
+
+```ts
+toFinite(3.2)
+// => 3.2
+
+toFinite(Number.MIN_VALUE)
+// => 5e-324
+
+toFinite(Infinity)
+// => 1.7976931348623157e+308
+
+toFinite('3.2')
+// => 3.2
+```
+
+#### Defined in
+
+misc/toFinite.ts:27
+
+___
+
+### toInteger
+
+▸ **toInteger**(`value`): `number`
+
+Converts `value` to an integer.
+
+**Note:** This method is loosely based on
+[`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`number`
+
+The converted integer
+
+**`Example`**
+
+```ts
+toInteger(3.2)
+// => 3
+
+toInteger(Number.MIN_VALUE)
+// => 0
+
+toInteger(Infinity)
+// => 1.7976931348623157e+308
+
+toInteger('3.2')
+// => 3
+```
+
+#### Defined in
+
+misc/toInteger.ts:29
+
+___
+
+### toLength
+
+▸ **toLength**(`value`): `number`
+
+Converts `value` to an integer suitable for use as the length of an
+array-like object.
+
+**Note:** This method is based on
+[`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`number`
+
+The converted integer
+
+**`Example`**
+
+```ts
+toLength(3.2)
+// => 3
+
+toLength(Number.MIN_VALUE)
+// => 0
+
+toLength(Infinity)
+// => 4294967295
+
+toLength('3.2')
+// => 3
+```
+
+#### Defined in
+
+misc/toLength.ts:31
+
+___
+
+### toNumber
+
+▸ **toNumber**(`value`): `number`
+
+Converts `value` to a number.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`number`
+
+The converted number
+
+**`Example`**
+
+```ts
+toNumber(3.2)
+// => 3.2
+
+toNumber(Number.MIN_VALUE)
+// => 5e-324
+
+toNumber(Infinity)
+// => Infinity
+
+toNumber('3.2')
+// => 3.2
+```
+
+#### Defined in
+
+misc/toNumber.ts:28
+
+___
+
+### toPath
+
+▸ **toPath**(`value`): `string`
+
+Converts `value` to a property path array.
+
+Numbers are converted to `[${value}]` to index arrays,
+characters are converted to `.${value}` to index object properties.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | (`string` \| `number`)[] | The string\|number array to convert |
+
+#### Returns
+
+`string`
+
+The property path to use with `{@link at}`, `{@link get}` and `{@link set}`
+
+**`Example`**
+
+```ts
+toPath(['a', 'b', 'c'])
+// => 'a.b.c'
+
+toPath(['a', 0, 'b', 'c'])
+// => a[0].b.c
+```
+
+#### Defined in
+
+misc/toPath.ts:23
+
+___
+
+### toPlainObject
+
+▸ **toPlainObject**(`value`): [`PlainObject`](README.md#plainobject)
+
+Converts `value` to a plain object flattening inherited enumerable string
+keyed properties of `value` to own properties of the plain object.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+[`PlainObject`](README.md#plainobject)
+
+The converted plain object
+
+**`Example`**
+
+```ts
+function Foo() {
+  this.b = 2
+}
+
+Foo.prototype.c = 3
+
+assign({ 'a': 1 }, new Foo)
+// => { 'a': 1, 'b': 2 }
+
+assign({ 'a': 1 }, toPlainObject(new Foo))
+// => { 'a': 1, 'b': 2, 'c': 3 }
+```
+
+#### Defined in
+
+misc/toPlainObject.ts:27
+
+___
+
+### toSafeInteger
+
+▸ **toSafeInteger**(`value`): `number`
+
+Converts `value` to a safe integer. A safe integer can be compared and
+represented correctly.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`number`
+
+The converted safe integer
+
+**`Example`**
+
+```ts
+toSafeInteger(3.2)
+// => 3
+
+toSafeInteger(Number.MIN_VALUE)
+// => 0
+
+toSafeInteger(Infinity)
+// => 9007199254740991
+
+toSafeInteger('3.2')
+// => 3
+```
+
+#### Defined in
+
+misc/toSafeInteger.ts:28
+
+___
+
+### toString
+
+▸ **toString**(`value`): `string`
+
+Converts `value` to a string. An empty string is returned for `null`
+and `undefined` values. The sign of `-0` is preserved.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `value` | `unknown` | The value to convert |
+
+#### Returns
+
+`string`
+
+The converted string
+
+**`Example`**
+
+```ts
+toString(null)
+// => ''
+
+toString(-0)
+// => '-0'
+
+toString([1, 2, 3])
+// => '1,2,3'
+```
+
+#### Defined in
+
+misc/toString.ts:24
 
 ## Number
 
@@ -3916,7 +4474,7 @@ average([1, 2, 3, 4, 5]) // => 3
 
 #### Defined in
 
-[number/average.ts:18](https://github.com/mhodge11/underscorets/blob/471b259/src/number/average.ts#L18)
+[number/average.ts:18](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/average.ts#L18)
 
 ___
 
@@ -3954,7 +4512,7 @@ ceil(6040, -2)
 
 #### Defined in
 
-[number/ceil.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/number/ceil.ts#L24)
+[number/ceil.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/ceil.ts#L24)
 
 ___
 
@@ -3990,7 +4548,7 @@ clamp(10, -5, 5)
 
 #### Defined in
 
-[number/clamp.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/number/clamp.ts#L20)
+[number/clamp.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/clamp.ts#L20)
 
 ___
 
@@ -4027,7 +4585,7 @@ factorial(5) // => 120
 
 #### Defined in
 
-[number/factorial.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/number/factorial.ts#L21)
+[number/factorial.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/factorial.ts#L21)
 
 ___
 
@@ -4065,7 +4623,7 @@ floor(4060, -2)
 
 #### Defined in
 
-[number/floor.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/number/floor.ts#L24)
+[number/floor.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/floor.ts#L24)
 
 ___
 
@@ -4105,7 +4663,7 @@ median([1, 2, 3, 4, 5, 6]) // => 3.5
 
 #### Defined in
 
-[number/median.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/number/median.ts#L20)
+[number/median.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/median.ts#L20)
 
 ___
 
@@ -4143,7 +4701,7 @@ round(1234.56);
 
 #### Defined in
 
-[number/round.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/number/round.ts#L24)
+[number/round.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/round.ts#L24)
 
 ___
 
@@ -4186,7 +4744,7 @@ sum([{ value: 1 }, { value: 2 }, { value: 3 }], (obj) => obj.value)
 
 #### Defined in
 
-[number/sum.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/number/sum.ts#L23)
+[number/sum.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/number/sum.ts#L23)
 
 ## Object
 
@@ -4235,7 +4793,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/at.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/object/at.ts#L32)
+[object/at.ts:32](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/at.ts#L32)
 
 ___
 
@@ -4276,7 +4834,7 @@ filterObject(object, (n) => !(n % 5))
 
 #### Defined in
 
-object/filterObject.ts:22
+[object/filterObject.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/filterObject.ts#L22)
 
 ___
 
@@ -4321,7 +4879,7 @@ findKey(users, ({ age }) => age < 40)
 
 #### Defined in
 
-[object/findKey.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/object/findKey.ts#L26)
+[object/findKey.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/findKey.ts#L26)
 
 ___
 
@@ -4366,13 +4924,13 @@ findLastKey(users, ({ age }) => age < 40)
 
 #### Defined in
 
-[object/findLastKey.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/object/findLastKey.ts#L26)
+[object/findLastKey.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/findLastKey.ts#L26)
 
 ___
 
-### flatKeys
+### flatten
 
-▸ **flatKeys**\<`T`\>(`object`): [`ObjectFlatKeys`](README.md#objectflatkeys)\<`T`\>
+▸ **flatten**\<`T`\>(`object`): [`ObjectFlatten`](README.md#objectflatten)\<`T`\>
 
 Flattens an object into a single level object.
 
@@ -4394,7 +4952,7 @@ These keys can be used with `{@link at}`, `{@link get}` and `{@link set}`.
 
 #### Returns
 
-[`ObjectFlatKeys`](README.md#objectflatkeys)\<`T`\>
+[`ObjectFlatten`](README.md#objectflatten)\<`T`\>
 
 A new object with flattened keys
 
@@ -4402,13 +4960,13 @@ A new object with flattened keys
 
 ```ts
 const obj = { a: { b: 2, c: [{ d: 3 }, { d: 4 }] } };
-flatKeys(obj);
+flatten(obj);
 // => { 'a.b': 2, 'a.c[0].d': 3, 'a.c[1].d': 4 }
 ```
 
 #### Defined in
 
-[object/flatKeys.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/object/flatKeys.ts#L41)
+object/flatten.ts:41
 
 ___
 
@@ -4457,7 +5015,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/get.ts:35](https://github.com/mhodge11/underscorets/blob/471b259/src/object/get.ts#L35)
+[object/get.ts:35](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/get.ts#L35)
 
 ___
 
@@ -4494,7 +5052,7 @@ keys({ 'a': 1, 'b': 2, 'c': 3 })
 
 #### Defined in
 
-[object/keys.ts:19](https://github.com/mhodge11/underscorets/blob/471b259/src/object/keys.ts#L19)
+[object/keys.ts:19](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/keys.ts#L19)
 
 ___
 
@@ -4543,7 +5101,7 @@ merge({ a: 1 }, { a: "Yes" })
 
 #### Defined in
 
-[object/merge.ts:34](https://github.com/mhodge11/underscorets/blob/471b259/src/object/merge.ts#L34)
+[object/merge.ts:34](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/merge.ts#L34)
 
 ___
 
@@ -4585,7 +5143,7 @@ omit(obj, ['a', 'b']);
 
 #### Defined in
 
-[object/omit.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/object/omit.ts#L25)
+[object/omit.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/omit.ts#L25)
 
 ___
 
@@ -4628,7 +5186,7 @@ pick(object, ['a', 'c'])
 
 #### Defined in
 
-[object/pick.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/object/pick.ts#L23)
+[object/pick.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/pick.ts#L23)
 
 ___
 
@@ -4688,7 +5246,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/set.ts:47](https://github.com/mhodge11/underscorets/blob/471b259/src/object/set.ts#L47)
+[object/set.ts:47](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/set.ts#L47)
 
 ___
 
@@ -4725,7 +5283,7 @@ values({ 'a': 1, 'b': 2, 'c': 3 })
 
 #### Defined in
 
-[object/values.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/object/values.ts#L21)
+[object/values.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/object/values.ts#L21)
 
 ## Promise
 
@@ -4770,7 +5328,7 @@ const firstTwo = await races(2, prom1, prom2, prom3);
 
 #### Defined in
 
-[promise/races.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/promise/races.ts#L24)
+[promise/races.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/promise/races.ts#L24)
 
 ___
 
@@ -4832,7 +5390,7 @@ The error of the last attempt if all attempts fail
 
 #### Defined in
 
-[promise/retry.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/promise/retry.ts#L41)
+[promise/retry.ts:41](https://github.com/mhodge11/underscorets/blob/0c75560/src/promise/retry.ts#L41)
 
 ___
 
@@ -4863,7 +5421,7 @@ await sleep(1000);
 
 #### Defined in
 
-[promise/sleep.ts:15](https://github.com/mhodge11/underscorets/blob/471b259/src/promise/sleep.ts#L15)
+[promise/sleep.ts:15](https://github.com/mhodge11/underscorets/blob/0c75560/src/promise/sleep.ts#L15)
 
 ___
 
@@ -4915,7 +5473,7 @@ An error if the promise does not resolve or reject before timing out
 
 #### Defined in
 
-[promise/timeout.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/promise/timeout.ts#L25)
+[promise/timeout.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/promise/timeout.ts#L25)
 
 ___
 
@@ -4963,7 +5521,7 @@ The error of the promise if it rejects and the error is not an instance of Error
 
 #### Defined in
 
-[promise/tryCatch.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/promise/tryCatch.ts#L24)
+[promise/tryCatch.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/promise/tryCatch.ts#L24)
 
 ## String
 
@@ -5000,7 +5558,7 @@ camelCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/camelCase.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/string/camelCase.ts#L24)
+[string/camelCase.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/camelCase.ts#L24)
 
 ___
 
@@ -5037,7 +5595,7 @@ deburr('déjà vu')
 
 #### Defined in
 
-[string/deburr.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/string/deburr.ts#L23)
+[string/deburr.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/deburr.ts#L23)
 
 ___
 
@@ -5076,7 +5634,7 @@ endsWith("abc", "b", 2);
 
 #### Defined in
 
-[string/endsWith.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/string/endsWith.ts#L23)
+[string/endsWith.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/endsWith.ts#L23)
 
 ___
 
@@ -5109,7 +5667,7 @@ escapeHtml('fred, barney, & pebbles')
 
 #### Defined in
 
-[string/escapeHtml.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/string/escapeHtml.ts#L23)
+[string/escapeHtml.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/escapeHtml.ts#L23)
 
 ___
 
@@ -5143,7 +5701,7 @@ escapeRegExp('[hello](https://helloworld.io/)')
 
 #### Defined in
 
-[string/escapeRegExp.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/string/escapeRegExp.ts#L20)
+[string/escapeRegExp.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/escapeRegExp.ts#L20)
 
 ___
 
@@ -5180,7 +5738,7 @@ kebabCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/kebabCase.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/string/kebabCase.ts#L24)
+[string/kebabCase.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/kebabCase.ts#L24)
 
 ___
 
@@ -5217,7 +5775,7 @@ lowerCase("__FOO_BAR__")
 
 #### Defined in
 
-[string/lowerCase.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/string/lowerCase.ts#L25)
+[string/lowerCase.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/lowerCase.ts#L25)
 
 ___
 
@@ -5251,7 +5809,7 @@ lowerFirst("FRED");
 
 #### Defined in
 
-[string/lowerFirst.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/string/lowerFirst.ts#L20)
+[string/lowerFirst.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/lowerFirst.ts#L20)
 
 ___
 
@@ -5293,7 +5851,7 @@ pad("abc", 3);
 
 #### Defined in
 
-[string/pad.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/string/pad.ts#L31)
+[string/pad.ts:31](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/pad.ts#L31)
 
 ___
 
@@ -5335,7 +5893,7 @@ padEnd("abc", 3);
 
 #### Defined in
 
-[string/padEnd.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/string/padEnd.ts#L29)
+[string/padEnd.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/padEnd.ts#L29)
 
 ___
 
@@ -5377,7 +5935,7 @@ padStart("abc", 3);
 
 #### Defined in
 
-[string/padStart.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/string/padStart.ts#L29)
+[string/padStart.ts:29](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/padStart.ts#L29)
 
 ___
 
@@ -5414,7 +5972,7 @@ pascalCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/pascalCase.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/string/pascalCase.ts#L24)
+[string/pascalCase.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/pascalCase.ts#L24)
 
 ___
 
@@ -5448,7 +6006,7 @@ repeat('*', 3)
 
 #### Defined in
 
-[string/repeat.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/string/repeat.ts#L20)
+[string/repeat.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/repeat.ts#L20)
 
 ___
 
@@ -5481,7 +6039,7 @@ replaceLast("Foo Bar Bar", "Bar", "Boo");
 
 #### Defined in
 
-[string/replaceLast.ts:17](https://github.com/mhodge11/underscorets/blob/471b259/src/string/replaceLast.ts#L17)
+[string/replaceLast.ts:17](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/replaceLast.ts#L17)
 
 ___
 
@@ -5521,7 +6079,7 @@ snakeCase('foo2bar')
 
 #### Defined in
 
-[string/snakeCase.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/string/snakeCase.ts#L27)
+[string/snakeCase.ts:27](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/snakeCase.ts#L27)
 
 ___
 
@@ -5556,7 +6114,7 @@ splitWords('fred, barney, & pebbles', /[^, ]+/g)
 
 #### Defined in
 
-[string/splitWords.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/string/splitWords.ts#L26)
+[string/splitWords.ts:26](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/splitWords.ts#L26)
 
 ___
 
@@ -5595,7 +6153,7 @@ startsWith("abc", "b", 1);
 
 #### Defined in
 
-[string/startsWith.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/string/startsWith.ts#L23)
+[string/startsWith.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/startsWith.ts#L23)
 
 ___
 
@@ -5629,7 +6187,7 @@ size('😀')
 
 #### Defined in
 
-string/stringSize.ts:22
+[string/stringSize.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/stringSize.ts#L22)
 
 ___
 
@@ -5669,7 +6227,7 @@ titleCase('HélloWorld')
 
 #### Defined in
 
-[string/titleCase.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/string/titleCase.ts#L27)
+[string/titleCase.ts:27](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/titleCase.ts#L27)
 
 ___
 
@@ -5706,7 +6264,7 @@ trim('!!abc_!', '_!')
 
 #### Defined in
 
-[string/trim.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/string/trim.ts#L20)
+[string/trim.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/trim.ts#L20)
 
 ___
 
@@ -5743,7 +6301,7 @@ trimEnd('abc_!!_', '_!')
 
 #### Defined in
 
-[string/trimEnd.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/string/trimEnd.ts#L21)
+[string/trimEnd.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/trimEnd.ts#L21)
 
 ___
 
@@ -5780,7 +6338,7 @@ trimStart('_!!_abc', '_!')
 
 #### Defined in
 
-[string/trimStart.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/string/trimStart.ts#L21)
+[string/trimStart.ts:21](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/trimStart.ts#L21)
 
 ___
 
@@ -5814,7 +6372,7 @@ unescapeHtml('fred, barney, &amp; pebbles')
 
 #### Defined in
 
-[string/unescapeHtml.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/string/unescapeHtml.ts#L24)
+[string/unescapeHtml.ts:24](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/unescapeHtml.ts#L24)
 
 ___
 
@@ -5851,7 +6409,7 @@ upperCase("__foo_bar__")
 
 #### Defined in
 
-[string/upperCase.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/string/upperCase.ts#L25)
+[string/upperCase.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/upperCase.ts#L25)
 
 ___
 
@@ -5885,9 +6443,35 @@ upperFirst("FRED");
 
 #### Defined in
 
-[string/upperFirst.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/string/upperFirst.ts#L20)
+[string/upperFirst.ts:20](https://github.com/mhodge11/underscorets/blob/0c75560/src/string/upperFirst.ts#L20)
 
 ## Type
+
+### ArrayFlat
+
+Ƭ **ArrayFlat**\<`A`, `D`\>: \{ `done`: `A` ; `recur`: `A` extends `ReadonlyArray`\<infer InnerArr\> ? `FlatArray`\<`InnerArr`, [``-1``, ``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6``, ``7``, ``8``, ``9``, ``10``, ``11``, ``12``, ``13``, ``14``, ``15``, ``16``, ``17``, ``18``, ``19``, ``20``][`D`]\> : `A`  }[`D` extends ``-1`` ? ``"done"`` : ``"recur"``]
+
+A type that represents a flattened array.
+
+**`Example`**
+
+```ts
+let arr = ["a", ["b", ["c"]]];
+let flat: ArrayFlat<typeof arr, 3> = ["a", "b", "c"];
+```
+
+#### Type parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `A` | extends `unknown`[] | The type of the array |
+| `D` | extends `number` | - |
+
+#### Defined in
+
+type/ArrayFlat.ts:14
+
+___
 
 ### ArrayHead
 
@@ -5910,7 +6494,7 @@ let head: Head<typeof arr> = arr[0];
 
 #### Defined in
 
-[types/ArrayHead.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ArrayHead.ts#L14)
+type/ArrayHead.ts:14
 
 ___
 
@@ -5935,7 +6519,7 @@ let last: Last<typeof arr> = arr[arr.length - 1];
 
 #### Defined in
 
-[types/ArrayLast.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ArrayLast.ts#L14)
+type/ArrayLast.ts:14
 
 ___
 
@@ -5964,7 +6548,59 @@ arr = [1, 2];
 
 #### Defined in
 
-[types/ArrayMinLength.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ArrayMinLength.ts#L26)
+type/ArrayMinLength.ts:26
+
+___
+
+### ArrayReduce
+
+Ƭ **ArrayReduce**\<`A`, `Acc`\>: `A` extends `undefined` ? `Acc` extends `undefined` ? `undefined` : `Acc` : `A`[``"length"``] extends ``0`` ? `Acc` extends `undefined` ? `undefined` : `Acc` : `Acc`
+
+This type reduces an array to a single value.
+
+**`Example`**
+
+```ts
+let arr = [1, 2, 3];
+let reduced: ArrayReduce<typeof arr, number> = arr.reduce((acc, val) => acc + val);
+// => 6
+```
+
+#### Type parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `A` | extends `unknown`[] | The type of the array |
+| `Acc` | `Acc` | - |
+
+#### Defined in
+
+type/ArrayReduce.ts:15
+
+___
+
+### ArrayReverse
+
+Ƭ **ArrayReverse**\<`A`\>: `A` extends [infer Head, ...(infer Tail)] ? [...ArrayReverse\<Tail\>, `Head`] : []
+
+This type reverses the order of an array.
+
+**`Example`**
+
+```ts
+type Foo = ArrayReverse<[1, 2, 3]>;
+// => [3, 2, 1]
+```
+
+#### Type parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `A` | extends `unknown`[] | The type of the array |
+
+#### Defined in
+
+type/ArrayReverse.ts:14
 
 ___
 
@@ -5989,23 +6625,23 @@ let tail: Tail<typeof arr> = arr.slice(1);
 
 #### Defined in
 
-[types/ArrayTail.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ArrayTail.ts#L14)
+type/ArrayTail.ts:14
 
 ___
 
-### CastedArray
+### CastArray
 
-Ƭ **CastedArray**\<`T`\>: `T` extends `unknown`[] ? `T` : `T`[]
+Ƭ **CastArray**\<`T`\>: `T` extends `unknown`[] ? `T` : `T`[]
 
 Casts a type to an array.
 
 **`Example`**
 
 ```ts
-type Foo = CastedArray<1>;
+type Foo = CastArray<1>;
 // => [1]
 
-type Bar = CastedArray<[1, 2, 3]>;
+type Bar = CastArray<[1, 2, 3]>;
 // => [1, 2, 3]
 ```
 
@@ -6017,7 +6653,7 @@ type Bar = CastedArray<[1, 2, 3]>;
 
 #### Defined in
 
-[types/CastedArray.ts:17](https://github.com/mhodge11/underscorets/blob/471b259/src/types/CastedArray.ts#L17)
+type/CastArray.ts:17
 
 ___
 
@@ -6057,33 +6693,7 @@ const compare: CompareFunction<[number, number]> = (a, b) => a > b;
 
 #### Defined in
 
-[types/CompareFunction.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/CompareFunction.ts#L14)
-
-___
-
-### FlattenedArray
-
-Ƭ **FlattenedArray**\<`A`, `D`\>: \{ `done`: `A` ; `recur`: `A` extends `ReadonlyArray`\<infer InnerArr\> ? `FlatArray`\<`InnerArr`, [``-1``, ``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6``, ``7``, ``8``, ``9``, ``10``, ``11``, ``12``, ``13``, ``14``, ``15``, ``16``, ``17``, ``18``, ``19``, ``20``][`D`]\> : `A`  }[`D` extends ``-1`` ? ``"done"`` : ``"recur"``]
-
-A type that represents a flattened array.
-
-**`Example`**
-
-```ts
-let arr = ["a", ["b", ["c"]]];
-let flattened: FlattenedArray<typeof arr, 3> = ["a", "b", "c"];
-```
-
-#### Type parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `A` | extends `unknown`[] | The type of the array |
-| `D` | extends `number` | - |
-
-#### Defined in
-
-[types/FlattenedArray.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/FlattenedArray.ts#L14)
+type/CompareFunction.ts:14
 
 ___
 
@@ -6136,7 +6746,7 @@ function foo<
 
 #### Defined in
 
-[types/GenericFunction.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/types/GenericFunction.ts#L28)
+type/GenericFunction.ts:28
 
 ___
 
@@ -6175,7 +6785,7 @@ JSON.stringify(good);
 
 #### Defined in
 
-[types/Jsonifiable.ts:40](https://github.com/mhodge11/underscorets/blob/471b259/src/types/Jsonifiable.ts#L40)
+type/Jsonifiable.ts:40
 
 ___
 
@@ -6210,13 +6820,13 @@ type Bar = ObjectAt<Foo, ["a", "b", "c"]>;
 
 #### Defined in
 
-[types/ObjectAt.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectAt.ts#L41)
+type/ObjectAt.ts:41
 
 ___
 
-### ObjectFlatKeys
+### ObjectFlatten
 
-Ƭ **ObjectFlatKeys**\<`T`\>: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )\<`Paths`\<`T`\>, `unknown`\>
+Ƭ **ObjectFlatten**\<`T`\>: [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )\<`Paths`\<`T`\>, `unknown`\>
 
 This type is used to get all the keys of an object, including nested objects.
 It flattens the object into a single level.
@@ -6236,7 +6846,7 @@ type NestedObject = {
   };
 };
 
-type FlatKeys = ObjectFlatKeys<NestedObject>;
+type FlatKeys = ObjectFlatten<NestedObject>;
 // => {
 //   "a": string;
 //   "a.b": { c: number; d: { e: boolean; }; };
@@ -6254,7 +6864,7 @@ type FlatKeys = ObjectFlatKeys<NestedObject>;
 
 #### Defined in
 
-[types/ObjectFlatKeys.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectFlatKeys.ts#L41)
+type/ObjectFlatten.ts:41
 
 ___
 
@@ -6300,7 +6910,7 @@ type Baz = ObjectGet<NestedObject, "b.d.e[0]">;
 
 #### Defined in
 
-[types/ObjectGet.ts:39](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectGet.ts#L39)
+type/ObjectGet.ts:39
 
 ___
 
@@ -6333,7 +6943,7 @@ type MyKeys = ObjectKeys<MyObject>;
 
 #### Defined in
 
-[types/ObjectKeys.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectKeys.ts#L26)
+type/ObjectKeys.ts:26
 
 ___
 
@@ -6375,7 +6985,7 @@ type Qux = ObjectMerge<[Foo, Bar, Baz]>;
 
 #### Defined in
 
-[types/ObjectMerge.ts:50](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectMerge.ts#L50)
+type/ObjectMerge.ts:50
 
 ___
 
@@ -6412,7 +7022,7 @@ type Paths = ObjectPaths<NestedObject>;
 
 #### Defined in
 
-[types/ObjectPaths.ts:30](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectPaths.ts#L30)
+type/ObjectPaths.ts:30
 
 ___
 
@@ -6459,7 +7069,7 @@ type Baz = ObjectSet<NestedObject, "b.d.e[0]", string>;
 
 #### Defined in
 
-[types/ObjectSet.ts:40](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectSet.ts#L40)
+type/ObjectSet.ts:40
 
 ___
 
@@ -6492,7 +7102,7 @@ type MyValues = ObjectValues<MyObject>;
 
 #### Defined in
 
-[types/ObjectValues.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ObjectValues.ts#L26)
+type/ObjectValues.ts:26
 
 ___
 
@@ -6517,7 +7127,7 @@ obj = [1, 2, 3];
 
 #### Defined in
 
-[types/PlainObject.ts:18](https://github.com/mhodge11/underscorets/blob/471b259/src/types/PlainObject.ts#L18)
+type/PlainObject.ts:18
 
 ___
 
@@ -6529,7 +7139,7 @@ This type defines a primitive value.
 
 #### Defined in
 
-[types/Primitive.ts:6](https://github.com/mhodge11/underscorets/blob/471b259/src/types/Primitive.ts#L6)
+type/Primitive.ts:6
 
 ___
 
@@ -6555,59 +7165,7 @@ type Foo = PullOutArray<[1, 2, 3][]>;
 
 #### Defined in
 
-[types/PullOutArray.ts:15](https://github.com/mhodge11/underscorets/blob/471b259/src/types/PullOutArray.ts#L15)
-
-___
-
-### ReducedArray
-
-Ƭ **ReducedArray**\<`A`, `Acc`\>: `A` extends `undefined` ? `Acc` extends `undefined` ? `undefined` : `Acc` : `A`[``"length"``] extends ``0`` ? `Acc` extends `undefined` ? `undefined` : `Acc` : `Acc`
-
-This type reduces an array to a single value.
-
-**`Example`**
-
-```ts
-let arr = [1, 2, 3];
-let reduced: ReducedArray<typeof arr, number> = arr.reduce((acc, val) => acc + val);
-// => 6
-```
-
-#### Type parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `A` | extends `unknown`[] | The type of the array |
-| `Acc` | `Acc` | - |
-
-#### Defined in
-
-[types/ReducedArray.ts:15](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ReducedArray.ts#L15)
-
-___
-
-### ReversedArray
-
-Ƭ **ReversedArray**\<`A`\>: `A` extends [infer Head, ...(infer Tail)] ? [...ReversedArray\<Tail\>, `Head`] : []
-
-This type reverses the order of an array.
-
-**`Example`**
-
-```ts
-type Foo = ReversedArray<[1, 2, 3]>;
-// => [3, 2, 1]
-```
-
-#### Type parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `A` | extends `unknown`[] | The type of the array |
-
-#### Defined in
-
-[types/ReversedArray.ts:14](https://github.com/mhodge11/underscorets/blob/471b259/src/types/ReversedArray.ts#L14)
+type/PullOutArray.ts:15
 
 ___
 
@@ -6619,7 +7177,7 @@ This type is a union of all typed arrays.
 
 #### Defined in
 
-[types/TypedArray.ts:6](https://github.com/mhodge11/underscorets/blob/471b259/src/types/TypedArray.ts#L6)
+type/TypedArray.ts:6
 
 ## UUID
 
@@ -6636,7 +7194,7 @@ The order of characters is optimized for better gzip and brotli compression.
 
 #### Defined in
 
-[uuid/uuidUrlAlphabet.ts:11](https://github.com/mhodge11/underscorets/blob/471b259/src/uuid/uuidUrlAlphabet.ts#L11)
+[uuid/uuidUrlAlphabet.ts:11](https://github.com/mhodge11/underscorets/blob/0c75560/src/uuid/uuidUrlAlphabet.ts#L11)
 
 ___
 
@@ -6687,7 +7245,7 @@ console.log(generateUuid(10));
 
 #### Defined in
 
-[uuid/generateCustomUuid.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/uuid/generateCustomUuid.ts#L25)
+[uuid/generateCustomUuid.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/uuid/generateCustomUuid.ts#L25)
 
 ___
 
@@ -6732,7 +7290,7 @@ console.log(await generateUuid(10));
 
 #### Defined in
 
-[uuid/generateCustomUuidAsync.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/uuid/generateCustomUuidAsync.ts#L25)
+[uuid/generateCustomUuidAsync.ts:25](https://github.com/mhodge11/underscorets/blob/0c75560/src/uuid/generateCustomUuidAsync.ts#L25)
 
 ___
 
@@ -6768,7 +7326,7 @@ console.log(generateUuid(10));
 
 #### Defined in
 
-[uuid/generateUuid.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/uuid/generateUuid.ts#L23)
+[uuid/generateUuid.ts:23](https://github.com/mhodge11/underscorets/blob/0c75560/src/uuid/generateUuid.ts#L23)
 
 ___
 
@@ -6804,567 +7362,9 @@ console.log(await generateUuidAsync(10));
 
 #### Defined in
 
-[uuid/generateUuidAsync.ts:22](https://github.com/mhodge11/underscorets/blob/471b259/src/uuid/generateUuidAsync.ts#L22)
+[uuid/generateUuidAsync.ts:22](https://github.com/mhodge11/underscorets/blob/0c75560/src/uuid/generateUuidAsync.ts#L22)
 
-## Util
-
-### castArray
-
-▸ **castArray**\<`T`\>(`value`): [`CastedArray`](README.md#castedarray)\<`T`\>
-
-Casts `value` as an array if it's not one.
-
-#### Type parameters
-
-| Name | Description |
-| :------ | :------ |
-| `T` | The type of the value |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `T` | The value to cast |
-
-#### Returns
-
-[`CastedArray`](README.md#castedarray)\<`T`\>
-
-The casted array
-
-**`Example`**
-
-```ts
-castArray(1)
-// => [1]
-
-castArray({ 'a': 1 })
-// => [{ 'a': 1 }]
-
-castArray('abc')
-// => ['abc']
-
-castArray(null)
-// => [null]
-
-castArray(undefined)
-// => [undefined]
-
-castArray()
-// => []
-
-const array = [1, 2, 3]
-console.log(castArray(array) === array)
-// => true
-```
-
-#### Defined in
-
-[util/castArray.ts:37](https://github.com/mhodge11/underscorets/blob/471b259/src/util/castArray.ts#L37)
-
-___
-
-### clone
-
-▸ **clone**\<`T`\>(`value`): `T`
-
-Creates a shallow clone of `value`.
-
-**Note:** This method is loosely based on the
-[structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
-and supports cloning arrays, array buffers, booleans, date objects, maps,
-numbers, `Object` objects, regexes, sets, strings, symbols, and typed
-arrays. The own enumerable properties of `arguments` objects are cloned
-as plain objects. Object inheritance is preserved. An empty object is
-returned for uncloneable values such as error objects, functions, DOM nodes,
-and WeakMaps.
-
-*Based on [lodash.clone](https://lodash.com/docs/#clone).*
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `T` | The value to clone |
-
-#### Returns
-
-`T`
-
-The cloned value
-
-**`Example`**
-
-```ts
-const objects = [{ 'a': 1 }, { 'b': 2 }]
-
-const shallow = clone(objects)
-console.log(shallow[0] === objects[0])
-// => true
-```
-
-#### Defined in
-
-[util/clone.ts:32](https://github.com/mhodge11/underscorets/blob/471b259/src/util/clone.ts#L32)
-
-___
-
-### cloneDeep
-
-▸ **cloneDeep**\<`T`\>(`value`): `T`
-
-This method is like `{@link clone}` except that it recursively clones `value`.
-Object inheritance is preserved.
-
-*Based on [lodash.cloneDeep](https://lodash.com/docs/#cloneDeep).*
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `T` | The value to recursively clone |
-
-#### Returns
-
-`T`
-
-The deep cloned value
-
-**`Example`**
-
-```ts
-const objects = [{ 'a': 1 }, { 'b': 2 }]
-
-const deep = cloneDeep(objects)
-console.log(deep[0] === objects[0])
-// => false
-```
-
-#### Defined in
-
-[util/cloneDeep.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/util/cloneDeep.ts#L24)
-
-___
-
-### size
-
-▸ **size**(`value`): `number`
-
-Gets the size of `collection` by returning its length for array-like
-values or the number of own enumerable string keyed properties for objects.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `string` \| `object` | The collection to inspect |
-
-#### Returns
-
-`number`
-
-The `value` size
-
-**`Example`**
-
-```ts
-size([1, 2, 3])
-// => 3
-
-size({ 'a': 1, 'b': 2 })
-// => 2
-
-size('pebbles')
-// => 7
-```
-
-#### Defined in
-
-[util/size.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/util/size.ts#L28)
-
-___
-
-### toArray
-
-▸ **toArray**\<`T`\>(`value`): `Item`\<`T`\>[]
-
-Converts `value` to an array.
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `T` | The value to convert |
-
-#### Returns
-
-`Item`\<`T`\>[]
-
-The converted array
-
-**`Example`**
-
-```ts
-toArray({ 'a': 1, 'b': 2 })
-// => [1, 2]
-
-toArray('abc')
-// => ['a', 'b', 'c']
-
-toArray(1)
-// => []
-
-toArray(null)
-// => []
-```
-
-#### Defined in
-
-[util/toArray.ts:49](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toArray.ts#L49)
-
-___
-
-### toFinite
-
-▸ **toFinite**(`value`): `number`
-
-Converts `value` to a finite number.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`number`
-
-The converted number
-
-**`Example`**
-
-```ts
-toFinite(3.2)
-// => 3.2
-
-toFinite(Number.MIN_VALUE)
-// => 5e-324
-
-toFinite(Infinity)
-// => 1.7976931348623157e+308
-
-toFinite('3.2')
-// => 3.2
-```
-
-#### Defined in
-
-[util/toFinite.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toFinite.ts#L27)
-
-___
-
-### toInteger
-
-▸ **toInteger**(`value`): `number`
-
-Converts `value` to an integer.
-
-**Note:** This method is loosely based on
-[`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`number`
-
-The converted integer
-
-**`Example`**
-
-```ts
-toInteger(3.2)
-// => 3
-
-toInteger(Number.MIN_VALUE)
-// => 0
-
-toInteger(Infinity)
-// => 1.7976931348623157e+308
-
-toInteger('3.2')
-// => 3
-```
-
-#### Defined in
-
-[util/toInteger.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toInteger.ts#L29)
-
-___
-
-### toLength
-
-▸ **toLength**(`value`): `number`
-
-Converts `value` to an integer suitable for use as the length of an
-array-like object.
-
-**Note:** This method is based on
-[`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`number`
-
-The converted integer
-
-**`Example`**
-
-```ts
-toLength(3.2)
-// => 3
-
-toLength(Number.MIN_VALUE)
-// => 0
-
-toLength(Infinity)
-// => 4294967295
-
-toLength('3.2')
-// => 3
-```
-
-#### Defined in
-
-[util/toLength.ts:31](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toLength.ts#L31)
-
-___
-
-### toNumber
-
-▸ **toNumber**(`value`): `number`
-
-Converts `value` to a number.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`number`
-
-The converted number
-
-**`Example`**
-
-```ts
-toNumber(3.2)
-// => 3.2
-
-toNumber(Number.MIN_VALUE)
-// => 5e-324
-
-toNumber(Infinity)
-// => Infinity
-
-toNumber('3.2')
-// => 3.2
-```
-
-#### Defined in
-
-[util/toNumber.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toNumber.ts#L28)
-
-___
-
-### toPath
-
-▸ **toPath**(`value`): `string`
-
-Converts `value` to a property path array.
-
-Numbers are converted to `[${value}]` to index arrays,
-characters are converted to `.${value}` to index object properties.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | (`string` \| `number`)[] | The string\|number array to convert |
-
-#### Returns
-
-`string`
-
-The property path to use with `{@link at}`, `{@link get}` and `{@link set}`
-
-**`Example`**
-
-```ts
-toPath(['a', 'b', 'c'])
-// => 'a.b.c'
-
-toPath(['a', 0, 'b', 'c'])
-// => a[0].b.c
-```
-
-#### Defined in
-
-[util/toPath.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toPath.ts#L23)
-
-___
-
-### toPlainObject
-
-▸ **toPlainObject**(`value`): [`PlainObject`](README.md#plainobject)
-
-Converts `value` to a plain object flattening inherited enumerable string
-keyed properties of `value` to own properties of the plain object.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-[`PlainObject`](README.md#plainobject)
-
-The converted plain object
-
-**`Example`**
-
-```ts
-function Foo() {
-  this.b = 2
-}
-
-Foo.prototype.c = 3
-
-assign({ 'a': 1 }, new Foo)
-// => { 'a': 1, 'b': 2 }
-
-assign({ 'a': 1 }, toPlainObject(new Foo))
-// => { 'a': 1, 'b': 2, 'c': 3 }
-```
-
-#### Defined in
-
-[util/toPlainObject.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toPlainObject.ts#L27)
-
-___
-
-### toSafeInteger
-
-▸ **toSafeInteger**(`value`): `number`
-
-Converts `value` to a safe integer. A safe integer can be compared and
-represented correctly.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`number`
-
-The converted safe integer
-
-**`Example`**
-
-```ts
-toSafeInteger(3.2)
-// => 3
-
-toSafeInteger(Number.MIN_VALUE)
-// => 0
-
-toSafeInteger(Infinity)
-// => 9007199254740991
-
-toSafeInteger('3.2')
-// => 3
-```
-
-#### Defined in
-
-[util/toSafeInteger.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toSafeInteger.ts#L28)
-
-___
-
-### toString
-
-▸ **toString**(`value`): `string`
-
-Converts `value` to a string. An empty string is returned for `null`
-and `undefined` values. The sign of `-0` is preserved.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `value` | `unknown` | The value to convert |
-
-#### Returns
-
-`string`
-
-The converted string
-
-**`Example`**
-
-```ts
-toString(null)
-// => ''
-
-toString(-0)
-// => '-0'
-
-toString([1, 2, 3])
-// => '1,2,3'
-```
-
-#### Defined in
-
-[util/toString.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/util/toString.ts#L24)
-
-## Validator
+## Validate
 
 ### isArguments
 
@@ -7396,7 +7396,7 @@ isArguments([1, 2, 3])
 
 #### Defined in
 
-[validator/isArguments.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isArguments.ts#L21)
+validate/isArguments.ts:21
 
 ___
 
@@ -7433,7 +7433,7 @@ isArray(Function)
 
 #### Defined in
 
-[validator/isArray.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isArray.ts#L23)
+validate/isArray.ts:23
 
 ___
 
@@ -7467,7 +7467,7 @@ isArrayBuffer(new Array(2))
 
 #### Defined in
 
-[validator/isArrayBuffer.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isArrayBuffer.ts#L21)
+validate/isArrayBuffer.ts:21
 
 ___
 
@@ -7509,7 +7509,7 @@ isArrayLike(Function)
 
 #### Defined in
 
-[validator/isArrayLike.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isArrayLike.ts#L28)
+validate/isArrayLike.ts:28
 
 ___
 
@@ -7550,7 +7550,7 @@ isArrayLikeObject(Function)
 
 #### Defined in
 
-[validator/isArrayLikeObject.ts:28](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isArrayLikeObject.ts#L28)
+validate/isArrayLikeObject.ts:28
 
 ___
 
@@ -7584,7 +7584,7 @@ isBigInt64Array(new Array(2))
 
 #### Defined in
 
-[validator/isBigInt64Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isBigInt64Array.ts#L21)
+validate/isBigInt64Array.ts:21
 
 ___
 
@@ -7618,7 +7618,7 @@ isBigUint64Array([])
 
 #### Defined in
 
-[validator/isBigUint64Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isBigUint64Array.ts#L21)
+validate/isBigUint64Array.ts:21
 
 ___
 
@@ -7655,7 +7655,7 @@ isBoolean(0)
 
 #### Defined in
 
-[validator/isBoolean.ts:24](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isBoolean.ts#L24)
+validate/isBoolean.ts:24
 
 ___
 
@@ -7679,7 +7679,7 @@ value is typeof globalThis & Object
 
 #### Defined in
 
-[validator/isBrowser.ts:8](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isBrowser.ts#L8)
+validate/isBrowser.ts:8
 
 ___
 
@@ -7715,7 +7715,7 @@ isBuffer(new Uint8Array(2))
 
 #### Defined in
 
-[validator/isBuffer.ts:20](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isBuffer.ts#L20)
+validate/isBuffer.ts:20
 
 ___
 
@@ -7749,7 +7749,7 @@ isDataView(new ArrayBuffer(2))
 
 #### Defined in
 
-[validator/isDataView.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isDataView.ts#L21)
+validate/isDataView.ts:21
 
 ___
 
@@ -7783,7 +7783,7 @@ isDate('Mon April 23 2012')
 
 #### Defined in
 
-[validator/isDate.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isDate.ts#L21)
+validate/isDate.ts:21
 
 ___
 
@@ -7831,7 +7831,7 @@ isEmpty({ 'a': 1 })
 
 #### Defined in
 
-[validator/isEmpty.ts:39](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isEmpty.ts#L39)
+validate/isEmpty.ts:39
 
 ___
 
@@ -7872,7 +7872,7 @@ object === other;
 
 #### Defined in
 
-[validator/isEqual.ts:42](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isEqual.ts#L42)
+validate/isEqual.ts:42
 
 ___
 
@@ -7907,7 +7907,7 @@ isError(Error)
 
 #### Defined in
 
-[validator/isError.ts:22](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isError.ts#L22)
+validate/isError.ts:22
 
 ___
 
@@ -7941,7 +7941,7 @@ isFloat32Array([])
 
 #### Defined in
 
-[validator/isFloat32Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isFloat32Array.ts#L21)
+validate/isFloat32Array.ts:21
 
 ___
 
@@ -7975,7 +7975,7 @@ isFloat64Array([])
 
 #### Defined in
 
-[validator/isFloat64Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isFloat64Array.ts#L21)
+validate/isFloat64Array.ts:21
 
 ___
 
@@ -8021,7 +8021,7 @@ isFunction(/abc/)
 
 #### Defined in
 
-[validator/isFunction.ts:30](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isFunction.ts#L30)
+validate/isFunction.ts:30
 
 ___
 
@@ -8055,7 +8055,7 @@ isInt16Array([])
 
 #### Defined in
 
-[validator/isInt16Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isInt16Array.ts#L21)
+validate/isInt16Array.ts:21
 
 ___
 
@@ -8089,7 +8089,7 @@ isInt32Array([])
 
 #### Defined in
 
-[validator/isInt32Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isInt32Array.ts#L21)
+validate/isInt32Array.ts:21
 
 ___
 
@@ -8123,7 +8123,7 @@ isInt8Array([])
 
 #### Defined in
 
-[validator/isInt8Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isInt8Array.ts#L21)
+validate/isInt8Array.ts:21
 
 ___
 
@@ -8166,7 +8166,7 @@ isLength('3')
 
 #### Defined in
 
-[validator/isLength.ts:29](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isLength.ts#L29)
+validate/isLength.ts:29
 
 ___
 
@@ -8206,7 +8206,7 @@ isMap(new WeakMap)
 
 #### Defined in
 
-[validator/isMap.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isMap.ts#L21)
+validate/isMap.ts:21
 
 ___
 
@@ -8230,7 +8230,7 @@ value is typeof globalThis & Object
 
 #### Defined in
 
-[validator/isNavigator.ts:8](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isNavigator.ts#L8)
+validate/isNavigator.ts:8
 
 ___
 
@@ -8267,7 +8267,7 @@ isNil(NaN)
 
 #### Defined in
 
-[validator/isNil.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isNil.ts#L21)
+validate/isNil.ts:21
 
 ___
 
@@ -8301,7 +8301,7 @@ isNull(void 0)
 
 #### Defined in
 
-[validator/isNull.ts:18](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isNull.ts#L18)
+validate/isNull.ts:18
 
 ___
 
@@ -8341,7 +8341,7 @@ isNumber('3')
 
 #### Defined in
 
-[validator/isNumber.ts:27](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isNumber.ts#L27)
+validate/isNumber.ts:27
 
 ___
 
@@ -8383,7 +8383,7 @@ isObject(null)
 
 #### Defined in
 
-[validator/isObject.ts:26](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isObject.ts#L26)
+validate/isObject.ts:26
 
 ___
 
@@ -8424,7 +8424,7 @@ isObjectLike(null)
 
 #### Defined in
 
-[validator/isObjectLike.ts:25](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isObjectLike.ts#L25)
+validate/isObjectLike.ts:25
 
 ___
 
@@ -8475,7 +8475,7 @@ isPlainObject(new Date())
 
 #### Defined in
 
-[validator/isPlainObject.ts:40](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isPlainObject.ts#L40)
+validate/isPlainObject.ts:40
 
 ___
 
@@ -8530,7 +8530,7 @@ isPrimitive(() => {});
 
 #### Defined in
 
-[validator/isPrimitive.ts:41](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isPrimitive.ts#L41)
+validate/isPrimitive.ts:41
 
 ___
 
@@ -8564,7 +8564,7 @@ isRegExp('/abc/')
 
 #### Defined in
 
-[validator/isRegExp.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isRegExp.ts#L21)
+validate/isRegExp.ts:21
 
 ___
 
@@ -8598,7 +8598,7 @@ isSet(new WeakSet)
 
 #### Defined in
 
-[validator/isSet.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isSet.ts#L21)
+validate/isSet.ts:21
 
 ___
 
@@ -8632,7 +8632,7 @@ isString(1)
 
 #### Defined in
 
-[validator/isString.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isString.ts#L21)
+validate/isString.ts:21
 
 ___
 
@@ -8666,7 +8666,7 @@ isSymbol('abc')
 
 #### Defined in
 
-[validator/isSymbol.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isSymbol.ts#L21)
+validate/isSymbol.ts:21
 
 ___
 
@@ -8700,7 +8700,7 @@ isTypedArray([])
 
 #### Defined in
 
-[validator/isTypedArray.ts:23](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isTypedArray.ts#L23)
+validate/isTypedArray.ts:23
 
 ___
 
@@ -8734,7 +8734,7 @@ isUint16Array([])
 
 #### Defined in
 
-[validator/isUint16Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUint16Array.ts#L21)
+validate/isUint16Array.ts:21
 
 ___
 
@@ -8768,7 +8768,7 @@ isUint32Array([])
 
 #### Defined in
 
-[validator/isUint32Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUint32Array.ts#L21)
+validate/isUint32Array.ts:21
 
 ___
 
@@ -8802,7 +8802,7 @@ isUint8Array(new Float32Array)
 
 #### Defined in
 
-[validator/isUint8Array.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUint8Array.ts#L21)
+validate/isUint8Array.ts:21
 
 ___
 
@@ -8836,7 +8836,7 @@ isUint8ClampedArray([])
 
 #### Defined in
 
-[validator/isUint8ClampedArray.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUint8ClampedArray.ts#L21)
+validate/isUint8ClampedArray.ts:21
 
 ___
 
@@ -8870,7 +8870,7 @@ isUndefined(null)
 
 #### Defined in
 
-[validator/isUndefined.ts:18](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUndefined.ts#L18)
+validate/isUndefined.ts:18
 
 ___
 
@@ -8903,7 +8903,7 @@ isUrl('google.com')
 
 #### Defined in
 
-[validator/isUrl.ts:17](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isUrl.ts#L17)
+validate/isUrl.ts:17
 
 ___
 
@@ -8937,7 +8937,7 @@ isWeakMap(new Map)
 
 #### Defined in
 
-[validator/isWeakMap.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isWeakMap.ts#L21)
+validate/isWeakMap.ts:21
 
 ___
 
@@ -8971,4 +8971,4 @@ isWeakSet(new Set)
 
 #### Defined in
 
-[validator/isWeakSet.ts:21](https://github.com/mhodge11/underscorets/blob/471b259/src/validator/isWeakSet.ts#L21)
+validate/isWeakSet.ts:21

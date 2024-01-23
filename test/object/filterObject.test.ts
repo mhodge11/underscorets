@@ -1,4 +1,4 @@
-import { filterObject } from "../../src/index.ts";
+import { filterObject } from "@object/index.ts";
 
 test("filterObject filters an obj", () => {
 	const object = { a: 1, b: 2, c: 3 };

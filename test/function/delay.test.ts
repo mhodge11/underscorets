@@ -1,4 +1,4 @@
-import { delay } from "../../src/index.ts";
+import { delay } from "@function/index.ts";
 
 beforeAll(() => {
 	vi.useFakeTimers();

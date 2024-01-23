@@ -1,4 +1,4 @@
-import { sleep, timeout } from "../../src/index.ts";
+import { sleep, timeout } from "@promise/index.ts";
 
 test("timeout", async () => {
 	const result = await timeout(sleep(20), 50);

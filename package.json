@@ -9,9 +9,8 @@
     "pnpm": ">=8.14.2"
   },
   "engineStrict": true,
-  "sideEffects": false,
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && cross-env NODE_ENV=production tsup",
     "build:docs": "typedoc",
     "check": "biome check ./src",
     "check:apply": "biome check ./src --apply",
@@ -59,9 +58,9 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -69,7 +68,11 @@
     ">2% and not dead"
   ],
   "files": [
-    "dist"
+    "dist/**/*",
+    "lib/**/*"
+  ],
+  "sideEffects": [
+    "dist/**/*"
   ],
   "devDependencies": {
     "@biomejs/biome": "^1.5.3",
@@ -81,6 +84,7 @@
     "@types/node": "^20.11.5",
     "@vitest/coverage-v8": "^1.2.1",
     "@vitest/ui": "^1.2.1",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "terser": "^5.27.0",

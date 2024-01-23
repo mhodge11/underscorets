@@ -1,4 +1,4 @@
-import { HashCache } from "../../src/cache/HashCache.ts";
+import { HashCache } from "@cache/HashCache.ts";
 
 const initHash = () =>
 	new HashCache([
@@ -81,4 +81,41 @@ test("HashCache returns '__hash_undefined__' for get if a key is present but the
 	expect(hash.get("c")).toBeUndefined();
 	expect(hash.data).toEqual({ a: 1, b: 2, c: "__hash_undefined__" });
 	expect(hash.size).toBe(3);
+});
+
+test("HashCache can use numbers as keys", () => {
+	const hash = new HashCache();
+	hash.set(1, 2);
+	expect(hash.get(1)).toBe(2);
+});
+
+test("HashCache can use objects as keys", () => {
+	const hash = new HashCache();
+	const obj = {};
+	hash.set(obj, 1);
+	expect(hash.get(obj)).toBe(1);
+});
+
+test("HashCache can use null as a key", () => {
+	const hash = new HashCache();
+	hash.set(null, 1);
+	expect(hash.get(null)).toBe(1);
+});
+
+test("HashCache can use undefined as a key", () => {
+	const hash = new HashCache();
+	hash.set(undefined, 1);
+	expect(hash.get(undefined)).toBe(1);
+});
+
+test("HashCache can use an array as a key", () => {
+	const hash = new HashCache();
+	hash.set([1, 2, 3], 1);
+	expect(hash.get([1, 2, 3])).toBe(1);
+});
+
+test("HashCache can use a boolean as a key", () => {
+	const hash = new HashCache();
+	hash.set(true, 1);
+	expect(hash.get(true)).toBe(1);
 });

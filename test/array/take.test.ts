@@ -1,4 +1,4 @@
-import { take } from "../../src/index.ts";
+import { take } from "@array/index.ts";
 
 test("take returns the first n elements of an array", () => {
 	const arr = [1, 2, 3];

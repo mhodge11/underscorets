@@ -1,6 +1,6 @@
-import { ListCache } from "../../src/cache/ListCache.ts";
-import { MapCache } from "../../src/cache/MapCache.ts";
-import { StackCache } from "../../src/cache/StackCache.ts";
+import { ListCache } from "@cache/ListCache.ts";
+import { MapCache } from "@cache/MapCache.ts";
+import { StackCache } from "@cache/StackCache.ts";
 
 const initStack = () =>
 	new StackCache([

@@ -1,4 +1,4 @@
-import { dropRightWhile } from "../../src/index.ts";
+import { dropRightWhile } from "@array/index.ts";
 
 const arr = [2, 4, 5, 6];
 

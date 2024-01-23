@@ -1,4 +1,4 @@
-import { reduceRight } from "../../src/index.ts";
+import { reduceRight } from "@array/index.ts";
 
 test("reduceRight reduces an array", () => {
 	expect(reduceRight([1, 2, 3, 4], (acc, n) => acc + n, 0)).toBe(10);

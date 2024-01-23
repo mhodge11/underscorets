@@ -21,4 +21,9 @@ import { createRound } from "../helpers/createRound.ts";
  *
  * @category Number
  */
-export const round = createRound("round");
+export function round(
+	number: number | `${number}`,
+	precision?: number | `${number}`,
+): number {
+	return createRound("round")(number, precision);
+}

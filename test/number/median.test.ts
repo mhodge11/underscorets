@@ -1,4 +1,4 @@
-import { median } from "../../src/index.ts";
+import { median } from "@number/index.ts";
 
 test("return the median of an odd length array", () => {
 	expect(median([1, 2, 3, 4, 5])).toBe(3);

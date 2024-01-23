@@ -1,4 +1,4 @@
-import { cond } from "../../src/index.ts";
+import { cond } from "@function/index.ts";
 
 test("should create a conditional function", () => {
 	const resultFunc = cond([

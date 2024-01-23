@@ -1,4 +1,4 @@
-import { takeRight } from "../../src/index.ts";
+import { takeRight } from "@array/index.ts";
 
 test("takeRight returns the last n elements of an array", () => {
 	const arr = [1, 2, 3];

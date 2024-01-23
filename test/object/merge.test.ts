@@ -1,4 +1,4 @@
-import { merge } from "../../src/index.ts";
+import { merge } from "@object/index.ts";
 
 test("merge two or more objects", () => {
 	const obj1 = { a: 1 };

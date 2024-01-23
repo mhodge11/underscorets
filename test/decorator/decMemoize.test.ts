@@ -1,4 +1,4 @@
-import { decMemoize } from "../../src/index.ts";
+import { decMemoize } from "@decorator/index.ts";
 
 const testFn = vi.fn((a: number, b: number) => a + b);
 

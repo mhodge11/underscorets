@@ -1,4 +1,4 @@
-import { slice } from "../../src/index.ts";
+import { slice } from "@array/index.ts";
 
 test("slice returns a slice of an array", () => {
 	const arr = [1, 2, 3, 4, 5, 6];

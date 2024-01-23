@@ -1,4 +1,4 @@
-import { tryCatch } from "../../src/index.ts";
+import { tryCatch } from "@promise/index.ts";
 
 test("resolve to an array with the result and null error if the promise resolves", async () => {
 	const result = "Hello, world!";

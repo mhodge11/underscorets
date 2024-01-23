@@ -1,4 +1,4 @@
-import { decMaxCalls } from "../../src/index.ts";
+import { decMaxCalls } from "@decorator/index.ts";
 
 test("decorator", () => {
 	class TestClass {

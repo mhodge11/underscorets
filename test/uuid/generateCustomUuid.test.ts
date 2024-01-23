@@ -1,4 +1,4 @@
-import { generateCustomUuid } from "../../src/index.ts";
+import { generateCustomUuid } from "@uuid/index.ts";
 
 test("generates a uuid with a custom alphabet", () => {
 	expect(generateCustomUuid("a", 5)()).toBe("aaaaa");

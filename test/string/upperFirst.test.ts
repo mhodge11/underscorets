@@ -1,4 +1,4 @@
-import { upperFirst } from "../../src/index.ts";
+import { upperFirst } from "@string/index.ts";
 
 test("should uppercase only the first character", () => {
 	expect(upperFirst("fred")).toBe("Fred");

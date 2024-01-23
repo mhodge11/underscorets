@@ -1,4 +1,4 @@
-import { generateKsuid, isValidKsuid } from "../../src/index.ts";
+import { generateKsuid, isValidKsuid } from "@ksuid/index.ts";
 
 test("generateKsuid", async () => {
 	const id = generateKsuid();

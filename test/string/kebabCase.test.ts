@@ -1,4 +1,4 @@
-import { kebabCase } from "../../src/index.ts";
+import { kebabCase } from "@string/index.ts";
 
 test("converts a str to kebab case", () => {
 	expect(kebabCase("helloWorld")).toBe("hello-world");

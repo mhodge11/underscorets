@@ -1,4 +1,4 @@
-import { decOnce } from "../../src/index.ts";
+import { decOnce } from "@decorator/index.ts";
 
 test("decorator", () => {
 	class TestClass {

@@ -1,4 +1,4 @@
-import { padStart } from "../../src/index.ts";
+import { padStart } from "@string/index.ts";
 
 test("padStart a str", () => {
 	expect(padStart("abc", 6)).toBe("   abc");

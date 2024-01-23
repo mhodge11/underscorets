@@ -1,4 +1,4 @@
-import { randomElement } from "../../src/index.ts";
+import { randomElement } from "@crypto/index.ts";
 
 test("sample function returns a random value from an array", () => {
 	const collection = [1, 2, 3, 4, 5];

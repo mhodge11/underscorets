@@ -1,4 +1,4 @@
-import { throttle } from "../../src/index.ts";
+import { throttle } from "@function/index.ts";
 
 const addOneMock = vi.fn((input: number) => input + 1);
 

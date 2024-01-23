@@ -1,4 +1,4 @@
-import type { ArrayTail } from "../types/ArrayTail.ts";
+import type { ArrayTail } from "../type/ArrayTail.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 

@@ -1,4 +1,4 @@
-import { move } from "../../src/index.ts";
+import { move } from "@array/index.ts";
 
 test("move an element within an array", () => {
 	expect(move([1, 2, 3, 4, 5], 0, 2)).toStrictEqual([2, 3, 1, 4, 5]);

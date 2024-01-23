@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Creates a debounced version of a function. Only calling it after a specified amount of time has passed without any new calls.

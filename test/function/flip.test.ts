@@ -1,4 +1,4 @@
-import { flip } from "../../src/index.ts";
+import { flip } from "@function/index.ts";
 
 test("should flip arguments", () => {
 	const func = vi.fn((a: number, b: number) => [a, b]);

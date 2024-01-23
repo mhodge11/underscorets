@@ -1,7 +1,7 @@
 import {
-	htmlEntityMap,
 	reHasUnescapedHtml,
 	reUnescapedHtml,
+	unhtmlEntityMap,
 } from "../config/regex.ts";
 
 /**
@@ -24,8 +24,8 @@ export function escapeHtml(string: string): string {
 	string ??= "";
 	if (string.length === 0 || !reHasUnescapedHtml.test(string)) return string;
 
-	return string.replace(reUnescapedHtml, (chr) => {
-		for (const [key, value] of htmlEntityMap) if (value === chr) return key;
-		return chr;
-	});
+	return string.replace(
+		reUnescapedHtml,
+		(entity: string) => unhtmlEntityMap.get(entity) ?? "",
+	);
 }

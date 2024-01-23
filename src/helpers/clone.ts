@@ -1,4 +1,4 @@
-import type { TypedArray } from "../types/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray.ts";
 
 import { each } from "../array/each.ts";
 import { StackCache } from "../cache/StackCache.ts";
@@ -31,9 +31,9 @@ import {
 	uint16Tag,
 	uint32Tag,
 } from "../config/tags.ts";
-import { isBuffer } from "../validator/isBuffer.ts";
-import { isObject } from "../validator/isObject.ts";
-import { isTypedArray } from "../validator/isTypedArray.ts";
+import { isBuffer } from "../validate/isBuffer.ts";
+import { isObject } from "../validate/isObject.ts";
+import { isTypedArray } from "../validate/isTypedArray.ts";
 import { assertUnreachable } from "./assertUnreachable.ts";
 import { assignValue } from "./assignValue.ts";
 import { cloneArrayBuffer } from "./cloneArrayBuffer.ts";
@@ -52,7 +52,7 @@ import { getTag } from "./getTag.ts";
 import { isPrototype } from "./isPrototype.ts";
 import { keysIn } from "./keysIn.ts";
 
-const initCloneByTag = <T>(object: T, tag: string, isDeep?: boolean): T => {
+function initCloneByTag<T>(object: T, tag: string, isDeep?: boolean): T {
 	const Ctor = (object as any).constructor;
 	switch (tag) {
 		case arrayBufferTag:
@@ -86,15 +86,15 @@ const initCloneByTag = <T>(object: T, tag: string, isDeep?: boolean): T => {
 	}
 
 	assertUnreachable(tag);
-};
+}
 
-export const initCloneObject = <T extends object>(object: T): T => {
+function initCloneObject<T extends object>(object: T): T {
 	if (typeof object.constructor === "function" && !isPrototype(object))
 		return Object.create(Object.getPrototypeOf(object)) as T;
 	return {} as T;
-};
+}
 
-const initCloneArray = <T>(array: T[] | ArrayLike<T>): T[] => {
+function initCloneArray<T>(array: T[] | ArrayLike<T>): T[] {
 	const { length } = array;
 	const result = new (array as any).constructor(length);
 
@@ -109,9 +109,9 @@ const initCloneArray = <T>(array: T[] | ArrayLike<T>): T[] => {
 	}
 
 	return result;
-};
+}
 
-export const clone = <T>(
+export function clone<T>(
 	value: T,
 	bitmask?: number | undefined,
 	customizer?: (
@@ -123,7 +123,7 @@ export const clone = <T>(
 	key?: PropertyKey,
 	object?: { [key: PropertyKey]: T },
 	stack?: StackCache,
-): T => {
+): T {
 	bitmask ??= 0;
 
 	let result: T | undefined;
@@ -239,4 +239,4 @@ export const clone = <T>(
 	});
 
 	return result as T;
-};
+}

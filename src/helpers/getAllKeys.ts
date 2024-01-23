@@ -1,10 +1,10 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
-import { isArrayLike } from "../validator/isArrayLike.ts";
+import { isArrayLike } from "../validate/isArrayLike.ts";
 import { arrayLikeKeys } from "./arrayLikeKeys.ts";
 import { getSymbols } from "./getSymbols.ts";
 
-export const getAllKeys = <T extends object>(object: T): (keyof T)[] => {
+export function getAllKeys<T extends object>(object: T): (keyof T)[] {
 	let allKeys: (keyof T)[] = [];
 
 	if (isArrayLike(object)) allKeys = arrayLikeKeys(object) as (keyof T)[];
@@ -14,4 +14,4 @@ export const getAllKeys = <T extends object>(object: T): (keyof T)[] => {
 		allKeys.push(...(getSymbols(object) as (keyof T)[]));
 
 	return allKeys;
-};
+}

@@ -1,6 +1,6 @@
-import type { ArrayMinLength } from "../types/ArrayMinLength.ts";
-import type { CompareFunction } from "../types/CompareFunction.ts";
-import type { PullOutArray } from "../types/PullOutArray.ts";
+import type { ArrayMinLength } from "../type/ArrayMinLength.ts";
+import type { CompareFunction } from "../type/CompareFunction.ts";
+import type { PullOutArray } from "../type/PullOutArray.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { fastArrayFlat } from "../helpers/fastArrayFlat.ts";

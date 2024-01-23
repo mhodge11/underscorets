@@ -1,4 +1,4 @@
-import type { ReducedArray } from "../types/ReducedArray.ts";
+import type { ArrayReduce } from "../type/ArrayReduce.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 
@@ -27,9 +27,9 @@ export function reduce<T, Acc = T>(
 	callback: (acc: Acc, value: T, index: number, self: readonly T[]) => Acc,
 	accumulator?: Acc,
 	initAccum?: boolean,
-): ReducedArray<T[], Acc> {
+): ArrayReduce<T[], Acc> {
 	const arr = arrayLikeValues(array);
-	if (!arr?.length) return accumulator as ReducedArray<T[], Acc>;
+	if (!arr?.length) return accumulator as ArrayReduce<T[], Acc>;
 
 	let i: number = -1;
 	const { length } = arr;
@@ -48,5 +48,5 @@ export function reduce<T, Acc = T>(
 		accumulator = callback(acc, arr[i] as T, i, arr);
 	}
 
-	return accumulator as ReducedArray<T[], Acc>;
+	return accumulator as ArrayReduce<T[], Acc>;
 }

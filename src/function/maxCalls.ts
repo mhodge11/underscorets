@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Creates a function that invokes the given function as long as it's called `<= n` times.

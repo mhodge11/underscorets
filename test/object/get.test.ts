@@ -1,4 +1,4 @@
-import { get } from "../../src/index.ts";
+import { get } from "@object/index.ts";
 
 test("get returns the value at the specified path", () => {
 	const object = { a: { b: { c: 1 } } };

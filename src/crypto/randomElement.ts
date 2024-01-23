@@ -1,5 +1,10 @@
 import { randomInt } from "./randomInt.ts";
 
+function getSingleElement<T>(array: T[]): T {
+	const randomIndex = randomInt(0, array.length - 1);
+	return array[randomIndex] as T;
+}
+
 /**
  * Gets a random element an array. A single element is returned by default.
  * Specify the `multi` parameter to get an array of multiple random elements.
@@ -27,7 +32,6 @@ import { randomInt } from "./randomInt.ts";
  *
  * @category Crypto
  */
-
 export function randomElement<T>(array: T[]): T | undefined;
 export function randomElement<T>(array: T[], multi: number): T[];
 export function randomElement<T>(
@@ -45,9 +49,4 @@ export function randomElement<T>(
 	const result = new Array<T>(multi);
 	for (let i = 0; i < multi; i++) result[i] = getSingleElement(array);
 	return result;
-}
-
-function getSingleElement<T>(array: T[]): T {
-	const randomIndex = randomInt(0, array.length - 1);
-	return array[randomIndex] as T;
 }

@@ -1,6 +1,6 @@
-export const iteratorToArray = <T>(
+export function iteratorToArray<T>(
 	iterator: Iterator<T> | IterableIterator<T>,
-): T[] => {
+): T[] {
 	if (iterator == null) return [];
 
 	let data: IteratorResult<T>;
@@ -9,4 +9,4 @@ export const iteratorToArray = <T>(
 	while (!(data = iterator.next()).done) array.push(data.value);
 
 	return array;
-};
+}

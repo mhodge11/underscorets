@@ -1,4 +1,4 @@
-import { escapeHtml } from "../../src/index.ts";
+import { escapeHtml } from "@string/index.ts";
 
 test("escape special characters to HTML entities", () => {
 	const string = "<p>Hello, World!</p>";

@@ -30,93 +30,124 @@ import {
 	weakSetTag,
 } from "../config/tags.ts";
 
-export const getTag = (value: unknown): string => {
+export function getTag(value: unknown): string {
 	if (value == null)
 		return value === undefined ? "[object Undefined]" : "[object Null]";
 	return Object.prototype.toString.call(value);
-};
+}
 
-export const hasArgsTag = (value: unknown): boolean =>
-	getTag(value) === argsTag;
+export function hasArgsTag(value: unknown): boolean {
+	return getTag(value) === argsTag;
+}
 
-export const hasArrayTag = (value: unknown): boolean =>
-	getTag(value) === arrayTag;
+export function hasArrayTag(value: unknown): boolean {
+	return getTag(value) === arrayTag;
+}
 
-export const hasArrayBufferTag = (value: unknown): boolean =>
-	getTag(value) === arrayBufferTag;
+export function hasArrayBufferTag(value: unknown): boolean {
+	return getTag(value) === arrayBufferTag;
+}
 
-export const hasBigInt64Tag = (value: unknown): boolean =>
-	getTag(value) === bigInt64Tag;
+export function hasBigInt64Tag(value: unknown): boolean {
+	return getTag(value) === bigInt64Tag;
+}
 
-export const hasBigUint64Tag = (value: unknown): boolean =>
-	getTag(value) === bigUint64Tag;
+export function hasBigUint64Tag(value: unknown): boolean {
+	return getTag(value) === bigUint64Tag;
+}
 
-export const hasBoolTag = (value: unknown): boolean =>
-	getTag(value) === boolTag;
+export function hasBoolTag(value: unknown): boolean {
+	return getTag(value) === boolTag;
+}
 
-export const hasDataViewTag = (value: unknown): boolean =>
-	getTag(value) === dataViewTag;
+export function hasDataViewTag(value: unknown): boolean {
+	return getTag(value) === dataViewTag;
+}
 
-export const hasDateTag = (value: unknown): boolean =>
-	getTag(value) === dateTag;
+export function hasDateTag(value: unknown): boolean {
+	return getTag(value) === dateTag;
+}
 
-export const hasDomExceptionTag = (value: unknown): boolean =>
-	getTag(value) === domExceptionTag;
+export function hasDomExceptionTag(value: unknown): boolean {
+	return getTag(value) === domExceptionTag;
+}
 
-export const hasErrorTag = (value: unknown): boolean =>
-	getTag(value) === errorTag;
+export function hasErrorTag(value: unknown): boolean {
+	return getTag(value) === errorTag;
+}
 
-export const hasFloat32Tag = (value: unknown): boolean =>
-	getTag(value) === float32Tag;
+export function hasFloat32Tag(value: unknown): boolean {
+	return getTag(value) === float32Tag;
+}
 
-export const hasFloat64Tag = (value: unknown): boolean =>
-	getTag(value) === float64Tag;
+export function hasFloat64Tag(value: unknown): boolean {
+	return getTag(value) === float64Tag;
+}
 
-export const hasInt16Tag = (value: unknown): boolean =>
-	getTag(value) === int16Tag;
+export function hasInt16Tag(value: unknown): boolean {
+	return getTag(value) === int16Tag;
+}
 
-export const hasInt32Tag = (value: unknown): boolean =>
-	getTag(value) === int32Tag;
+export function hasInt32Tag(value: unknown): boolean {
+	return getTag(value) === int32Tag;
+}
 
-export const hasInt8Tag = (value: unknown): boolean =>
-	getTag(value) === int8Tag;
+export function hasInt8Tag(value: unknown): boolean {
+	return getTag(value) === int8Tag;
+}
 
-export const hasMapTag = (value: unknown): boolean => getTag(value) === mapTag;
+export function hasMapTag(value: unknown): boolean {
+	return getTag(value) === mapTag;
+}
 
-export const hasNumberTag = (value: unknown): boolean =>
-	getTag(value) === numberTag;
+export function hasNumberTag(value: unknown): boolean {
+	return getTag(value) === numberTag;
+}
 
-export const hasObjectTag = (value: unknown): boolean =>
-	getTag(value) === objectTag;
+export function hasObjectTag(value: unknown): boolean {
+	return getTag(value) === objectTag;
+}
 
-export const hasRegExpTag = (value: unknown): boolean =>
-	getTag(value) === regexpTag;
+export function hasRegExpTag(value: unknown): boolean {
+	return getTag(value) === regexpTag;
+}
 
-export const hasSetTag = (value: unknown): boolean => getTag(value) === setTag;
+export function hasSetTag(value: unknown): boolean {
+	return getTag(value) === setTag;
+}
 
-export const hasStringTag = (value: unknown): boolean =>
-	getTag(value) === stringTag;
+export function hasStringTag(value: unknown): boolean {
+	return getTag(value) === stringTag;
+}
 
-export const hasSymbolTag = (value: unknown): boolean =>
-	getTag(value) === symbolTag;
+export function hasSymbolTag(value: unknown): boolean {
+	return getTag(value) === symbolTag;
+}
 
-export const hasTypedArrayTag = (value: unknown): boolean =>
-	reTypedTag.test(getTag(value));
+export function hasTypedArrayTag(value: unknown): boolean {
+	return reTypedTag.test(getTag(value));
+}
 
-export const hasUint16Tag = (value: unknown): boolean =>
-	getTag(value) === uint16Tag;
+export function hasUint16Tag(value: unknown): boolean {
+	return getTag(value) === uint16Tag;
+}
 
-export const hasUint32Tag = (value: unknown): boolean =>
-	getTag(value) === uint32Tag;
+export function hasUint32Tag(value: unknown): boolean {
+	return getTag(value) === uint32Tag;
+}
 
-export const hasUint8ClampedTag = (value: unknown): boolean =>
-	getTag(value) === uint8ClampedTag;
+export function hasUint8ClampedTag(value: unknown): boolean {
+	return getTag(value) === uint8ClampedTag;
+}
 
-export const hasUint8Tag = (value: unknown): boolean =>
-	getTag(value) === uint8Tag;
+export function hasUint8Tag(value: unknown): boolean {
+	return getTag(value) === uint8Tag;
+}
 
-export const hasWeakMapTag = (value: unknown): boolean =>
-	getTag(value) === weakMapTag;
+export function hasWeakMapTag(value: unknown): boolean {
+	return getTag(value) === weakMapTag;
+}
 
-export const hasWeakSetTag = (value: unknown): boolean =>
-	getTag(value) === weakSetTag;
+export function hasWeakSetTag(value: unknown): boolean {
+	return getTag(value) === weakSetTag;
+}

@@ -1,4 +1,4 @@
-import { factorial } from "../../src/index.ts";
+import { factorial } from "@number/index.ts";
 
 test("return 1 when the input is 0", () => {
 	expect(factorial(0)).toBe(1);

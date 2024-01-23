@@ -3,6 +3,7 @@ export const validPathRegex =
 export const pathSplitRegex = /\.|(?=\[)/g;
 export const matchBracketsRegex = /[[\]]/g;
 export const accentControlRegex = /[\u0300-\u036F]/g;
+
 export const htmlEntityMap = new Map([
 	["&amp;", "&"],
 	["&lt;", "<"],
@@ -10,6 +11,15 @@ export const htmlEntityMap = new Map([
 	["&quot;", '"'],
 	["&#39;", "'"],
 ]);
+
+export const unhtmlEntityMap = new Map([
+	["&", "&amp;"],
+	["<", "&lt;"],
+	[">", "&gt;"],
+	['"', "&quot;"],
+	["'", "&#39;"],
+]);
+
 export const reUnescapedHtml = /[&<>"']/g;
 export const reHasUnescapedHtml = RegExp(reUnescapedHtml.source);
 export const reEscapedHtml = /&(?:amp|lt|gt|quot|#(0+)?39);/g;

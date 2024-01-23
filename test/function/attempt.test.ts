@@ -1,4 +1,4 @@
-import { attempt } from "../../src/index.ts";
+import { attempt } from "@function/index.ts";
 
 test("should return the result of `func`", () => {
 	expect(attempt(() => "x")).toEqual(["x", undefined]);

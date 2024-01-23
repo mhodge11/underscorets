@@ -1,6 +1,6 @@
 import { assignValue, baseAssignValue } from "./assignValue.ts";
 
-export const copyObject = <T extends object, K extends keyof T>(
+export function copyObject<T extends object, K extends keyof T>(
 	source: T,
 	props: K[],
 	object?: Partial<T>,
@@ -11,7 +11,7 @@ export const copyObject = <T extends object, K extends keyof T>(
 		object: Partial<T>,
 		source: T,
 	) => R,
-): T | Partial<T> => {
+): T | Partial<T> {
 	const isNew = !object;
 	object = (object || {}) as Partial<T>;
 
@@ -26,4 +26,4 @@ export const copyObject = <T extends object, K extends keyof T>(
 	}
 
 	return object as T | Partial<T>;
-};
+}

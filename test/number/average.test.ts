@@ -1,4 +1,4 @@
-import { average } from "../../src/index.ts";
+import { average } from "@number/index.ts";
 
 test("return NaN when the input array is empty", () => {
 	expect(average([])).toBeNaN();

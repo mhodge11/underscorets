@@ -1,5 +1,5 @@
-import { MAX_SAFE_INTEGER } from "../../src/config/constants.ts";
-import { repeat } from "../../src/index.ts";
+import { MAX_SAFE_INTEGER } from "@config/constants.ts";
+import { repeat } from "@string/index.ts";
 
 test("repeat a str", () => {
 	expect(repeat("*", 3)).toBe("***");

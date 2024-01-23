@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Generates a function that invokes the given function `func` at most once per every `wait` milliseconds.

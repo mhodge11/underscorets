@@ -1,4 +1,4 @@
-import { round } from "../../src/index.ts";
+import { round } from "@number/index.ts";
 
 test("round a num to the given precision", () => {
 	expect(round(1.23456, 2)).toBe(1.23);

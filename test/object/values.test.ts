@@ -1,4 +1,4 @@
-import { values } from "../../src/index.ts";
+import { values } from "@object/index.ts";
 
 test("values returns an array of the obj's values", () => {
 	const object = { a: 1, b: 2, c: 3 };

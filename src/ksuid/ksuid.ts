@@ -34,13 +34,14 @@ const VALID_BUFFER_ASSERTION = `Valid KSUID buffers are ${BYTE_LENGTH} bytes`;
 
 const VALID_PAYLOAD_ASSERTION = `Valid KSUID payloads are ${PAYLOAD_BYTE_LENGTH} bytes`;
 
-const randomBytes = (): Uint8Array =>
-	crypto.getRandomValues(new Uint8Array(16));
+function randomBytes(): Uint8Array {
+	return crypto.getRandomValues(new Uint8Array(16));
+}
 
-const fromParts = (
+function fromParts(
 	timestamp: string | number | Date,
 	payload: Uint8Array,
-): ArrayBuffer => {
+): ArrayBuffer {
 	const buffer = new ArrayBuffer(BYTE_LENGTH);
 	const view = new DataView(buffer);
 
@@ -55,7 +56,7 @@ const fromParts = (
 	}
 
 	return view.buffer;
-};
+}
 
 /**
  * A KSUID is a unique identifier that is sortable by the time it was created.

@@ -1,4 +1,4 @@
-import { each } from "../../src/index.ts";
+import { each } from "@array/index.ts";
 
 test("each iterates over elements of an array", () => {
 	const arr = [1, 2, 3];

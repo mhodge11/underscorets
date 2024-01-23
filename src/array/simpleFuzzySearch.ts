@@ -8,8 +8,9 @@ import { fuzzySearchMatch } from "./fuzzySearch.ts";
  * @param str The string to match with the pattern
  * @returns True if the string matches the pattern, false otherwise
  */
-export const simpleFuzzySearchTest = (pattern: string, str: string) =>
-	!!fuzzySearchMatch(pattern, str);
+export function simpleFuzzySearchTest(pattern: string, str: string) {
+	return !!fuzzySearchMatch(pattern, str);
+}
 
 /**
  * Fuzzy search an array of strings.

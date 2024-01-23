@@ -1,7 +1,7 @@
 import { cryptoMockHighestValue, cryptoMockLowestValue } from "./__mocks__.ts";
 
 function runImport() {
-	return import("../../src/index.ts");
+	return import("@crypto/index.ts");
 }
 
 beforeEach(() => {

@@ -1,4 +1,4 @@
-import { memoize } from "../../src/index.ts";
+import { memoize } from "@function/index.ts";
 
 const testFn = vi.fn((a: number, b: number) => a + b);
 

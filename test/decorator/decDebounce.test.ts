@@ -1,4 +1,4 @@
-import { decDebounce } from "../../src/index.ts";
+import { decDebounce } from "@decorator/index.ts";
 
 const testFn = vi.fn((x: number) => x * 2);
 

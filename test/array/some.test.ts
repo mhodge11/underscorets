@@ -1,4 +1,4 @@
-import { some } from "../../src/index.ts";
+import { some } from "@array/index.ts";
 
 test("some returns true if at least one element passes the predicate check", () => {
 	expect(some([1, 2, 3, 4], (n) => n % 2 === 0)).toBe(true);

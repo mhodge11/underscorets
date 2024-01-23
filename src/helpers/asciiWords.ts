@@ -1,4 +1,5 @@
 import { reAsciiWord } from "../config/regex.ts";
 
-export const asciiWords = (string: string): string[] =>
-	string.match(reAsciiWord) ?? [];
+export function asciiWords(string: string): string[] {
+	return string.match(reAsciiWord) ?? [];
+}

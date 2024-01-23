@@ -1,4 +1,4 @@
-import { sleep } from "../../src/index.ts";
+import { sleep } from "@promise/index.ts";
 
 test("resolve after the specified time", async () => {
 	const startTime = Date.now();

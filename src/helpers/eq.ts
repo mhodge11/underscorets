@@ -1,2 +1,3 @@
-export const eq = (a: unknown, b: unknown): boolean =>
-	a === b || (a !== a && b !== b);
+export function eq(a: unknown, b: unknown): boolean {
+	return a === b || (a !== a && b !== b);
+}

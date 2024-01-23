@@ -1,4 +1,4 @@
-import { titleCase } from "../../src/index.ts";
+import { titleCase } from "@string/index.ts";
 
 test("convert a str to start case", () => {
 	expect(titleCase("hello world")).toBe("Hello World");

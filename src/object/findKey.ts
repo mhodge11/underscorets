@@ -1,4 +1,4 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 /**
  * This method returns the key of the first element `predicate` returns truthy for.

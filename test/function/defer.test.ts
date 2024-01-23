@@ -1,4 +1,4 @@
-import { defer } from "../../src/index.ts";
+import { defer } from "@function/index.ts";
 
 beforeAll(() => {
 	vi.useFakeTimers();

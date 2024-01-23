@@ -1,12 +1,12 @@
-import { isArguments } from "../validator/isArguments.ts";
-import { isBuffer } from "../validator/isBuffer.ts";
-import { isTypedArray } from "../validator/isTypedArray.ts";
+import { isArguments } from "../validate/isArguments.ts";
+import { isBuffer } from "../validate/isBuffer.ts";
+import { isTypedArray } from "../validate/isTypedArray.ts";
 import { isIndex } from "./isIndex.ts";
 
-export const arrayLikeKeys = <T>(
+export function arrayLikeKeys<T>(
 	value: ArrayLike<T>,
 	inherited?: boolean,
-): string[] => {
+): string[] {
 	const isArr: boolean = Array.isArray(value);
 	const isArg: boolean = !isArr && isArguments(value);
 	const isBuff: boolean = !isArr && !isArg && isBuffer(value);
@@ -32,4 +32,4 @@ export const arrayLikeKeys = <T>(
 			result.push(key);
 
 	return result;
-};
+}

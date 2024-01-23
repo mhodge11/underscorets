@@ -1,4 +1,4 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 import { difference } from "../array/difference.ts";
 import { pick } from "./pick.ts";

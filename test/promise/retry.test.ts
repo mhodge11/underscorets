@@ -1,4 +1,4 @@
-import { retry } from "../../src/index.ts";
+import { retry } from "@promise/index.ts";
 
 test("retry until successful", async () => {
 	const mockFn = vi

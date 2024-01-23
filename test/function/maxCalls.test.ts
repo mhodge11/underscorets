@@ -1,4 +1,4 @@
-import { maxCalls } from "../../src/index.ts";
+import { maxCalls } from "@function/index.ts";
 
 test("only calls 3 times", () => {
 	const testFn = vi.fn();

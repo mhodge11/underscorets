@@ -1,5 +1,5 @@
-import type { ObjectKeys } from "../types/ObjectKeys.ts";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectKeys } from "../type/ObjectKeys.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 /**
  * Creates an array of the own enumerable string keyed property names of `object`.

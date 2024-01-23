@@ -1,4 +1,4 @@
-import { findIndex } from "../../src/index.ts";
+import { findIndex } from "@array/index.ts";
 
 test("findIndex returns the index of the first element that passes the predicate check", () => {
 	expect(findIndex([1, 2, 3, 4], (n) => n > 2)).toBe(2);

@@ -1,1 +1,3 @@
-export const asciiSize = (string: string): number => string.length;
+export function asciiSize(string: string): number {
+	return string.length;
+}

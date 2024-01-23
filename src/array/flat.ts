@@ -1,23 +1,23 @@
-import type { FlattenedArray } from "../types/FlattenedArray.ts";
+import type { ArrayFlat } from "../type/ArrayFlat.ts";
 
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { fastArrayFlat } from "../helpers/fastArrayFlat.ts";
 import { floor } from "../number/floor.ts";
-import { isArguments } from "../validator/isArguments.ts";
+import { isArguments } from "../validate/isArguments.ts";
 
-const isFlattenable = (value: unknown): boolean => {
+function isFlattenable(value: unknown): boolean {
 	return (
 		Array.isArray(value) ||
 		isArguments(value) ||
 		!!(value as any)?.[Symbol.isConcatSpreadable]
 	);
-};
+}
 
-const flatten = <T, D extends number = 1>(
+function flatten<T, D extends number = 1>(
 	array: readonly T[],
 	depth: D,
-	result?: FlattenedArray<T[], D>[],
-): FlattenedArray<T[], D>[] => {
+	result?: ArrayFlat<T[], D>[],
+): ArrayFlat<T[], D>[] {
 	const d = depth;
 	result ??= [];
 
@@ -28,7 +28,7 @@ const flatten = <T, D extends number = 1>(
 		else result[result.length] = value as any;
 
 	return result;
-};
+}
 
 /**
  * Flattens an array of arrays into a single array.
@@ -54,14 +54,14 @@ const flatten = <T, D extends number = 1>(
 export function flat<T, D extends number = 1>(
 	array: readonly T[] | ArrayLike<T>,
 	depth?: D,
-): FlattenedArray<T[], D>[] {
+): ArrayFlat<T[], D>[] {
 	const arr = arrayLikeValues(array);
 	if (!arr?.length) return [];
 
 	let d = depth ? floor(depth) : 1;
 	d < 1 && (d = 1);
 
-	if (d === 1) return fastArrayFlat(arr as any) as FlattenedArray<T[], D>[];
+	if (d === 1) return fastArrayFlat(arr as any) as ArrayFlat<T[], D>[];
 
 	return flatten(arr, d as D);
 }

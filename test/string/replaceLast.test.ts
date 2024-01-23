@@ -1,4 +1,4 @@
-import { replaceLast } from "../../src/index.ts";
+import { replaceLast } from "@string/index.ts";
 
 test("Replace last occurrence of a str", () => {
 	expect(replaceLast("Foo Bar Bar", "Bar", "Boo")).toBe("Foo Bar Boo");

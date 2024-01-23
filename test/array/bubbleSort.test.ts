@@ -1,4 +1,4 @@
-import { bubbleSort } from "../../src/index.ts";
+import { bubbleSort } from "@array/index.ts";
 
 test("bubble sort the array in ascending order based on the iteratee function", () => {
 	const numbers = [3, 1, 2];

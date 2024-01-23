@@ -1,4 +1,4 @@
-import { splitWords } from "../../src/index.ts";
+import { splitWords } from "@string/index.ts";
 
 test("split camelCase into two words", () => {
 	expect(splitWords("camelCase")).toEqual(["camel", "Case"]);

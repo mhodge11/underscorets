@@ -1,4 +1,4 @@
-import { set } from "../../src/index.ts";
+import { set } from "@object/index.ts";
 
 test("set a value", () => {
 	const object = { a: { b: 2 } };

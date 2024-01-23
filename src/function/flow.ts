@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Composes a function that returns the result of invoking the given functions

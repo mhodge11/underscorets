@@ -1,4 +1,4 @@
-import { takeWhile } from "../../src/index.ts";
+import { takeWhile } from "@array/index.ts";
 
 const numbers = [2, 4, 5, 6, 7, 8, 9, 10];
 

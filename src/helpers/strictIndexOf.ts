@@ -1,10 +1,10 @@
 import { arrayLikeValues } from "./arrayLikeValues.ts";
 
-export const strictIndexOf = <T>(
+export function strictIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,
 	value: T,
 	fromIndex: number,
-): number => {
+): number {
 	const arr = arrayLikeValues(array);
 	if (!arr?.length) return -1;
 
@@ -14,4 +14,4 @@ export const strictIndexOf = <T>(
 	while (++i < length) if (arr[i] === value) return i;
 
 	return -1;
-};
+}

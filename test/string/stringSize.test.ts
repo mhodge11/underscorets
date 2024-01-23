@@ -1,4 +1,4 @@
-import { stringSize } from "../../src/index.ts";
+import { stringSize } from "@string/index.ts";
 
 test("stringSize a str", () => {
 	expect(stringSize("abc")).toBe(3);

@@ -1,5 +1,5 @@
-import type { ArrayTail } from "../types/ArrayTail.ts";
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { ArrayTail } from "../type/ArrayTail.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Transforms a function into a decorator function.

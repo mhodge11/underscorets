@@ -1,5 +1,5 @@
-import type { ObjectValues } from "../types/ObjectValues.ts";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectValues } from "../type/ObjectValues.ts";
+import type { PlainObject } from "../type/PlainObject.ts";
 
 import { keys } from "./keys.ts";
 

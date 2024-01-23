@@ -1,4 +1,4 @@
-import { sample } from "../../src/index.ts";
+import { sample } from "@array/index.ts";
 
 test("sample returns a random element from an array", () => {
 	const arr = [1, 2, 3, 4, 5, 6];

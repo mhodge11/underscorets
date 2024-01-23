@@ -1,5 +1,5 @@
-import { HashCache } from "../../src/cache/HashCache.ts";
-import { MapCache } from "../../src/cache/MapCache.ts";
+import { HashCache } from "@cache/HashCache.ts";
+import { MapCache } from "@cache/MapCache.ts";
 
 const initMap = () =>
 	new MapCache([

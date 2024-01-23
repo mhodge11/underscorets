@@ -1,7 +1,8 @@
 const BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-const maxLength = (array: number[], from: number, to: number): number =>
-	Math.ceil((array.length * Math.log2(from)) / Math.log2(to));
+function maxLength(array: number[], from: number, to: number): number {
+	return Math.ceil((array.length * Math.log2(from)) / Math.log2(to));
+}
 
 /**
  * Converts arrays of integers from one base to another. Uses an O(N²) algorithm.
@@ -10,14 +11,14 @@ const maxLength = (array: number[], from: number, to: number): number =>
  *
  * @see https://github.com/novemberborn/base-convert-int-array
  */
-const baseConvertIntArray = (
+function baseConvertIntArray(
 	array: number[],
 	{
 		from,
 		to,
 		fixedLength,
 	}: { from: number; to: number; fixedLength?: number | undefined },
-): number[] => {
+): number[] {
 	let length = fixedLength;
 	if (typeof length === "undefined") length = maxLength(array, from, to);
 	const result = new Array(length);
@@ -56,9 +57,9 @@ const baseConvertIntArray = (
 	// Fill in any holes in the result array.
 	while (offset > 0) result[--offset] = 0;
 	return result;
-};
+}
 
-export const base62 = (view: DataView, fixedLength?: number): string => {
+export function base62(view: DataView, fixedLength?: number): string {
 	const numbs: number[] = new Array(view.byteLength);
 
 	for (let offset = 0; offset < view.byteLength; offset++)
@@ -67,15 +68,12 @@ export const base62 = (view: DataView, fixedLength?: number): string => {
 	return baseConvertIntArray(numbs, { from: 256, to: 62, fixedLength })
 		.map((value: number) => BASE62[value])
 		.join("");
-};
+}
 
 /**
  * @see https://github.com/novemberborn/ksuid/blob/90ca4c1508f216e03923de610291786a0d6a868c/base62.js#L13C40-L21C85
  */
-export const debase62 = (
-	data: string,
-	fixedLength?: number,
-): ArrayBufferLike => {
+export function debase62(data: string, fixedLength?: number): ArrayBufferLike {
 	const input = Array.from(data, (char) => {
 		const charCode = char.charCodeAt(0);
 		if (charCode < 58) return charCode - 48;
@@ -86,4 +84,4 @@ export const debase62 = (
 	return new Uint8Array(
 		baseConvertIntArray(input, { from: 62, to: 256, fixedLength }),
 	).buffer;
-};
+}

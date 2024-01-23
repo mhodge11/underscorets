@@ -1,15 +1,15 @@
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { sortCompare } from "../helpers/sortCompare.ts";
 
-const swap = <T>(array: T[], firstIndex: number, secondIndex: number) => {
+function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
 	const temp = array[firstIndex];
 	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
 	array[firstIndex] = array[secondIndex]!;
 	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
 	array[secondIndex] = temp!;
-};
+}
 
-const pivot = <T>(
+function pivot<T>(
 	array: T[],
 	pivotIndex = 0,
 	endIndex = array.length - 1,
@@ -17,7 +17,7 @@ const pivot = <T>(
 		order?: "asc" | "desc";
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
-) => {
+) {
 	let swapIndex = pivotIndex;
 
 	for (let i = pivotIndex + 1; i <= endIndex; i++) {
@@ -36,7 +36,7 @@ const pivot = <T>(
 	swap(array, pivotIndex, swapIndex);
 
 	return swapIndex;
-};
+}
 
 const sort = <T>(
 	array: T[],

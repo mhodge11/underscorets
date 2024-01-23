@@ -1,4 +1,4 @@
-import { head } from "../../src/index.ts";
+import { head } from "@array/index.ts";
 
 test("head returns the first element of an array", () => {
 	expect(head([1, 2, 3, 4])).toBe(1);

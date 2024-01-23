@@ -1,4 +1,4 @@
-import { unescapeHtml } from "../../src/index.ts";
+import { unescapeHtml } from "@string/index.ts";
 
 test("unescape HTML entities", () => {
 	const html = "&lt;p&gt;Hello, World!&lt;/p&gt;";

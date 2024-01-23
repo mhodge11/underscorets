@@ -19,7 +19,6 @@
  *
  * @category Crypto
  */
-
 export function randomInt(min: number, max: number): number {
 	// Taken from https://stackoverflow.com/a/41452318
 	if (!Number.isInteger(min))

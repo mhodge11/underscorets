@@ -1,4 +1,4 @@
-import { compact } from "../../src/index.ts";
+import { compact } from "@array/index.ts";
 
 test("compact an array", () => {
 	expect(compact([0, 1, undefined, null, 2, null])).toEqual([1, 2]);

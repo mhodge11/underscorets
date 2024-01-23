@@ -1,4 +1,4 @@
-import { snakeCase } from "../../src/index.ts";
+import { snakeCase } from "@string/index.ts";
 
 test("converts a str to snake_case", () => {
 	expect(snakeCase("someString")).toBe("some_string");

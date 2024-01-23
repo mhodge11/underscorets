@@ -1,4 +1,4 @@
-import { lastIndexOf } from "../../src/index.ts";
+import { lastIndexOf } from "@array/index.ts";
 
 test("lastIndexOf returns the index of the last element", () => {
 	expect(lastIndexOf([1, 2, 3, 4], 3)).toBe(2);

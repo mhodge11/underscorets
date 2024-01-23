@@ -1,4 +1,4 @@
-import { flat } from "../../src/index.ts";
+import { flat } from "@array/index.ts";
 
 test("flattens an array of arrays", () => {
 	expect(flat([[2], [3], [4, 5], [6, 7, 8], [9]])).toEqual([

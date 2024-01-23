@@ -1,4 +1,4 @@
-import { races } from "../../src/index.ts";
+import { races } from "@promise/index.ts";
 
 const delayedPromise = (delay: number) =>
 	new Promise((resolve) => {

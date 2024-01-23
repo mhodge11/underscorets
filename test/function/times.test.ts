@@ -1,4 +1,4 @@
-import { times } from "../../src/index.ts";
+import { times } from "@function/index.ts";
 
 const testFN = vi.fn((index: number) => index);
 

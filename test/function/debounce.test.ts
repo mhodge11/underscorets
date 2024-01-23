@@ -1,4 +1,4 @@
-import { debounce } from "../../src/index.ts";
+import { debounce } from "@function/index.ts";
 
 const testFn = vi.fn((x: number) => x * 2);
 

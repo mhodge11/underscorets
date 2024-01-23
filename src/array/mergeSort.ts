@@ -1,14 +1,14 @@
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { sortCompare } from "../helpers/sortCompare.ts";
 
-const merge = <T>(
+function merge<T>(
 	array1: T[],
 	array2: T[],
 	...criteria: {
 		order?: "asc" | "desc";
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
-) => {
+) {
 	const combined: T[] = [];
 
 	let i = 0;
@@ -32,7 +32,7 @@ const merge = <T>(
 	combined.push(...array2.slice(j));
 
 	return combined;
-};
+}
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.

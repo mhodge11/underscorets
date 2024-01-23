@@ -1,6 +1,6 @@
-import type { Jsonifiable } from "../types/Jsonifiable.ts";
+import type { Jsonifiable } from "../type/Jsonifiable.ts";
 
-import { isEqual } from "../validator/isEqual.ts";
+import { isEqual } from "../validate/isEqual.ts";
 import { HashCache } from "./HashCache.ts";
 
 interface Data {
@@ -11,7 +11,7 @@ interface Data {
 
 type MapData = HashCache | Map<any, any>;
 
-const isKeyable = (value: unknown): value is Jsonifiable => {
+function isKeyable(value: unknown): value is Jsonifiable {
 	const type = typeof value;
 
 	return type === "string" ||
@@ -20,9 +20,9 @@ const isKeyable = (value: unknown): value is Jsonifiable => {
 		type === "boolean"
 		? value !== "__proto__"
 		: value === null;
-};
+}
 
-const getMapData = (map: MapCache, key: unknown): MapData => {
+function getMapData(map: MapCache, key: unknown): MapData {
 	const { data } = map;
 
 	if (isKeyable(key)) {
@@ -31,7 +31,7 @@ const getMapData = (map: MapCache, key: unknown): MapData => {
 	}
 
 	return data.map;
-};
+}
 
 export class MapCache {
 	data: Data = {

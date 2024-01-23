@@ -1,4 +1,4 @@
-import { dropRight } from "../../src/index.ts";
+import { dropRight } from "@array/index.ts";
 
 test("removes 1 element from the start of the array", () => {
 	const arr = [2, 4, 5, 6];

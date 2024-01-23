@@ -1,7 +1,4 @@
-export const cloneBuffer = <T extends Buffer>(
-	buffer: T,
-	isDeep?: boolean,
-): T => {
+export function cloneBuffer<T extends Buffer>(buffer: T, isDeep?: boolean): T {
 	if (isDeep) return buffer.subarray() as T;
 
 	const { length } = buffer;
@@ -10,4 +7,4 @@ export const cloneBuffer = <T extends Buffer>(
 	buffer.copy(result);
 
 	return result as T;
-};
+}

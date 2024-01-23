@@ -1,4 +1,4 @@
-import { reduce } from "../../src/index.ts";
+import { reduce } from "@array/index.ts";
 
 test("reduce reduces an array", () => {
 	expect(reduce([1, 2, 3, 4], (acc, n) => acc + n, 0)).toBe(10);

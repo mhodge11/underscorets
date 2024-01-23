@@ -1,4 +1,4 @@
-import { upperCase } from "../../src/index.ts";
+import { upperCase } from "@string/index.ts";
 
 test("should uppercase as space-separated words", () => {
 	expect(upperCase("--foo-bar--")).toBe("FOO BAR");

@@ -1,15 +1,17 @@
 export type {
+	ArrayFlat,
 	ArrayHead,
 	ArrayLast,
 	ArrayMinLength,
+	ArrayReduce,
+	ArrayReverse,
 	ArrayTail,
-	CastedArray,
+	CastArray,
 	CompareFunction,
-	FlattenedArray,
 	GenericFunction,
 	Jsonifiable,
 	ObjectAt,
-	ObjectFlatKeys,
+	ObjectFlatten,
 	ObjectGet,
 	ObjectKeys,
 	ObjectMerge,
@@ -19,10 +21,8 @@ export type {
 	PlainObject,
 	Primitive,
 	PullOutArray,
-	ReducedArray,
-	ReversedArray,
 	TypedArray,
-} from "./types/index.ts";
+} from "./type/index.ts";
 
 export {
 	bubbleSort,
@@ -117,6 +117,28 @@ export {
 } from "./ksuid/index.ts";
 
 export {
+	BinarySearchTree,
+	DoublyLinkedList,
+	HashMap,
+	LinkedList,
+	Stack,
+	XYZ,
+	castArray,
+	clone,
+	cloneDeep,
+	size,
+	toArray,
+	toFinite,
+	toInteger,
+	toLength,
+	toNumber,
+	toPath,
+	toPlainObject,
+	toSafeInteger,
+	toString,
+} from "./misc/index.ts";
+
+export {
 	average,
 	ceil,
 	clamp,
@@ -132,7 +154,7 @@ export {
 	filterObject,
 	findKey,
 	findLastKey,
-	flatKeys,
+	flatten,
 	get,
 	keys,
 	merge,
@@ -178,28 +200,6 @@ export {
 	upperCase,
 	upperFirst,
 } from "./string/index.ts";
-
-export {
-	BinarySearchTree,
-	DoublyLinkedList,
-	HashMap,
-	LinkedList,
-	Stack,
-	XYZ,
-	castArray,
-	clone,
-	cloneDeep,
-	size,
-	toArray,
-	toFinite,
-	toInteger,
-	toLength,
-	toNumber,
-	toPath,
-	toPlainObject,
-	toSafeInteger,
-	toString,
-} from "./util/index.ts";
 
 export {
 	generateCustomUuid,
@@ -254,4 +254,4 @@ export {
 	isUrl,
 	isWeakMap,
 	isWeakSet,
-} from "./validator/index.ts";
+} from "./validate/index.ts";

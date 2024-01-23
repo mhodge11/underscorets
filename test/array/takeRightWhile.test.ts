@@ -1,4 +1,4 @@
-import { takeRightWhile } from "../../src/index.ts";
+import { takeRightWhile } from "@array/index.ts";
 
 const numbers = [2, 3, 5, 7, 11, 14, 17, 19, 23, 29];
 

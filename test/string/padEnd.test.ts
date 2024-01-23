@@ -1,4 +1,4 @@
-import { padEnd } from "../../src/index.ts";
+import { padEnd } from "@string/index.ts";
 
 test("padEnd a str", () => {
 	expect(padEnd("abc", 6)).toBe("abc   ");

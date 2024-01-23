@@ -1,4 +1,4 @@
-import { sum } from "../../src/index.ts";
+import { sum } from "@number/index.ts";
 
 test("calculate the sum of an array of numbers", () => {
 	expect(sum([1, 2, 3, 4, 5])).toEqual(15);

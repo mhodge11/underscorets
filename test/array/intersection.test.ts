@@ -1,4 +1,4 @@
-import { intersection } from "../../src/index.ts";
+import { intersection } from "@array/index.ts";
 
 test("returns the correct intersections", () => {
 	const arr1 = [1, 2, 3, 4, 5];

@@ -1,4 +1,4 @@
-import { omit } from "../../src/index.ts";
+import { omit } from "@object/index.ts";
 
 test("omit the specified keys from an obj", () => {
 	const object = { a: 1, b: 2, c: 3 };

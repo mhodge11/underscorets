@@ -1,4 +1,4 @@
-import { minCalls } from "../../src/index.ts";
+import { minCalls } from "@function/index.ts";
 
 test("after function works correctly", () => {
 	const testFn = vi.fn();

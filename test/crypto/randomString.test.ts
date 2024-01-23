@@ -1,4 +1,4 @@
-import { randomString } from "../../src/index.ts";
+import { randomString } from "@crypto/index.ts";
 
 test("generate a random string of the specified length", () => {
 	expect(randomString(8)).toHaveLength(8);

@@ -1,4 +1,4 @@
-import { pascalCase } from "../../src/index.ts";
+import { pascalCase } from "@string/index.ts";
 
 test("converts a str to PascalCase", () => {
 	expect(pascalCase("hello world")).toEqual("HelloWorld");

@@ -1,7 +1,7 @@
 import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
 import { isNaN } from "../helpers/isNaN.ts";
 import { strictLastIndexOf } from "../helpers/strictLastIndexOf.ts";
-import { toInteger } from "../util/toInteger.ts";
+import { toInteger } from "../misc/toInteger.ts";
 import { findIndex } from "./findIndex.ts";
 
 /**

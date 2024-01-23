@@ -1,4 +1,4 @@
-import { every } from "../../src/index.ts";
+import { every } from "@array/index.ts";
 
 test("every returns true if all elements pass the predicate check", () => {
 	expect(every([1, 2, 3, 4], (n) => n < 5)).toBe(true);

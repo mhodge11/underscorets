@@ -1,4 +1,4 @@
-import { at } from "../../src/index.ts";
+import { at } from "@object/index.ts";
 
 test("at returns the values at the given paths", () => {
 	const object = { a: [{ b: { c: 3 } }, 4] };

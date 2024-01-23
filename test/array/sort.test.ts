@@ -1,4 +1,4 @@
-import { sort } from "../../src/index.ts";
+import { sort } from "@array/index.ts";
 
 test("sort the array in ascending order based on the iteratee function", () => {
 	const numbers = [3, 1, 2];

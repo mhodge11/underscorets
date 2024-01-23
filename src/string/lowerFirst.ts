@@ -17,4 +17,6 @@ import { createCaseFirst } from "../helpers/createCaseFirst.ts";
  *
  * @category String
  */
-export const lowerFirst = createCaseFirst("toLowerCase");
+export function lowerFirst(string: string): string {
+	return createCaseFirst("toLowerCase")(string);
+}

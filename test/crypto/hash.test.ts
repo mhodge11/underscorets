@@ -1,4 +1,4 @@
-import { hash } from "../../src/index.ts";
+import { hash } from "@crypto/index.ts";
 
 test("generate a hash from a string using the default algorithm (SHA-256)", async () => {
 	const hashValue = await hash("hello world");

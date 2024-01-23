@@ -1,5 +1,5 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
-import type { ReversedArray } from "../types/ReversedArray.ts";
+import type { ArrayReverse } from "../type/ArrayReverse.ts";
+import type { GenericFunction } from "../type/GenericFunction.ts";
 
 /**
  * Creates a function that invokes `func` with arguments reversed.
@@ -25,14 +25,14 @@ export function flip<T extends GenericFunction<T>>(
 ): (
 	this: any,
 	...unknown: [...Parameters<T>]
-) => ReturnType<(...args: ReversedArray<[...Parameters<T>]>) => ReturnType<T>> {
+) => ReturnType<(...args: ArrayReverse<[...Parameters<T>]>) => ReturnType<T>> {
 	if (typeof func !== "function")
 		throw new TypeError("Argument must be a function");
 
 	return function (
 		this: unknown,
 		...args: [...Parameters<T>]
-	): ReturnType<(...args: ReversedArray<[...Parameters<T>]>) => ReturnType<T>> {
+	): ReturnType<(...args: ArrayReverse<[...Parameters<T>]>) => ReturnType<T>> {
 		return func.apply(this, args.reverse() as any);
 	};
 }

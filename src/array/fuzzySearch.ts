@@ -21,7 +21,7 @@ type Result = {
  *
  * @category Array
  */
-export const fuzzySearchMatch = (
+export function fuzzySearchMatch(
 	pattern: string,
 	string: string,
 	opts?: {
@@ -30,7 +30,7 @@ export const fuzzySearchMatch = (
 		post?: string;
 		caseSensitive?: boolean;
 	},
-) => {
+) {
 	let result = "";
 	let score = 0;
 	let stepScore = 0;
@@ -59,7 +59,7 @@ export const fuzzySearchMatch = (
 	}
 
 	return null;
-};
+}
 
 /**
  * Fuzzy search an array of strings.

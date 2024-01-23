@@ -1,4 +1,4 @@
-import { mergeSort } from "../../src/index.ts";
+import { mergeSort } from "@array/index.ts";
 
 test("merge sort the array in ascending order based on the iteratee function", () => {
 	const numbers = [3, 1, 2];

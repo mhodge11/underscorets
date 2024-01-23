@@ -1,4 +1,4 @@
-export const copyArray = <T>(source: readonly T[], array?: T[]): T[] => {
+export function copyArray<T>(source: readonly T[], array?: T[]): T[] {
 	if (source == null) return [];
 
 	let index: number = -1;
@@ -9,4 +9,4 @@ export const copyArray = <T>(source: readonly T[], array?: T[]): T[] => {
 	for (const value of source) array[++index] = value;
 
 	return array;
-};
+}

@@ -1,4 +1,4 @@
-import { endsWith } from "../../src/index.ts";
+import { endsWith } from "@string/index.ts";
 
 test("endsWith a str", () => {
 	expect(endsWith("abc", "c")).toBe(true);

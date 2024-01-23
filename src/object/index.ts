@@ -2,7 +2,7 @@ export { at } from "./at.ts";
 export { filterObject } from "./filterObject.ts";
 export { findKey } from "./findKey.ts";
 export { findLastKey } from "./findLastKey.ts";
-export { flatKeys } from "./flatKeys.ts";
+export { flatten } from "./flatten.ts";
 export { get } from "./get.ts";
 export { keys } from "./keys.ts";
 export { merge } from "./merge.ts";

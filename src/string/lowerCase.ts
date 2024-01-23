@@ -1,5 +1,5 @@
 import { reQuotes } from "../config/regex.ts";
-import { toString } from "../util/toString.ts";
+import { toString } from "../misc/toString.ts";
 import { splitWords } from "./splitWords.ts";
 
 /**
@@ -22,8 +22,9 @@ import { splitWords } from "./splitWords.ts";
  *
  * @category String
  */
-export const lowerCase = (string: string): string =>
-	splitWords(toString(string).replace(reQuotes, "")).reduce(
+export function lowerCase(string: string): string {
+	return splitWords(toString(string).replace(reQuotes, "")).reduce(
 		(result, word, index) => result + (index ? " " : "") + word.toLowerCase(),
 		"",
 	);
+}

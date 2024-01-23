@@ -1,4 +1,8 @@
-import type { Jsonifiable } from "../types/Jsonifiable.ts";
+import type { Jsonifiable } from "../type/Jsonifiable.ts";
+
+type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";
+
+let textEncoder: TextEncoder | undefined;
 
 /**
  * Generates a hash of the given data using the specified algorithm.
@@ -42,7 +46,3 @@ export async function hash(
 	const hexValues = hashArray.map((b) => b.toString(16).padStart(2, "0"));
 	return hexValues.join("");
 }
-
-let textEncoder: TextEncoder | undefined;
-
-type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";

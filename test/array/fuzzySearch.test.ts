@@ -1,5 +1,5 @@
-import { fuzzySearchMatch } from "../../src/array/fuzzySearch.ts";
-import { fuzzySearch } from "../../src/index.ts";
+import { fuzzySearchMatch } from "@array/fuzzySearch.ts";
+import { fuzzySearch } from "@array/index.ts";
 
 test("fuzzySearchMatch should return the rendered string and match score", () => {
 	const match = fuzzySearchMatch("ab", "ZaZbZ", { pre: "<", post: ">" });

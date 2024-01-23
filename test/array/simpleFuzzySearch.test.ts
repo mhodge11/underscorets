@@ -1,5 +1,5 @@
-import { simpleFuzzySearchTest } from "../../src/array/simpleFuzzySearch.ts";
-import { simpleFuzzySearch } from "../../src/index.ts";
+import { simpleFuzzySearch } from "@array/index.ts";
+import { simpleFuzzySearchTest } from "@array/simpleFuzzySearch.ts";
 
 test("simpleFuzzySearchTest should return true when fuzzy match", () => {
 	expect(simpleFuzzySearchTest("back", "imaback")).toBeTruthy();

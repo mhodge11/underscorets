@@ -1,4 +1,4 @@
-import { includes } from "../../src/index.ts";
+import { includes } from "@array/index.ts";
 
 test("includes returns true if the array includes the value", () => {
 	expect(includes([1, 2, 3, 4], 3)).toBe(true);

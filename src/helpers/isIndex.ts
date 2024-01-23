@@ -1,7 +1,7 @@
 import { MAX_SAFE_INTEGER } from "../config/constants.ts";
 import { reIsUint } from "../config/regex.ts";
 
-export const isIndex = (value: unknown, length?: number) => {
+export function isIndex(value: unknown, length?: number) {
 	const type = typeof value;
 
 	length ??= MAX_SAFE_INTEGER;
@@ -13,4 +13,4 @@ export const isIndex = (value: unknown, length?: number) => {
 		(value as any) % 1 === 0 &&
 		(value as any) < length
 	);
-};
+}

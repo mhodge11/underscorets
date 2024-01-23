@@ -1,4 +1,4 @@
-import { flowRight } from "../../src/index.ts";
+import { flowRight } from "@function/index.ts";
 
 test("calls the functions in reverse order", () => {
 	const square = vi.fn((n: number) => n * n);

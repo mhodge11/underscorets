@@ -1,4 +1,4 @@
-import { findLastKey } from "../../src/index.ts";
+import { findLastKey } from "@object/index.ts";
 
 test("findLastKey finds a key in an obj", () => {
 	const object = { a: 1, b: 2, c: 3 };

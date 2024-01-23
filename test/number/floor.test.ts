@@ -1,4 +1,4 @@
-import { floor } from "../../src/index.ts";
+import { floor } from "@number/index.ts";
 
 test("floor returns the floor of a positive num", () => {
 	expect(floor(1.5)).toBe(1);

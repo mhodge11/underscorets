@@ -1,4 +1,4 @@
-import { filter } from "../../src/index.ts";
+import { filter } from "@array/index.ts";
 
 test("filter filters an array", () => {
 	expect(filter([1, 2, 3, 4], (n) => n < 3)).toEqual([1, 2]);

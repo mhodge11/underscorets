@@ -1,4 +1,4 @@
-import { generateKsuid, isValidKsuid } from "../../src/index.ts";
+import { generateKsuid, isValidKsuid } from "@ksuid/index.ts";
 
 test("isValidKsuid return true for valid ksuids", () => {
 	expect(isValidKsuid(generateKsuid())).toBe(true);

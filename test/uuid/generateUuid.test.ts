@@ -1,4 +1,4 @@
-import { generateUuid, uuidUrlAlphabet } from "../../src/index.ts";
+import { generateUuid, uuidUrlAlphabet } from "@uuid/index.ts";
 
 test("generates URL-friendly IDs", () => {
 	for (let i = 0; i < 100; i++) {

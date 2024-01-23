@@ -1,4 +1,4 @@
-import { once } from "../../src/index.ts";
+import { once } from "@function/index.ts";
 
 test("should invoke `func` once", () => {
 	const mock = vi.fn();

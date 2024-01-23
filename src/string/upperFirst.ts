@@ -17,4 +17,6 @@ import { createCaseFirst } from "../helpers/createCaseFirst.ts";
  *
  * @category String
  */
-export const upperFirst = createCaseFirst("toUpperCase");
+export function upperFirst(string: string): string {
+	return createCaseFirst("toUpperCase")(string);
+}

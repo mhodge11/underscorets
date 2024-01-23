@@ -1,4 +1,4 @@
-import { last } from "../../src/index.ts";
+import { last } from "@array/index.ts";
 
 test("last returns the last element of an array", () => {
 	expect(last([1, 2, 3, 4])).toBe(4);

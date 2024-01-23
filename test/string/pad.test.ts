@@ -1,4 +1,4 @@
-import { pad } from "../../src/index.ts";
+import { pad } from "@string/index.ts";
 
 test("should pad str", () => {
 	expect(pad("abc", 8)).toBe("  abc   ");

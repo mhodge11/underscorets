@@ -1,4 +1,4 @@
-import { toInteger } from "../util/toInteger.ts";
+import { toInteger } from "../misc/toInteger.ts";
 import { slice } from "./slice.ts";
 
 /**

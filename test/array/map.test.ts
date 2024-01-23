@@ -1,4 +1,4 @@
-import { map } from "../../src/index.ts";
+import { map } from "@array/index.ts";
 
 test("map maps an array", () => {
 	expect(map([1, 2, 3, 4], (n) => n * 2)).toEqual([2, 4, 6, 8]);

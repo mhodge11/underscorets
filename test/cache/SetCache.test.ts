@@ -1,7 +1,7 @@
-import { HashCache } from "../../src/cache/HashCache.ts";
-import { MapCache } from "../../src/cache/MapCache.ts";
-import { SetCache } from "../../src/cache/SetCache.ts";
-import { HASH_UNDEFINED } from "../../src/config/constants.ts";
+import { HashCache } from "@cache/HashCache.ts";
+import { MapCache } from "@cache/MapCache.ts";
+import { SetCache } from "@cache/SetCache.ts";
+import { HASH_UNDEFINED } from "@config/constants.ts";
 
 const initSet = () => new SetCache([0, 1, 2, 3]);
 

@@ -1,4 +1,4 @@
-export const createRound = (methodName: "ceil" | "floor" | "round") => {
+export function createRound(methodName: "ceil" | "floor" | "round") {
 	const operation = Math[methodName];
 
 	return (number: number | `${number}`, precision?: number | `${number}`) => {
@@ -11,4 +11,4 @@ export const createRound = (methodName: "ceil" | "floor" | "round") => {
 		const factor = 10 ** precision;
 		return operation((number + Number.EPSILON) * factor) / factor;
 	};
-};
+}

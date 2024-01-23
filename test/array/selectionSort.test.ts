@@ -1,4 +1,4 @@
-import { selectionSort } from "../../src/index.ts";
+import { selectionSort } from "@array/index.ts";
 
 test("selection sort the array in ascending order based on the iteratee function", () => {
 	const numbers = [3, 1, 2];

@@ -1,4 +1,4 @@
-import { deburr } from "../../src/index.ts";
+import { deburr } from "@string/index.ts";
 
 test("removes diacritics from a str", () => {
 	expect(deburr("Mëtàl Hëàd")).toEqual("Metal Head");

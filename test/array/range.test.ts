@@ -1,4 +1,4 @@
-import { range } from "../../src/index.ts";
+import { range } from "@array/index.ts";
 
 test("range of numbers", () => {
 	expect(range(1, 5)).toEqual([1, 2, 3, 4, 5]);

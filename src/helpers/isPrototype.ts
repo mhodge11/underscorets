@@ -1,4 +1,4 @@
-export const isPrototype = (value: unknown): boolean => {
+export function isPrototype(value: unknown): boolean {
 	if (value == null) return false;
 
 	const Ctor: Function = value?.constructor;
@@ -6,4 +6,4 @@ export const isPrototype = (value: unknown): boolean => {
 		(typeof Ctor === "function" && Ctor.prototype) || Object.prototype;
 
 	return value === proto;
-};
+}
