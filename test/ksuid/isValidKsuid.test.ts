@@ -1,13 +1,13 @@
-import { ksuid } from "../../src/index.ts";
+import { generateKsuid, isValidKsuid } from "@ksuid/index.ts";
 
-test("ksuid.isValidKsuid return true for valid ksuids", () => {
-	expect(ksuid.isValidKsuid(ksuid.generateKsuid())).toBe(true);
+test("isValidKsuid return true for valid ksuids", () => {
+	expect(isValidKsuid(generateKsuid())).toBe(true);
 });
 
-test("ksuid.isValidKsuid return false for invalid ksuids", () => {
-	expect(ksuid.isValidKsuid("")).toBe(false);
-	expect(ksuid.isValidKsuid("test")).toBe(false);
-	expect(ksuid.isValidKsuid("test-")).toBe(false);
-	expect(ksuid.isValidKsuid("test_")).toBe(false);
-	expect(ksuid.isValidKsuid("test_123")).toBe(false);
+test("isValidKsuid return false for invalid ksuids", () => {
+	expect(isValidKsuid("")).toBe(false);
+	expect(isValidKsuid("test")).toBe(false);
+	expect(isValidKsuid("test-")).toBe(false);
+	expect(isValidKsuid("test_")).toBe(false);
+	expect(isValidKsuid("test_123")).toBe(false);
 });

@@ -1,11 +1,13 @@
-import { createPadding } from "../helpers/createPadding.ts";
-import { ceil } from "../number/ceil.ts";
-import { floor } from "../number/floor.ts";
-import { stringSize } from "./size.ts";
+import { createPadding } from "../helpers/createPadding";
+import { ceil } from "../number/ceil";
+import { floor } from "../number/floor";
+import { stringSize } from "./stringSize";
 
 /**
  * Pads `string` on the left and right sides if it's shorter than `length`.
  * Padding characters are truncated if they exceed `length`.
+ *
+ * *Based on [lodash.pad](https://lodash.com/docs/4.17.15#pad).*
  *
  * @example
  * ```ts

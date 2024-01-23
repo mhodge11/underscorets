@@ -1,7 +1,7 @@
-import { uuid } from "../../src/index.ts";
+import { generateCustomUuidAsync } from "@uuid/index.ts";
 
 test("generates a uuid with a custom alphabet", async () => {
-	const uid = uuid.generateCustomUuidAsync("a", 5);
+	const uid = generateCustomUuidAsync("a", 5);
 	expect(await uid()).toBe("aaaaa");
 });
 
@@ -9,7 +9,7 @@ test("has flat distribution", async () => {
 	const COUNT = 50 * 1000;
 	const LENGTH = 30;
 	const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-	const uid = uuid.generateCustomUuidAsync(ALPHABET, LENGTH);
+	const uid = generateCustomUuidAsync(ALPHABET, LENGTH);
 
 	const chars: Record<string, number> = {};
 	for (let i = 0; i < COUNT; i++) {
@@ -35,6 +35,6 @@ test("has flat distribution", async () => {
 });
 
 test("changes size", async () => {
-	const uid = uuid.generateCustomUuidAsync("a", 10);
+	const uid = generateCustomUuidAsync("a", 10);
 	expect(await uid()).toBe("aaaaaaaaaa");
 });

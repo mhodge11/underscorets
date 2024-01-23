@@ -3,6 +3,8 @@
  *
  * It uses `crypto.getRandomValues` to generate the random number.
  *
+ * *Based on [moderndash.randomInt](https://moderndash.io/docs/randomInt).
+ *
  * @example
  * ```ts
  * randomInt(1, 10)
@@ -17,7 +19,6 @@
  *
  * @category Crypto
  */
-
 export function randomInt(min: number, max: number): number {
 	// Taken from https://stackoverflow.com/a/41452318
 	if (!Number.isInteger(min))
@@ -38,7 +39,7 @@ export function randomInt(min: number, max: number): number {
 
 	let randomValue: number;
 	do {
-		crypto.getRandomValues(randomBuffer);
+		crypto?.getRandomValues(randomBuffer);
 		randomValue = 0;
 		for (let i = 0; i < randomBytes; i++)
 			randomValue = (randomValue << 8) + (randomBuffer[i] as number);

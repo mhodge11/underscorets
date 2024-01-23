@@ -2,6 +2,8 @@
  * Invokes a function `n` times, returning an array of the results of
  * each invocation.
  *
+ * *Based on [moderndash.times](https://moderndash.io/docs/times).*
+ *
  * @example
  * ```ts
  * times(index => console.log("Run", index), 3)

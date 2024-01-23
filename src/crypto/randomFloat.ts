@@ -3,6 +3,8 @@
  *
  * It uses `crypto.getRandomValues` to generate the random number.
  *
+ * *Based on [moderndash.randomFloat](https://moderndash.io/docs/randomFloat).
+ *
  * @example
  * ```ts
  * randomFloat(1, 10)
@@ -16,7 +18,6 @@
  *
  * @category Crypto
  */
-
 export function randomFloat(min: number, max: number): number {
 	if (min >= max)
 		throw new Error(
@@ -25,7 +26,7 @@ export function randomFloat(min: number, max: number): number {
 
 	// TODO: Switch to UInt64Array when safari support is better (https://caniuse.com/mdn-javascript_builtins_bigint64array)
 	const randomBuffer = new Uint32Array(2);
-	crypto.getRandomValues(randomBuffer);
+	crypto?.getRandomValues(randomBuffer);
 
 	// keep all 32 bits of the the first, top 21 of the second for 53 random bits
 	const randomBigInt =

@@ -1,4 +1,4 @@
-import { createCaseFirst } from "../helpers/createCaseFirst.ts";
+import { createCaseFirst } from "../helpers/createCaseFirst";
 
 /**
  * Converts the first character of `string` to lower case.
@@ -17,4 +17,6 @@ import { createCaseFirst } from "../helpers/createCaseFirst.ts";
  *
  * @category String
  */
-export const lowerFirst = createCaseFirst("toLowerCase");
+export function lowerFirst(string: string): string {
+	return createCaseFirst("toLowerCase")(string);
+}

@@ -1,14 +1,14 @@
-import { uuid } from "../../src/index.ts";
+import { generateCustomUuid } from "@uuid/index.ts";
 
 test("generates a uuid with a custom alphabet", () => {
-	expect(uuid.generateCustomUuid("a", 5)()).toBe("aaaaa");
+	expect(generateCustomUuid("a", 5)()).toBe("aaaaa");
 });
 
 test("has flat distribution", () => {
 	const COUNT = 50 * 1000;
 	const LENGTH = 30;
 	const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-	const uid = uuid.generateCustomUuid(ALPHABET, LENGTH);
+	const uid = generateCustomUuid(ALPHABET, LENGTH);
 
 	const chars: Record<string, number> = {};
 	for (let i = 0; i < COUNT; i++) {
@@ -34,5 +34,5 @@ test("has flat distribution", () => {
 });
 
 test("changes size", () => {
-	expect(uuid.generateCustomUuid("a", 10)()).toBe("aaaaaaaaaa");
+	expect(generateCustomUuid("a", 10)()).toBe("aaaaaaaaaa");
 });

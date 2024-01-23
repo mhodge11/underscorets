@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Creates an object with grouped items in the array.

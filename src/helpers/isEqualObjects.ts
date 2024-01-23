@@ -1,9 +1,9 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject";
 
-import { isEqual } from "../validator/isEqual.ts";
-import { isPlainObject } from "../validator/isPlainObject.ts";
+import { isEqual } from "../validate/isEqual";
+import { isPlainObject } from "../validate/isPlainObject";
 
-export const isEqualObjects = (a: PlainObject, b: PlainObject): boolean => {
+export function isEqualObjects(a: PlainObject, b: PlainObject): boolean {
 	if (!isPlainObject(a) || !isPlainObject(b)) return false;
 
 	if (Object.is(a, b)) return true;
@@ -18,4 +18,4 @@ export const isEqualObjects = (a: PlainObject, b: PlainObject): boolean => {
 
 	// the objects are deeply equal
 	return true;
-};
+}

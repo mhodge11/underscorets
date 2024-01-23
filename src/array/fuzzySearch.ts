@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 type Result = {
 	string: string;
@@ -10,6 +10,7 @@ type Result = {
 /**
  * Test if a string matches a pattern for fuzzy searching.
  *
+ * @private
  * @param pattern The search input string
  * @param string The string to match with the pattern
  * @param opts (Optional) Options object
@@ -20,7 +21,7 @@ type Result = {
  *
  * @category Array
  */
-export const fuzzySearchMatch = (
+export function fuzzySearchMatch(
 	pattern: string,
 	string: string,
 	opts?: {
@@ -29,7 +30,7 @@ export const fuzzySearchMatch = (
 		post?: string;
 		caseSensitive?: boolean;
 	},
-) => {
+) {
 	let result = "";
 	let score = 0;
 	let stepScore = 0;
@@ -58,41 +59,14 @@ export const fuzzySearchMatch = (
 	}
 
 	return null;
-};
-
-/**
- * Test if a string matches a pattern for simple fuzzy searching.
- *
- * @param pattern The search input string
- * @param str The string to match with the pattern
- * @returns True if the string matches the pattern, false otherwise
- */
-export const simpleFuzzySearchTest = (pattern: string, str: string) =>
-	!!fuzzySearchMatch(pattern, str);
-
-/**
- * Fuzzy search an array of strings.
- * It does not use a scoring system
- * and returns the matches in the order they appear in the array.
- *
- * @example
- * ```ts
- * simpleFuzzySearch("abc", ["abc", "acb", "bac", "bca", "cab", "cba"])
- * // => ["abc", "acb", "bac", "bca", "cab", "cba"]
- * ```
- *
- * @param pattern The search input string
- * @param array The array to search through
- * @returns An array of matches
- */
-export function simpleFuzzySearch(pattern: string, array: string[]) {
-	return array.filter((str) => simpleFuzzySearchTest(pattern, str));
 }
 
 /**
  * Fuzzy search an array of strings.
  * It uses a scoring system to determine the best matches.
  * The best matches are returned first.
+ *
+ * *Based on [fuzzy-search](https://github.com/wouterrutgers/fuzzy-search).*
  *
  * @example
  * ```ts
@@ -115,6 +89,8 @@ export function simpleFuzzySearch(pattern: string, array: string[]) {
  * @param opts.post (Optional) String to put after a matching character
  * @template T The type of array
  * @returns An array of matches
+ *
+ * @category Array
  */
 export function fuzzySearch<T extends any[] | ArrayLike<any> = string[]>(
 	pattern: string,

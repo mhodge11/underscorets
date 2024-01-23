@@ -5,10 +5,14 @@
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],
   "exclude": [
     "**/test/**/*",
+    "**/dist/**/*",
+    "**/lib/**/*",
+    "**/shims/**/*",
     "**/node_modules/**/*",
-    "**/coverage/**/*",
-    "**/internal/**/*"
+    "**/coverage/**/*"
   ],
+  "cleanOutputDir": true,
+  "readme": "none",
   "out": "./docs",
   "excludeReferences": true,
   "logLevel": "Verbose"

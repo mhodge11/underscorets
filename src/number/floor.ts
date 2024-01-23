@@ -1,4 +1,4 @@
-import { createRound } from "../helpers/createRound.ts";
+import { createRound } from "../helpers/createRound";
 
 /**
  * Computes `number` rounded down to `precision`. (Round down: the smallest integer less than or equal to a given number.)
@@ -21,4 +21,9 @@ import { createRound } from "../helpers/createRound.ts";
  *
  * @category Number
  */
-export const floor = createRound("floor");
+export function floor(
+	number: number | `${number}`,
+	precision?: number | `${number}`,
+): number {
+	return createRound("floor")(number, precision);
+}

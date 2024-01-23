@@ -1,4 +1,4 @@
-import { ListCache } from "../../src/cache/ListCache.ts";
+import { ListCache } from "@cache/ListCache.ts";
 
 const initList = () =>
 	new ListCache([

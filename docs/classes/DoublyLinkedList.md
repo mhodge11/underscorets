@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / DoublyLinkedList
+[underscorets - v0.1.9](../README.md) / DoublyLinkedList
 
 # Class: DoublyLinkedList\<T\>
 
@@ -305,7 +305,7 @@ list.reverse();
 
 #### Defined in
 
-util/doublyLinkedList.ts:292
+[misc/doublyLinkedList.ts:273](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L273)
 
 ## Properties
 
@@ -313,11 +313,9 @@ util/doublyLinkedList.ts:292
 
 • `Private` **\_head**: `undefined` \| `Node`\<`T`\>
 
-First node in linked list.
-
 #### Defined in
 
-util/doublyLinkedList.ts:244
+[misc/doublyLinkedList.ts:238](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L238)
 
 ___
 
@@ -325,11 +323,9 @@ ___
 
 • `Private` **\_size**: `number` = `0`
 
-Number of nodes in linked list.
-
 #### Defined in
 
-util/doublyLinkedList.ts:240
+[misc/doublyLinkedList.ts:237](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L237)
 
 ___
 
@@ -337,11 +333,9 @@ ___
 
 • `Private` **\_tail**: `undefined` \| `Node`\<`T`\>
 
-Last node in linked list.
-
 #### Defined in
 
-util/doublyLinkedList.ts:248
+[misc/doublyLinkedList.ts:239](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L239)
 
 ## Accessors
 
@@ -357,7 +351,7 @@ The DoublyLinkedList tag.
 
 #### Defined in
 
-util/doublyLinkedList.ts:274
+[misc/doublyLinkedList.ts:257](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L257)
 
 ___
 
@@ -373,7 +367,7 @@ First node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:260
+[misc/doublyLinkedList.ts:247](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L247)
 
 ___
 
@@ -389,7 +383,7 @@ Number of nodes in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:253
+[misc/doublyLinkedList.ts:242](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L242)
 
 ___
 
@@ -405,7 +399,7 @@ Last node in linked list.
 
 #### Defined in
 
-util/doublyLinkedList.ts:267
+[misc/doublyLinkedList.ts:252](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L252)
 
 ## Methods
 
@@ -419,7 +413,7 @@ util/doublyLinkedList.ts:267
 
 #### Defined in
 
-util/doublyLinkedList.ts:285
+[misc/doublyLinkedList.ts:265](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L265)
 
 ___
 
@@ -427,15 +421,13 @@ ___
 
 ▸ **[iterator]**(): `IterableIterator`\<`T`\>
 
-An iterator for the DoublyLinkedList to use with `for...of` loops.
-
 #### Returns
 
 `IterableIterator`\<`T`\>
 
 #### Defined in
 
-util/doublyLinkedList.ts:281
+[misc/doublyLinkedList.ts:261](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L261)
 
 ___
 
@@ -456,7 +448,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:479
+[misc/doublyLinkedList.ts:455](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L455)
 
 ___
 
@@ -476,7 +468,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:337
+[misc/doublyLinkedList.ts:318](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L318)
 
 ___
 
@@ -496,7 +488,7 @@ ___
 
 #### Defined in
 
-util/doublyLinkedList.ts:391
+[misc/doublyLinkedList.ts:370](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L370)
 
 ___
 
@@ -504,15 +496,15 @@ ___
 
 ▸ **copy**(): [`DoublyLinkedList`](DoublyLinkedList.md)\<`T`\>
 
+Creates a copy of the DoublyLinkedList.
+
 #### Returns
 
 [`DoublyLinkedList`](DoublyLinkedList.md)\<`T`\>
 
-A copy of the DoublyLinkedList
-
 #### Defined in
 
-util/doublyLinkedList.ts:554
+[misc/doublyLinkedList.ts:518](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L518)
 
 ___
 
@@ -536,7 +528,7 @@ Node at index
 
 #### Defined in
 
-util/doublyLinkedList.ts:434
+[misc/doublyLinkedList.ts:410](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L410)
 
 ___
 
@@ -561,7 +553,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:469
+[misc/doublyLinkedList.ts:445](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L445)
 
 ___
 
@@ -579,7 +571,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:358
+[misc/doublyLinkedList.ts:339](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L339)
 
 ___
 
@@ -603,7 +595,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:331
+[misc/doublyLinkedList.ts:312](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L312)
 
 ___
 
@@ -627,7 +619,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:500
+[misc/doublyLinkedList.ts:474](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L474)
 
 ___
 
@@ -645,7 +637,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:525
+[misc/doublyLinkedList.ts:496](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L496)
 
 ___
 
@@ -670,7 +662,7 @@ Node at index
 
 #### Defined in
 
-util/doublyLinkedList.ts:456
+[misc/doublyLinkedList.ts:432](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L432)
 
 ___
 
@@ -688,7 +680,7 @@ Removed node
 
 #### Defined in
 
-util/doublyLinkedList.ts:412
+[misc/doublyLinkedList.ts:390](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L390)
 
 ___
 
@@ -702,11 +694,9 @@ Converts the DoublyLinkedList to an array.
 
 `T`[]
 
-The DoublyLinkedList as an array
-
 #### Defined in
 
-util/doublyLinkedList.ts:586
+[misc/doublyLinkedList.ts:540](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L540)
 
 ___
 
@@ -720,17 +710,17 @@ Converts the DoublyLinkedList to JSON.
 
 `T`[]
 
-The DoublyLinkedList as JSON
-
 #### Defined in
 
-util/doublyLinkedList.ts:577
+[misc/doublyLinkedList.ts:535](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L535)
 
 ___
 
 ### toString
 
 ▸ **toString**(`replacer?`, `space?`): `string`
+
+Converts the DoublyLinkedList to a string.
 
 #### Parameters
 
@@ -743,11 +733,9 @@ ___
 
 `string`
 
-The DoublyLinkedList as a string.
-
 #### Defined in
 
-util/doublyLinkedList.ts:561
+[misc/doublyLinkedList.ts:523](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L523)
 
 ___
 
@@ -771,7 +759,7 @@ Entire linked list
 
 #### Defined in
 
-util/doublyLinkedList.ts:385
+[misc/doublyLinkedList.ts:364](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L364)
 
 ___
 
@@ -801,7 +789,7 @@ DoublyLinkedList created from array
 
 #### Defined in
 
-util/doublyLinkedList.ts:302
+[misc/doublyLinkedList.ts:283](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L283)
 
 ___
 
@@ -831,4 +819,4 @@ DoublyLinkedList created from string
 
 #### Defined in
 
-util/doublyLinkedList.ts:312
+[misc/doublyLinkedList.ts:293](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L293)

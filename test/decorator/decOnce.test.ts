@@ -1,10 +1,10 @@
-import { decorator } from "../../src/index.ts";
+import { decOnce } from "@decorator/index.ts";
 
 test("decorator", () => {
 	class TestClass {
 		private count = 0;
 
-		@decorator.once()
+		@decOnce()
 		testMethod() {
 			return ++this.count;
 		}

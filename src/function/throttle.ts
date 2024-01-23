@@ -1,10 +1,12 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Generates a function that invokes the given function `func` at most once per every `wait` milliseconds.
  * The throttled function always returns the result of the last `func` invocation.
  *
  * This function can be used as a decorator with {@link decThrottle}.
+ *
+ * *Based on [moderndash.throttle](https://moderndash.io/docs/throttle).*
  *
  * @example
  * ```ts

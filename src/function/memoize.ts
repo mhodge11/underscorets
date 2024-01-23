@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 const defaultResolver = (...args: unknown[]) => JSON.stringify(args);
 
@@ -16,6 +16,8 @@ const defaultResolver = (...args: unknown[]) => JSON.stringify(args);
  * It can be replaced by a custom cache that matches the `Map` interface.
  *
  * This function can be used as a decorator with {@link decMemoize}.
+ *
+ * *Based on [moderndash.memoize](https://moderndash.io/docs/memoize).*
  *
  * @example
  * ```ts

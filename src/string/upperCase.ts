@@ -1,6 +1,5 @@
-import { reQuotes } from "../config/regex.ts";
-import { toString } from "../util/toString.ts";
-import { splitWords } from "./splitWords.ts";
+import { toString } from "../misc/toString";
+import { splitWords } from "./splitWords";
 
 /**
  * Converts `string`, as space separated words, to upper case.
@@ -22,8 +21,9 @@ import { splitWords } from "./splitWords.ts";
  *
  * @category String
  */
-export const upperCase = (string: string): string =>
-	splitWords(toString(string).replace(reQuotes, "")).reduce(
+export function upperCase(string: string): string {
+	return splitWords(toString(string).replace(/['\u2019]/g, "")).reduce(
 		(result, word, index) => result + (index ? " " : "") + word.toUpperCase(),
 		"",
 	);
+}

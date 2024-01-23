@@ -1,4 +1,4 @@
-import { base62, debase62 } from "../helpers/base62.ts";
+import { base62, debase62 } from "../helpers/base62";
 
 const EPOCH_IN_MS = 14e11;
 
@@ -34,13 +34,14 @@ const VALID_BUFFER_ASSERTION = `Valid KSUID buffers are ${BYTE_LENGTH} bytes`;
 
 const VALID_PAYLOAD_ASSERTION = `Valid KSUID payloads are ${PAYLOAD_BYTE_LENGTH} bytes`;
 
-const randomBytes = (): Uint8Array =>
-	crypto.getRandomValues(new Uint8Array(16));
+function randomBytes(): Uint8Array {
+	return crypto?.getRandomValues(new Uint8Array(16));
+}
 
-const fromParts = (
+function fromParts(
 	timestamp: string | number | Date,
 	payload: Uint8Array,
-): ArrayBuffer => {
+): ArrayBuffer {
 	const buffer = new ArrayBuffer(BYTE_LENGTH);
 	const view = new DataView(buffer);
 
@@ -55,7 +56,7 @@ const fromParts = (
 	}
 
 	return view.buffer;
-};
+}
 
 /**
  * A KSUID is a unique identifier that is sortable by the time it was created.
@@ -82,6 +83,8 @@ const fromParts = (
  * - `payload` - The payload of the KSUID.
  * - `string` - The KSUID as a string.
  * - `[Symbol.toStringTag]` - The KSUID tag.
+ *
+ * *Based on [ksuid](https://github.com/segmentio/ksuid).*
  *
  * @example
  * ```ts
@@ -167,10 +170,8 @@ export class KSUID {
 		const b = new Uint8Array(other.view.buffer);
 
 		for (let offset = 0; offset < a.length; offset++) {
-			// biome-ignore lint/style/noNonNullAssertion: This will always be defined
-			if (a[offset]! < b[offset]!) return -1;
-			// biome-ignore lint/style/noNonNullAssertion: This will always be defined
-			if (a[offset]! > b[offset]!) return 1;
+			if ((a[offset] as number) < (b[offset] as number)) return -1;
+			if ((a[offset] as number) > (b[offset] as number)) return 1;
 		}
 
 		return 0;
@@ -241,7 +242,10 @@ export class KSUID {
 		)
 			throw new TypeError(TIME_IN_MS_ASSERTION);
 
-		if (!Buffer.isBuffer(payload) || payload.byteLength !== PAYLOAD_BYTE_LENGTH)
+		if (
+			!Buffer?.isBuffer(payload) ||
+			payload.byteLength !== PAYLOAD_BYTE_LENGTH
+		)
 			throw new TypeError(VALID_PAYLOAD_ASSERTION);
 
 		return new KSUID(fromParts(timestamp, payload));

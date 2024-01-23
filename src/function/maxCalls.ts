@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Creates a function that invokes the given function as long as it's called `<= n` times.
@@ -6,6 +6,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  * Subsequent calls to the created function return the result of the last `func` invocation.
  *
  * This function can be used as a decorator with {@link decMaxCalls}.
+ *
+ * *Based on [moderndash.maxCalls](https://moderndash.io/docs/maxCalls).*
  *
  * @example
  * ```ts

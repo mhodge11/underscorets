@@ -1,4 +1,4 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject";
 
 /**
  * This method is like `{@link findKey}` except it returns the key of the last element `predicate` returns truthy for.

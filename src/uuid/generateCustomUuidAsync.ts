@@ -1,9 +1,9 @@
-import { generateCustomUuid } from "./generateCustomUuid.ts";
+import { generateCustomUuid } from "./generateCustomUuid";
 
 /**
  * Asynchronously generates a UUID using a custom alphabet.
  *
- * *Based on the [nanoid](https://github.com/ai/nanoid) package.*
+ * *Based on [nanoid](https://github.com/ai/nanoid).*
  *
  * @example
  * ```ts
@@ -16,9 +16,11 @@ import { generateCustomUuid } from "./generateCustomUuid.ts";
  * //=> "01a2b3c4d5"
  * ```
  *
- * @param alphabet Custom alphabet to generate the UUID from.
- * @param defaultSize Default size of the UUID.
- * @returns A promise resolving to a function that generates a UUID.
+ * @param alphabet Custom alphabet to generate the UUID from
+ * @param defaultSize Default size of the UUID
+ * @returns A promise resolving to a function that generates a UUID
+ *
+ * @category UUID
  */
 export function generateCustomUuidAsync(alphabet: string, defaultSize = 21) {
 	const customUuid = generateCustomUuid(alphabet, defaultSize);

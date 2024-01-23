@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / Stack
+[underscorets - v0.1.9](../README.md) / Stack
 
 # Class: Stack\<T\>
 
@@ -96,9 +96,9 @@ stack.toArray();
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `values?` | `T`[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `values?` | `T`[] | The values to create the stack from |
 
 #### Returns
 
@@ -106,7 +106,7 @@ stack.toArray();
 
 #### Defined in
 
-util/stack.ts:83
+[misc/stack.ts:78](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L78)
 
 ## Properties
 
@@ -116,7 +116,7 @@ util/stack.ts:83
 
 #### Defined in
 
-util/stack.ts:49
+[misc/stack.ts:49](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L49)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-util/stack.ts:48
+[misc/stack.ts:48](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L48)
 
 ## Accessors
 
@@ -142,7 +142,7 @@ The Stack tag.
 
 #### Defined in
 
-util/stack.ts:68
+[misc/stack.ts:62](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L62)
 
 ___
 
@@ -158,7 +158,7 @@ The size of the stack.
 
 #### Defined in
 
-util/stack.ts:61
+[misc/stack.ts:57](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L57)
 
 ___
 
@@ -174,7 +174,7 @@ The top node of the stack.
 
 #### Defined in
 
-util/stack.ts:54
+[misc/stack.ts:52](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L52)
 
 ## Methods
 
@@ -188,7 +188,7 @@ util/stack.ts:54
 
 #### Defined in
 
-util/stack.ts:79
+[misc/stack.ts:70](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L70)
 
 ___
 
@@ -196,15 +196,13 @@ ___
 
 ▸ **[iterator]**(): `IterableIterator`\<`T`\>
 
-An iterator for the stack to use with `for...of` loops.
-
 #### Returns
 
 `IterableIterator`\<`T`\>
 
 #### Defined in
 
-util/stack.ts:75
+[misc/stack.ts:66](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L66)
 
 ___
 
@@ -224,7 +222,7 @@ ___
 
 #### Defined in
 
-util/stack.ts:128
+[misc/stack.ts:123](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L123)
 
 ___
 
@@ -232,17 +230,15 @@ ___
 
 ▸ **clear**(): [`Stack`](Stack.md)\<`T`\>
 
-Clears the stack.
+Removes all Nodes from the stack and returns a copy of the old Stack.
 
 #### Returns
 
 [`Stack`](Stack.md)\<`T`\>
 
-The stack before it was cleared.
-
 #### Defined in
 
-util/stack.ts:160
+[misc/stack.ts:146](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L146)
 
 ___
 
@@ -250,17 +246,15 @@ ___
 
 ▸ **copy**(): [`Stack`](Stack.md)\<`T`\>
 
-Constructs a new stack with the same values as the current stack.
+Creates a copy of the Stack.
 
 #### Returns
 
 [`Stack`](Stack.md)\<`T`\>
 
-The new stack.
-
 #### Defined in
 
-util/stack.ts:172
+[misc/stack.ts:154](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L154)
 
 ___
 
@@ -268,17 +262,15 @@ ___
 
 ▸ **pop**(): `undefined` \| `Node`\<`T`\>
 
-Pops a value from the stack.
+Removes a Node from the end of the Stack and returns it.
 
 #### Returns
 
 `undefined` \| `Node`\<`T`\>
 
-The popped value, or `undefined` if the stack is empty.
-
 #### Defined in
 
-util/stack.ts:142
+[misc/stack.ts:133](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L133)
 
 ___
 
@@ -302,7 +294,7 @@ The stack, or `undefined` if no value was provided.
 
 #### Defined in
 
-util/stack.ts:122
+[misc/stack.ts:117](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L117)
 
 ___
 
@@ -316,11 +308,9 @@ Converts the Stack to an array.
 
 `T`[]
 
-The Stack as an array
-
 #### Defined in
 
-util/stack.ts:204
+[misc/stack.ts:176](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L176)
 
 ___
 
@@ -328,23 +318,23 @@ ___
 
 ▸ **toJSON**(): `T`[]
 
-Converts the Stack to a string used by `JSON.stringify()`.
+Converts the stack to JSON.
 
 #### Returns
 
 `T`[]
 
-The Stack as a string
-
 #### Defined in
 
-util/stack.ts:195
+[misc/stack.ts:171](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L171)
 
 ___
 
 ### toString
 
 ▸ **toString**(`replacer?`, `space?`): `string`
+
+Converts the Stack to a string.
 
 #### Parameters
 
@@ -357,11 +347,9 @@ ___
 
 `string`
 
-The Stack as a string.
-
 #### Defined in
 
-util/stack.ts:179
+[misc/stack.ts:159](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L159)
 
 ___
 
@@ -391,7 +379,7 @@ The stack.
 
 #### Defined in
 
-util/stack.ts:93
+[misc/stack.ts:88](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L88)
 
 ___
 
@@ -421,4 +409,4 @@ Stack created from string
 
 #### Defined in
 
-util/stack.ts:103
+[misc/stack.ts:98](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/stack.ts#L98)

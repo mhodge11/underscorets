@@ -1,4 +1,4 @@
-import { decorator } from "../../src/index.ts";
+import { decMemoize } from "@decorator/index.ts";
 
 const testFn = vi.fn((a: number, b: number) => a + b);
 
@@ -8,7 +8,7 @@ beforeEach(() => {
 
 test("decorator", () => {
 	class TestClass {
-		@decorator.memoize({ ttl: 1000 })
+		@decMemoize({ ttl: 1000 })
 		testMethod(a: number, b: number) {
 			return testFn(a, b);
 		}

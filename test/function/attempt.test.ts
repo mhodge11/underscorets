@@ -1,11 +1,11 @@
-import { fn } from "../../src/index.ts";
+import { attempt } from "@function/index.ts";
 
 test("should return the result of `func`", () => {
-	expect(fn.attempt(() => "x")).toEqual(["x", undefined]);
+	expect(attempt(() => "x")).toEqual(["x", undefined]);
 });
 
 test("should provide additional arguments to `func`", () => {
-	const actual = fn.attempt(
+	const actual = attempt(
 		(start: number, end: number) => {
 			return [start, end];
 		},
@@ -16,7 +16,7 @@ test("should provide additional arguments to `func`", () => {
 });
 
 test("should coerce errors to error objects", () => {
-	const actual = fn.attempt(() => {
+	const actual = attempt(() => {
 		throw "x";
 	});
 	expect(actual[1]).toEqual(new Error("x"));
@@ -30,7 +30,7 @@ test("should preserve custom errors", () => {
 		}
 	}
 
-	const actual = fn.attempt(() => {
+	const actual = attempt(() => {
 		throw new CustomError("x");
 	});
 

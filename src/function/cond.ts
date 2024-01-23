@@ -1,10 +1,12 @@
-import { map } from "../array/map.ts";
+import { map } from "../array/map";
 
 /**
  * Creates a function that iterates over `pairs` and invokes the corresponding
  * function of the first predicate to return truthy. The predicate-function
  * pairs are invoked with the `this` binding and arguments of the created
  * function.
+ *
+ * *Based on [lodash.cond](https://lodash.com/docs/4.17.15#cond).*
  *
  * @example
  * ```ts

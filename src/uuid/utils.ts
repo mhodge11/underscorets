@@ -8,21 +8,21 @@ const POOL_SIZE_MULTIPLIER = 128;
 export let pool: Buffer;
 export let poolOffset: number;
 
-export const fillPool = (bytes: number): void => {
+export function fillPool(bytes: number): void {
 	if (!pool || pool.length < bytes) {
-		pool = Buffer.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
-		crypto.getRandomValues(pool);
+		pool = Buffer?.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
+		crypto?.getRandomValues(pool);
 		poolOffset = 0;
 	} else if (poolOffset + bytes > pool.length) {
-		crypto.getRandomValues(pool);
+		crypto?.getRandomValues(pool);
 		poolOffset = 0;
 	}
 
 	poolOffset += bytes;
-};
+}
 
-export const random = (bytes: number): Buffer => {
+export function random(bytes: number): Buffer {
 	// `-=` convert `bytes` to number to prevent `valueOf` abusing
 	fillPool((bytes -= 0));
 	return pool.subarray(poolOffset - bytes, poolOffset);
-};
+}

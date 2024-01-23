@@ -1,10 +1,10 @@
-import { eq } from "./eq.ts";
+import { eq } from "./eq";
 
-export const baseAssignValue = (
+export function baseAssignValue(
 	object: object,
 	key: PropertyKey,
 	value: unknown,
-): void => {
+): void {
 	if (key === "__proto__")
 		Object.defineProperty(object, key, {
 			configurable: true,
@@ -13,13 +13,13 @@ export const baseAssignValue = (
 			writable: true,
 		});
 	else (object as any)[key] = value;
-};
+}
 
-export const assignValue = (
+export function assignValue(
 	object: object,
 	key: PropertyKey,
 	value: unknown,
-): void => {
+): void {
 	const objValue = (object as any)[key];
 
 	if (
@@ -29,4 +29,4 @@ export const assignValue = (
 			baseAssignValue(object, key, value);
 	} else if (value === undefined && !(key in object))
 		baseAssignValue(object, key, value);
-};
+}

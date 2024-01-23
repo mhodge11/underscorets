@@ -1,6 +1,6 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { toInteger } from "../util/toInteger.ts";
-import { findIndex } from "./findIndex.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { toInteger } from "../misc/toInteger";
+import { findIndex } from "./findIndex";
 
 /**
  * This method is like `{@link findIndex}` except that it iterates over elements of `array` from right to left.

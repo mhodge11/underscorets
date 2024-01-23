@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * This method iterates over elements of `array` until the predicate returns truthy.

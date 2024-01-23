@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Creates unique array retaining first occurrence of elements.

@@ -1,4 +1,9 @@
-import { reHasUnicode } from "../config/regex.ts";
+import { rsAstralRange, rsComboRange, rsVarRange, rsZWJ } from "./reUnicode.ts";
 
-export const hasUnicode = (string: string): boolean =>
-	reHasUnicode.test(string);
+const reHasUnicode = RegExp(
+	`[${rsZWJ + rsAstralRange + rsComboRange + rsVarRange}]`,
+);
+
+export function hasUnicode(string: string): boolean {
+	return reHasUnicode.test(string);
+}

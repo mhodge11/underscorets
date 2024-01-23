@@ -1,10 +1,10 @@
-import type { ArrayMinLength } from "../types/ArrayMinLength.ts";
-import type { CompareFunction } from "../types/CompareFunction.ts";
-import type { PullOutArray } from "../types/PullOutArray.ts";
+import type { ArrayMinLength } from "../type/ArrayMinLength";
+import type { CompareFunction } from "../type/CompareFunction";
+import type { PullOutArray } from "../type/PullOutArray";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { fastArrayFlat } from "../helpers/fastArrayFlat.ts";
-import { unique } from "./unique.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { fastArrayFlat } from "../helpers/fastArrayFlat";
+import { unique } from "./unique";
 
 /**
  * Create an array with unique values that are present in all arrays.
@@ -58,8 +58,7 @@ export function intersection<
 
 	const arrayLikes = arraysOrCompareFn as T;
 	const arrays = arrayLikes.map(arrayLikeValues);
-	// biome-ignore lint/style/noNonNullAssertion: arrays will always have at least two elements
-	const firstArray = unique(arrays.shift()!);
+	const firstArray = unique(arrays.shift() as unknown[]);
 	const combinedRestArray = fastArrayFlat(arrays);
 
 	if (!compareFunction) {

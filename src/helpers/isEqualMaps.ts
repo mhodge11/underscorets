@@ -1,11 +1,11 @@
-import { PlainObject } from "../types/PlainObject.ts";
+import { PlainObject } from "../type/PlainObject";
 
-import { isEqualObjects } from "./isEqualObjects.ts";
+import { isEqualObjects } from "./isEqualObjects";
 
-export const isEqualMaps = (
+export function isEqualMaps(
 	a: Map<unknown, unknown>,
 	b: Map<unknown, unknown>,
-): boolean => {
+): boolean {
 	if (!(a instanceof Map) || !(b instanceof Map)) return false;
 
 	if (Object.is(a, b)) return true;
@@ -16,4 +16,4 @@ export const isEqualMaps = (
 	const bObj: PlainObject = Object.fromEntries(b);
 
 	return isEqualObjects(aObj, bObj);
-};
+}

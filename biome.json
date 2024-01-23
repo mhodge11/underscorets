@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.5.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
   "formatter": {
     "ignore": [
       "**/coverage/**/*",
@@ -30,6 +30,7 @@
       "suspicious": {
         "noAssignInExpressions": "off",
         "noConfusingVoidType": "off",
+        "noControlCharactersInRegex": "off",
         "noExplicitAny": "off",
         "noFallthroughSwitchClause": "off",
         "noSelfCompare": "off",

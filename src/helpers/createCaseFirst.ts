@@ -1,10 +1,11 @@
-import { castSlice } from "./castSlice.ts";
-import { hasUnicode } from "./hasUnicode.ts";
-import { stringToArray } from "./stringToArray.ts";
+import { castSlice } from "./castSlice";
+import { hasUnicode } from "./hasUnicode";
+import { stringToArray } from "./stringToArray";
 
-export const createCaseFirst =
-	(methodName: "toUpperCase" | "toLowerCase") =>
-	(string: string): string => {
+export function createCaseFirst(
+	methodName: "toUpperCase" | "toLowerCase",
+): (string: string) => string {
+	return (string: string): string => {
 		if (!string) return "";
 
 		const strSymbols = hasUnicode(string) ? stringToArray(string) : undefined;
@@ -15,3 +16,4 @@ export const createCaseFirst =
 
 		return chr[methodName]() + trailing;
 	};
+}

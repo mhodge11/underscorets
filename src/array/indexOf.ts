@@ -1,6 +1,21 @@
-import { isNaN } from "../helpers/isNaN.ts";
-import { strictIndexOf } from "../helpers/strictIndexOf.ts";
-import { findIndex } from "./findIndex.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { findIndex } from "./findIndex";
+
+function strictIndexOf<T>(
+	array: readonly T[] | ArrayLike<T>,
+	value: T,
+	fromIndex: number,
+): number {
+	const arr = arrayLikeValues(array);
+	if (!arr?.length) return -1;
+
+	let i = fromIndex - 1;
+	const { length } = arr;
+
+	while (++i < length) if (arr[i] === value) return i;
+
+	return -1;
+}
 
 /**
  * Gets the index at which the first occurrence of `value` is found in `array`
@@ -34,5 +49,5 @@ export function indexOf<T>(
 	fromIndex ??= 0;
 	return value === value
 		? strictIndexOf(array, value, fromIndex)
-		: findIndex(array, isNaN, fromIndex);
+		: findIndex(array, (value) => value !== value, fromIndex);
 }

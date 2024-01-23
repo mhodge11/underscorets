@@ -1,5 +1,5 @@
-import { toInteger } from "../util/toInteger.ts";
-import { slice } from "./slice.ts";
+import { toInteger } from "../misc/toInteger";
+import { slice } from "./slice";
 
 /**
  * Creates a slice of `array` with `n` elements taken from the beginning.

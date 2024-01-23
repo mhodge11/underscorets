@@ -1,12 +1,21 @@
-import type { TypedArray } from "../types/TypedArray.ts";
+import type { TypedArray } from "../type/TypedArray";
 
-import { each } from "../array/each.ts";
-import { StackCache } from "../cache/StackCache.ts";
-import {
-	CLONE_DEEP_FLAG,
-	CLONE_FLAT_FLAG,
-	CLONE_SYMBOLS_FLAG,
-} from "../config/flags.ts";
+import { each } from "../array/each";
+import { StackCache } from "../cache/StackCache";
+import { isBuffer } from "../validate/isBuffer";
+import { isObject } from "../validate/isObject";
+import { isTypedArray } from "../validate/isTypedArray";
+import { assertUnreachable } from "./assertUnreachable";
+import { assignValue } from "./assignValue";
+import { cloneArrayBuffer } from "./cloneArrayBuffer";
+import { cloneBuffer } from "./cloneBuffer";
+import { cloneDataView } from "./cloneDataView";
+import { cloneRegExp } from "./cloneRegExp";
+import { cloneSymbol } from "./cloneSymbol";
+import { cloneTypedArray } from "./cloneTypedArray";
+import { copyArray } from "./copyArray";
+import { copySymbols } from "./copySymbols";
+import { getAllKeys } from "./getAllKeys";
 import {
 	argsTag,
 	arrayBufferTag,
@@ -16,6 +25,7 @@ import {
 	dateTag,
 	float32Tag,
 	float64Tag,
+	getTag,
 	int8Tag,
 	int16Tag,
 	int32Tag,
@@ -30,29 +40,23 @@ import {
 	uint8Tag,
 	uint16Tag,
 	uint32Tag,
-} from "../config/tags.ts";
-import { isBuffer } from "../validator/isBuffer.ts";
-import { isObject } from "../validator/isObject.ts";
-import { isTypedArray } from "../validator/isTypedArray.ts";
-import { assertUnreachable } from "./assertUnreachable.ts";
-import { assignValue } from "./assignValue.ts";
-import { cloneArrayBuffer } from "./cloneArrayBuffer.ts";
-import { cloneBuffer } from "./cloneBuffer.ts";
-import { cloneDataView } from "./cloneDataView.ts";
-import { cloneRegExp } from "./cloneRegExp.ts";
-import { cloneSymbol } from "./cloneSymbol.ts";
-import { cloneTypedArray } from "./cloneTypedArray.ts";
-import { copyArray } from "./copyArray.ts";
-import { copyObject } from "./copyObject.ts";
-import { copySymbols } from "./copySymbols.ts";
-import { copySymbolsIn } from "./copySymbolsIn.ts";
-import { getAllKeys } from "./getAllKeys.ts";
-import { getAllKeysIn } from "./getAllKeysIn.ts";
-import { getTag } from "./getTag.ts";
-import { isPrototype } from "./isPrototype.ts";
-import { keysIn } from "./keysIn.ts";
+} from "./getTag";
 
-const initCloneByTag = <T>(object: T, tag: string, isDeep?: boolean): T => {
+/** Clone flags */
+export const CLONE_DEEP_FLAG = 1;
+export const CLONE_SYMBOLS_FLAG = 4;
+
+function isPrototype(value: unknown): boolean {
+	if (value == null) return false;
+
+	const Ctor: Function = value?.constructor;
+	const proto: Function =
+		(typeof Ctor === "function" && Ctor.prototype) || Object.prototype;
+
+	return value === proto;
+}
+
+function initCloneByTag<T>(object: T, tag: string, isDeep?: boolean): T {
 	const Ctor = (object as any).constructor;
 	switch (tag) {
 		case arrayBufferTag:
@@ -86,15 +90,15 @@ const initCloneByTag = <T>(object: T, tag: string, isDeep?: boolean): T => {
 	}
 
 	assertUnreachable(tag);
-};
+}
 
-export const initCloneObject = <T extends object>(object: T): T => {
+function initCloneObject<T extends object>(object: T): T {
 	if (typeof object.constructor === "function" && !isPrototype(object))
 		return Object.create(Object.getPrototypeOf(object)) as T;
 	return {} as T;
-};
+}
 
-const initCloneArray = <T>(array: T[] | ArrayLike<T>): T[] => {
+function initCloneArray<T>(array: T[] | ArrayLike<T>): T[] {
 	const { length } = array;
 	const result = new (array as any).constructor(length);
 
@@ -109,9 +113,9 @@ const initCloneArray = <T>(array: T[] | ArrayLike<T>): T[] => {
 	}
 
 	return result;
-};
+}
 
-export const clone = <T>(
+export function clone<T>(
 	value: T,
 	bitmask?: number | undefined,
 	customizer?: (
@@ -123,12 +127,11 @@ export const clone = <T>(
 	key?: PropertyKey,
 	object?: { [key: PropertyKey]: T },
 	stack?: StackCache,
-): T => {
+): T {
 	bitmask ??= 0;
 
 	let result: T | undefined;
 	const isDeep = bitmask & CLONE_DEEP_FLAG;
-	const isFlat = bitmask & CLONE_FLAT_FLAG;
 	const isFull = bitmask & CLONE_SYMBOLS_FLAG;
 
 	if (customizer)
@@ -148,17 +151,11 @@ export const clone = <T>(
 
 		const isFunc = typeof value === "function";
 		if (tag === objectTag || tag === argsTag || (isFunc && !object)) {
-			result = isFlat || isFunc ? ({} as T) : initCloneObject(value);
+			// result = isFlat || isFunc ? ({} as T) : initCloneObject(value);
+			result = isFunc ? ({} as T) : initCloneObject(value);
 
 			if (!isDeep)
-				return (
-					isFlat
-						? copySymbolsIn(
-								value,
-								copyObject(value, keysIn(value), result as {}),
-						  )
-						: copySymbols(value, Object.assign(result as {}, value))
-				) as T;
+				return copySymbols(value, Object.assign(result as {}, value)) as T;
 		} else {
 			if (isFunc || !cloneableTags[tag]) return (object ? value : {}) as T;
 			result = initCloneByTag(value, tag, !!isDeep);
@@ -207,14 +204,7 @@ export const clone = <T>(
 
 	if (isTypedArray(value)) return result as T;
 
-	const keysFunc = isFull
-		? isFlat
-			? getAllKeysIn
-			: getAllKeys
-		: isFlat
-		  ? keysIn
-		  : Object.keys;
-
+	const keysFunc = isFull ? getAllKeys : Object.keys;
 	const props = isArr ? undefined : keysFunc(value as any);
 
 	each(props || (value as (keyof T)[]), (subValue, key) => {
@@ -239,4 +229,4 @@ export const clone = <T>(
 	});
 
 	return result as T;
-};
+}

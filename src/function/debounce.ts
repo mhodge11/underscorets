@@ -1,4 +1,4 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Creates a debounced version of a function. Only calling it after a specified amount of time has passed without any new calls.
@@ -9,6 +9,8 @@ import type { GenericFunction } from "../types/GenericFunction.ts";
  * - `pending()` returns true if the debounced function is set to invoke.
  *
  * This function can be used as a decorator with {@link decDebounce}.
+ *
+ * *Based on [moderndash.debounce](https://moderndash.io/docs/debounce).*
  *
  * @example
  * ```ts

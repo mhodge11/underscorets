@@ -1,16 +1,16 @@
-import { str } from "../../src/index.ts";
+import { trimStart } from "@string/index.ts";
 
 test("trim characters", () => {
-	expect(str.trimStart("abc", "a")).toBe("bc");
-	expect(str.trimStart("__abc__", "_")).toBe("abc__");
-	expect(str.trimStart("___", "_")).toBe("");
-	expect(str.trimStart("_$$abc$__", "$_")).toBe("abc$__");
+	expect(trimStart("abc", "a")).toBe("bc");
+	expect(trimStart("__abc__", "_")).toBe("abc__");
+	expect(trimStart("___", "_")).toBe("");
+	expect(trimStart("_$$abc$__", "$_")).toBe("abc$__");
 });
 
 test("trim nothing", () => {
-	expect(str.trimStart("abc", "rtz")).toBe("abc");
+	expect(trimStart("abc", "rtz")).toBe("abc");
 });
 
 test("empty str", () => {
-	expect(str.trimStart("", "")).toBe("");
+	expect(trimStart("", "")).toBe("");
 });

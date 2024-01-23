@@ -1,5 +1,5 @@
-import type { $, O } from "hotscript";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectKeys } from "../type/ObjectKeys";
+import type { PlainObject } from "../type/PlainObject";
 
 /**
  * Creates an array of the own enumerable string keyed property names of `object`.
@@ -16,8 +16,8 @@ import type { PlainObject } from "../types/PlainObject.ts";
  *
  * @category Object
  */
-export function keys<T extends PlainObject>(object: T): $<O.Keys, T>[] {
+export function keys<T extends PlainObject>(object: T): ObjectKeys<T> {
 	const keys: string[] = [];
 	for (const key in object) keys.push(key);
-	return keys as $<O.Keys, T>[];
+	return keys as ObjectKeys<T>;
 }

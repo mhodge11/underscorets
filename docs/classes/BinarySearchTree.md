@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / BinarySearchTree
+[underscorets - v0.1.9](../README.md) / BinarySearchTree
 
 # Class: BinarySearchTree\<T\>
 
@@ -123,8 +123,6 @@ tree.remove(3);
 
 • **new BinarySearchTree**\<`T`\>(`options?`): [`BinarySearchTree`](BinarySearchTree.md)\<`T`\>
 
-Creates a new BinarySearchTree.
-
 #### Type parameters
 
 | Name |
@@ -146,7 +144,7 @@ Creates a new BinarySearchTree.
 
 #### Defined in
 
-util/binarySearchTree.ts:140
+[misc/binarySearchTree.ts:128](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L128)
 
 ## Properties
 
@@ -156,7 +154,7 @@ util/binarySearchTree.ts:140
 
 #### Defined in
 
-util/binarySearchTree.ts:72
+[misc/binarySearchTree.ts:72](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L72)
 
 ___
 
@@ -181,7 +179,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:71
+[misc/binarySearchTree.ts:71](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L71)
 
 ___
 
@@ -191,7 +189,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:70
+[misc/binarySearchTree.ts:70](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L70)
 
 ___
 
@@ -201,7 +199,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:73
+[misc/binarySearchTree.ts:73](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L73)
 
 ## Accessors
 
@@ -217,7 +215,7 @@ The BinarySearchTree tag.
 
 #### Defined in
 
-util/binarySearchTree.ts:99
+[misc/binarySearchTree.ts:91](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L91)
 
 ___
 
@@ -233,7 +231,7 @@ Whether the binary search tree allows duplicate values.
 
 #### Defined in
 
-util/binarySearchTree.ts:85
+[misc/binarySearchTree.ts:81](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L81)
 
 ___
 
@@ -265,7 +263,7 @@ Function returns `1` if `a` should be on the right compared to `b`.
 
 #### Defined in
 
-util/binarySearchTree.ts:130
+[misc/binarySearchTree.ts:119](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L119)
 
 • `set` **compare**(`fn`): `void`
 
@@ -286,7 +284,7 @@ Function returns `1` if `a` should be on the right compared to `b`.
 
 #### Defined in
 
-util/binarySearchTree.ts:120
+[misc/binarySearchTree.ts:109](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L109)
 
 ___
 
@@ -302,7 +300,7 @@ The raw data of the binary search tree.
 
 #### Defined in
 
-util/binarySearchTree.ts:78
+[misc/binarySearchTree.ts:76](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L76)
 
 ___
 
@@ -318,7 +316,7 @@ The number of nodes in the binary search tree.
 
 #### Defined in
 
-util/binarySearchTree.ts:92
+[misc/binarySearchTree.ts:86](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L86)
 
 ## Methods
 
@@ -332,7 +330,7 @@ util/binarySearchTree.ts:92
 
 #### Defined in
 
-util/binarySearchTree.ts:110
+[misc/binarySearchTree.ts:99](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L99)
 
 ___
 
@@ -340,15 +338,13 @@ ___
 
 ▸ **[iterator]**(): `IterableIterator`\<`T`\>
 
-An iterator for the BinarySearchTree to use with `for...of` loops.
-
 #### Returns
 
 `IterableIterator`\<`T`\>
 
 #### Defined in
 
-util/binarySearchTree.ts:106
+[misc/binarySearchTree.ts:95](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L95)
 
 ___
 
@@ -369,7 +365,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:369
+[misc/binarySearchTree.ts:357](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L357)
 
 ___
 
@@ -390,7 +386,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:346
+[misc/binarySearchTree.ts:334](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L334)
 
 ___
 
@@ -411,7 +407,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:326
+[misc/binarySearchTree.ts:314](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L314)
 
 ___
 
@@ -435,7 +431,7 @@ The values of the binary search tree in breadth-first order
 
 #### Defined in
 
-util/binarySearchTree.ts:387
+[misc/binarySearchTree.ts:375](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L375)
 
 ___
 
@@ -459,7 +455,7 @@ Whether the binary search tree contains a value.
 
 #### Defined in
 
-util/binarySearchTree.ts:255
+[misc/binarySearchTree.ts:243](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L243)
 
 ___
 
@@ -467,15 +463,15 @@ ___
 
 ▸ **copy**(): [`BinarySearchTree`](BinarySearchTree.md)\<`T`\>
 
+Creates a copy of the BinarySearchTree.
+
 #### Returns
 
 [`BinarySearchTree`](BinarySearchTree.md)\<`T`\>
 
-A copy of the BinarySearchTree
-
 #### Defined in
 
-util/binarySearchTree.ts:408
+[misc/binarySearchTree.ts:394](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L394)
 
 ___
 
@@ -499,7 +495,7 @@ The values of the binary search tree in in-order
 
 #### Defined in
 
-util/binarySearchTree.ts:362
+[misc/binarySearchTree.ts:350](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L350)
 
 ___
 
@@ -523,7 +519,7 @@ The values of the binary search tree in post-order
 
 #### Defined in
 
-util/binarySearchTree.ts:339
+[misc/binarySearchTree.ts:327](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L327)
 
 ___
 
@@ -547,7 +543,7 @@ The values of the binary search tree in pre-order
 
 #### Defined in
 
-util/binarySearchTree.ts:319
+[misc/binarySearchTree.ts:307](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L307)
 
 ___
 
@@ -571,13 +567,13 @@ The node containing the value or `undefined` if the value doesn't exist
 
 #### Defined in
 
-util/binarySearchTree.ts:275
+[misc/binarySearchTree.ts:263](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L263)
 
 ___
 
 ### insert
 
-▸ **insert**(`value`): [`BinarySearchTree`](BinarySearchTree.md)\<`T`\>
+▸ **insert**(`value`): `this`
 
 Inserts a value into the binary search tree.
 
@@ -589,13 +585,13 @@ Inserts a value into the binary search tree.
 
 #### Returns
 
-[`BinarySearchTree`](BinarySearchTree.md)\<`T`\>
+`this`
 
 The binary search tree
 
 #### Defined in
 
-util/binarySearchTree.ts:209
+[misc/binarySearchTree.ts:197](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L197)
 
 ___
 
@@ -619,7 +615,7 @@ The maximum value node
 
 #### Defined in
 
-util/binarySearchTree.ts:307
+[misc/binarySearchTree.ts:295](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L295)
 
 ___
 
@@ -643,7 +639,7 @@ The minimum value node
 
 #### Defined in
 
-util/binarySearchTree.ts:295
+[misc/binarySearchTree.ts:283](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L283)
 
 ___
 
@@ -664,7 +660,7 @@ ___
 
 #### Defined in
 
-util/binarySearchTree.ts:377
+[misc/binarySearchTree.ts:365](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L365)
 
 ___
 
@@ -678,11 +674,9 @@ Converts the BinarySearchTree to JSON.
 
 `T`[]
 
-The BinarySearchTree as JSON
-
 #### Defined in
 
-util/binarySearchTree.ts:437
+[misc/binarySearchTree.ts:417](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L417)
 
 ___
 
@@ -696,17 +690,17 @@ Converts the BinarySearchTree to an object.
 
 `undefined` \| `NodeObject`\<`T`\>
 
-The BinarySearchTree as an object
-
 #### Defined in
 
-util/binarySearchTree.ts:446
+[misc/binarySearchTree.ts:422](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L422)
 
 ___
 
 ### toString
 
 ▸ **toString**(`replacer?`, `space?`): `string`
+
+Converts the BinarySearchTree to a string.
 
 #### Parameters
 
@@ -719,11 +713,9 @@ ___
 
 `string`
 
-The BinarySearchTree as a string.
-
 #### Defined in
 
-util/binarySearchTree.ts:421
+[misc/binarySearchTree.ts:405](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L405)
 
 ___
 
@@ -756,7 +748,7 @@ Binary search tree created from array
 
 #### Defined in
 
-util/binarySearchTree.ts:165
+[misc/binarySearchTree.ts:153](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L153)
 
 ___
 
@@ -789,4 +781,4 @@ Binary search tree created from string
 
 #### Defined in
 
-util/binarySearchTree.ts:184
+[misc/binarySearchTree.ts:172](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/binarySearchTree.ts#L172)

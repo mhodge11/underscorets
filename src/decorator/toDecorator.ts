@@ -1,8 +1,10 @@
-import type { ArrayTail } from "../types/ArrayTail.ts";
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { ArrayTail } from "../type/ArrayTail";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Transforms a function into a decorator function.
+ *
+ * *Based on [moderndash.toDecorator](https://moderndash.io/docs/todecorator).*
  *
  * @example
  * ```ts

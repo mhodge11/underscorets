@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { sortCompare } from "../helpers/sortCompare";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.
@@ -43,13 +43,10 @@ export function insertionSort<T>(
 	let temp: T;
 
 	for (let i = 1; i < sortedArray.length; i++) {
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		temp = sortedArray[i]!;
+		temp = sortedArray[i] as T;
 		let j = i - 1;
-		// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-		while (j > -1 && sortCompare(...criteria)(sortedArray[j]!, temp) > 0) {
-			// biome-ignore lint/style/noNonNullAssertion: this is guaranteed to be defined
-			sortedArray[j + 1] = sortedArray[j]!;
+		while (j > -1 && sortCompare(...criteria)(sortedArray[j] as T, temp) > 0) {
+			sortedArray[j + 1] = sortedArray[j] as T;
 			j--;
 		}
 

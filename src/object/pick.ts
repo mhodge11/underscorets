@@ -1,7 +1,9 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject";
 
 /**
  * Creates an object composed of the picked `object` properties.
+ *
+ * *Based on [moderndash.pick](https://moderndash.io/docs/pick).*
  *
  * @example
  * ```ts

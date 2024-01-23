@@ -1,4 +1,4 @@
-import { fn } from "../../src/index.ts";
+import { throttle } from "@function/index.ts";
 
 const addOneMock = vi.fn((input: number) => input + 1);
 
@@ -11,7 +11,7 @@ beforeEach(() => {
 });
 
 test("only calls the function on in time frame", () => {
-	const throttled = fn.throttle(addOneMock, 50);
+	const throttled = throttle(addOneMock, 50);
 
 	throttled(1);
 	throttled(2);
@@ -27,7 +27,7 @@ test("only calls the function on in time frame", () => {
 });
 
 test("return value is last invocation", () => {
-	const throttled = fn.throttle(addOneMock, 50);
+	const throttled = throttle(addOneMock, 50);
 
 	let returnValue: ReturnType<typeof throttled>;
 	returnValue = throttled(1);

@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * This method is like `{@link each}` except that it iterates over elements of `array` from right to left.

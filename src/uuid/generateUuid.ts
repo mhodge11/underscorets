@@ -1,10 +1,10 @@
-import { fillPool, pool, poolOffset } from "./utils.ts";
-import { uuidUrlAlphabet } from "./uuidUrlAlphabet.ts";
+import { fillPool, pool, poolOffset } from "./utils";
+import { uuidUrlAlphabet } from "./uuidUrlAlphabet";
 
 /**
  * Generates a UUID.
  *
- * *Based on the [nanoid](https://github.com/ai/nanoid) package.*
+ * *Based on [nanoid](https://github.com/ai/nanoid).*
  *
  * @example
  * ```ts
@@ -15,8 +15,10 @@ import { uuidUrlAlphabet } from "./uuidUrlAlphabet.ts";
  * //=> "01a2b3c4d5"
  * ```
  *
- * @param size Size of the UUID.
- * @returns A UUID.
+ * @param size Size of the UUID
+ * @returns A UUID
+ *
+ * @category UUID
  */
 export function generateUuid(size = 21) {
 	// `-=` convert `size` to number to prevent `valueOf` abusing
@@ -29,8 +31,7 @@ export function generateUuid(size = 21) {
 		// range to the 0-63 value range. Therefore, adding hacks, such
 		// as empty string fallback or magic numbers, is unnecessary because
 		// the bitmask trims bytes down to the alphabet size.
-		// biome-ignore lint/style/noNonNullAssertion: <explanation>
-		id += uuidUrlAlphabet[pool[i]! & 63];
+		id += uuidUrlAlphabet[(pool[i] as number) & 63];
 	}
 	return id;
 }

@@ -1,6 +1,6 @@
-import { ksuid } from "../../src/index.ts";
+import { generateKsuid, isValidKsuid } from "@ksuid/index.ts";
 
 test("generateKsuid", async () => {
-	const id = ksuid.generateKsuid();
-	expect(ksuid.isValidKsuid(id)).toBe(true);
+	const id = generateKsuid();
+	expect(isValidKsuid(id)).toBe(true);
 });

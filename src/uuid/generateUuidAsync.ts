@@ -1,9 +1,9 @@
-import { generateUuid } from "./generateUuid.ts";
+import { generateUuid } from "./generateUuid";
 
 /**
  * Asynchronously generates a UUID.
  *
- * *Based on the [nanoid](https://github.com/ai/nanoid) package.*
+ * *Based on [nanoid](https://github.com/ai/nanoid).*
  *
  * @example
  * ```ts
@@ -14,8 +14,10 @@ import { generateUuid } from "./generateUuid.ts";
  * //=> "01a2b3c4d5"
  * ```
  *
- * @param size Size of the UUID.
- * @returns A promise resolving to UUID.
+ * @param size Size of the UUID
+ * @returns A promise resolving to UUID
+ *
+ * @category UUID
  */
 export async function generateUuidAsync(size = 21) {
 	return generateUuid(size);

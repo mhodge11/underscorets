@@ -1,11 +1,10 @@
-export const sortCompare =
-	<T>(
-		...criteria: {
-			order?: "asc" | "desc";
-			by?: (item: T) => number | bigint | Date | string;
-		}[]
-	) =>
-	(a: T, b: T) => {
+export function sortCompare<T>(
+	...criteria: {
+		order?: "asc" | "desc";
+		by?: (item: T) => number | bigint | Date | string;
+	}[]
+): (a: T, b: T) => number {
+	return (a: T, b: T) => {
 		if (criteria.length === 0) {
 			if (a < b) return -1;
 			if (a > b) return 1;
@@ -21,3 +20,4 @@ export const sortCompare =
 		}
 		return 0;
 	};
+}

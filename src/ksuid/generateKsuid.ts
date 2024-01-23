@@ -1,4 +1,4 @@
-import { KSUID } from "./ksuid.ts";
+import { KSUID } from "./ksuid";
 
 /**
  * Generates a new KSUID.

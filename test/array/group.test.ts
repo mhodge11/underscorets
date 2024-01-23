@@ -1,13 +1,13 @@
-import { array } from "../../src/index.ts";
+import { group } from "@array/index.ts";
 
 test("groups elements by evenness", () => {
 	const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	const even = (value: number) => (value % 2 === 0).toString();
-	const result = array.group(arr, even);
+	const result = group(arr, even);
 	expect(result).toEqual({ true: [2, 4, 6, 8, 10], false: [1, 3, 5, 7, 9] });
 });
 
-test("array.group an arr by a property", () => {
+test("group an arr by a property", () => {
 	const arr = [
 		{ name: "Alice", age: 30 },
 		{ name: "Bob", age: 35 },
@@ -16,7 +16,7 @@ test("array.group an arr by a property", () => {
 		{ name: "Eve", age: 35 },
 	];
 
-	const result = array.group(arr, (element) => element.age);
+	const result = group(arr, (element) => element.age);
 
 	expect(result).toEqual({
 		30: [
@@ -31,7 +31,7 @@ test("array.group an arr by a property", () => {
 	});
 });
 
-test("array.group returns an empty object if the array is empty", () => {
-	const result = array.group([], (value) => value);
+test("group returns an empty object if the array is empty", () => {
+	const result = group([], (value) => value);
 	expect(result).toEqual({});
 });

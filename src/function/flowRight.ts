@@ -1,10 +1,12 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
-import { flow } from "./flow.ts";
+import { flow } from "./flow";
 
 /**
  * This method is like `{@link flow}` except that it composes a function that
  * invokes the given functions from right to left.
+ *
+ * *Based on [lodash.flowRight](https://lodash.com/docs/4.17.15#flowRight).*
  *
  * @example
  * ```ts

@@ -1,4 +1,4 @@
-import { fn } from "../../src/index.ts";
+import { debounce } from "@function/index.ts";
 
 const testFn = vi.fn((x: number) => x * 2);
 
@@ -11,7 +11,7 @@ afterEach(() => {
 });
 
 test("only calls the function once", () => {
-	const debounced = fn.debounce(testFn, 100);
+	const debounced = debounce(testFn, 100);
 
 	debounced(1);
 	debounced(1);
@@ -27,7 +27,7 @@ test("only calls the function once", () => {
 });
 
 test("calls the function again after the wait period", () => {
-	const debounced = fn.debounce(testFn, 100);
+	const debounced = debounce(testFn, 100);
 
 	debounced(1);
 	vi.advanceTimersByTime(50);
@@ -43,7 +43,7 @@ test("calls the function again after the wait period", () => {
 });
 
 test("cancel", () => {
-	const debounced = fn.debounce(testFn, 100);
+	const debounced = debounce(testFn, 100);
 
 	debounced(1);
 	debounced.cancel();
@@ -52,7 +52,7 @@ test("cancel", () => {
 });
 
 test("flush", () => {
-	const debounced = fn.debounce(testFn, 100);
+	const debounced = debounce(testFn, 100);
 
 	debounced(1);
 	debounced.flush();
@@ -60,7 +60,7 @@ test("flush", () => {
 });
 
 test("pending", () => {
-	const debounced = fn.debounce(testFn, 100);
+	const debounced = debounce(testFn, 100);
 	expect(debounced.pending()).toBe(false);
 
 	debounced(1);

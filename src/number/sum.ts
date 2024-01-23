@@ -1,4 +1,4 @@
-import { reduce } from "../array/reduce.ts";
+import { reduce } from "../array/reduce";
 
 /**
  * Calculates the sum of an array of numbers.

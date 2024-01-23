@@ -3,6 +3,8 @@
  *
  * This is useful for handling errors in async functions without try/catch blocks.
  *
+ * *Based on [moderndash.tryCatch](https://moderndash.io/docs/tryCatch).*
+ *
  * @example
  * ```ts
  * const [data, error] = await tryCatch(fetch('https://example.com/api'));

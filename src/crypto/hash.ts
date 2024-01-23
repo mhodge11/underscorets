@@ -1,4 +1,8 @@
-import type { Jsonifiable } from "../types/Jsonifiable.ts";
+import type { Jsonifiable } from "../type/Jsonifiable";
+
+type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";
+
+let textEncoder: TextEncoder | undefined;
 
 /**
  * Generates a hash of the given data using the specified algorithm.
@@ -6,6 +10,8 @@ import type { Jsonifiable } from "../types/Jsonifiable.ts";
  * It uses the Web Crypto API to generate the hash.
  *
  * *Note: If you need a secure hash use a specialized library like [crypto-js](https://www.npmjs.com/package/crypto-js) instead.*
+ *
+ * *Based on [moderndash.hash](https://moderndash.io/docs/hash).*
  *
  * @example
  * ```ts
@@ -35,12 +41,8 @@ export async function hash(
 			? textEncoder.encode(data)
 			: textEncoder.encode(JSON.stringify(data));
 
-	const hashBuffer = await crypto.subtle.digest(algorithm, dataBuffer);
+	const hashBuffer = await crypto?.subtle.digest(algorithm, dataBuffer);
 	const hashArray = [...new Uint8Array(hashBuffer)];
 	const hexValues = hashArray.map((b) => b.toString(16).padStart(2, "0"));
 	return hexValues.join("");
 }
-
-let textEncoder: TextEncoder | undefined;
-
-type SupportedAlgorithms = "SHA-256" | "SHA-384" | "SHA-512";

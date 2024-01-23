@@ -1,4 +1,4 @@
-[underscorets](../README.md) / [Exports](../modules.md) / LinkedList
+[underscorets - v0.1.9](../README.md) / LinkedList
 
 # Class: LinkedList\<T\>
 
@@ -225,7 +225,7 @@ list.reverse();
 
 #### Defined in
 
-util/linkedList.ts:212
+[misc/linkedList.ts:193](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L193)
 
 ## Properties
 
@@ -233,11 +233,9 @@ util/linkedList.ts:212
 
 • **\_head**: `undefined` \| `Node`\<`T`\>
 
-First node in linked list.
-
 #### Defined in
 
-util/linkedList.ts:164
+[misc/linkedList.ts:158](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L158)
 
 ___
 
@@ -245,11 +243,9 @@ ___
 
 • **\_size**: `number` = `0`
 
-Number of nodes in linked list.
-
 #### Defined in
 
-util/linkedList.ts:160
+[misc/linkedList.ts:157](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L157)
 
 ___
 
@@ -257,11 +253,9 @@ ___
 
 • **\_tail**: `undefined` \| `Node`\<`T`\>
 
-Last node in linked list.
-
 #### Defined in
 
-util/linkedList.ts:168
+[misc/linkedList.ts:159](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L159)
 
 ## Accessors
 
@@ -277,7 +271,7 @@ The LinkedList tag.
 
 #### Defined in
 
-util/linkedList.ts:194
+[misc/linkedList.ts:177](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L177)
 
 ___
 
@@ -293,7 +287,7 @@ First node in linked list.
 
 #### Defined in
 
-util/linkedList.ts:180
+[misc/linkedList.ts:167](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L167)
 
 ___
 
@@ -309,7 +303,7 @@ Number of nodes in linked list.
 
 #### Defined in
 
-util/linkedList.ts:173
+[misc/linkedList.ts:162](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L162)
 
 ___
 
@@ -325,7 +319,7 @@ Last node in linked list.
 
 #### Defined in
 
-util/linkedList.ts:187
+[misc/linkedList.ts:172](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L172)
 
 ## Methods
 
@@ -339,7 +333,7 @@ util/linkedList.ts:187
 
 #### Defined in
 
-util/linkedList.ts:205
+[misc/linkedList.ts:185](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L185)
 
 ___
 
@@ -347,15 +341,13 @@ ___
 
 ▸ **[iterator]**(): `IterableIterator`\<`T`\>
 
-An iterator for the LinkedList to use with `for...of` loops.
-
 #### Returns
 
 `IterableIterator`\<`T`\>
 
 #### Defined in
 
-util/linkedList.ts:201
+[misc/linkedList.ts:181](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L181)
 
 ___
 
@@ -376,7 +368,7 @@ ___
 
 #### Defined in
 
-util/linkedList.ts:390
+[misc/linkedList.ts:363](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L363)
 
 ___
 
@@ -396,7 +388,7 @@ ___
 
 #### Defined in
 
-util/linkedList.ts:257
+[misc/linkedList.ts:238](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L238)
 
 ___
 
@@ -416,7 +408,7 @@ ___
 
 #### Defined in
 
-util/linkedList.ts:313
+[misc/linkedList.ts:290](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L290)
 
 ___
 
@@ -424,15 +416,15 @@ ___
 
 ▸ **copy**(): [`LinkedList`](LinkedList.md)\<`T`\>
 
+Creates a copy of the LinkedList.
+
 #### Returns
 
 [`LinkedList`](LinkedList.md)\<`T`\>
 
-A copy of the LinkedList
-
 #### Defined in
 
-util/linkedList.ts:455
+[misc/linkedList.ts:417](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L417)
 
 ___
 
@@ -456,7 +448,7 @@ Node at index
 
 #### Defined in
 
-util/linkedList.ts:352
+[misc/linkedList.ts:325](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L325)
 
 ___
 
@@ -481,7 +473,7 @@ Entire linked list
 
 #### Defined in
 
-util/linkedList.ts:380
+[misc/linkedList.ts:353](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L353)
 
 ___
 
@@ -489,23 +481,21 @@ ___
 
 ▸ **pop**(): `undefined` \| `Node`\<`T`\>
 
-Remove node from end of list.
+Removes a node from the end of the LinkedList and returns it.
 
 #### Returns
 
 `undefined` \| `Node`\<`T`\>
 
-Removed node
-
 #### Defined in
 
-util/linkedList.ts:277
+[misc/linkedList.ts:254](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L254)
 
 ___
 
 ### push
 
-▸ **push**(`...value`): [`LinkedList`](LinkedList.md)\<`T`\>
+▸ **push**(`...value`): `this`
 
 Add value to end of list.
 
@@ -517,13 +507,13 @@ Add value to end of list.
 
 #### Returns
 
-[`LinkedList`](LinkedList.md)\<`T`\>
+`this`
 
-Entire linked list
+Entire linked list object
 
 #### Defined in
 
-util/linkedList.ts:251
+[misc/linkedList.ts:232](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L232)
 
 ___
 
@@ -547,7 +537,7 @@ Removed node
 
 #### Defined in
 
-util/linkedList.ts:407
+[misc/linkedList.ts:379](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L379)
 
 ___
 
@@ -555,17 +545,15 @@ ___
 
 ▸ **reverse**(): [`LinkedList`](LinkedList.md)\<`T`\>
 
-Reverse the linked list.
+Returns the reversed LinkedList.
 
 #### Returns
 
 [`LinkedList`](LinkedList.md)\<`T`\>
 
-Entire reversed linked list
-
 #### Defined in
 
-util/linkedList.ts:430
+[misc/linkedList.ts:396](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L396)
 
 ___
 
@@ -590,7 +578,7 @@ Node at index
 
 #### Defined in
 
-util/linkedList.ts:367
+[misc/linkedList.ts:340](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L340)
 
 ___
 
@@ -598,17 +586,15 @@ ___
 
 ▸ **shift**(): `undefined` \| `Node`\<`T`\>
 
-Remove node from beginning of list.
+Removes a Node from the beginning of the list and returns it.
 
 #### Returns
 
 `undefined` \| `Node`\<`T`\>
 
-Removed node
-
 #### Defined in
 
-util/linkedList.ts:332
+[misc/linkedList.ts:305](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L305)
 
 ___
 
@@ -622,11 +608,9 @@ Converts the LinkedList to an array.
 
 `T`[]
 
-The LinkedList as an array
-
 #### Defined in
 
-util/linkedList.ts:487
+[misc/linkedList.ts:439](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L439)
 
 ___
 
@@ -634,23 +618,23 @@ ___
 
 ▸ **toJSON**(): `T`[]
 
-Converts the LinkedList to a string used by `JSON.stringify()`.
+Converts the LinkedList to JSON.
 
 #### Returns
 
 `T`[]
 
-The LinkedList as a string
-
 #### Defined in
 
-util/linkedList.ts:478
+[misc/linkedList.ts:434](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L434)
 
 ___
 
 ### toString
 
 ▸ **toString**(`replacer?`, `space?`): `string`
+
+Converts the LinkedList to a string.
 
 #### Parameters
 
@@ -663,17 +647,15 @@ ___
 
 `string`
 
-The LinkedList as a string.
-
 #### Defined in
 
-util/linkedList.ts:462
+[misc/linkedList.ts:422](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L422)
 
 ___
 
 ### unshift
 
-▸ **unshift**(`...value`): [`LinkedList`](LinkedList.md)\<`T`\>
+▸ **unshift**(`...value`): `this`
 
 Add value to beginning of list.
 
@@ -685,19 +667,19 @@ Add value to beginning of list.
 
 #### Returns
 
-[`LinkedList`](LinkedList.md)\<`T`\>
+`this`
 
-Entire linked list
+The entire linked list object
 
 #### Defined in
 
-util/linkedList.ts:307
+[misc/linkedList.ts:284](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L284)
 
 ___
 
 ### from
 
-▸ **from**\<`T`\>(`values`): [`LinkedList`](LinkedList.md)\<`T`\>
+▸ **from**\<`V`\>(`values`): [`LinkedList`](LinkedList.md)\<`V`\>
 
 Creates a LinkedList from an array.
 
@@ -705,23 +687,23 @@ Creates a LinkedList from an array.
 
 | Name |
 | :------ |
-| `T` |
+| `V` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `values` | `T`[] | Values to create LinkedList from |
+| `values` | `V`[] | Values to create LinkedList from |
 
 #### Returns
 
-[`LinkedList`](LinkedList.md)\<`T`\>
+[`LinkedList`](LinkedList.md)\<`V`\>
 
 LinkedList created from array
 
 #### Defined in
 
-util/linkedList.ts:222
+[misc/linkedList.ts:203](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L203)
 
 ___
 
@@ -751,4 +733,4 @@ LinkedList created from string
 
 #### Defined in
 
-util/linkedList.ts:232
+[misc/linkedList.ts:213](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/linkedList.ts#L213)

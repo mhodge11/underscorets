@@ -1,6 +1,6 @@
-import type { ArrayTail } from "../types/ArrayTail.ts";
+import type { ArrayTail } from "../type/ArrayTail";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
 
 /**
  * Gets all but the first element of `array`.

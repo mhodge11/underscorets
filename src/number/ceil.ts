@@ -1,4 +1,4 @@
-import { createRound } from "../helpers/createRound.ts";
+import { createRound } from "../helpers/createRound";
 
 /**
  * Computes `number` rounded up to `precision`. (Round up: the smallest integer greater than or equal to a given number.)
@@ -21,4 +21,9 @@ import { createRound } from "../helpers/createRound.ts";
  *
  * @category Number
  */
-export const ceil = createRound("ceil");
+export function ceil(
+	number: number | `${number}`,
+	precision?: number | `${number}`,
+): number {
+	return createRound("ceil")(number, precision);
+}

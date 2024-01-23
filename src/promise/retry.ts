@@ -1,11 +1,13 @@
-import { assertUnreachable } from "../helpers/assertUnreachable.ts";
-import { sleep } from "./sleep.ts";
+import { assertUnreachable } from "../helpers/assertUnreachable";
+import { sleep } from "./sleep";
 
 /**
  * Retry a function until it succeeds or the maximum number of retries is reached.
  *
  * Default maxRetries: `5`.
  * Default backoff: `2^retries * 100ms` (100, 200, 400, 800, 1600, 3200, ...)
+ *
+ * *Based on [moderndash.retry](https://moderndash.io/docs/retry).*
  *
  * @example
  * ```ts

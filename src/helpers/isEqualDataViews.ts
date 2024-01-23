@@ -1,4 +1,4 @@
-export const isEqualDataViews = (a: DataView, b: DataView): boolean => {
+export function isEqualDataViews(a: DataView, b: DataView): boolean {
 	if (!(a instanceof DataView) || !(b instanceof DataView)) return false;
 
 	if (Object.is(a, b)) return true;
@@ -9,4 +9,4 @@ export const isEqualDataViews = (a: DataView, b: DataView): boolean => {
 		if (a.getUint8(i) !== b.getUint8(i)) return false;
 
 	return true;
-};
+}

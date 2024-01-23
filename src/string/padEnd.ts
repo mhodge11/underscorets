@@ -1,9 +1,11 @@
-import { createPadding } from "../helpers/createPadding.ts";
-import { stringSize } from "./size.ts";
+import { createPadding } from "../helpers/createPadding";
+import { stringSize } from "./stringSize";
 
 /**
  * Pads `string` on the right side if it's shorter than `length`.
  * Padding characters are truncated if they exceed `length`.
+ *
+ * *Based on [lodash.padEnd](https://lodash.com/docs/4.17.15#padEnd).*
  *
  * @example
  * ```ts

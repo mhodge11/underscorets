@@ -1,10 +1,15 @@
-import { randomInt } from "./randomInt.ts";
+import { randomInt } from "./randomInt";
+
+const DEFAULT_CHARSET =
+	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 /**
  * Generates a random string of the specified length.
  * The default charset is alphanumeric characters.
  *
  * It uses `crypto.getRandomValues` to generate the random string.
+ *
+ * *Based on [moderndash.randomString](https://moderndash.io/docs/randomString).*
  *
  * @example
  * ```ts
@@ -21,7 +26,6 @@ import { randomInt } from "./randomInt.ts";
  *
  * @category Crypto
  */
-
 export function randomString(
 	length: number,
 	charSet = DEFAULT_CHARSET,
@@ -36,6 +40,3 @@ export function randomString(
 
 	return result;
 }
-
-const DEFAULT_CHARSET =
-	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

@@ -1,4 +1,4 @@
-import { fn } from "../../src/index.ts";
+import { memoize } from "@function/index.ts";
 
 const testFn = vi.fn((a: number, b: number) => a + b);
 
@@ -6,8 +6,8 @@ beforeEach(() => {
 	testFn.mockClear();
 });
 
-test("fn.memoize a function", () => {
-	const memoizedFunc = fn.memoize(testFn);
+test("memoize a function", () => {
+	const memoizedFunc = memoize(testFn);
 
 	expect(memoizedFunc(1, 2)).to.equal(3);
 	expect(memoizedFunc(1, 2)).to.equal(3);
@@ -15,7 +15,7 @@ test("fn.memoize a function", () => {
 });
 
 test("return different results for different arguments", () => {
-	const memoizedFunc = fn.memoize(testFn);
+	const memoizedFunc = memoize(testFn);
 
 	expect(memoizedFunc(1, 2)).to.equal(3);
 	expect(memoizedFunc(2, 3)).to.equal(5);
@@ -23,12 +23,12 @@ test("return different results for different arguments", () => {
 });
 
 test("expose a cache property", () => {
-	const memoizedFunc = fn.memoize(testFn);
+	const memoizedFunc = memoize(testFn);
 	expect(memoizedFunc.cache).to.be.an.instanceof(Map);
 });
 
 test("use a custom resolver", () => {
-	const memoizedFunc = fn.memoize(testFn, {
+	const memoizedFunc = memoize(testFn, {
 		resolver: (a: number, b: number) => (a + b).toString(),
 	});
 
@@ -39,7 +39,7 @@ test("use a custom resolver", () => {
 
 test("use a custom ttl", () => {
 	vi.useFakeTimers();
-	const memoizedFunc = fn.memoize(testFn, { ttl: 1000 });
+	const memoizedFunc = memoize(testFn, { ttl: 1000 });
 
 	expect(memoizedFunc(1, 2)).to.equal(3);
 	expect(memoizedFunc(1, 2)).to.equal(3);
@@ -55,5 +55,5 @@ test("use a custom ttl", () => {
 });
 
 test("throws an error when func is not a function", () => {
-	expect(() => fn.memoize(undefined as any)).toThrow(TypeError);
+	expect(() => memoize(undefined as any)).toThrow(TypeError);
 });

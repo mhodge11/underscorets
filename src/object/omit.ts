@@ -1,10 +1,12 @@
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { PlainObject } from "../type/PlainObject";
 
-import { difference } from "../array/difference.ts";
-import { pick } from "./pick.ts";
+import { difference } from "../array/difference";
+import { pick } from "./pick";
 
 /**
  * Omit specified keys from an object
+ *
+ * *Based on [moderndash.omit](https://moderndash.io/docs/omit).*
  *
  * @example
  * ```ts

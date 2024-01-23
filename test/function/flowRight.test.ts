@@ -1,9 +1,9 @@
-import { fn } from "../../src/index.ts";
+import { flowRight } from "@function/index.ts";
 
 test("calls the functions in reverse order", () => {
 	const square = vi.fn((n: number) => n * n);
 	const double = vi.fn((n: number) => n * 2);
-	const squareThenDouble = fn.flowRight(double, square);
+	const squareThenDouble = flowRight(double, square);
 
 	expect(squareThenDouble(2)).toBe(8);
 	expect(square).toHaveBeenCalledOnce();
@@ -17,11 +17,11 @@ test("calls the functions in reverse order", () => {
 test("should throw error if `funcs` is not a function", () => {
 	expect(() => {
 		// @ts-expect-error - intentionally passing invalid type
-		fn.flowRight(1);
+		flowRight(1);
 	}).toThrowError(TypeError);
 });
 
 test("should return undefined if no functions are provided", () => {
 	// @ts-expect-error - intentionally passing invalid type
-	expect(fn.flowRight()()).toBe(undefined);
+	expect(flowRight()()).toBe(undefined);
 });

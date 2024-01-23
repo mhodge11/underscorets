@@ -1,9 +1,9 @@
-import type { ArrayMinLength } from "../types/ArrayMinLength.ts";
-import type { CompareFunction } from "../types/CompareFunction.ts";
-import type { PullOutArray } from "../types/PullOutArray.ts";
+import type { ArrayMinLength } from "../type/ArrayMinLength";
+import type { CompareFunction } from "../type/CompareFunction";
+import type { PullOutArray } from "../type/PullOutArray";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { fastArrayFlat } from "../helpers/fastArrayFlat.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { fastArrayFlat } from "../helpers/fastArrayFlat";
 
 /**
  * Create a new array with values from the first array that are not present in the other arrays.
@@ -54,8 +54,7 @@ export function difference<
 
 	const arrayLikes = arraysOrCompareFn as T;
 	const arrays = arrayLikes.map(arrayLikeValues);
-	// biome-ignore lint/style/noNonNullAssertion: arrays will always have at least two elements
-	const firstArray = arrays.shift()!;
+	const firstArray = arrays.shift() as T;
 	const combinedRestArray = fastArrayFlat(arrays);
 
 	if (!compareFn) {

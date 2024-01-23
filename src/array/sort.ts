@@ -1,5 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { sortCompare } from "../helpers/sortCompare";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.

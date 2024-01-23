@@ -1,8 +1,8 @@
-import { fn } from "../../src/index.ts";
+import { once } from "@function/index.ts";
 
 test("should invoke `func` once", () => {
 	const mock = vi.fn();
-	const func = fn.once(mock);
+	const func = once(mock);
 	func();
 	func();
 	func();
@@ -12,6 +12,6 @@ test("should invoke `func` once", () => {
 test("should throw error if `func` is not a function", () => {
 	expect(() => {
 		// @ts-expect-error - intentionally passing invalid type
-		fn.once(1);
+		once(1);
 	}).toThrowError(TypeError);
 });

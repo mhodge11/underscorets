@@ -1,8 +1,10 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Defers invoking the `func` until the current call stack has cleared. Any
  * additional arguments are provided to `func` when it's invoked.
+ *
+ * *Based on [lodash.defer](https://lodash.com/docs/4.17.15#defer).*
  *
  * @example
  * ```ts

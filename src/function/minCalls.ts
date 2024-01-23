@@ -1,10 +1,12 @@
-import type { GenericFunction } from "../types/GenericFunction.ts";
+import type { GenericFunction } from "../type/GenericFunction";
 
 /**
  * Creates a function that invokes the given function once it's called more than `n` times.
  * Returns undefined until the minimum call count is reached.
  *
  * This function can be used as a decorator with {@link decMinCalls}.
+ *
+ * *Based on [moderndash.minCalls](https://moderndash.io/docs/minCalls).*
  *
  * @example
  * ```ts

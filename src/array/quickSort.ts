@@ -1,15 +1,13 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues.ts";
-import { sortCompare } from "../helpers/sortCompare.ts";
+import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { sortCompare } from "../helpers/sortCompare";
 
-const swap = <T>(array: T[], firstIndex: number, secondIndex: number) => {
-	const temp = array[firstIndex];
-	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-	array[firstIndex] = array[secondIndex]!;
-	// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-	array[secondIndex] = temp!;
-};
+function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
+	const temp = array[firstIndex] as T;
+	array[firstIndex] = array[secondIndex] as T;
+	array[secondIndex] = temp;
+}
 
-const pivot = <T>(
+function pivot<T>(
 	array: T[],
 	pivotIndex = 0,
 	endIndex = array.length - 1,
@@ -17,15 +15,13 @@ const pivot = <T>(
 		order?: "asc" | "desc";
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
-) => {
+) {
 	let swapIndex = pivotIndex;
 
 	for (let i = pivotIndex + 1; i <= endIndex; i++) {
 		const compareResult = sortCompare(...criteria)(
-			// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-			array[i]!,
-			// biome-ignore lint/style/noNonNullAssertion: these are guaranteed to be defined
-			array[pivotIndex]!,
+			array[i] as T,
+			array[pivotIndex] as T,
 		);
 		if (compareResult < 0) {
 			swapIndex++;
@@ -36,7 +32,7 @@ const pivot = <T>(
 	swap(array, pivotIndex, swapIndex);
 
 	return swapIndex;
-};
+}
 
 const sort = <T>(
 	array: T[],

@@ -1,6 +1,6 @@
 # underscorets
 
-A utility library for modern TypeScript that can run on the edge. Fully-tested and ready to be dropped into any environment. Similar functions to lodash except it is type-safe and optimized for modern JS environments.
+A **dependency-less** utility library for modern TypeScript that can run on the edge. **Fully-tested** and ready to be dropped into any environment. **Tree-shakeable** so it doesn't bloat your projects with unnecessary imports. Similar functions to lodash except it is type-safe and optimized for modern JS environments.
 
 ## Installation
 
@@ -24,4 +24,4 @@ bun add underscorets
 
 ## Docs
 
-View the docs [here](https://github.com/mhodge11/underscorets/blob/main/docs/modules.md).
+View the docs [here](https://github.com/mhodge11/underscorets/blob/main/docs/README.md).

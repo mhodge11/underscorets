@@ -1,11 +1,11 @@
 import { randomBytes } from "crypto";
 
 function runBase62Import() {
-	return import("../../src/helpers/base62.ts");
+	return import("@helpers/base62.ts");
 }
 
 function runImport() {
-	return import("../../src/index.ts");
+	return import("@ksuid/index.ts");
 }
 
 function toArrayBuffer(buffer: Buffer) {
@@ -27,7 +27,7 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
-	vi.doUnmock("../../src/helpers/base62.ts");
+	vi.doUnmock("@ksuid/helpers/base62.ts");
 	vi.resetModules();
 });
 
@@ -56,184 +56,184 @@ test("lexographic ordering of encoded values is that of decoded values", async (
 });
 
 test("created with the current time", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 
-	const x = ksuid.KSUID.random();
+	const x = KSUID.random();
 	expect(x.date.valueOf()).toBe(14e11);
 });
 
 test("provides the uncorrected timestamp in seconds", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	vi.advanceTimersByTime(5e3);
 
-	const x = ksuid.KSUID.random();
+	const x = KSUID.random();
 	expect(x.timestamp * 1e3).toBe(Date.now() - 14e11);
 });
 
 test("randomAsync accepts milliseconds value", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const ms = new Date(2025, 4, 15).getTime();
-	const x = await ksuid.KSUID.randomAsync(ms);
+	const x = await KSUID.randomAsync(ms);
 	expect(x.timestamp * 1e3).toBe(ms - 14e11);
 });
 
 test("random accepts milliseconds value", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const ms = new Date(2025, 4, 15).getTime();
-	const x = ksuid.KSUID.random(ms);
+	const x = KSUID.random(ms);
 	expect(x.timestamp * 1e3).toBe(ms - 14e11);
 });
 
 test("randomAsync accepts date value", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const d = new Date(2014, 4, 15);
-	const x = await ksuid.KSUID.randomAsync(d);
+	const x = await KSUID.randomAsync(d);
 	expect(x.timestamp * 1e3).toBe(d.getTime() - 14e11);
 });
 
 test("random accepts date value", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const d = new Date(2014, 4, 15);
-	const x = ksuid.KSUID.random(d);
+	const x = KSUID.random(d);
 	expect(x.timestamp * 1e3).toBe(d.getTime() - 14e11);
 });
 
 test("encodes as a string", async () => {
-	const { ksuid } = await runImport();
-	const x = new ksuid.KSUID(toArrayBuffer(Buffer.alloc(20)));
+	const { KSUID } = await runImport();
+	const x = new KSUID(toArrayBuffer(Buffer.alloc(20)));
 	const expected = "0".repeat(27);
 	expect(x.string).toBe(expected);
 });
 
 test("strings are padded", async () => {
-	const { ksuid } = await runImport();
-	const zero = new ksuid.KSUID(toArrayBuffer(Buffer.alloc(20, 0)));
-	const max = new ksuid.KSUID(toArrayBuffer(Buffer.alloc(20, 0xff)));
+	const { KSUID } = await runImport();
+	const zero = new KSUID(toArrayBuffer(Buffer.alloc(20, 0)));
+	const max = new KSUID(toArrayBuffer(Buffer.alloc(20, 0xff)));
 	expect(zero.length).toBe(max.length);
 });
 
 test("can parse strings", async () => {
-	const { ksuid } = await runImport();
-	const zero = new ksuid.KSUID(toArrayBuffer(Buffer.alloc(20, 0)));
-	const parsedZero = ksuid.KSUID.parse("0".repeat(27));
+	const { KSUID } = await runImport();
+	const zero = new KSUID(toArrayBuffer(Buffer.alloc(20, 0)));
+	const parsedZero = KSUID.parse("0".repeat(27));
 	expect(zero.compare(parsedZero)).toBe(0);
 
-	const max = new ksuid.KSUID(toArrayBuffer(Buffer.alloc(20, 0xff)));
-	const parsedMax = ksuid.KSUID.parse(ksuid.KSUID.MAX_STRING_ENCODED);
+	const max = new KSUID(toArrayBuffer(Buffer.alloc(20, 0xff)));
+	const parsedMax = KSUID.parse(KSUID.MAX_STRING_ENCODED);
 	expect(max.compare(parsedMax)).toBe(0);
 
-	expect(() => ksuid.KSUID.parse("123")).toThrowError(TypeError);
+	expect(() => KSUID.parse("123")).toThrowError(TypeError);
 });
 
 test("encode and decode", async () => {
-	const { ksuid } = await runImport();
-	const x = ksuid.KSUID.random();
-	const builtFromEncodedString = ksuid.KSUID.parse(x.string);
+	const { KSUID } = await runImport();
+	const x = KSUID.random();
+	const builtFromEncodedString = KSUID.parse(x.string);
 	expect(x.compare(builtFromEncodedString)).toBe(0);
 });
 
 test("throws if called without valid buffer", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	// @ts-expect-error Testing invalid input
-	expect(() => new ksuid.KSUID()).toThrowError(TypeError);
+	expect(() => new KSUID()).toThrowError(TypeError);
 	// @ts-expect-error Testing invalid input
-	expect(() => new ksuid.KSUID("foo")).toThrowError(TypeError);
-	expect(() => new ksuid.KSUID(Buffer.from("foo"))).toThrowError(TypeError);
+	expect(() => new KSUID("foo")).toThrowError(TypeError);
+	expect(() => new KSUID(Buffer.from("foo"))).toThrowError(TypeError);
 });
 
 test("buffer accessor returns new buffers", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const initial = toArrayBuffer(randomBytes(20));
-	const x = new ksuid.KSUID(initial);
+	const x = new KSUID(initial);
 	expect(x.raw).not.toBe(initial);
 	expect(x.raw).not.toBe(x.raw);
 	expect(toBuffer(x.raw).equals(toBuffer(initial))).toBe(true);
 });
 
 test("raw accessor returns raw buffer", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const expected = Buffer.alloc(20, 0xff);
-	const x = new ksuid.KSUID(toArrayBuffer(expected));
+	const x = new KSUID(toArrayBuffer(expected));
 	expect(toBuffer(x.raw).equals(expected)).toBe(true);
 	expect(x.raw).not.toBe(x.raw);
 });
 
 test("payload accessor returns payload buffer", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const expected = Buffer.alloc(16, 0xff);
-	const x = new ksuid.KSUID(
+	const x = new KSUID(
 		toArrayBuffer(Buffer.concat([Buffer.alloc(4), expected])),
 	);
 	expect(toBuffer(x.payload).equals(expected)).toBe(true);
 });
 
 test("payload accessor returns new buffers", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	const expected = Buffer.alloc(16, 0xff);
-	const x = new ksuid.KSUID(
+	const x = new KSUID(
 		toArrayBuffer(Buffer.concat([Buffer.alloc(4), expected])),
 	);
 	expect(x.payload).not.toBe(x.payload);
 });
 
 test("compare() returns 0 when comparing against a non-KSUID", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	// @ts-expect-error Testing invalid input
-	expect(ksuid.KSUID.random().compare({})).toBe(0);
+	expect(KSUID.random().compare({})).toBe(0);
 });
 
 test("equals()", async () => {
-	const { ksuid } = await runImport();
-	const x = ksuid.KSUID.random();
-	const y = ksuid.KSUID.random();
+	const { KSUID } = await runImport();
+	const x = KSUID.random();
+	const y = KSUID.random();
 	expect(x.equals(x)).toBe(true);
 	expect(x.equals(y)).toBe(false);
 	expect(y.equals(x)).toBe(false);
-	expect(x.equals(new ksuid.KSUID(x.raw))).toBe(true);
-	expect(new ksuid.KSUID(x.raw).equals(x)).toBe(true);
+	expect(x.equals(new KSUID(x.raw))).toBe(true);
+	expect(new KSUID(x.raw).equals(x)).toBe(true);
 });
 
 test("toString()", async () => {
-	const { ksuid } = await runImport();
-	const x = ksuid.KSUID.random();
+	const { KSUID } = await runImport();
+	const x = KSUID.random();
 	const result = /^KSUID \{ (.+?) \}$/.exec(x.toString());
-	expect(ksuid.KSUID.parse(result?.[1] as string).string).toBe(result?.[1]);
+	expect(KSUID.parse(result?.[1] as string).string).toBe(result?.[1]);
 });
 
 test("toJSON()", async () => {
-	const { ksuid } = await runImport();
-	const x = ksuid.KSUID.random();
+	const { KSUID } = await runImport();
+	const x = KSUID.random();
 	const stringified = JSON.stringify(x);
 	expect(typeof stringified).toBe("string");
-	expect(ksuid.KSUID.parse(JSON.parse(stringified)).string).toBe(x.string);
+	expect(KSUID.parse(JSON.parse(stringified)).string).toBe(x.string);
 });
 
-test("ksuid.KSUID.random() returns a promise for a new instance", async () => {
-	const { ksuid } = await runImport();
-	const p = ksuid.KSUID.randomAsync();
+test("KSUID.random() returns a promise for a new instance", async () => {
+	const { KSUID } = await runImport();
+	const p = KSUID.randomAsync();
 	expect(p).toBeInstanceOf(Promise);
-	expect(await p).toBeInstanceOf(ksuid.KSUID);
+	expect(await p).toBeInstanceOf(KSUID);
 });
 
-test("ksuid.KSUID.fromParts() validators timeInMs", async () => {
-	const { ksuid } = await runImport();
+test("KSUID.fromParts() validators timeInMs", async () => {
+	const { KSUID } = await runImport();
 	let notInt = "";
 	try {
-		ksuid.KSUID.fromParts("foo", Buffer.alloc(16));
+		KSUID.fromParts("foo", Buffer.alloc(16));
 	} catch (error) {
 		if (error instanceof TypeError) notInt = error.message;
 	}
 
 	let tooEarly = "";
 	try {
-		ksuid.KSUID.fromParts(0, Buffer.alloc(16));
+		KSUID.fromParts(0, Buffer.alloc(16));
 	} catch (error) {
 		if (error instanceof TypeError) tooEarly = error.message;
 	}
 
 	let tooLate = "";
 	try {
-		ksuid.KSUID.fromParts(1e3 * (2 ** 32 - 1) + 14e11 + 1, Buffer.alloc(16));
+		KSUID.fromParts(1e3 * (2 ** 32 - 1) + 14e11 + 1, Buffer.alloc(16));
 	} catch (error) {
 		if (error instanceof TypeError) tooLate = error.message;
 	}
@@ -245,25 +245,25 @@ test("ksuid.KSUID.fromParts() validators timeInMs", async () => {
 });
 
 test("KSUID.fromParts() validators payload", async () => {
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 	let notInt = "";
 	try {
 		// @ts-expect-error Testing invalid input
-		ksuid.KSUID.fromParts(Date.now(), "foo");
+		KSUID.fromParts(Date.now(), "foo");
 	} catch (error) {
 		if (error instanceof TypeError) notInt = error.message;
 	}
 
 	let tooSmall = "";
 	try {
-		ksuid.KSUID.fromParts(Date.now(), Buffer.alloc(15));
+		KSUID.fromParts(Date.now(), Buffer.alloc(15));
 	} catch (error) {
 		if (error instanceof TypeError) tooSmall = error.message;
 	}
 
 	let tooLarge = "";
 	try {
-		ksuid.KSUID.fromParts(Date.now(), Buffer.alloc(17));
+		KSUID.fromParts(Date.now(), Buffer.alloc(17));
 	} catch (error) {
 		if (error instanceof TypeError) tooLarge = error.message;
 	}
@@ -273,18 +273,18 @@ test("KSUID.fromParts() validators payload", async () => {
 });
 
 test("KSUID.fromParts() returns a new instance", async () => {
-	const { ksuid } = await runImport();
-	const x = ksuid.KSUID.fromParts(Date.now(), Buffer.alloc(16));
-	expect(x).toBeInstanceOf(ksuid.KSUID);
+	const { KSUID } = await runImport();
+	const x = KSUID.fromParts(Date.now(), Buffer.alloc(16));
+	expect(x).toBeInstanceOf(KSUID);
 });
 
 test("KSUID.parse() creates a new KSUID if debased byte length is not the normal byte length", async () => {
-	vi.doMock("../../src/helpers/base62.ts", () => ({
+	vi.doMock("@ksuid/helpers/base62.ts", () => ({
 		debase62: () => new Uint8Array(1).buffer,
 	}));
 
-	const { ksuid } = await runImport();
+	const { KSUID } = await runImport();
 
-	const x = ksuid.KSUID.parse("0".repeat(27));
-	expect(x).toBeInstanceOf(ksuid.KSUID);
+	const x = KSUID.parse("0".repeat(27));
+	expect(x).toBeInstanceOf(KSUID);
 });

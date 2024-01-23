@@ -1,7 +1,7 @@
-import type { $, O } from "hotscript";
-import type { PlainObject } from "../types/PlainObject.ts";
+import type { ObjectValues } from "../type/ObjectValues";
+import type { PlainObject } from "../type/PlainObject";
 
-import { keys } from "./keys.ts";
+import { keys } from "./keys";
 
 /**
  * Creates an array of the own enumerable string keyed property values of `object`.
@@ -18,11 +18,11 @@ import { keys } from "./keys.ts";
  *
  * @category Object
  */
-export function values<T extends PlainObject>(object: T): $<O.Values, T>[] {
+export function values<T extends PlainObject>(object: T): ObjectValues<T> {
 	if (object == null) return [];
 
 	const props = keys(object);
 	if (props.length === 0) return [];
 
-	return props.map((key) => object[key]) as $<O.Values, T>[];
+	return props.map((key) => object[key]) as ObjectValues<T>;
 }
