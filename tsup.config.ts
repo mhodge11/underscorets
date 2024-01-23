@@ -1,14 +1,9 @@
 import { defineConfig } from "tsup";
 
-const env = process.env.NODE_ENV;
-
 export default defineConfig({
 	entryPoints: ["src/index.ts"],
-	entry: ["src/**/*"],
 	format: ["esm", "cjs"],
-	bundle: env === "production",
-	minify: env === "production" ? "terser" : false,
-	outDir: env === "production" ? "dist" : "lib",
+	outDir: "dist",
 	splitting: true,
 	treeshake: true,
 	sourcemap: true,

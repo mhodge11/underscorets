@@ -1,7 +1,7 @@
 {
   "name": "underscorets",
   "description": "A utility library for modern TypeScript that can run on the edge.",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "packageManager": "pnpm@8.14.2",
   "engines": {
@@ -10,7 +10,7 @@
   },
   "engineStrict": true,
   "scripts": {
-    "build": "tsup && cross-env NODE_ENV=production tsup",
+    "build": "tsup",
     "build:docs": "typedoc",
     "check": "biome check ./src",
     "check:apply": "biome check ./src --apply",
@@ -53,14 +53,14 @@
     "access": "public",
     "@mhodge11:registry": "https://npm.pkg.github.com"
   },
-  "main": "lib/index.cjs",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -68,8 +68,7 @@
     ">2% and not dead"
   ],
   "files": [
-    "dist/**/*",
-    "lib/**/*"
+    "dist/**/*"
   ],
   "sideEffects": false,
   "devDependencies": {
