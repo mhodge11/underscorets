@@ -4,8 +4,8 @@
     "types": ["node", "vitest/globals"],
 
     "lib": ["ESNext", "DOM"],
-    "module": "esnext",
-    "target": "esnext",
+    "module": "ESNext",
+    "target": "ESNext",
 
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
@@ -55,7 +55,7 @@
       "@validate/*": ["src/validate/*"]
     }
   },
-  "include": ["./**/*.ts", "./**/*.js", "shims/**/*.{cjs,js}"],
+  "include": ["./**/*.ts", "./**/*.js"],
   "exclude": [
     "./**/coverage/**/*",
     "./**/node_modules/**/*",

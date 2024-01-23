@@ -1,4 +1,4 @@
-# underscorets - v0.1.8
+# underscorets - v0.1.9
 
 ## Table of contents
 
@@ -278,7 +278,7 @@ bubbleSort(array,
 
 #### Defined in
 
-[array/bubbleSort.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/array/bubbleSort.ts#L31)
+[array/bubbleSort.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/bubbleSort.ts#L31)
 
 ___
 
@@ -319,7 +319,7 @@ chunk(['a', 'b', 'c', 'd'], 3)
 
 #### Defined in
 
-[array/chunk.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/array/chunk.ts#L24)
+[array/chunk.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/chunk.ts#L24)
 
 ___
 
@@ -357,7 +357,7 @@ compact([0, 1, false, 2, '', 3])
 
 #### Defined in
 
-[array/compact.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/array/compact.ts#L21)
+[array/compact.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/compact.ts#L21)
 
 ___
 
@@ -405,7 +405,7 @@ count(users, value => value.age);
 
 #### Defined in
 
-[array/count.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/array/count.ts#L29)
+[array/count.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/count.ts#L29)
 
 ___
 
@@ -455,7 +455,7 @@ difference(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/difference.ts:37](https://github.com/mhodge11/underscorets/blob/776105e/src/array/difference.ts#L37)
+[array/difference.ts:37](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/difference.ts#L37)
 
 ▸ **difference**\<`T`\>(`...arraysOrCompareFn`): [`PullOutArray`](README.md#pulloutarray)\<[...T]\>
 
@@ -477,7 +477,7 @@ difference(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/difference.ts:40](https://github.com/mhodge11/underscorets/blob/776105e/src/array/difference.ts#L40)
+[array/difference.ts:40](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/difference.ts#L40)
 
 ___
 
@@ -521,7 +521,7 @@ drop(users, 2)
 
 #### Defined in
 
-[array/drop.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/drop.ts#L26)
+[array/drop.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/drop.ts#L26)
 
 ___
 
@@ -565,7 +565,7 @@ dropRight(users, 2)
 
 #### Defined in
 
-[array/dropRight.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/dropRight.ts#L26)
+[array/dropRight.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/dropRight.ts#L26)
 
 ___
 
@@ -610,7 +610,7 @@ dropRightWhile(users, user => user.active)
 
 #### Defined in
 
-[array/dropRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/dropRightWhile.ts#L26)
+[array/dropRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/dropRightWhile.ts#L26)
 
 ___
 
@@ -655,7 +655,7 @@ dropWhile(users, user => user.active)
 
 #### Defined in
 
-[array/dropWhile.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/dropWhile.ts#L26)
+[array/dropWhile.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/dropWhile.ts#L26)
 
 ___
 
@@ -692,7 +692,7 @@ each([1, 2], value => console.log(value))
 
 #### Defined in
 
-[array/each.ts:19](https://github.com/mhodge11/underscorets/blob/776105e/src/array/each.ts#L19)
+[array/each.ts:19](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/each.ts#L19)
 
 ___
 
@@ -728,7 +728,7 @@ each([1, 2], value => console.log(value))
 
 #### Defined in
 
-[array/eachRight.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/array/eachRight.ts#L18)
+[array/eachRight.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/eachRight.ts#L18)
 
 ___
 
@@ -772,7 +772,7 @@ every([true, 1, null, 'yes'], Boolean)
 
 #### Defined in
 
-[array/every.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/array/every.ts#L25)
+[array/every.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/every.ts#L25)
 
 ___
 
@@ -819,7 +819,7 @@ filter(users, ({ active }) => active)
 
 #### Defined in
 
-[array/filter.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/filter.ts#L26)
+[array/filter.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/filter.ts#L26)
 
 ___
 
@@ -866,7 +866,7 @@ findIndex(users, ({ user }) => user === 'pebbles')
 
 #### Defined in
 
-[array/findIndex.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/array/findIndex.ts#L28)
+[array/findIndex.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/findIndex.ts#L28)
 
 ___
 
@@ -911,7 +911,7 @@ findLastIndex(users, ({ user }) => user === 'pebbles')
 
 #### Defined in
 
-[array/findLastIndex.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/array/findLastIndex.ts#L28)
+[array/findLastIndex.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/findLastIndex.ts#L28)
 
 ___
 
@@ -954,7 +954,7 @@ flat([1, [2, [3, [4]], 5]], 2)
 
 #### Defined in
 
-[array/flat.ts:54](https://github.com/mhodge11/underscorets/blob/776105e/src/array/flat.ts#L54)
+[array/flat.ts:54](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/flat.ts#L54)
 
 ___
 
@@ -1004,7 +1004,7 @@ fuzzySearch("abc", ["abc", "acb", "bac", "bca", "cab", "cba"])
 
 #### Defined in
 
-[array/fuzzySearch.ts:95](https://github.com/mhodge11/underscorets/blob/776105e/src/array/fuzzySearch.ts#L95)
+[array/fuzzySearch.ts:95](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/fuzzySearch.ts#L95)
 
 ___
 
@@ -1046,7 +1046,7 @@ group([6.1, 4.2, 6.3], value => value > 5 ? '>5' : '<=5')
 
 #### Defined in
 
-[array/group.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/array/group.ts#L22)
+[array/group.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/group.ts#L22)
 
 ___
 
@@ -1086,7 +1086,7 @@ head([]);
 
 #### Defined in
 
-[array/head.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/array/head.ts#L23)
+[array/head.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/head.ts#L23)
 
 ___
 
@@ -1129,7 +1129,7 @@ includes([1, 2, 3], 1, (a, b) => a === b);
 
 #### Defined in
 
-[array/includes.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/array/includes.ts#L24)
+[array/includes.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/includes.ts#L24)
 
 ___
 
@@ -1175,7 +1175,7 @@ indexOf([1, 2, 1, 2], 2, 2)
 
 #### Defined in
 
-[array/indexOf.ts:44](https://github.com/mhodge11/underscorets/blob/776105e/src/array/indexOf.ts#L44)
+[array/indexOf.ts:44](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/indexOf.ts#L44)
 
 ___
 
@@ -1222,7 +1222,7 @@ insertionSort(array,
 
 #### Defined in
 
-[array/insertionSort.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/array/insertionSort.ts#L31)
+[array/insertionSort.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/insertionSort.ts#L31)
 
 ___
 
@@ -1275,7 +1275,7 @@ intersection(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/intersection.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/array/intersection.ts#L41)
+[array/intersection.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/intersection.ts#L41)
 
 ▸ **intersection**\<`T`\>(`...arraysOrCompareFn`): [`PullOutArray`](README.md#pulloutarray)\<[...T]\>
 
@@ -1297,7 +1297,7 @@ intersection(arr1, arr2, (a, b) => a.id === b.id)
 
 #### Defined in
 
-[array/intersection.ts:44](https://github.com/mhodge11/underscorets/blob/776105e/src/array/intersection.ts#L44)
+[array/intersection.ts:44](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/intersection.ts#L44)
 
 ___
 
@@ -1334,7 +1334,7 @@ last([1, 2, 3])
 
 #### Defined in
 
-[array/last.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/array/last.ts#L20)
+[array/last.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/last.ts#L20)
 
 ___
 
@@ -1373,7 +1373,7 @@ lastIndexOf([1, 2, 1, 2], 2)
 
 #### Defined in
 
-[array/lastIndexOf.ts:35](https://github.com/mhodge11/underscorets/blob/776105e/src/array/lastIndexOf.ts#L35)
+[array/lastIndexOf.ts:35](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/lastIndexOf.ts#L35)
 
 ___
 
@@ -1412,7 +1412,7 @@ map([4, 8], n => n * n)
 
 #### Defined in
 
-[array/map.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/array/map.ts#L20)
+[array/map.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/map.ts#L20)
 
 ___
 
@@ -1459,7 +1459,7 @@ mergeSort(array,
 
 #### Defined in
 
-[array/mergeSort.ts:64](https://github.com/mhodge11/underscorets/blob/776105e/src/array/mergeSort.ts#L64)
+[array/mergeSort.ts:64](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/mergeSort.ts#L64)
 
 ___
 
@@ -1502,7 +1502,7 @@ If index is out of bounds
 
 #### Defined in
 
-[array/move.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/array/move.ts#L21)
+[array/move.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/move.ts#L21)
 
 ___
 
@@ -1549,7 +1549,7 @@ quickSort(array,
 
 #### Defined in
 
-[array/quickSort.ts:82](https://github.com/mhodge11/underscorets/blob/776105e/src/array/quickSort.ts#L82)
+[array/quickSort.ts:82](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/quickSort.ts#L82)
 
 ___
 
@@ -1597,7 +1597,7 @@ If range is negative or step is 0
 
 #### Defined in
 
-[array/range.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/array/range.ts#L31)
+[array/range.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/range.ts#L31)
 
 ___
 
@@ -1642,7 +1642,7 @@ If accumulator is nullish and initAccum is false
 
 #### Defined in
 
-[array/reduce.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/array/reduce.ts#L25)
+[array/reduce.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/reduce.ts#L25)
 
 ___
 
@@ -1687,7 +1687,7 @@ If accumulator is nullish and initAccum is false
 
 #### Defined in
 
-[array/reduceRight.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/array/reduceRight.ts#L25)
+[array/reduceRight.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/reduceRight.ts#L25)
 
 ___
 
@@ -1729,7 +1729,7 @@ sample([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[array/sample.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/array/sample.ts#L27)
+[array/sample.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/sample.ts#L27)
 
 ___
 
@@ -1776,7 +1776,7 @@ selectionSort(array,
 
 #### Defined in
 
-[array/selectionSort.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/array/selectionSort.ts#L31)
+[array/selectionSort.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/selectionSort.ts#L31)
 
 ___
 
@@ -1813,7 +1813,7 @@ shuffle([1, 2, 3, 4])
 
 #### Defined in
 
-[array/shuffle.ts:19](https://github.com/mhodge11/underscorets/blob/776105e/src/array/shuffle.ts#L19)
+[array/shuffle.ts:19](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/shuffle.ts#L19)
 
 ___
 
@@ -1849,7 +1849,7 @@ simpleFuzzySearch("abc", ["abc", "acb", "bac", "bca", "cab", "cba"])
 
 #### Defined in
 
-[array/simpleFuzzySearch.ts:34](https://github.com/mhodge11/underscorets/blob/776105e/src/array/simpleFuzzySearch.ts#L34)
+[array/simpleFuzzySearch.ts:34](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/simpleFuzzySearch.ts#L34)
 
 ___
 
@@ -1888,7 +1888,7 @@ slice([1, 2, 3, 4], 1, 3)
 
 #### Defined in
 
-[array/slice.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/array/slice.ts#L20)
+[array/slice.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/slice.ts#L20)
 
 ___
 
@@ -1927,7 +1927,7 @@ some([null, 0, 'yes', false], Boolean)
 
 #### Defined in
 
-[array/some.ts:19](https://github.com/mhodge11/underscorets/blob/776105e/src/array/some.ts#L19)
+[array/some.ts:19](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/some.ts#L19)
 
 ___
 
@@ -1974,7 +1974,7 @@ sort(array,
 
 #### Defined in
 
-[array/sort.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/array/sort.ts#L31)
+[array/sort.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/sort.ts#L31)
 
 ___
 
@@ -2011,7 +2011,7 @@ tail([1, 2, 3])
 
 #### Defined in
 
-[array/tail.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/array/tail.ts#L20)
+[array/tail.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/tail.ts#L20)
 
 ___
 
@@ -2055,7 +2055,7 @@ take(users, 2)
 
 #### Defined in
 
-[array/take.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/take.ts#L26)
+[array/take.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/take.ts#L26)
 
 ___
 
@@ -2099,7 +2099,7 @@ takeRight(users, 2)
 
 #### Defined in
 
-[array/takeRight.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/takeRight.ts#L26)
+[array/takeRight.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/takeRight.ts#L26)
 
 ___
 
@@ -2144,7 +2144,7 @@ takeRightWhile(users, user => user.active)
 
 #### Defined in
 
-[array/takeRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/takeRightWhile.ts#L26)
+[array/takeRightWhile.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/takeRightWhile.ts#L26)
 
 ___
 
@@ -2189,7 +2189,7 @@ takeWhile(users, user => user.active)
 
 #### Defined in
 
-[array/takeWhile.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/array/takeWhile.ts#L26)
+[array/takeWhile.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/takeWhile.ts#L26)
 
 ___
 
@@ -2243,7 +2243,7 @@ unique(users, (a, b) => a.name === b.name)
 
 #### Defined in
 
-[array/unique.ts:35](https://github.com/mhodge11/underscorets/blob/776105e/src/array/unique.ts#L35)
+[array/unique.ts:35](https://github.com/mhodge11/underscorets/blob/6764b97/src/array/unique.ts#L35)
 
 ## Crypto
 
@@ -2290,7 +2290,7 @@ If the specified algorithm is not supported by the Web Crypto API
 
 #### Defined in
 
-[crypto/hash.ts:34](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/hash.ts#L34)
+[crypto/hash.ts:34](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/hash.ts#L34)
 
 ___
 
@@ -2338,7 +2338,7 @@ randomElement([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[crypto/randomElement.ts:35](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/randomElement.ts#L35)
+[crypto/randomElement.ts:35](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/randomElement.ts#L35)
 
 ▸ **randomElement**\<`T`\>(`array`, `multi`): `T`[]
 
@@ -2361,7 +2361,7 @@ randomElement([1, 2, 3, 4], 2)
 
 #### Defined in
 
-[crypto/randomElement.ts:36](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/randomElement.ts#L36)
+[crypto/randomElement.ts:36](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/randomElement.ts#L36)
 
 ___
 
@@ -2401,7 +2401,7 @@ If `min` is greater than or equal to `max`
 
 #### Defined in
 
-[crypto/randomFloat.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/randomFloat.ts#L21)
+[crypto/randomFloat.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/randomFloat.ts#L21)
 
 ___
 
@@ -2445,7 +2445,7 @@ If `min` is greater than or equal to `max`
 
 #### Defined in
 
-[crypto/randomInt.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/randomInt.ts#L22)
+[crypto/randomInt.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/randomInt.ts#L22)
 
 ___
 
@@ -2485,7 +2485,7 @@ randomString(16, 'abc');
 
 #### Defined in
 
-[crypto/randomString.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/crypto/randomString.ts#L29)
+[crypto/randomString.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/crypto/randomString.ts#L29)
 
 ## Decorator
 
@@ -2543,7 +2543,7 @@ instance.testMethod("World");
 
 #### Defined in
 
-[decorator/decDebounce.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decDebounce.ts#L32)
+[decorator/decDebounce.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decDebounce.ts#L32)
 
 ___
 
@@ -2604,7 +2604,7 @@ instance.testMethod(); // => 2
 
 #### Defined in
 
-[decorator/decMaxCalls.ts:35](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decMaxCalls.ts#L35)
+[decorator/decMaxCalls.ts:35](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decMaxCalls.ts#L35)
 
 ___
 
@@ -2669,7 +2669,7 @@ instance.testMethod(1, 2); // => 3 (cache miss)
 
 #### Defined in
 
-[decorator/decMemoize.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decMemoize.ts#L41)
+[decorator/decMemoize.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decMemoize.ts#L41)
 
 ___
 
@@ -2727,7 +2727,7 @@ instance.testMethod(); // => 1
 
 #### Defined in
 
-[decorator/decMinCalls.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decMinCalls.ts#L32)
+[decorator/decMinCalls.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decMinCalls.ts#L32)
 
 ___
 
@@ -2780,7 +2780,7 @@ instance.testMethod(); // => 1
 
 #### Defined in
 
-[decorator/decOnce.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decOnce.ts#L31)
+[decorator/decOnce.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decOnce.ts#L31)
 
 ___
 
@@ -2837,7 +2837,7 @@ instance.testMethod(); // nothing happens
 
 #### Defined in
 
-[decorator/decThrottle.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/decThrottle.ts#L31)
+[decorator/decThrottle.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/decThrottle.ts#L31)
 
 ___
 
@@ -2919,7 +2919,7 @@ instance.testMethod();
 
 #### Defined in
 
-[decorator/toDecorator.ts:38](https://github.com/mhodge11/underscorets/blob/776105e/src/decorator/toDecorator.ts#L38)
+[decorator/toDecorator.ts:38](https://github.com/mhodge11/underscorets/blob/6764b97/src/decorator/toDecorator.ts#L38)
 
 ## Function
 
@@ -2964,7 +2964,7 @@ if (error) {
 
 #### Defined in
 
-[function/attempt.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/function/attempt.ts#L25)
+[function/attempt.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/attempt.ts#L25)
 
 ___
 
@@ -3032,7 +3032,7 @@ func({ 'a': '1', 'b': '2' })
 
 #### Defined in
 
-[function/cond.ts:36](https://github.com/mhodge11/underscorets/blob/776105e/src/function/cond.ts#L36)
+[function/cond.ts:36](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/cond.ts#L36)
 
 ___
 
@@ -3083,7 +3083,7 @@ debouncedSayHello("Jane");
 
 #### Defined in
 
-[function/debounce.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/function/debounce.ts#L32)
+[function/debounce.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/debounce.ts#L32)
 
 ___
 
@@ -3124,7 +3124,7 @@ defer(text => console.log(text), 'deferred')
 
 #### Defined in
 
-[function/defer.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/function/defer.ts#L22)
+[function/defer.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/defer.ts#L22)
 
 ___
 
@@ -3166,7 +3166,7 @@ delay(text => console.log(text), 1000, 'later')
 
 #### Defined in
 
-[function/delay.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/function/delay.ts#L23)
+[function/delay.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/delay.ts#L23)
 
 ___
 
@@ -3220,7 +3220,7 @@ flipped('a', 'b', 'c', 'd')
 
 #### Defined in
 
-[function/flip.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/function/flip.ts#L23)
+[function/flip.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/flip.ts#L23)
 
 ___
 
@@ -3283,7 +3283,7 @@ addSquare(1, 2)
 
 #### Defined in
 
-[function/flow.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/function/flow.ts#L31)
+[function/flow.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/flow.ts#L31)
 
 ___
 
@@ -3345,7 +3345,7 @@ addSquare(1, 2)
 
 #### Defined in
 
-[function/flowRight.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/function/flowRight.ts#L32)
+[function/flowRight.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/flowRight.ts#L32)
 
 ___
 
@@ -3397,7 +3397,7 @@ limitAddCount() // => 2
 
 #### Defined in
 
-[function/maxCalls.ts:33](https://github.com/mhodge11/underscorets/blob/776105e/src/function/maxCalls.ts#L33)
+[function/maxCalls.ts:33](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/maxCalls.ts#L33)
 
 ___
 
@@ -3468,7 +3468,7 @@ const defaultResolver = (...args: unknown[]) => JSON.stringify(args)
 
 #### Defined in
 
-[function/memoize.ts:54](https://github.com/mhodge11/underscorets/blob/776105e/src/function/memoize.ts#L54)
+[function/memoize.ts:54](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/memoize.ts#L54)
 
 ___
 
@@ -3529,7 +3529,7 @@ limitedCaution()
 
 #### Defined in
 
-[function/minCalls.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/function/minCalls.ts#L29)
+[function/minCalls.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/minCalls.ts#L29)
 
 ___
 
@@ -3587,7 +3587,7 @@ filter([1, 2, 3, 4, 5, 6], negate(isEven))
 
 #### Defined in
 
-[function/negate.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/function/negate.ts#L24)
+[function/negate.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/negate.ts#L24)
 
 ___
 
@@ -3649,7 +3649,7 @@ limitAddCount() // => 1
 
 #### Defined in
 
-[function/once.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/function/once.ts#L32)
+[function/once.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/once.ts#L32)
 
 ___
 
@@ -3695,7 +3695,7 @@ throttled();
 
 #### Defined in
 
-[function/throttle.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/function/throttle.ts#L27)
+[function/throttle.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/throttle.ts#L27)
 
 ___
 
@@ -3740,7 +3740,7 @@ times(() => 0, 4)
 
 #### Defined in
 
-[function/times.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/function/times.ts#L24)
+[function/times.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/function/times.ts#L24)
 
 ## KSUID
 
@@ -3783,7 +3783,7 @@ compareKsuids(ksuid1, ksuid1);
 
 #### Defined in
 
-[ksuid/compareKsuids.ts:30](https://github.com/mhodge11/underscorets/blob/776105e/src/ksuid/compareKsuids.ts#L30)
+[ksuid/compareKsuids.ts:30](https://github.com/mhodge11/underscorets/blob/6764b97/src/ksuid/compareKsuids.ts#L30)
 
 ___
 
@@ -3813,7 +3813,7 @@ const ksuid = generateKsuid();
 
 #### Defined in
 
-[ksuid/generateKsuid.ts:16](https://github.com/mhodge11/underscorets/blob/776105e/src/ksuid/generateKsuid.ts#L16)
+[ksuid/generateKsuid.ts:16](https://github.com/mhodge11/underscorets/blob/6764b97/src/ksuid/generateKsuid.ts#L16)
 
 ___
 
@@ -3843,7 +3843,7 @@ const ksuid = await generateKsuidAsync();
 
 #### Defined in
 
-[ksuid/generateKsuidAsync.ts:16](https://github.com/mhodge11/underscorets/blob/776105e/src/ksuid/generateKsuidAsync.ts#L16)
+[ksuid/generateKsuidAsync.ts:16](https://github.com/mhodge11/underscorets/blob/6764b97/src/ksuid/generateKsuidAsync.ts#L16)
 
 ___
 
@@ -3877,7 +3877,7 @@ isValidKsuid("notaKSUID");
 
 #### Defined in
 
-[ksuid/isValidKsuid.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/ksuid/isValidKsuid.ts#L21)
+[ksuid/isValidKsuid.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/ksuid/isValidKsuid.ts#L21)
 
 ## Misc
 
@@ -3933,7 +3933,7 @@ console.log(castArray(array) === array)
 
 #### Defined in
 
-[misc/castArray.ts:37](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/castArray.ts#L37)
+[misc/castArray.ts:37](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/castArray.ts#L37)
 
 ___
 
@@ -3984,7 +3984,7 @@ console.log(shallow[0] === objects[0])
 
 #### Defined in
 
-[misc/clone.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/clone.ts#L31)
+[misc/clone.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/clone.ts#L31)
 
 ___
 
@@ -4027,7 +4027,7 @@ console.log(deep[0] === objects[0])
 
 #### Defined in
 
-[misc/cloneDeep.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/cloneDeep.ts#L27)
+[misc/cloneDeep.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/cloneDeep.ts#L27)
 
 ___
 
@@ -4065,7 +4065,7 @@ size('pebbles')
 
 #### Defined in
 
-[misc/size.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/size.ts#L28)
+[misc/size.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/size.ts#L28)
 
 ___
 
@@ -4111,7 +4111,7 @@ toArray(null)
 
 #### Defined in
 
-[misc/toArray.ts:43](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toArray.ts#L43)
+[misc/toArray.ts:43](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toArray.ts#L43)
 
 ___
 
@@ -4151,7 +4151,7 @@ toFinite('3.2')
 
 #### Defined in
 
-[misc/toFinite.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toFinite.ts#L26)
+[misc/toFinite.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toFinite.ts#L26)
 
 ___
 
@@ -4194,7 +4194,7 @@ toInteger('3.2')
 
 #### Defined in
 
-[misc/toInteger.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toInteger.ts#L29)
+[misc/toInteger.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toInteger.ts#L29)
 
 ___
 
@@ -4238,7 +4238,7 @@ toLength('3.2')
 
 #### Defined in
 
-[misc/toLength.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toLength.ts#L32)
+[misc/toLength.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toLength.ts#L32)
 
 ___
 
@@ -4278,7 +4278,7 @@ toNumber('3.2')
 
 #### Defined in
 
-[misc/toNumber.ts:39](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toNumber.ts#L39)
+[misc/toNumber.ts:39](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toNumber.ts#L39)
 
 ___
 
@@ -4315,7 +4315,7 @@ toPath(['a', 0, 'b', 'c'])
 
 #### Defined in
 
-[misc/toPath.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toPath.ts#L23)
+[misc/toPath.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toPath.ts#L23)
 
 ___
 
@@ -4356,7 +4356,7 @@ assign({ 'a': 1 }, toPlainObject(new Foo))
 
 #### Defined in
 
-[misc/toPlainObject.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toPlainObject.ts#L27)
+[misc/toPlainObject.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toPlainObject.ts#L27)
 
 ___
 
@@ -4397,7 +4397,7 @@ toSafeInteger('3.2')
 
 #### Defined in
 
-[misc/toSafeInteger.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toSafeInteger.ts#L27)
+[misc/toSafeInteger.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toSafeInteger.ts#L27)
 
 ___
 
@@ -4435,7 +4435,7 @@ toString([1, 2, 3])
 
 #### Defined in
 
-[misc/toString.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/misc/toString.ts#L24)
+[misc/toString.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/toString.ts#L24)
 
 ## Number
 
@@ -4474,7 +4474,7 @@ average([1, 2, 3, 4, 5]) // => 3
 
 #### Defined in
 
-[number/average.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/number/average.ts#L18)
+[number/average.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/average.ts#L18)
 
 ___
 
@@ -4512,7 +4512,7 @@ ceil(6040, -2)
 
 #### Defined in
 
-[number/ceil.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/number/ceil.ts#L24)
+[number/ceil.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/ceil.ts#L24)
 
 ___
 
@@ -4548,7 +4548,7 @@ clamp(10, -5, 5)
 
 #### Defined in
 
-[number/clamp.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/number/clamp.ts#L20)
+[number/clamp.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/clamp.ts#L20)
 
 ___
 
@@ -4585,7 +4585,7 @@ factorial(5) // => 120
 
 #### Defined in
 
-[number/factorial.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/number/factorial.ts#L21)
+[number/factorial.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/factorial.ts#L21)
 
 ___
 
@@ -4623,7 +4623,7 @@ floor(4060, -2)
 
 #### Defined in
 
-[number/floor.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/number/floor.ts#L24)
+[number/floor.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/floor.ts#L24)
 
 ___
 
@@ -4663,7 +4663,7 @@ median([1, 2, 3, 4, 5, 6]) // => 3.5
 
 #### Defined in
 
-[number/median.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/number/median.ts#L20)
+[number/median.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/median.ts#L20)
 
 ___
 
@@ -4701,7 +4701,7 @@ round(1234.56);
 
 #### Defined in
 
-[number/round.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/number/round.ts#L24)
+[number/round.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/round.ts#L24)
 
 ___
 
@@ -4744,7 +4744,7 @@ sum([{ value: 1 }, { value: 2 }, { value: 3 }], (obj) => obj.value)
 
 #### Defined in
 
-[number/sum.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/number/sum.ts#L23)
+[number/sum.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/number/sum.ts#L23)
 
 ## Object
 
@@ -4793,7 +4793,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/at.ts:32](https://github.com/mhodge11/underscorets/blob/776105e/src/object/at.ts#L32)
+[object/at.ts:32](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/at.ts#L32)
 
 ___
 
@@ -4834,7 +4834,7 @@ filterObject(object, (n) => !(n % 5))
 
 #### Defined in
 
-[object/filterObject.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/object/filterObject.ts#L22)
+[object/filterObject.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/filterObject.ts#L22)
 
 ___
 
@@ -4879,7 +4879,7 @@ findKey(users, ({ age }) => age < 40)
 
 #### Defined in
 
-[object/findKey.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/object/findKey.ts#L26)
+[object/findKey.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/findKey.ts#L26)
 
 ___
 
@@ -4924,7 +4924,7 @@ findLastKey(users, ({ age }) => age < 40)
 
 #### Defined in
 
-[object/findLastKey.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/object/findLastKey.ts#L26)
+[object/findLastKey.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/findLastKey.ts#L26)
 
 ___
 
@@ -4966,7 +4966,7 @@ flatten(obj);
 
 #### Defined in
 
-[object/flatten.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/object/flatten.ts#L41)
+[object/flatten.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/flatten.ts#L41)
 
 ___
 
@@ -5015,7 +5015,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/get.ts:35](https://github.com/mhodge11/underscorets/blob/776105e/src/object/get.ts#L35)
+[object/get.ts:35](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/get.ts#L35)
 
 ___
 
@@ -5052,7 +5052,7 @@ keys({ 'a': 1, 'b': 2, 'c': 3 })
 
 #### Defined in
 
-[object/keys.ts:19](https://github.com/mhodge11/underscorets/blob/776105e/src/object/keys.ts#L19)
+[object/keys.ts:19](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/keys.ts#L19)
 
 ___
 
@@ -5101,7 +5101,7 @@ merge({ a: 1 }, { a: "Yes" })
 
 #### Defined in
 
-[object/merge.ts:34](https://github.com/mhodge11/underscorets/blob/776105e/src/object/merge.ts#L34)
+[object/merge.ts:34](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/merge.ts#L34)
 
 ___
 
@@ -5143,7 +5143,7 @@ omit(obj, ['a', 'b']);
 
 #### Defined in
 
-[object/omit.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/object/omit.ts#L25)
+[object/omit.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/omit.ts#L25)
 
 ___
 
@@ -5186,7 +5186,7 @@ pick(object, ['a', 'c'])
 
 #### Defined in
 
-[object/pick.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/object/pick.ts#L23)
+[object/pick.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/pick.ts#L23)
 
 ___
 
@@ -5246,7 +5246,7 @@ If the path is invalid
 
 #### Defined in
 
-[object/set.ts:47](https://github.com/mhodge11/underscorets/blob/776105e/src/object/set.ts#L47)
+[object/set.ts:47](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/set.ts#L47)
 
 ___
 
@@ -5283,7 +5283,7 @@ values({ 'a': 1, 'b': 2, 'c': 3 })
 
 #### Defined in
 
-[object/values.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/object/values.ts#L21)
+[object/values.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/object/values.ts#L21)
 
 ## Promise
 
@@ -5328,7 +5328,7 @@ const firstTwo = await races(2, prom1, prom2, prom3);
 
 #### Defined in
 
-[promise/races.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/races.ts#L24)
+[promise/races.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/promise/races.ts#L24)
 
 ___
 
@@ -5390,7 +5390,7 @@ The error of the last attempt if all attempts fail
 
 #### Defined in
 
-[promise/retry.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/retry.ts#L41)
+[promise/retry.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/promise/retry.ts#L41)
 
 ___
 
@@ -5421,7 +5421,7 @@ await sleep(1000);
 
 #### Defined in
 
-[promise/sleep.ts:15](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/sleep.ts#L15)
+[promise/sleep.ts:15](https://github.com/mhodge11/underscorets/blob/6764b97/src/promise/sleep.ts#L15)
 
 ___
 
@@ -5473,7 +5473,7 @@ An error if the promise does not resolve or reject before timing out
 
 #### Defined in
 
-[promise/timeout.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/timeout.ts#L25)
+[promise/timeout.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/promise/timeout.ts#L25)
 
 ___
 
@@ -5521,7 +5521,7 @@ The error of the promise if it rejects and the error is not an instance of Error
 
 #### Defined in
 
-[promise/tryCatch.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/promise/tryCatch.ts#L24)
+[promise/tryCatch.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/promise/tryCatch.ts#L24)
 
 ## String
 
@@ -5558,7 +5558,7 @@ camelCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/camelCase.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/string/camelCase.ts#L24)
+[string/camelCase.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/camelCase.ts#L24)
 
 ___
 
@@ -5595,7 +5595,7 @@ deburr('déjà vu')
 
 #### Defined in
 
-[string/deburr.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/string/deburr.ts#L21)
+[string/deburr.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/deburr.ts#L21)
 
 ___
 
@@ -5634,7 +5634,7 @@ endsWith("abc", "b", 2);
 
 #### Defined in
 
-[string/endsWith.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/string/endsWith.ts#L23)
+[string/endsWith.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/endsWith.ts#L23)
 
 ___
 
@@ -5667,7 +5667,7 @@ escapeHtml('fred, barney, & pebbles')
 
 #### Defined in
 
-[string/escapeHtml.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/string/escapeHtml.ts#L29)
+[string/escapeHtml.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/escapeHtml.ts#L29)
 
 ___
 
@@ -5701,7 +5701,7 @@ escapeRegExp('[hello](https://helloworld.io/)')
 
 #### Defined in
 
-[string/escapeRegExp.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/string/escapeRegExp.ts#L25)
+[string/escapeRegExp.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/escapeRegExp.ts#L25)
 
 ___
 
@@ -5738,7 +5738,7 @@ kebabCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/kebabCase.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/string/kebabCase.ts#L24)
+[string/kebabCase.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/kebabCase.ts#L24)
 
 ___
 
@@ -5775,7 +5775,7 @@ lowerCase("__FOO_BAR__")
 
 #### Defined in
 
-[string/lowerCase.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/string/lowerCase.ts#L24)
+[string/lowerCase.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/lowerCase.ts#L24)
 
 ___
 
@@ -5809,7 +5809,7 @@ lowerFirst("FRED");
 
 #### Defined in
 
-[string/lowerFirst.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/string/lowerFirst.ts#L20)
+[string/lowerFirst.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/lowerFirst.ts#L20)
 
 ___
 
@@ -5851,7 +5851,7 @@ pad("abc", 3);
 
 #### Defined in
 
-[string/pad.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/string/pad.ts#L31)
+[string/pad.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/pad.ts#L31)
 
 ___
 
@@ -5893,7 +5893,7 @@ padEnd("abc", 3);
 
 #### Defined in
 
-[string/padEnd.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/string/padEnd.ts#L29)
+[string/padEnd.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/padEnd.ts#L29)
 
 ___
 
@@ -5935,7 +5935,7 @@ padStart("abc", 3);
 
 #### Defined in
 
-[string/padStart.ts:29](https://github.com/mhodge11/underscorets/blob/776105e/src/string/padStart.ts#L29)
+[string/padStart.ts:29](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/padStart.ts#L29)
 
 ___
 
@@ -5972,7 +5972,7 @@ pascalCase('__FOO_BAR__')
 
 #### Defined in
 
-[string/pascalCase.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/string/pascalCase.ts#L24)
+[string/pascalCase.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/pascalCase.ts#L24)
 
 ___
 
@@ -6006,7 +6006,7 @@ repeat('*', 3)
 
 #### Defined in
 
-[string/repeat.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/string/repeat.ts#L18)
+[string/repeat.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/repeat.ts#L18)
 
 ___
 
@@ -6039,7 +6039,7 @@ replaceLast("Foo Bar Bar", "Bar", "Boo");
 
 #### Defined in
 
-[string/replaceLast.ts:17](https://github.com/mhodge11/underscorets/blob/776105e/src/string/replaceLast.ts#L17)
+[string/replaceLast.ts:17](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/replaceLast.ts#L17)
 
 ___
 
@@ -6079,7 +6079,7 @@ snakeCase('foo2bar')
 
 #### Defined in
 
-[string/snakeCase.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/string/snakeCase.ts#L27)
+[string/snakeCase.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/snakeCase.ts#L27)
 
 ___
 
@@ -6114,7 +6114,7 @@ splitWords('fred, barney, & pebbles', /[^, ]+/g)
 
 #### Defined in
 
-[string/splitWords.ts:117](https://github.com/mhodge11/underscorets/blob/776105e/src/string/splitWords.ts#L117)
+[string/splitWords.ts:117](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/splitWords.ts#L117)
 
 ___
 
@@ -6153,7 +6153,7 @@ startsWith("abc", "b", 1);
 
 #### Defined in
 
-[string/startsWith.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/string/startsWith.ts#L23)
+[string/startsWith.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/startsWith.ts#L23)
 
 ___
 
@@ -6187,7 +6187,7 @@ size('😀')
 
 #### Defined in
 
-[string/stringSize.ts:31](https://github.com/mhodge11/underscorets/blob/776105e/src/string/stringSize.ts#L31)
+[string/stringSize.ts:31](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/stringSize.ts#L31)
 
 ___
 
@@ -6227,7 +6227,7 @@ titleCase('HélloWorld')
 
 #### Defined in
 
-[string/titleCase.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/string/titleCase.ts#L27)
+[string/titleCase.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/titleCase.ts#L27)
 
 ___
 
@@ -6264,7 +6264,7 @@ trim('!!abc_!', '_!')
 
 #### Defined in
 
-[string/trim.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/string/trim.ts#L20)
+[string/trim.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/trim.ts#L20)
 
 ___
 
@@ -6301,7 +6301,7 @@ trimEnd('abc_!!_', '_!')
 
 #### Defined in
 
-[string/trimEnd.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/string/trimEnd.ts#L21)
+[string/trimEnd.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/trimEnd.ts#L21)
 
 ___
 
@@ -6338,7 +6338,7 @@ trimStart('_!!_abc', '_!')
 
 #### Defined in
 
-[string/trimStart.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/string/trimStart.ts#L21)
+[string/trimStart.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/trimStart.ts#L21)
 
 ___
 
@@ -6372,7 +6372,7 @@ unescapeHtml('fred, barney, &amp; pebbles')
 
 #### Defined in
 
-[string/unescapeHtml.ts:30](https://github.com/mhodge11/underscorets/blob/776105e/src/string/unescapeHtml.ts#L30)
+[string/unescapeHtml.ts:30](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/unescapeHtml.ts#L30)
 
 ___
 
@@ -6409,7 +6409,7 @@ upperCase("__foo_bar__")
 
 #### Defined in
 
-[string/upperCase.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/string/upperCase.ts#L24)
+[string/upperCase.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/upperCase.ts#L24)
 
 ___
 
@@ -6443,7 +6443,7 @@ upperFirst("FRED");
 
 #### Defined in
 
-[string/upperFirst.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/string/upperFirst.ts#L20)
+[string/upperFirst.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/string/upperFirst.ts#L20)
 
 ## Type
 
@@ -6469,7 +6469,7 @@ let flat: ArrayFlat<typeof arr, 3> = ["a", "b", "c"];
 
 #### Defined in
 
-[type/ArrayFlat.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayFlat.ts#L14)
+[type/ArrayFlat.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayFlat.ts#L14)
 
 ___
 
@@ -6494,7 +6494,7 @@ let head: Head<typeof arr> = arr[0];
 
 #### Defined in
 
-[type/ArrayHead.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayHead.ts#L14)
+[type/ArrayHead.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayHead.ts#L14)
 
 ___
 
@@ -6519,7 +6519,7 @@ let last: Last<typeof arr> = arr[arr.length - 1];
 
 #### Defined in
 
-[type/ArrayLast.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayLast.ts#L14)
+[type/ArrayLast.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayLast.ts#L14)
 
 ___
 
@@ -6548,7 +6548,7 @@ arr = [1, 2];
 
 #### Defined in
 
-[type/ArrayMinLength.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayMinLength.ts#L26)
+[type/ArrayMinLength.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayMinLength.ts#L26)
 
 ___
 
@@ -6575,7 +6575,7 @@ let reduced: ArrayReduce<typeof arr, number> = arr.reduce((acc, val) => acc + va
 
 #### Defined in
 
-[type/ArrayReduce.ts:15](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayReduce.ts#L15)
+[type/ArrayReduce.ts:15](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayReduce.ts#L15)
 
 ___
 
@@ -6600,7 +6600,7 @@ type Foo = ArrayReverse<[1, 2, 3]>;
 
 #### Defined in
 
-[type/ArrayReverse.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayReverse.ts#L14)
+[type/ArrayReverse.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayReverse.ts#L14)
 
 ___
 
@@ -6625,7 +6625,7 @@ let tail: Tail<typeof arr> = arr.slice(1);
 
 #### Defined in
 
-[type/ArrayTail.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ArrayTail.ts#L14)
+[type/ArrayTail.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ArrayTail.ts#L14)
 
 ___
 
@@ -6653,7 +6653,7 @@ type Bar = CastArray<[1, 2, 3]>;
 
 #### Defined in
 
-[type/CastArray.ts:17](https://github.com/mhodge11/underscorets/blob/776105e/src/type/CastArray.ts#L17)
+[type/CastArray.ts:17](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/CastArray.ts#L17)
 
 ___
 
@@ -6693,7 +6693,7 @@ const compare: CompareFunction<[number, number]> = (a, b) => a > b;
 
 #### Defined in
 
-[type/CompareFunction.ts:14](https://github.com/mhodge11/underscorets/blob/776105e/src/type/CompareFunction.ts#L14)
+[type/CompareFunction.ts:14](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/CompareFunction.ts#L14)
 
 ___
 
@@ -6746,7 +6746,7 @@ function foo<
 
 #### Defined in
 
-[type/GenericFunction.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/type/GenericFunction.ts#L28)
+[type/GenericFunction.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/GenericFunction.ts#L28)
 
 ___
 
@@ -6785,7 +6785,7 @@ JSON.stringify(good);
 
 #### Defined in
 
-[type/Jsonifiable.ts:40](https://github.com/mhodge11/underscorets/blob/776105e/src/type/Jsonifiable.ts#L40)
+[type/Jsonifiable.ts:40](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/Jsonifiable.ts#L40)
 
 ___
 
@@ -6820,7 +6820,7 @@ type Bar = ObjectAt<Foo, ["a", "b", "c"]>;
 
 #### Defined in
 
-[type/ObjectAt.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectAt.ts#L41)
+[type/ObjectAt.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectAt.ts#L41)
 
 ___
 
@@ -6864,7 +6864,7 @@ type FlatKeys = ObjectFlatten<NestedObject>;
 
 #### Defined in
 
-[type/ObjectFlatten.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectFlatten.ts#L41)
+[type/ObjectFlatten.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectFlatten.ts#L41)
 
 ___
 
@@ -6910,7 +6910,7 @@ type Baz = ObjectGet<NestedObject, "b.d.e[0]">;
 
 #### Defined in
 
-[type/ObjectGet.ts:39](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectGet.ts#L39)
+[type/ObjectGet.ts:39](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectGet.ts#L39)
 
 ___
 
@@ -6943,7 +6943,7 @@ type MyKeys = ObjectKeys<MyObject>;
 
 #### Defined in
 
-[type/ObjectKeys.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectKeys.ts#L26)
+[type/ObjectKeys.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectKeys.ts#L26)
 
 ___
 
@@ -6985,7 +6985,7 @@ type Qux = ObjectMerge<[Foo, Bar, Baz]>;
 
 #### Defined in
 
-[type/ObjectMerge.ts:50](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectMerge.ts#L50)
+[type/ObjectMerge.ts:50](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectMerge.ts#L50)
 
 ___
 
@@ -7022,7 +7022,7 @@ type Paths = ObjectPaths<NestedObject>;
 
 #### Defined in
 
-[type/ObjectPaths.ts:30](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectPaths.ts#L30)
+[type/ObjectPaths.ts:30](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectPaths.ts#L30)
 
 ___
 
@@ -7069,7 +7069,7 @@ type Baz = ObjectSet<NestedObject, "b.d.e[0]", string>;
 
 #### Defined in
 
-[type/ObjectSet.ts:40](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectSet.ts#L40)
+[type/ObjectSet.ts:40](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectSet.ts#L40)
 
 ___
 
@@ -7102,7 +7102,7 @@ type MyValues = ObjectValues<MyObject>;
 
 #### Defined in
 
-[type/ObjectValues.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/type/ObjectValues.ts#L26)
+[type/ObjectValues.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/ObjectValues.ts#L26)
 
 ___
 
@@ -7127,7 +7127,7 @@ obj = [1, 2, 3];
 
 #### Defined in
 
-[type/PlainObject.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/type/PlainObject.ts#L18)
+[type/PlainObject.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/PlainObject.ts#L18)
 
 ___
 
@@ -7139,7 +7139,7 @@ This type defines a primitive value.
 
 #### Defined in
 
-[type/Primitive.ts:6](https://github.com/mhodge11/underscorets/blob/776105e/src/type/Primitive.ts#L6)
+[type/Primitive.ts:6](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/Primitive.ts#L6)
 
 ___
 
@@ -7165,7 +7165,7 @@ type Foo = PullOutArray<[1, 2, 3][]>;
 
 #### Defined in
 
-[type/PullOutArray.ts:15](https://github.com/mhodge11/underscorets/blob/776105e/src/type/PullOutArray.ts#L15)
+[type/PullOutArray.ts:15](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/PullOutArray.ts#L15)
 
 ___
 
@@ -7177,7 +7177,7 @@ This type is a union of all typed arrays.
 
 #### Defined in
 
-[type/TypedArray.ts:6](https://github.com/mhodge11/underscorets/blob/776105e/src/type/TypedArray.ts#L6)
+[type/TypedArray.ts:6](https://github.com/mhodge11/underscorets/blob/6764b97/src/type/TypedArray.ts#L6)
 
 ## UUID
 
@@ -7194,7 +7194,7 @@ The order of characters is optimized for better gzip and brotli compression.
 
 #### Defined in
 
-[uuid/uuidUrlAlphabet.ts:11](https://github.com/mhodge11/underscorets/blob/776105e/src/uuid/uuidUrlAlphabet.ts#L11)
+[uuid/uuidUrlAlphabet.ts:11](https://github.com/mhodge11/underscorets/blob/6764b97/src/uuid/uuidUrlAlphabet.ts#L11)
 
 ___
 
@@ -7245,7 +7245,7 @@ console.log(generateUuid(10));
 
 #### Defined in
 
-[uuid/generateCustomUuid.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/uuid/generateCustomUuid.ts#L25)
+[uuid/generateCustomUuid.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/uuid/generateCustomUuid.ts#L25)
 
 ___
 
@@ -7290,7 +7290,7 @@ console.log(await generateUuid(10));
 
 #### Defined in
 
-[uuid/generateCustomUuidAsync.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/uuid/generateCustomUuidAsync.ts#L25)
+[uuid/generateCustomUuidAsync.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/uuid/generateCustomUuidAsync.ts#L25)
 
 ___
 
@@ -7326,7 +7326,7 @@ console.log(generateUuid(10));
 
 #### Defined in
 
-[uuid/generateUuid.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/uuid/generateUuid.ts#L23)
+[uuid/generateUuid.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/uuid/generateUuid.ts#L23)
 
 ___
 
@@ -7362,7 +7362,7 @@ console.log(await generateUuidAsync(10));
 
 #### Defined in
 
-[uuid/generateUuidAsync.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/uuid/generateUuidAsync.ts#L22)
+[uuid/generateUuidAsync.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/uuid/generateUuidAsync.ts#L22)
 
 ## Validate
 
@@ -7396,7 +7396,7 @@ isArguments([1, 2, 3])
 
 #### Defined in
 
-[validate/isArguments.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isArguments.ts#L21)
+[validate/isArguments.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isArguments.ts#L21)
 
 ___
 
@@ -7433,7 +7433,7 @@ isArray(Function)
 
 #### Defined in
 
-[validate/isArray.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isArray.ts#L23)
+[validate/isArray.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isArray.ts#L23)
 
 ___
 
@@ -7467,7 +7467,7 @@ isArrayBuffer(new Array(2))
 
 #### Defined in
 
-[validate/isArrayBuffer.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isArrayBuffer.ts#L21)
+[validate/isArrayBuffer.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isArrayBuffer.ts#L21)
 
 ___
 
@@ -7509,7 +7509,7 @@ isArrayLike(Function)
 
 #### Defined in
 
-[validate/isArrayLike.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isArrayLike.ts#L28)
+[validate/isArrayLike.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isArrayLike.ts#L28)
 
 ___
 
@@ -7550,7 +7550,7 @@ isArrayLikeObject(Function)
 
 #### Defined in
 
-[validate/isArrayLikeObject.ts:28](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isArrayLikeObject.ts#L28)
+[validate/isArrayLikeObject.ts:28](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isArrayLikeObject.ts#L28)
 
 ___
 
@@ -7584,7 +7584,7 @@ isBigInt64Array(new Array(2))
 
 #### Defined in
 
-[validate/isBigInt64Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isBigInt64Array.ts#L21)
+[validate/isBigInt64Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isBigInt64Array.ts#L21)
 
 ___
 
@@ -7618,7 +7618,7 @@ isBigUint64Array([])
 
 #### Defined in
 
-[validate/isBigUint64Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isBigUint64Array.ts#L21)
+[validate/isBigUint64Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isBigUint64Array.ts#L21)
 
 ___
 
@@ -7655,7 +7655,7 @@ isBoolean(0)
 
 #### Defined in
 
-[validate/isBoolean.ts:24](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isBoolean.ts#L24)
+[validate/isBoolean.ts:24](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isBoolean.ts#L24)
 
 ___
 
@@ -7679,7 +7679,7 @@ value is typeof globalThis & Object
 
 #### Defined in
 
-[validate/isBrowser.ts:8](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isBrowser.ts#L8)
+[validate/isBrowser.ts:8](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isBrowser.ts#L8)
 
 ___
 
@@ -7715,7 +7715,7 @@ isBuffer(new Uint8Array(2))
 
 #### Defined in
 
-[validate/isBuffer.ts:20](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isBuffer.ts#L20)
+[validate/isBuffer.ts:20](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isBuffer.ts#L20)
 
 ___
 
@@ -7749,7 +7749,7 @@ isDataView(new ArrayBuffer(2))
 
 #### Defined in
 
-[validate/isDataView.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isDataView.ts#L21)
+[validate/isDataView.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isDataView.ts#L21)
 
 ___
 
@@ -7783,7 +7783,7 @@ isDate('Mon April 23 2012')
 
 #### Defined in
 
-[validate/isDate.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isDate.ts#L21)
+[validate/isDate.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isDate.ts#L21)
 
 ___
 
@@ -7831,7 +7831,7 @@ isEmpty({ 'a': 1 })
 
 #### Defined in
 
-[validate/isEmpty.ts:39](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isEmpty.ts#L39)
+[validate/isEmpty.ts:39](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isEmpty.ts#L39)
 
 ___
 
@@ -7872,7 +7872,7 @@ object === other;
 
 #### Defined in
 
-[validate/isEqual.ts:42](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isEqual.ts#L42)
+[validate/isEqual.ts:42](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isEqual.ts#L42)
 
 ___
 
@@ -7907,7 +7907,7 @@ isError(Error)
 
 #### Defined in
 
-[validate/isError.ts:22](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isError.ts#L22)
+[validate/isError.ts:22](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isError.ts#L22)
 
 ___
 
@@ -7941,7 +7941,7 @@ isFloat32Array([])
 
 #### Defined in
 
-[validate/isFloat32Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isFloat32Array.ts#L21)
+[validate/isFloat32Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isFloat32Array.ts#L21)
 
 ___
 
@@ -7975,7 +7975,7 @@ isFloat64Array([])
 
 #### Defined in
 
-[validate/isFloat64Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isFloat64Array.ts#L21)
+[validate/isFloat64Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isFloat64Array.ts#L21)
 
 ___
 
@@ -8021,7 +8021,7 @@ isFunction(/abc/)
 
 #### Defined in
 
-[validate/isFunction.ts:30](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isFunction.ts#L30)
+[validate/isFunction.ts:30](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isFunction.ts#L30)
 
 ___
 
@@ -8055,7 +8055,7 @@ isInt16Array([])
 
 #### Defined in
 
-[validate/isInt16Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isInt16Array.ts#L21)
+[validate/isInt16Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isInt16Array.ts#L21)
 
 ___
 
@@ -8089,7 +8089,7 @@ isInt32Array([])
 
 #### Defined in
 
-[validate/isInt32Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isInt32Array.ts#L21)
+[validate/isInt32Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isInt32Array.ts#L21)
 
 ___
 
@@ -8123,7 +8123,7 @@ isInt8Array([])
 
 #### Defined in
 
-[validate/isInt8Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isInt8Array.ts#L21)
+[validate/isInt8Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isInt8Array.ts#L21)
 
 ___
 
@@ -8166,7 +8166,7 @@ isLength('3')
 
 #### Defined in
 
-[validate/isLength.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isLength.ts#L27)
+[validate/isLength.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isLength.ts#L27)
 
 ___
 
@@ -8206,7 +8206,7 @@ isMap(new WeakMap)
 
 #### Defined in
 
-[validate/isMap.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isMap.ts#L21)
+[validate/isMap.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isMap.ts#L21)
 
 ___
 
@@ -8230,7 +8230,7 @@ value is typeof globalThis & Object
 
 #### Defined in
 
-[validate/isNavigator.ts:8](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isNavigator.ts#L8)
+[validate/isNavigator.ts:8](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isNavigator.ts#L8)
 
 ___
 
@@ -8267,7 +8267,7 @@ isNil(NaN)
 
 #### Defined in
 
-[validate/isNil.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isNil.ts#L21)
+[validate/isNil.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isNil.ts#L21)
 
 ___
 
@@ -8301,7 +8301,7 @@ isNull(void 0)
 
 #### Defined in
 
-[validate/isNull.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isNull.ts#L18)
+[validate/isNull.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isNull.ts#L18)
 
 ___
 
@@ -8341,7 +8341,7 @@ isNumber('3')
 
 #### Defined in
 
-[validate/isNumber.ts:27](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isNumber.ts#L27)
+[validate/isNumber.ts:27](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isNumber.ts#L27)
 
 ___
 
@@ -8383,7 +8383,7 @@ isObject(null)
 
 #### Defined in
 
-[validate/isObject.ts:26](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isObject.ts#L26)
+[validate/isObject.ts:26](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isObject.ts#L26)
 
 ___
 
@@ -8424,7 +8424,7 @@ isObjectLike(null)
 
 #### Defined in
 
-[validate/isObjectLike.ts:25](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isObjectLike.ts#L25)
+[validate/isObjectLike.ts:25](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isObjectLike.ts#L25)
 
 ___
 
@@ -8475,7 +8475,7 @@ isPlainObject(new Date())
 
 #### Defined in
 
-[validate/isPlainObject.ts:40](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isPlainObject.ts#L40)
+[validate/isPlainObject.ts:40](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isPlainObject.ts#L40)
 
 ___
 
@@ -8530,7 +8530,7 @@ isPrimitive(() => {});
 
 #### Defined in
 
-[validate/isPrimitive.ts:41](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isPrimitive.ts#L41)
+[validate/isPrimitive.ts:41](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isPrimitive.ts#L41)
 
 ___
 
@@ -8564,7 +8564,7 @@ isRegExp('/abc/')
 
 #### Defined in
 
-[validate/isRegExp.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isRegExp.ts#L21)
+[validate/isRegExp.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isRegExp.ts#L21)
 
 ___
 
@@ -8598,7 +8598,7 @@ isSet(new WeakSet)
 
 #### Defined in
 
-[validate/isSet.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isSet.ts#L21)
+[validate/isSet.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isSet.ts#L21)
 
 ___
 
@@ -8632,7 +8632,7 @@ isString(1)
 
 #### Defined in
 
-[validate/isString.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isString.ts#L21)
+[validate/isString.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isString.ts#L21)
 
 ___
 
@@ -8666,7 +8666,7 @@ isSymbol('abc')
 
 #### Defined in
 
-[validate/isSymbol.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isSymbol.ts#L21)
+[validate/isSymbol.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isSymbol.ts#L21)
 
 ___
 
@@ -8700,7 +8700,7 @@ isTypedArray([])
 
 #### Defined in
 
-[validate/isTypedArray.ts:23](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isTypedArray.ts#L23)
+[validate/isTypedArray.ts:23](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isTypedArray.ts#L23)
 
 ___
 
@@ -8734,7 +8734,7 @@ isUint16Array([])
 
 #### Defined in
 
-[validate/isUint16Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUint16Array.ts#L21)
+[validate/isUint16Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUint16Array.ts#L21)
 
 ___
 
@@ -8768,7 +8768,7 @@ isUint32Array([])
 
 #### Defined in
 
-[validate/isUint32Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUint32Array.ts#L21)
+[validate/isUint32Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUint32Array.ts#L21)
 
 ___
 
@@ -8802,7 +8802,7 @@ isUint8Array(new Float32Array)
 
 #### Defined in
 
-[validate/isUint8Array.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUint8Array.ts#L21)
+[validate/isUint8Array.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUint8Array.ts#L21)
 
 ___
 
@@ -8836,7 +8836,7 @@ isUint8ClampedArray([])
 
 #### Defined in
 
-[validate/isUint8ClampedArray.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUint8ClampedArray.ts#L21)
+[validate/isUint8ClampedArray.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUint8ClampedArray.ts#L21)
 
 ___
 
@@ -8870,7 +8870,7 @@ isUndefined(null)
 
 #### Defined in
 
-[validate/isUndefined.ts:18](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUndefined.ts#L18)
+[validate/isUndefined.ts:18](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUndefined.ts#L18)
 
 ___
 
@@ -8903,7 +8903,7 @@ isUrl('google.com')
 
 #### Defined in
 
-[validate/isUrl.ts:17](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isUrl.ts#L17)
+[validate/isUrl.ts:17](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isUrl.ts#L17)
 
 ___
 
@@ -8937,7 +8937,7 @@ isWeakMap(new Map)
 
 #### Defined in
 
-[validate/isWeakMap.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isWeakMap.ts#L21)
+[validate/isWeakMap.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isWeakMap.ts#L21)
 
 ___
 
@@ -8971,4 +8971,4 @@ isWeakSet(new Set)
 
 #### Defined in
 
-[validate/isWeakSet.ts:21](https://github.com/mhodge11/underscorets/blob/776105e/src/validate/isWeakSet.ts#L21)
+[validate/isWeakSet.ts:21](https://github.com/mhodge11/underscorets/blob/6764b97/src/validate/isWeakSet.ts#L21)

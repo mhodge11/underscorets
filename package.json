@@ -1,23 +1,23 @@
 {
   "name": "underscorets",
   "description": "A utility library for modern TypeScript that can run on the edge.",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "packageManager": "pnpm@8.14.2",
   "engines": {
-    "node": ">=18.19.0",
+    "node": ">=16",
     "pnpm": ">=8.14.2"
   },
   "engineStrict": true,
   "scripts": {
     "build": "tsup && cross-env NODE_ENV=production tsup",
     "build:docs": "typedoc",
-    "check": "biome check ./src",
-    "check:apply": "biome check ./src --apply",
-    "format": "biome format ./src",
-    "format:write": "biome format ./src --write",
-    "lint": "biome lint ./src",
-    "lint:apply": "biome lint ./src --apply",
+    "check": "biome check ./src && biome check ./shims",
+    "check:apply": "biome check ./src --apply && biome check ./shims --apply",
+    "format": "biome format ./src && biome format ./shims",
+    "format:write": "biome format ./src --write && biome format ./shims --write",
+    "lint": "biome lint ./src && biome lint ./shims",
+    "lint:apply": "biome lint ./src --apply && biome lint ./shims --apply",
     "prepare": "husky install",
     "test": "vitest run --coverage",
     "test:dev": "vitest --ui"

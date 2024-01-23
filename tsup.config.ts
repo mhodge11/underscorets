@@ -6,6 +6,7 @@ export default defineConfig({
 	entryPoints: ["src/index.ts"],
 	format: ["esm", "cjs"],
 	outDir: "dist",
+	target: ["esnext", "node16"],
 	clean: env !== "production",
 	minify: env === "production" ? "terser" : false,
 	splitting: true,
