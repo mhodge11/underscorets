@@ -1,6 +1,6 @@
 import type { ArrayLast } from "../type/ArrayLast";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Gets the last element of `array`.
@@ -18,8 +18,8 @@ import { arrayLikeValues } from "../helpers/arrayLikeValues";
  * @category Array
  */
 export function last<T>(array: readonly T[] | ArrayLike<T>): ArrayLast<T[]> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return undefined as ArrayLast<T[]>;
+	if (!array?.length) return undefined as ArrayLast<T[]>;
 
+	const arr = arrayLikeToArray(array);
 	return arr[arr.length - 1] as ArrayLast<T[]>;
 }

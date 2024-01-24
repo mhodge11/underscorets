@@ -1,4 +1,4 @@
-[underscorets - v0.1.9](../README.md) / DoublyLinkedList
+[underscorets - v0.1.10](../README.md) / DoublyLinkedList
 
 # Class: DoublyLinkedList\<T\>
 
@@ -305,7 +305,7 @@ list.reverse();
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:273](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L273)
+[misc/doublyLinkedList.ts:273](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L273)
 
 ## Properties
 
@@ -315,7 +315,7 @@ list.reverse();
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:238](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L238)
+[misc/doublyLinkedList.ts:238](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L238)
 
 ___
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:237](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L237)
+[misc/doublyLinkedList.ts:237](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L237)
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:239](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L239)
+[misc/doublyLinkedList.ts:239](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L239)
 
 ## Accessors
 
@@ -351,7 +351,7 @@ The DoublyLinkedList tag.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:257](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L257)
+[misc/doublyLinkedList.ts:257](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L257)
 
 ___
 
@@ -367,7 +367,7 @@ First node in linked list.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:247](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L247)
+[misc/doublyLinkedList.ts:247](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L247)
 
 ___
 
@@ -383,7 +383,7 @@ Number of nodes in linked list.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:242](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L242)
+[misc/doublyLinkedList.ts:242](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L242)
 
 ___
 
@@ -399,7 +399,7 @@ Last node in linked list.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:252](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L252)
+[misc/doublyLinkedList.ts:252](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L252)
 
 ## Methods
 
@@ -413,7 +413,7 @@ Last node in linked list.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:265](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L265)
+[misc/doublyLinkedList.ts:265](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L265)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:261](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L261)
+[misc/doublyLinkedList.ts:261](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L261)
 
 ___
 
@@ -448,7 +448,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:455](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L455)
+[misc/doublyLinkedList.ts:455](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L455)
 
 ___
 
@@ -468,7 +468,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:318](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L318)
+[misc/doublyLinkedList.ts:318](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L318)
 
 ___
 
@@ -488,7 +488,7 @@ ___
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:370](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L370)
+[misc/doublyLinkedList.ts:370](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L370)
 
 ___
 
@@ -504,7 +504,7 @@ Creates a copy of the DoublyLinkedList.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:518](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L518)
+[misc/doublyLinkedList.ts:518](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L518)
 
 ___
 
@@ -528,7 +528,7 @@ Node at index
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:410](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L410)
+[misc/doublyLinkedList.ts:410](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L410)
 
 ___
 
@@ -553,7 +553,7 @@ Entire linked list
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:445](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L445)
+[misc/doublyLinkedList.ts:445](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L445)
 
 ___
 
@@ -571,7 +571,7 @@ Removed node
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:339](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L339)
+[misc/doublyLinkedList.ts:339](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L339)
 
 ___
 
@@ -595,7 +595,7 @@ Entire linked list
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:312](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L312)
+[misc/doublyLinkedList.ts:312](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L312)
 
 ___
 
@@ -619,7 +619,7 @@ Removed node
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:474](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L474)
+[misc/doublyLinkedList.ts:474](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L474)
 
 ___
 
@@ -637,7 +637,7 @@ Entire linked list
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:496](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L496)
+[misc/doublyLinkedList.ts:496](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L496)
 
 ___
 
@@ -662,7 +662,7 @@ Node at index
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:432](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L432)
+[misc/doublyLinkedList.ts:432](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L432)
 
 ___
 
@@ -680,7 +680,7 @@ Removed node
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:390](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L390)
+[misc/doublyLinkedList.ts:390](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L390)
 
 ___
 
@@ -696,7 +696,7 @@ Converts the DoublyLinkedList to an array.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:540](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L540)
+[misc/doublyLinkedList.ts:540](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L540)
 
 ___
 
@@ -712,7 +712,7 @@ Converts the DoublyLinkedList to JSON.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:535](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L535)
+[misc/doublyLinkedList.ts:535](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L535)
 
 ___
 
@@ -735,7 +735,7 @@ Converts the DoublyLinkedList to a string.
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:523](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L523)
+[misc/doublyLinkedList.ts:523](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L523)
 
 ___
 
@@ -759,7 +759,7 @@ Entire linked list
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:364](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L364)
+[misc/doublyLinkedList.ts:364](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L364)
 
 ___
 
@@ -789,7 +789,7 @@ DoublyLinkedList created from array
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:283](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L283)
+[misc/doublyLinkedList.ts:283](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L283)
 
 ___
 
@@ -819,4 +819,4 @@ DoublyLinkedList created from string
 
 #### Defined in
 
-[misc/doublyLinkedList.ts:293](https://github.com/mhodge11/underscorets/blob/6764b97/src/misc/doublyLinkedList.ts#L293)
+[misc/doublyLinkedList.ts:293](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/doublyLinkedList.ts#L293)

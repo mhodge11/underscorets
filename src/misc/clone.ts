@@ -1,4 +1,4 @@
-import { CLONE_SYMBOLS_FLAG, clone as _clone } from "../helpers/clone";
+import { CLONE_SYMBOLS_FLAG, baseClone } from "./utils";
 
 /**
  * Creates a shallow clone of `value`.
@@ -29,5 +29,5 @@ import { CLONE_SYMBOLS_FLAG, clone as _clone } from "../helpers/clone";
  * @category Misc
  */
 export function clone<T>(value: T): T {
-	return _clone(value, CLONE_SYMBOLS_FLAG);
+	return baseClone(value, CLONE_SYMBOLS_FLAG);
 }

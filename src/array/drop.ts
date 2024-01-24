@@ -1,5 +1,4 @@
-import { toInteger } from "../misc/toInteger";
-import { slice } from "./slice";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` excluding `n` elements dropped from the beginning.
@@ -26,8 +25,10 @@ import { slice } from "./slice";
 export function drop<T>(array: readonly T[] | ArrayLike<T>, n?: number): T[] {
 	if (!array?.length) return [];
 
-	n ??= 1;
-	const { length } = array;
+	const arr = arrayLikeToArray(array);
 
-	return slice(array, n < 0 ? 0 : toInteger(n), length);
+	n ??= 1;
+	const { length } = arr;
+
+	return arr.slice(n < 0 ? 0 : Math.trunc(n), length);
 }

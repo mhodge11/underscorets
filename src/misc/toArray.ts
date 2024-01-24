@@ -1,12 +1,17 @@
 import type { ToArray } from "../type/ToArray";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { copyArray } from "../helpers/copyArray";
-import { stringToArray } from "../helpers/stringToArray";
-import { values as objectValues } from "../object/values";
+import { hasUnicode } from "../helpers/hasUnicode";
+import { reUnicode } from "../helpers/reUnicode";
+import { values } from "../object/values";
 import { isArrayLike } from "../validate/isArrayLike";
 import { isPlainObject } from "../validate/isPlainObject";
 import { isString } from "../validate/isString";
+
+export function stringToArray(string: string): string[] {
+	return (
+		hasUnicode(string) ? string.match(reUnicode) : string.split("")
+	) as string[];
+}
 
 function iteratorToArray<T>(iterator: Iterator<T> | IterableIterator<T>): T[] {
 	let data: IteratorResult<T>;
@@ -49,14 +54,23 @@ export function toArray<T>(value: T): ToArray<T> {
 				value instanceof String ? value.toString() : value,
 			) as ToArray<T>;
 
-		const array = arrayLikeValues(value);
-		return copyArray(array) as ToArray<T>;
+		const array = Array.isArray(value)
+			? value
+			: Array.prototype.slice.call(value);
+
+		let i = -1;
+		const { length } = array;
+
+		const newArr = new Array(length);
+		for (const value of array) newArr[++i] = value;
+
+		return newArr;
 	}
 
 	if (typeof value === "object" && Symbol.iterator in value)
 		return iteratorToArray((value as any)[Symbol.iterator]());
 
-	if (isPlainObject(value)) return objectValues(value) as ToArray<T>;
+	if (isPlainObject(value)) return values(value) as ToArray<T>;
 
 	return [];
 }

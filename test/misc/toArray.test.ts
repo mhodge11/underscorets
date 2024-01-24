@@ -20,6 +20,7 @@ test("toArray an object returns an empty array", () => {
 test("toArray a string returns an array with the string", () => {
 	expect(toArray("test")).toEqual(["t", "e", "s", "t"]);
 	expect(toArray(new String("test"))).toEqual(["t", "e", "s", "t"]);
+	expect(toArray("😍")).toEqual(["😍"]);
 });
 
 test("toArray a number returns an empty array", () => {

@@ -1,3 +1,16 @@
+export function arrayLikeToArray<T>(
+	arrayLike: T[] | readonly T[] | ArrayLike<T>,
+): T[] {
+	if (Array.isArray(arrayLike)) return arrayLike;
+	return Array.prototype.slice.call(arrayLike);
+}
+
+export function fastArrayFlat<T>(arrays: (readonly T[])[]): readonly T[] {
+	let result = arrays.shift() ?? [];
+	for (const array of arrays) result = [...result, ...array];
+	return result;
+}
+
 export function sortCompare<T>(
 	...criteria: {
 		order?: "asc" | "desc";
@@ -10,6 +23,7 @@ export function sortCompare<T>(
 			if (a > b) return 1;
 			return 0;
 		}
+
 		for (const { order = "asc", by = (item: T) => item } of criteria) {
 			const aValue = by(a);
 			const bValue = by(b);
@@ -18,6 +32,7 @@ export function sortCompare<T>(
 				return order === "asc" ? compare : -compare;
 			}
 		}
+
 		return 0;
 	};
 }

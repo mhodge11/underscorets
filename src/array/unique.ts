@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates unique array retaining first occurrence of elements.
@@ -36,8 +36,9 @@ export function unique<T>(
 	array: readonly T[] | ArrayLike<T>,
 	compareFn?: (a: T, b: T) => boolean,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	if (!compareFn) return [...new Set(arr)];
 

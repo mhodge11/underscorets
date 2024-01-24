@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Checks if `predicate` returns truthy for **any** element of `array`.
@@ -20,8 +20,9 @@ export function some<T>(
 	array: readonly T[] | ArrayLike<T>,
 	predicate: (value: T, index: number, self: readonly T[]) => boolean,
 ): boolean {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return false;
+	if (!array?.length) return false;
+
+	const arr = arrayLikeToArray(array);
 
 	let i = -1;
 	const { length } = arr;

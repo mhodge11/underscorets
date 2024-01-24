@@ -1,6 +1,6 @@
 import type { ArrayHead } from "../type/ArrayHead";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Gets the first element of `array`.
@@ -21,6 +21,8 @@ import { arrayLikeValues } from "../helpers/arrayLikeValues";
  * @category Array
  */
 export function head<T>(array: readonly T[] | ArrayLike<T>): ArrayHead<T[]> {
-	const arr = arrayLikeValues(array);
-	return (arr?.length ? arr[0] : undefined) as ArrayHead<T[]>;
+	if (!array?.length) return undefined as ArrayHead<T[]>;
+
+	const arr = arrayLikeToArray(array);
+	return arr[0] as ArrayHead<T[]>;
 }

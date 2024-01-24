@@ -1,6 +1,8 @@
 import type { GenericFunction } from "../type/GenericFunction";
 
-const defaultResolver = (...args: unknown[]) => JSON.stringify(args);
+function defaultResolver(...args: unknown[]): string {
+	return JSON.stringify(args);
+}
 
 /**
  * Creates a function that memoizes the result of a given function.

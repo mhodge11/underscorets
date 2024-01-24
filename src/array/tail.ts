@@ -1,6 +1,6 @@
 import type { ArrayTail } from "../type/ArrayTail";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Gets all but the first element of `array`.
@@ -18,9 +18,9 @@ import { arrayLikeValues } from "../helpers/arrayLikeValues";
  * @category Array
  */
 export function tail<T>(array: readonly T[] | ArrayLike<T>): ArrayTail<T[]> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [] as ArrayTail<T[]>;
+	if (!array?.length) return [] as ArrayTail<T[]>;
 
+	const arr = arrayLikeToArray(array);
 	const [, ...result] = arr;
 	return result as ArrayTail<T[]>;
 }

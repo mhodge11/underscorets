@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` excluding elements dropped from the end.
@@ -27,8 +27,9 @@ export function dropRightWhile<T>(
 	array: readonly T[] | ArrayLike<T>,
 	predicate: (value: T) => boolean,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	let i = arr.length;
 	while (i > 0 && predicate(arr[i - 1] as T)) i--;

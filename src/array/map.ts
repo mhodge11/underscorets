@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates an array of values by running each element in `array` through `callback`.
@@ -21,8 +21,9 @@ export function map<T, R = T>(
 	array: readonly T[] | ArrayLike<T>,
 	callback: (value: T, index: number, self: readonly T[]) => R,
 ): R[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	const { length } = arr;
 	const mapped: R[] = new Array(length);

@@ -1,7 +1,5 @@
-import { createPadding } from "../helpers/createPadding";
-import { ceil } from "../number/ceil";
-import { floor } from "../number/floor";
 import { stringSize } from "./stringSize";
+import { createPadding } from "./utils.ts";
 
 /**
  * Pads `string` on the left and right sides if it's shorter than `length`.
@@ -38,6 +36,8 @@ export function pad(string: string, length: number, chars?: string): string {
 	const mid = (length - stringLength) / 2;
 
 	return (
-		createPadding(floor(mid), chars) + string + createPadding(ceil(mid), chars)
+		createPadding(Math.floor(mid), chars) +
+		string +
+		createPadding(Math.ceil(mid), chars)
 	);
 }

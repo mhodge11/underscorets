@@ -1,4 +1,4 @@
-import { base62, debase62 } from "../helpers/base62";
+import { base62, debase62 } from "./utils";
 
 const EPOCH_IN_MS = 14e11;
 

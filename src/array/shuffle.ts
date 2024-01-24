@@ -1,5 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { floor } from "../number/floor";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a new array of shuffled values, using the Fisher-Yates-Durstenfeld Shuffle algorithm.
@@ -17,13 +16,13 @@ import { floor } from "../number/floor";
  * @category Array
  */
 export function shuffle<T>(array: readonly T[]): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
 
+	const arr = arrayLikeToArray(array);
 	const shuffledArray = [...arr];
 
 	for (let i = shuffledArray.length - 1; i > 0; i--) {
-		const j = floor(Math.random() * (i + 1));
+		const j = Math.floor(Math.random() * (i + 1));
 
 		[shuffledArray[i], shuffledArray[j]] = [
 			shuffledArray[j],

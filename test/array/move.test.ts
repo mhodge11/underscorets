@@ -9,6 +9,10 @@ test("return the original array if 'fromIndex' is equal to 'toIndex'", () => {
 	expect(move([1, 2, 3, 4, 5], 0, 0)).toStrictEqual([1, 2, 3, 4, 5]);
 });
 
+test("return an empty array if the input array is empty", () => {
+	expect(move([], 0, 0)).toStrictEqual([]);
+});
+
 test("throw an error if 'fromIndex' is out of bounds", () => {
 	expect(() => move([1, 2, 3, 4, 5], -1, 0)).toThrow();
 	expect(() => move([1, 2, 3, 4, 5], 5, 0)).toThrow();

@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 type Falsy = false | 0 | "" | null | undefined;
 
@@ -21,8 +21,9 @@ type Falsy = false | 0 | "" | null | undefined;
 export function compact<T extends NonNullable<unknown>>(
 	array: readonly (T | Falsy)[] | ArrayLike<T | Falsy>,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	let i = 0;
 	const result: T[] = [];

@@ -1,6 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { toInteger } from "../misc/toInteger";
-import { ceil } from "../number/ceil";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
@@ -25,16 +23,16 @@ export function chunk<T>(
 	array: readonly T[] | ArrayLike<T>,
 	size: number,
 ): T[][] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
 
-	const intSize = toInteger(size);
+	const arr = arrayLikeToArray(array);
+	const intSize = Math.trunc(size);
 
 	if (intSize < 1) return [];
 
 	let i = 0;
 	let j = 0;
-	const chunks = new Array(ceil(arr.length / size));
+	const chunks = new Array(Math.ceil(arr.length / size));
 
 	while (i < arr.length) chunks[j++] = arr.slice(i, (i += intSize));
 

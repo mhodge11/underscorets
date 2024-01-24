@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates an object with grouped items in the array.
@@ -23,8 +23,9 @@ export function group<T, K extends PropertyKey>(
 	array: readonly T[] | ArrayLike<T>,
 	getGroupKey: (value: T) => K,
 ): Record<K, T[]> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return {} as Record<K, T[]>;
+	if (!array?.length) return {} as Record<K, T[]>;
+
+	const arr = arrayLikeToArray(array);
 
 	const groupedArr = {} as Record<K, T[]>;
 

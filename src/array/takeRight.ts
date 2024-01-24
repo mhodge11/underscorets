@@ -1,5 +1,4 @@
-import { toInteger } from "../misc/toInteger";
-import { slice } from "./slice";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` with `n` elements taken from the end.
@@ -26,8 +25,9 @@ import { slice } from "./slice";
 export function takeRight<T>(array: T[] | ArrayLike<T>, n?: number): T[] {
 	if (!array?.length) return [];
 
-	const { length } = array;
-	n = length - toInteger(n ?? 1);
+	const arr = arrayLikeToArray(array);
+	const { length } = arr;
+	n = length - Math.trunc(n ?? 1);
 
-	return slice(array, n < 0 ? 0 : n, length);
+	return arr.slice(n < 0 ? 0 : n, length);
 }

@@ -1,6 +1,6 @@
 import type { ArrayReduce } from "../type/ArrayReduce";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Like `{@link reduce}`, but iterates from right to left.
@@ -28,8 +28,9 @@ export function reduceRight<T, Acc = T>(
 	accumulator?: Acc,
 	initAccum?: boolean,
 ): ArrayReduce<T[], Acc> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return accumulator as ArrayReduce<T[], Acc>;
+	if (!array?.length) return accumulator as ArrayReduce<T[], Acc>;
+
+	const arr = arrayLikeToArray(array);
 
 	let { length } = arr;
 

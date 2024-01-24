@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 type Result = {
 	string: string;
@@ -109,14 +109,15 @@ export function fuzzySearch<T extends any[] | ArrayLike<any> = string[]>(
 				caseSensitive?: boolean;
 		  },
 ): Result[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length || typeof pattern !== "string")
+	if (!array?.length || typeof pattern !== "string")
 		return [] as {
 			string: string;
 			score: number;
 			index: number;
 			original: string;
 		}[];
+
+	const arr = arrayLikeToArray(array);
 
 	const options =
 		opts ??

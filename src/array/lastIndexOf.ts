@@ -1,13 +1,12 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { toInteger } from "../misc/toInteger";
 import { findIndex } from "./findIndex";
+import { arrayLikeToArray } from "./utils.ts";
 
 function strictLastIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,
 	value: T,
 	fromIndex: number,
 ): number {
-	const arr = arrayLikeValues(array);
+	const arr = arrayLikeToArray(array);
 
 	let i: number = fromIndex + 1;
 	while (i--) if (arr[i] === value) return i;
@@ -43,7 +42,7 @@ export function lastIndexOf<T>(
 	let i: number = length;
 
 	if (fromIndex !== undefined) {
-		i = toInteger(fromIndex);
+		i = Math.trunc(fromIndex);
 		i = i < 0 ? Math.max(length + i, 0) : Math.min(i, length - 1);
 	}
 

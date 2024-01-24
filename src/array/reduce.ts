@@ -1,6 +1,6 @@
 import type { ArrayReduce } from "../type/ArrayReduce";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Reduces an array to a single value by invoking the callback function for each element in the array.
@@ -28,8 +28,9 @@ export function reduce<T, Acc = T>(
 	accumulator?: Acc,
 	initAccum?: boolean,
 ): ArrayReduce<T[], Acc> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return accumulator as ArrayReduce<T[], Acc>;
+	if (!array?.length) return accumulator as ArrayReduce<T[], Acc>;
+
+	const arr = arrayLikeToArray(array);
 
 	let i: number = -1;
 	const { length } = arr;

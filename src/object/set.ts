@@ -2,12 +2,8 @@ import type { ObjectPaths } from "../type/ObjectPaths";
 import type { ObjectSet } from "../type/ObjectSet";
 import type { PlainObject } from "../type/PlainObject";
 
-import {
-	matchBracketsRegex,
-	pathSplitRegex,
-	validPathRegex,
-} from "../helpers/rePath";
 import { isPlainObject } from "../validate/isPlainObject";
+import { matchBracketsRegex, pathSplitRegex, validPathRegex } from "./utils.ts";
 
 /**
  * Sets the value at path of object. If a portion of path doesn’t exist, it’s created.

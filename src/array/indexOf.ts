@@ -1,13 +1,14 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
 import { findIndex } from "./findIndex";
+import { arrayLikeToArray } from "./utils.ts";
 
 function strictIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,
 	value: T,
 	fromIndex: number,
 ): number {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return -1;
+	if (!array?.length) return -1;
+
+	const arr = arrayLikeToArray(array);
 
 	let i = fromIndex - 1;
 	const { length } = arr;

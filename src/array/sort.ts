@@ -1,5 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { sortCompare } from "../helpers/sortCompare";
+import { arrayLikeToArray, sortCompare } from "./utils.ts";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.
@@ -35,8 +34,9 @@ export function sort<T>(
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 	if (arr.length < 2) return arr;
 
 	return arr.toSorted(sortCompare(...criteria));

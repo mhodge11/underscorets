@@ -1,5 +1,3 @@
-import { reduce } from "../array/reduce";
-
 /**
  * Calculates the sum of an array of numbers.
  *
@@ -27,5 +25,5 @@ export function sum<T>(
 	if (!array?.length) return NaN;
 
 	const toNumber = callback ?? ((value) => +value);
-	return reduce(array, (acc, value) => toNumber(value) + acc, 0);
+	return array.reduce((acc, value) => toNumber(value) + acc, 0);
 }

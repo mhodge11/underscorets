@@ -19,4 +19,6 @@ test("toString returns a string", () => {
 	expect(toString(new Set())).toBe("[object Set]");
 	expect(toString(new WeakMap())).toBe("[object WeakMap]");
 	expect(toString(new WeakSet())).toBe("[object WeakSet]");
+	expect(toString(Symbol())).toBe("Symbol()");
+	expect(toString(-0)).toBe("-0");
 });

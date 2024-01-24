@@ -1,4 +1,3 @@
-import { toString } from "../misc/toString";
 import { splitWords } from "./splitWords";
 
 /**
@@ -22,7 +21,7 @@ import { splitWords } from "./splitWords";
  * @category String
  */
 export function lowerCase(string: string): string {
-	return splitWords(toString(string).replace(/['\u2019]/g, "")).reduce(
+	return splitWords(string.replace(/['\u2019]/g, "")).reduce(
 		(result, word, index) => result + (index ? " " : "") + word.toLowerCase(),
 		"",
 	);

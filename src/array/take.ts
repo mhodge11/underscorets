@@ -1,5 +1,4 @@
-import { toInteger } from "../misc/toInteger";
-import { slice } from "./slice";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` with `n` elements taken from the beginning.
@@ -28,5 +27,6 @@ export function take<T>(array: T[] | ArrayLike<T>, n?: number): T[] {
 
 	n ??= 1;
 
-	return slice(array, 0, n < 0 ? 0 : toInteger(n));
+	const arr = arrayLikeToArray(array);
+	return arr.slice(0, n < 0 ? 0 : Math.trunc(n));
 }

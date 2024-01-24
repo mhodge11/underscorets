@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * This method iterates over elements of `array` until the predicate returns truthy.
@@ -31,8 +31,9 @@ export function findIndex<T>(
 	fromIndex?: number,
 	fromRight?: boolean,
 ): number {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return -1;
+	if (!array?.length) return -1;
+
+	const arr = arrayLikeToArray(array);
 
 	let i = (fromIndex ?? 0) + (fromRight ? 1 : -1);
 	const { length } = arr;

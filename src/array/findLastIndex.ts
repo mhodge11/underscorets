@@ -1,6 +1,5 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { toInteger } from "../misc/toInteger";
 import { findIndex } from "./findIndex";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * This method is like `{@link findIndex}` except that it iterates over elements of `array` from right to left.
@@ -30,14 +29,15 @@ export function findLastIndex<T>(
 	predicate: (value: T, index: number, self: readonly T[]) => boolean,
 	fromIndex?: number,
 ): number {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return -1;
+	if (!array?.length) return -1;
+
+	const arr = arrayLikeToArray(array);
 
 	const { length } = arr;
 	let i = length - 1;
 
 	if (fromIndex != null) {
-		i = toInteger(fromIndex);
+		i = Math.trunc(fromIndex);
 		i = fromIndex < 0 ? Math.max(length + i, 0) : Math.min(i, length - 1);
 	}
 

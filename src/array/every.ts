@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Checks if `predicate` returns truthy for **all** elements of `array`.
@@ -26,8 +26,9 @@ export function every<T>(
 	array: readonly T[] | ArrayLike<T>,
 	predicate: (value: T, index: number, self: readonly T[]) => boolean,
 ): boolean {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return true;
+	if (!array?.length) return true;
+
+	const arr = arrayLikeToArray(array);
 
 	let i = -1;
 	const { length } = arr;

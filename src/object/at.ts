@@ -2,7 +2,6 @@ import type { ObjectAt } from "../type/ObjectAt";
 import type { ObjectPaths } from "../type/ObjectPaths";
 import type { PlainObject } from "../type/PlainObject";
 
-import { validPathRegex } from "../helpers/rePath";
 import { get } from "./get";
 
 /**
@@ -34,15 +33,6 @@ export function at<T extends PlainObject, P extends ObjectPaths<T>>(
 	paths: P[],
 ): ObjectAt<T, P[]> {
 	const values: any[] = [];
-
-	for (const path of paths) {
-		if (!validPathRegex.test(path))
-			throw new Error(
-				`Invalid path: ${path}. Look at the examples for the correct format.`,
-			);
-
-		values.push(get(object, path));
-	}
-
+	for (const path of paths) values.push(get(object, path));
 	return values as ObjectAt<T, P[]>;
 }

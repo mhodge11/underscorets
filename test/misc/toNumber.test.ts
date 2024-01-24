@@ -14,10 +14,14 @@ test("toNumber converts a number to a number", () => {
 	expect(toNumber({})).toBe(NaN);
 	expect(toNumber(new String("3.2"))).toBe(3.2);
 	expect(toNumber({ a: 3.2 })).toBe(NaN);
+	expect(toNumber({ valueOf: null })).toBe(NaN);
 	expect(toNumber({ valueOf: () => 3.2 })).toBe(3.2);
+	expect(toNumber({ valueOf: () => 0 })).toBe(0);
 	expect(toNumber({ valueOf: () => new String("3.2") })).toBe(3.2);
 	expect(toNumber({ valueOf: () => ({}) })).toBe(NaN);
 	expect(toNumber({ valueOf: () => "-0x1a2b3c" })).toBe(NaN);
 	expect(toNumber({ valueOf: () => "-0b101010" })).toBe(NaN);
 	expect(toNumber({ valueOf: () => "-0o1234567" })).toBe(NaN);
+	expect(toNumber("0b101010")).toBe(42);
+	expect(toNumber("0o1234567")).toBe(342391);
 });

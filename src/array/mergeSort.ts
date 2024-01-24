@@ -1,5 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { sortCompare } from "../helpers/sortCompare";
+import { arrayLikeToArray, sortCompare } from "./utils.ts";
 
 function merge<T>(
 	array1: T[],
@@ -68,8 +67,9 @@ export function mergeSort<T>(
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return arr;
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 	if (arr.length < 2) return arr;
 
 	const mid = Math.floor(arr.length / 2);

@@ -1,16 +1,9 @@
 import type { ArrayFlat } from "../type/ArrayFlat";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { fastArrayFlat } from "../helpers/fastArrayFlat";
-import { floor } from "../number/floor";
-import { isArguments } from "../validate/isArguments";
+import { arrayLikeToArray, fastArrayFlat } from "./utils.ts";
 
 function isFlattenable(value: unknown): boolean {
-	return (
-		Array.isArray(value) ||
-		isArguments(value) ||
-		!!(value as any)?.[Symbol.isConcatSpreadable]
-	);
+	return Array.isArray(value) || !!(value as any)?.[Symbol.isConcatSpreadable];
 }
 
 function flatten<T, D extends number = 1>(
@@ -55,10 +48,11 @@ export function flat<T, D extends number = 1>(
 	array: readonly T[] | ArrayLike<T>,
 	depth?: D,
 ): ArrayFlat<T[], D>[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
 
-	let d = depth ? floor(depth) : 1;
+	const arr = arrayLikeToArray(array);
+
+	let d = depth ? Math.trunc(depth) : 1;
 	d < 1 && (d = 1);
 
 	if (d === 1) return fastArrayFlat(arr as any) as ArrayFlat<T[], D>[];

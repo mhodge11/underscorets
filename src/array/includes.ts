@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Checks if `value` is in `array` based on [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero) comparison.
@@ -26,8 +26,9 @@ export function includes<T>(
 	value: T,
 	compareFn?: (a: T, b: T) => boolean,
 ): boolean {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return false;
+	if (!array?.length) return false;
+
+	const arr = arrayLikeToArray(array);
 
 	if (!compareFn) compareFn = (a, b) => a === b;
 	for (const item of arr) if (compareFn(value, item)) return true;

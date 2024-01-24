@@ -2,9 +2,8 @@ import type { ArrayMinLength } from "../type/ArrayMinLength";
 import type { CompareFunction } from "../type/CompareFunction";
 import type { PullOutArray } from "../type/PullOutArray";
 
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { fastArrayFlat } from "../helpers/fastArrayFlat";
 import { unique } from "./unique";
+import { arrayLikeToArray, fastArrayFlat } from "./utils.ts";
 
 /**
  * Create an array with unique values that are present in all arrays.
@@ -57,7 +56,7 @@ export function intersection<
 		compareFnProvided && (arraysOrCompareFn.pop() as CompareFunction<T>);
 
 	const arrayLikes = arraysOrCompareFn as T;
-	const arrays = arrayLikes.map(arrayLikeValues);
+	const arrays = arrayLikes.map(arrayLikeToArray);
 	const firstArray = unique(arrays.shift() as unknown[]);
 	const combinedRestArray = fastArrayFlat(arrays);
 

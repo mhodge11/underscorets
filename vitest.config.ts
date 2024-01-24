@@ -16,12 +16,12 @@ export default defineProject({
 			include: ["**/src/**/*.ts"],
 			exclude: [
 				"**/dist/**/*.{js,cjs,ts}",
-				"**/lib/**/*.{js,cjs,ts}",
 				"**/test/**/*.ts",
 				"**/helpers/**/*.ts",
 				"**/shims/**/*.ts",
 				"**/type/**/*.ts",
 				"**/src/index.ts",
+				"**/utils.ts",
 			],
 		},
 	},

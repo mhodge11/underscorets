@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Iterates over elements of `array`, returning an array of all elements `predicate` returns truthy for.
@@ -27,8 +27,9 @@ export function filter<T>(
 	array: readonly T[] | ArrayLike<T>,
 	predicate: (value: T, index: number, self: readonly T[]) => boolean,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	let i = -1;
 	let resI = 0;

@@ -1,5 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { sortCompare } from "../helpers/sortCompare";
+import { arrayLikeToArray, sortCompare } from "./utils.ts";
 
 function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
 	const temp = array[firstIndex] as T;
@@ -34,7 +33,7 @@ function pivot<T>(
 	return swapIndex;
 }
 
-const sort = <T>(
+function sort<T>(
 	array: T[],
 	left = 0,
 	right = array.length - 1,
@@ -42,7 +41,7 @@ const sort = <T>(
 		order?: "asc" | "desc";
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
-) => {
+) {
 	if (left < right) {
 		const pivotIndex = pivot(array, left, right, ...criteria);
 		sort(array, left, pivotIndex - 1, ...criteria);
@@ -50,7 +49,7 @@ const sort = <T>(
 	}
 
 	return array;
-};
+}
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.
@@ -86,8 +85,9 @@ export function quickSort<T>(
 		by?: (item: T) => number | bigint | Date | string;
 	}[]
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 	if (arr.length < 2) return arr;
 
 	return sort([...arr], 0, arr.length - 1, ...criteria);

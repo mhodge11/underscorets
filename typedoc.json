@@ -6,7 +6,6 @@
   "exclude": [
     "**/test/**/*",
     "**/dist/**/*",
-    "**/lib/**/*",
     "**/shims/**/*",
     "**/node_modules/**/*",
     "**/coverage/**/*"

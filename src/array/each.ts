@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Iterates over elements of `array` and invokes `callback` for each element.
@@ -24,8 +24,9 @@ export function each<T>(
 		self: readonly T[],
 	) => void | undefined | boolean,
 ): void {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return;
+	if (!array?.length) return;
+
+	const arr = arrayLikeToArray(array);
 
 	let i = -1;
 	const { length } = arr;

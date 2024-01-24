@@ -171,8 +171,12 @@ test("maps", () => {
 	map3.set("a", 1);
 	map3.set("b", 3);
 
+	const map4 = new Map();
+	map4.set("a", 1);
+
 	expect(isEqual(map1, map2)).toBe(true);
 	expect(isEqual(map1, map3)).toBe(false);
+	expect(isEqual(map1, map4)).toBe(false);
 });
 
 test("sets", () => {
@@ -188,6 +192,10 @@ test("sets", () => {
 	set3.add(1);
 	set3.add(3);
 
+	const set4 = new Set();
+	set4.add(1);
+
 	expect(isEqual(set1, set2)).toBe(true);
 	expect(isEqual(set1, set3)).toBe(false);
+	expect(isEqual(set1, set4)).toBe(false);
 });

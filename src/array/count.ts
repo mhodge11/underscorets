@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates an object with counts of occurrences of items in the array.
@@ -30,9 +30,9 @@ export function count<T, K extends PropertyKey>(
 	array: readonly T[] | ArrayLike<T>,
 	criteria: (value: T) => K,
 ): Record<K, number> {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return {} as Record<K, number>;
+	if (!array?.length) return {} as Record<K, number>;
 
+	const arr = arrayLikeToArray(array);
 	const object = {} as Record<K, number>;
 
 	for (const value of arr) {

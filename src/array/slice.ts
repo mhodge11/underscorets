@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` from `start` up to, but not including, `end`.
@@ -22,8 +22,9 @@ export function slice<T = unknown>(
 	start: number,
 	end?: number,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	let { length } = arr;
 

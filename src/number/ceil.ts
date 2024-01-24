@@ -1,4 +1,4 @@
-import { createRound } from "../helpers/createRound";
+import { createRound } from "./utils";
 
 /**
  * Computes `number` rounded up to `precision`. (Round up: the smallest integer greater than or equal to a given number.)

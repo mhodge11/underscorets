@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Moves an element within an array.
@@ -23,7 +23,9 @@ export function move<T>(
 	from: number,
 	to: number,
 ): T[] {
-	const arr = arrayLikeValues(array);
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	if (from < 0 || from >= arr.length)
 		throw new RangeError(

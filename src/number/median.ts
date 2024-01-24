@@ -1,6 +1,3 @@
-import { map } from "../array/map";
-import { floor } from "./floor";
-
 /**
  * Calculates the median of an array of numbers
  *
@@ -24,9 +21,9 @@ export function median<T>(
 	if (numbers.length === 0) return NaN;
 
 	const converter = callback ?? ((value: T) => +value);
-	const mappedArray = map(numbers, converter);
+	const mappedArray = numbers.map(converter);
 	const sortedArray = mappedArray.toSorted((a, b) => a - b);
-	const mid = floor(sortedArray.length / 2);
+	const mid = Math.floor(sortedArray.length / 2);
 
 	return sortedArray.length % 2 === 0
 		? ((sortedArray[mid - 1] as number) + (sortedArray[mid] as number)) / 2

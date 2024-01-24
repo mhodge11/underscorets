@@ -1,8 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
-import { copyArray } from "../helpers/copyArray";
-import { toInteger } from "../misc/toInteger";
-import { floor } from "../number/floor";
-import { slice } from "./slice";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Gets a random element from `array`.
@@ -28,28 +24,32 @@ export function sample<T>(
 	array: readonly T[] | ArrayLike<T>,
 	size?: number,
 ): T[] {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return [];
+	if (!array?.length) return [];
+
+	const arr = arrayLikeToArray(array);
 
 	const { length } = arr;
 
 	if (size == null || size <= 1)
-		return [arr[floor(Math.random() * length)] as T];
+		return [arr[Math.floor(Math.random() * length)] as T];
 
-	let intSize = toInteger(size);
+	let intSize = Math.trunc(size);
 	let i = -1;
 	const lastIndex = length - 1;
-	const result = copyArray(arr);
 
+	const result = new Array(length) as T[];
+	for (const value of arr) result[++i] = value;
+
+	i = -1;
 	intSize = intSize > length ? length : intSize;
 
 	while (++i < intSize) {
-		const rand = i + floor(Math.random() * (lastIndex - i + 1));
+		const rand = i + Math.floor(Math.random() * (lastIndex - i + 1));
 		const value = result[rand];
 
 		result[rand] = result[i] as T;
 		result[i] = value as T;
 	}
 
-	return slice(result, 0, intSize);
+	return result.slice(0, intSize);
 }

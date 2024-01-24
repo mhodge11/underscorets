@@ -1,8 +1,4 @@
-import {
-	CLONE_DEEP_FLAG,
-	CLONE_SYMBOLS_FLAG,
-	clone as _clone,
-} from "../helpers/clone";
+import { CLONE_DEEP_FLAG, CLONE_SYMBOLS_FLAG, baseClone } from "./utils";
 
 /**
  * This method is like `{@link clone}` except that it recursively clones `value`.
@@ -25,5 +21,5 @@ import {
  * @category Misc
  */
 export function cloneDeep<T>(value: T): T {
-	return _clone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG);
+	return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG);
 }

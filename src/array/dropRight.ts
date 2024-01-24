@@ -1,5 +1,4 @@
-import { toInteger } from "../misc/toInteger";
-import { slice } from "./slice";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * Creates a slice of `array` excluding `n` elements dropped from the end.
@@ -29,8 +28,10 @@ export function dropRight<T>(
 ): T[] {
 	if (!array?.length) return [];
 
-	const { length } = array;
-	n = length - toInteger(n ?? 1);
+	const arr = arrayLikeToArray(array);
 
-	return slice(array, 0, n < 0 ? 0 : n);
+	const { length } = arr;
+	n = length - Math.trunc(n ?? 1);
+
+	return arr.slice(0, n < 0 ? 0 : n);
 }

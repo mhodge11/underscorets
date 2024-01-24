@@ -1,4 +1,3 @@
-import { fastArrayFlat } from "../helpers/fastArrayFlat";
 import { isPlainObject } from "../validate/isPlainObject";
 
 function defaultHashFn(length = 7) {
@@ -260,6 +259,9 @@ export class HashMap<T> {
 	toArray(): [string, T][] {
 		const filtered = this._data.filter((entry) => entry !== undefined);
 		if (filtered.length === 0) return [];
-		return fastArrayFlat(filtered) as [string, T][];
+
+		let result = filtered.shift() as [string, T][];
+		for (const array of filtered) result = [...result, ...array];
+		return result;
 	}
 }

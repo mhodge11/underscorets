@@ -1,5 +1,3 @@
-import { floor } from "../number/floor";
-
 /**
  * Creates an array from start to end (inclusive), stepping by step.
  * If start is larger than end, the array is generated in reverse
@@ -35,7 +33,7 @@ export function range(start: number, end: number, step?: number): number[] {
 
 	step = start > end ? -step : step;
 
-	const length = floor(Math.abs((end - start) / step)) + 1;
+	const length = Math.floor(Math.abs((end - start) / step)) + 1;
 	console.log(length);
 	const result = new Array(length) as number[];
 

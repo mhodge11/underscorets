@@ -1,4 +1,3 @@
-import { assertUnreachable } from "../helpers/assertUnreachable";
 import { sleep } from "./sleep";
 
 /**
@@ -63,5 +62,5 @@ export async function retry<T>(
 			await sleep(backOffFn(retries));
 		}
 
-	assertUnreachable("Retry loop should never reach this point.");
+	throw Error("Retry loop should never reach this point.");
 }

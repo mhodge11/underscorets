@@ -1,4 +1,4 @@
-import { arrayLikeValues } from "../helpers/arrayLikeValues";
+import { arrayLikeToArray } from "./utils.ts";
 
 /**
  * This method is like `{@link each}` except that it iterates over elements of `array` from right to left.
@@ -23,8 +23,9 @@ export function eachRight<T>(
 		self: readonly T[],
 	) => void | undefined | boolean,
 ): void {
-	const arr = arrayLikeValues(array);
-	if (!arr?.length) return;
+	if (!array?.length) return;
+
+	const arr = arrayLikeToArray(array);
 
 	let { length } = arr;
 	while (length--) if (callback(arr[length] as T, length, arr) === false) break;
