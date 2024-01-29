@@ -1,8 +1,8 @@
 import type { ArrayFlat } from "../type/ArrayFlat";
 
-import { arrayLikeToArray, fastArrayFlat } from "./utils.ts";
+import { arrayLikeToArray, fastArrayFlat } from "./utils";
 
-function isFlattenable(value: unknown): boolean {
+function isFlattenable(value: object): boolean {
 	return Array.isArray(value) || !!(value as any)?.[Symbol.isConcatSpreadable];
 }
 
@@ -15,10 +15,10 @@ function flatten<T, D extends number = 1>(
 	result ??= [];
 
 	for (const value of array)
-		if (d > 0 && isFlattenable(value))
-			if (d > 1) flatten(value as any, d - 1, result);
-			else result.push(...(value as any));
-		else result[result.length] = value as any;
+		if (d > 0 && isFlattenable(value as T & object))
+			if (d > 1) flatten(value as readonly T[], d - 1, result);
+			else result.push(...(value as ArrayFlat<T[], D>[]));
+		else result[result.length] = value as ArrayFlat<T[], D>;
 
 	return result;
 }
@@ -50,12 +50,12 @@ export function flat<T, D extends number = 1>(
 ): ArrayFlat<T[], D>[] {
 	if (!array?.length) return [];
 
-	const arr = arrayLikeToArray(array);
+	const arr = arrayLikeToArray(array) as (readonly ArrayFlat<T[], D>[])[];
 
 	let d = depth ? Math.trunc(depth) : 1;
 	d < 1 && (d = 1);
 
-	if (d === 1) return fastArrayFlat(arr as any) as ArrayFlat<T[], D>[];
+	if (d === 1) return fastArrayFlat(arr) as ArrayFlat<T[], D>[];
 
-	return flatten(arr, d as D);
+	return flatten(arr, d as D) as ArrayFlat<T[], D>[];
 }

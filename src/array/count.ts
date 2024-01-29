@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Creates an object with counts of occurrences of items in the array.

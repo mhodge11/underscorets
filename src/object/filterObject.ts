@@ -28,8 +28,8 @@ export function filterObject<T extends PlainObject, K extends keyof T>(
 	const result: Partial<T> = {};
 
 	for (const key in object)
-		if (predicate((object as any)[key], key as any, object))
-			result[key] = (object as any)[key];
+		if (predicate(object[key as unknown as K], key as unknown as K, object))
+			result[key] = object[key];
 
 	return result;
 }

@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Creates a slice of `array` excluding elements dropped from the beginning.

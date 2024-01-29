@@ -1,4 +1,4 @@
-import { createCaseFirst } from "./utils.ts";
+import { createCaseFirst } from "./utils";
 
 /**
  * Converts the first character of `string` to lower case.

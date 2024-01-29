@@ -1,6 +1,6 @@
 import type { ArrayLast } from "../type/ArrayLast";
 
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Gets the last element of `array`.

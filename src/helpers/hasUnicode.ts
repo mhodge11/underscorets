@@ -1,4 +1,4 @@
-import { rsAstralRange, rsComboRange, rsVarRange, rsZWJ } from "./reUnicode.ts";
+import { rsAstralRange, rsComboRange, rsVarRange, rsZWJ } from "./reUnicode";
 
 const reHasUnicode = RegExp(
 	`[${rsZWJ + rsAstralRange + rsComboRange + rsVarRange}]`,

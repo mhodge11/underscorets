@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Creates unique array retaining first occurrence of elements.

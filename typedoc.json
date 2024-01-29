@@ -1,5 +1,6 @@
 {
   "$schema": "https://typedoc.org/schema.json",
+  "name": "underscoreTS",
   "includeVersion": true,
   "entryPoints": ["src/index.ts"],
   "plugin": ["typedoc-plugin-markdown", "typedoc-plugin-mdn-links"],

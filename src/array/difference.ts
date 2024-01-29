@@ -2,7 +2,7 @@ import type { ArrayMinLength } from "../type/ArrayMinLength";
 import type { CompareFunction } from "../type/CompareFunction";
 import type { PullOutArray } from "../type/PullOutArray";
 
-import { arrayLikeToArray, fastArrayFlat } from "./utils.ts";
+import { arrayLikeToArray, fastArrayFlat } from "./utils";
 
 /**
  * Create a new array with values from the first array that are not present in the other arrays.

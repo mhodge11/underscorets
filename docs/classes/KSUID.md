@@ -1,4 +1,4 @@
-[underscorets - v0.1.10](../README.md) / KSUID
+[underscoreTS - v0.1.11](../README.md) / KSUID
 
 # Class: KSUID
 
@@ -97,7 +97,7 @@ Creates a new KSUID from an ArrayBufferLike.
 
 #### Defined in
 
-[ksuid/ksuid.ts:115](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L115)
+[ksuid/ksuid.ts:115](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L115)
 
 ## Properties
 
@@ -107,7 +107,7 @@ Creates a new KSUID from an ArrayBufferLike.
 
 #### Defined in
 
-[ksuid/ksuid.ts:108](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L108)
+[ksuid/ksuid.ts:108](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L108)
 
 ___
 
@@ -119,7 +119,7 @@ A string-encoded maximum value for a KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:104](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L104)
+[ksuid/ksuid.ts:104](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L104)
 
 ___
 
@@ -131,7 +131,7 @@ A string-encoded minimum value for a KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:106](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L106)
+[ksuid/ksuid.ts:106](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L106)
 
 ## Accessors
 
@@ -147,7 +147,7 @@ The KSUID tag
 
 #### Defined in
 
-[ksuid/ksuid.ts:154](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L154)
+[ksuid/ksuid.ts:154](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L154)
 
 ___
 
@@ -163,7 +163,7 @@ The date the KSUID was created
 
 #### Defined in
 
-[ksuid/ksuid.ts:131](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L131)
+[ksuid/ksuid.ts:131](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L131)
 
 ___
 
@@ -179,7 +179,7 @@ The byte length of the KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:126](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L126)
+[ksuid/ksuid.ts:126](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L126)
 
 ___
 
@@ -195,7 +195,7 @@ The payload of the KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:141](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L141)
+[ksuid/ksuid.ts:141](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L141)
 
 ___
 
@@ -211,7 +211,7 @@ A copy of the underlying buffer
 
 #### Defined in
 
-[ksuid/ksuid.ts:121](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L121)
+[ksuid/ksuid.ts:121](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L121)
 
 ___
 
@@ -227,7 +227,7 @@ The KSUID as a string
 
 #### Defined in
 
-[ksuid/ksuid.ts:146](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L146)
+[ksuid/ksuid.ts:146](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L146)
 
 ___
 
@@ -243,7 +243,7 @@ The timestamp of the KSUID in milliseconds since the epoch
 
 #### Defined in
 
-[ksuid/ksuid.ts:136](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L136)
+[ksuid/ksuid.ts:136](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L136)
 
 ## Methods
 
@@ -269,7 +269,7 @@ Compares this KSUID to another.
 
 #### Defined in
 
-[ksuid/ksuid.ts:166](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L166)
+[ksuid/ksuid.ts:166](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L166)
 
 ___
 
@@ -293,7 +293,7 @@ Checks if this KSUID is equal to another.
 
 #### Defined in
 
-[ksuid/ksuid.ts:186](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L186)
+[ksuid/ksuid.ts:186](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L186)
 
 ___
 
@@ -311,7 +311,7 @@ The KSUID as a string
 
 #### Defined in
 
-[ksuid/ksuid.ts:195](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L195)
+[ksuid/ksuid.ts:195](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L195)
 
 ___
 
@@ -329,7 +329,7 @@ The KSUID as a string
 
 #### Defined in
 
-[ksuid/ksuid.ts:204](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L204)
+[ksuid/ksuid.ts:204](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L204)
 
 ___
 
@@ -354,7 +354,7 @@ A KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:235](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L235)
+[ksuid/ksuid.ts:235](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L235)
 
 ___
 
@@ -378,7 +378,7 @@ Checks if a buffer is a valid KSUID.
 
 #### Defined in
 
-[ksuid/ksuid.ts:260](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L260)
+[ksuid/ksuid.ts:260](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L260)
 
 ___
 
@@ -402,7 +402,7 @@ A KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:270](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L270)
+[ksuid/ksuid.ts:270](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L270)
 
 ___
 
@@ -426,7 +426,7 @@ A KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:214](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L214)
+[ksuid/ksuid.ts:214](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L214)
 
 ___
 
@@ -450,4 +450,4 @@ A KSUID
 
 #### Defined in
 
-[ksuid/ksuid.ts:224](https://github.com/mhodge11/underscorets/blob/e937f27/src/ksuid/ksuid.ts#L224)
+[ksuid/ksuid.ts:224](https://github.com/mhodge11/underscorets/blob/e187cf5/src/ksuid/ksuid.ts#L224)

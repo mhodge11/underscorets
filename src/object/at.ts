@@ -32,7 +32,7 @@ export function at<T extends PlainObject, P extends ObjectPaths<T>>(
 	object: T,
 	paths: P[],
 ): ObjectAt<T, P[]> {
-	const values: any[] = [];
+	const values: unknown[] = [];
 	for (const path of paths) values.push(get(object, path));
 	return values as ObjectAt<T, P[]>;
 }

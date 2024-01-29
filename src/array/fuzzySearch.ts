@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 type Result = {
 	string: string;
@@ -14,9 +14,9 @@ type Result = {
  * @param pattern The search input string
  * @param string The string to match with the pattern
  * @param opts (Optional) Options object
- * @param opts.extract (Optional) Function to extract a string from an element in the array
  * @param opts.pre (Optional) String to put before a matching character
  * @param opts.post (Optional) String to put after a matching character
+ * @param opts.caseSensitive (Optional) Whether to match case sensitively
  * @returns An object with the rendered string and the score, or null if it doesn't match
  *
  * @category Array
@@ -25,7 +25,6 @@ export function fuzzySearchMatch(
 	pattern: string,
 	string: string,
 	opts?: {
-		extract?: (...args: any) => string;
 		pre?: string;
 		post?: string;
 		caseSensitive?: boolean;
@@ -87,12 +86,15 @@ export function fuzzySearchMatch(
  * @param opts.extract (Optional) Function to extract a string from an element in the array
  * @param opts.pre (Optional) String to put before a matching character
  * @param opts.post (Optional) String to put after a matching character
+ * @param opts.caseSensitive (Optional) Whether to match case sensitively
  * @template T The type of array
  * @returns An array of matches
  *
  * @category Array
  */
-export function fuzzySearch<T extends any[] | ArrayLike<any> = string[]>(
+export function fuzzySearch<
+	T extends unknown[] | ArrayLike<unknown> = string[],
+>(
 	pattern: string,
 	array: T,
 	opts?: T extends string[] | ArrayLike<string>
@@ -117,7 +119,7 @@ export function fuzzySearch<T extends any[] | ArrayLike<any> = string[]>(
 			original: string;
 		}[];
 
-	const arr = arrayLikeToArray(array);
+	const arr = arrayLikeToArray(array) as T[];
 
 	const options =
 		opts ??

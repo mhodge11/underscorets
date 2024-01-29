@@ -1,8 +1,8 @@
-import { hasUnicode } from "../helpers/hasUnicode.ts";
-import { reUnicode } from "../helpers/reUnicode.ts";
-import { toString } from "../misc/toString.ts";
-import { repeat } from "./repeat.ts";
-import { stringSize } from "./stringSize.ts";
+import { hasUnicode } from "../helpers/hasUnicode";
+import { reUnicode } from "../helpers/reUnicode";
+import { toString } from "../misc/toString";
+import { repeat } from "./repeat";
+import { stringSize } from "./stringSize";
 
 export function createCaseFirst(
 	methodName: "toUpperCase" | "toLowerCase",

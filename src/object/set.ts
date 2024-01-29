@@ -3,7 +3,7 @@ import type { ObjectSet } from "../type/ObjectSet";
 import type { PlainObject } from "../type/PlainObject";
 
 import { isPlainObject } from "../validate/isPlainObject";
-import { matchBracketsRegex, pathSplitRegex, validPathRegex } from "./utils.ts";
+import { matchBracketsRegex, pathSplitRegex, validPathRegex } from "./utils";
 
 /**
  * Sets the value at path of object. If a portion of path doesn’t exist, it’s created.

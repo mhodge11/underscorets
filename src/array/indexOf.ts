@@ -1,5 +1,5 @@
 import { findIndex } from "./findIndex";
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 function strictIndexOf<T>(
 	array: readonly T[] | ArrayLike<T>,

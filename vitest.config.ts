@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 // Configure Vitest (https://vitest.dev/config/)
 
-import { URL, fileURLToPath } from "node:url";
+import { fileURLToPath } from "node:url";
 import { defineProject } from "vitest/config";
 
 function getPath(path: string) {

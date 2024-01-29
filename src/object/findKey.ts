@@ -30,7 +30,8 @@ export function findKey<T extends PlainObject, K extends keyof T>(
 	if (object == null) return undefined;
 
 	for (const key in object)
-		if (predicate((object as any)[key], key as any, object)) return key as any;
+		if (predicate(object[key as unknown as K], key as unknown as K, object))
+			return key as unknown as K;
 
 	return undefined;
 }

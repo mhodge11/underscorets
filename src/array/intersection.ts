@@ -3,7 +3,7 @@ import type { CompareFunction } from "../type/CompareFunction";
 import type { PullOutArray } from "../type/PullOutArray";
 
 import { unique } from "./unique";
-import { arrayLikeToArray, fastArrayFlat } from "./utils.ts";
+import { arrayLikeToArray, fastArrayFlat } from "./utils";
 
 /**
  * Create an array with unique values that are present in all arrays.

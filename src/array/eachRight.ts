@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * This method is like `{@link each}` except that it iterates over elements of `array` from right to left.

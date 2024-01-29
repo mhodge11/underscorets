@@ -68,7 +68,9 @@ export function toArray<T>(value: T): ToArray<T> {
 	}
 
 	if (typeof value === "object" && Symbol.iterator in value)
-		return iteratorToArray((value as any)[Symbol.iterator]());
+		return iteratorToArray(
+			(value as Iterable<[unknown, unknown]>)[Symbol.iterator](),
+		) as ToArray<T>;
 
 	if (isPlainObject(value)) return values(value) as ToArray<T>;
 

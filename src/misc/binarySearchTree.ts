@@ -403,7 +403,9 @@ export class BinarySearchTree<T> {
 
 	/** Converts the BinarySearchTree to a string. */
 	toString(
-		replacer?: ((this: any, key: string, value: any) => any) | undefined,
+		replacer?:
+			| ((this: unknown, key: string, value: unknown) => unknown)
+			| undefined,
 		space?: string | number | undefined,
 	): string {
 		return `${this[Symbol.toStringTag]} ${JSON.stringify(
@@ -464,7 +466,9 @@ class Node<T> {
 
 	/** Converts the Node to a string. */
 	toString(
-		replacer?: ((this: any, key: string, value: any) => any) | undefined,
+		replacer?:
+			| ((this: unknown, key: string, value: unknown) => unknown)
+			| undefined,
 		space?: string | number | undefined,
 	): string {
 		return `${this[Symbol.toStringTag]} ${JSON.stringify(

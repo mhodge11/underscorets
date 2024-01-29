@@ -1,6 +1,6 @@
 import type { ArrayReduce } from "../type/ArrayReduce";
 
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Like `{@link reduce}`, but iterates from right to left.

@@ -1,4 +1,4 @@
-import { arrayLikeToArray, sortCompare } from "./utils.ts";
+import { arrayLikeToArray, sortCompare } from "./utils";
 
 /**
  * Creates new array sorted in ascending/descending order with single or multiple criteria.

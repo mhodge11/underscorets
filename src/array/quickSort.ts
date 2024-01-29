@@ -1,4 +1,4 @@
-import { arrayLikeToArray, sortCompare } from "./utils.ts";
+import { arrayLikeToArray, sortCompare } from "./utils";
 
 function swap<T>(array: T[], firstIndex: number, secondIndex: number) {
 	const temp = array[firstIndex] as T;

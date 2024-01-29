@@ -27,7 +27,7 @@ export function negate<T extends (...args: any) => boolean>(
 	if (typeof predicate !== "function")
 		throw new TypeError("Expected a function");
 
-	return function (this: any, ...args: Parameters<T>): boolean {
+	return function (this: unknown, ...args: Parameters<T>): boolean {
 		return !predicate.apply(this, args);
 	};
 }

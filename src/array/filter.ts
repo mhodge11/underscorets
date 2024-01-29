@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Iterates over elements of `array`, returning an array of all elements `predicate` returns truthy for.

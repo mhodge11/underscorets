@@ -34,7 +34,7 @@ export function findLastKey<T extends PlainObject, K extends keyof T>(
 
 	while (length--) {
 		const key = keys[length] as string;
-		if (predicate((object as any)[key], key as any, object)) return key as any;
+		if (predicate(object[key as K], key as K, object)) return key as K;
 	}
 
 	return undefined;

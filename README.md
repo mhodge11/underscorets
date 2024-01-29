@@ -1,13 +1,39 @@
-# underscorets
+<h1 align=center>
+  underscoreTS
+</h1>
 
-A **dependency-less** utility library for modern TypeScript that can run on the edge. **Fully-tested** and ready to be dropped into any environment. **Tree-shakeable** so it doesn't bloat your projects with unnecessary imports. Similar functions to lodash except it is type-safe and optimized for modern JS environments.
+<p align=center>
+  <b>
+    A modern TypeScript utility library that can run on the edge.
+    Similar functions to lodash except it is type-safe and optimized for modern JS environments.
+  </b>
+</p>
 
-## Installation
+<div align=center class="space-y">
+  ✅ ESM
+  ✅ Fast & Lightweight
+  ✅ Tree-shakable
+  ✅ Typescript Strict Mode (no any)
+  <br>
+  ✅ 100% Test Coverage
+  ✅ Zero dependencies
+  ✅ Hoverable Docs
+  ✅ TS Decorators
+</div>
+<p></p>
+
+<h3 align=center class="hide-on-website">
+  <a href="https://github.com/mhodge11/underscorets/blob/main/docs/README.md" target="_blank">
+       📓 Documentation
+  </a>
+</h3>
+
+## 💾 Installation
 
 Intall with your preferred package manager:
 
 ```shell
-npm i underscorets
+npm add underscorets
 ```
 
 ```shell
@@ -15,13 +41,15 @@ yarn add underscorets
 ```
 
 ```shell
-pnpm i underscorets
+pnpm add underscorets
 ```
 
 ```shell
 bun add underscorets
 ```
 
-## Docs
+## 📋 Requirements
 
-View the docs [here](https://github.com/mhodge11/underscorets/blob/main/docs/README.md).
+- **NodeJS**: >=16 | **Bun**: >=1
+- **Typescript**: >=4.8
+  - Enable the [experimentalDecorators](https://www.typescriptlang.org/tsconfig#experimentalDecorators) flag to use decorator functions.

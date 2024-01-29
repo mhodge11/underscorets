@@ -1,5 +1,5 @@
 import { stringSize } from "./stringSize";
-import { createPadding } from "./utils.ts";
+import { createPadding } from "./utils";
 
 /**
  * Pads `string` on the right side if it's shorter than `length`.

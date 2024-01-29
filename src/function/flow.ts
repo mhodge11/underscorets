@@ -30,7 +30,7 @@ import type { GenericFunction } from "../type/GenericFunction";
  */
 export function flow<T extends GenericFunction<T>>(
 	...funcs: T[]
-): (this: unknown, ...args: [...Parameters<T>]) => ReturnType<T> {
+): (this: unknown, ...args: Parameters<T>) => ReturnType<T> {
 	const length = funcs.length;
 	let i = length;
 
@@ -38,11 +38,16 @@ export function flow<T extends GenericFunction<T>>(
 		if (typeof funcs[i] !== "function")
 			throw new TypeError("Expected a function");
 
-	return function (this: any, ...args: [...Parameters<T>]): ReturnType<T> {
+	return function (this: unknown, ...args: Parameters<T>): ReturnType<T> {
 		let j = 0;
-		let result = (length ? (funcs[j] as T).apply(this, args) : args[0]) as any;
+		let result = length
+			? ((funcs[j] as T).apply(this, args) as Parameters<T>)
+			: ((args as [...Parameters<T>])[0] as Parameters<T>);
 
-		while (++j < length) result = (funcs[j] as any).call(this, result as any);
+		while (++j < length) {
+			// @ts-expect-error - Figure out how to fix this
+			result = (funcs[j] as T).call(this, result) as Parameters<T>;
+		}
 
 		return result as ReturnType<T>;
 	};

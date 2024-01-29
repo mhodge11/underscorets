@@ -1,4 +1,4 @@
-[underscorets - v0.1.10](../README.md) / XYZ
+[underscoreTS - v0.1.11](../README.md) / XYZ
 
 # Class: XYZ
 
@@ -191,7 +191,7 @@ p.bfs({
 
 #### Defined in
 
-[misc/xyz.ts:264](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L264)
+[misc/xyz.ts:264](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L264)
 
 ## Properties
 
@@ -201,7 +201,7 @@ p.bfs({
 
 #### Defined in
 
-[misc/xyz.ts:250](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L250)
+[misc/xyz.ts:250](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L250)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[misc/xyz.ts:251](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L251)
+[misc/xyz.ts:251](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L251)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[misc/xyz.ts:252](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L252)
+[misc/xyz.ts:252](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L252)
 
 ## Accessors
 
@@ -237,7 +237,7 @@ The XYZ tag.
 
 #### Defined in
 
-[misc/xyz.ts:255](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L255)
+[misc/xyz.ts:255](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L255)
 
 ## Methods
 
@@ -261,7 +261,7 @@ The original object
 
 #### Defined in
 
-[misc/xyz.ts:399](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L399)
+[misc/xyz.ts:401](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L401)
 
 ___
 
@@ -288,7 +288,7 @@ The BFS result
 
 #### Defined in
 
-[misc/xyz.ts:572](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L572)
+[misc/xyz.ts:574](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L574)
 
 ___
 
@@ -304,7 +304,7 @@ The copy of the object
 
 #### Defined in
 
-[misc/xyz.ts:461](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L461)
+[misc/xyz.ts:463](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L463)
 
 ___
 
@@ -328,7 +328,7 @@ The distance
 
 #### Defined in
 
-[misc/xyz.ts:520](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L520)
+[misc/xyz.ts:522](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L522)
 
 ___
 
@@ -352,7 +352,7 @@ Whether the coordinates are the same
 
 #### Defined in
 
-[misc/xyz.ts:481](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L481)
+[misc/xyz.ts:483](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L483)
 
 ___
 
@@ -376,7 +376,7 @@ The difference of the coordinates
 
 #### Defined in
 
-[misc/xyz.ts:433](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L433)
+[misc/xyz.ts:435](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L435)
 
 ___
 
@@ -400,7 +400,7 @@ The original object with the values multiplied
 
 #### Defined in
 
-[misc/xyz.ts:443](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L443)
+[misc/xyz.ts:445](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L445)
 
 ___
 
@@ -424,7 +424,7 @@ The neighbors
 
 #### Defined in
 
-[misc/xyz.ts:494](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L494)
+[misc/xyz.ts:496](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L496)
 
 ___
 
@@ -448,7 +448,7 @@ The neighbors
 
 #### Defined in
 
-[misc/xyz.ts:507](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L507)
+[misc/xyz.ts:509](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L509)
 
 ___
 
@@ -472,7 +472,7 @@ The sum of the coordinates
 
 #### Defined in
 
-[misc/xyz.ts:411](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L411)
+[misc/xyz.ts:413](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L413)
 
 ___
 
@@ -496,7 +496,7 @@ The original object
 
 #### Defined in
 
-[misc/xyz.ts:421](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L421)
+[misc/xyz.ts:423](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L423)
 
 ___
 
@@ -520,7 +520,7 @@ The distance
 
 #### Defined in
 
-[misc/xyz.ts:534](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L534)
+[misc/xyz.ts:536](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L536)
 
 ___
 
@@ -544,7 +544,7 @@ The new object with the values multiplied
 
 #### Defined in
 
-[misc/xyz.ts:454](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L454)
+[misc/xyz.ts:456](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L456)
 
 ___
 
@@ -560,7 +560,7 @@ The XYZ as a coordinate array.
 
 #### Defined in
 
-[misc/xyz.ts:382](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L382)
+[misc/xyz.ts:384](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L384)
 
 ___
 
@@ -582,7 +582,7 @@ The XYZ as a coordinate object.
 
 #### Defined in
 
-[misc/xyz.ts:389](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L389)
+[misc/xyz.ts:391](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L391)
 
 ___
 
@@ -600,7 +600,7 @@ The XYZ as a string
 
 #### Defined in
 
-[misc/xyz.ts:375](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L375)
+[misc/xyz.ts:377](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L377)
 
 ___
 
@@ -619,7 +619,7 @@ The new object with the values normalized
 
 #### Defined in
 
-[misc/xyz.ts:471](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L471)
+[misc/xyz.ts:473](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L473)
 
 ___
 
@@ -631,7 +631,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `replacer?` | (`this`: `any`, `key`: `string`, `value`: `any`) => `any` |
+| `replacer?` | (`this`: `unknown`, `key`: `string`, `value`: `unknown`) => `unknown` |
 | `space?` | `string` \| `number` |
 
 #### Returns
@@ -642,7 +642,7 @@ The XYZ as a string.
 
 #### Defined in
 
-[misc/xyz.ts:359](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L359)
+[misc/xyz.ts:359](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L359)
 
 ___
 
@@ -672,7 +672,7 @@ The value
 
 #### Defined in
 
-[misc/xyz.ts:549](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L549)
+[misc/xyz.ts:551](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L551)
 
 ▸ **valueIn**\<`T`\>(`arr`): `T`
 
@@ -694,7 +694,7 @@ The value
 
 #### Defined in
 
-[misc/xyz.ts:550](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L550)
+[misc/xyz.ts:552](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L552)
 
 ___
 
@@ -720,7 +720,7 @@ A new XYZ object
 
 #### Defined in
 
-[misc/xyz.ts:303](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L303)
+[misc/xyz.ts:303](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L303)
 
 ___
 
@@ -747,7 +747,7 @@ The XYZ object
 
 #### Defined in
 
-[misc/xyz.ts:313](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L313)
+[misc/xyz.ts:313](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L313)
 
 ___
 
@@ -774,7 +774,7 @@ The XYZ object
 
 #### Defined in
 
-[misc/xyz.ts:330](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L330)
+[misc/xyz.ts:330](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L330)
 
 ___
 
@@ -798,7 +798,7 @@ The normalized coordinate
 
 #### Defined in
 
-[misc/xyz.ts:276](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L276)
+[misc/xyz.ts:276](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L276)
 
 ___
 
@@ -822,4 +822,4 @@ The sum of the coordinates
 
 #### Defined in
 
-[misc/xyz.ts:286](https://github.com/mhodge11/underscorets/blob/e937f27/src/misc/xyz.ts#L286)
+[misc/xyz.ts:286](https://github.com/mhodge11/underscorets/blob/e187cf5/src/misc/xyz.ts#L286)

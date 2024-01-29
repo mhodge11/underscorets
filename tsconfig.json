@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "types": ["node", "vitest/globals"],
+    "types": ["node", "bun", "vitest/globals"],
 
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",

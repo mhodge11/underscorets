@@ -1,6 +1,6 @@
 import type { ArrayHead } from "../type/ArrayHead";
 
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Gets the first element of `array`.

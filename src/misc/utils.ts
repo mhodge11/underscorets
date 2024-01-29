@@ -481,7 +481,9 @@ function getAllKeys<T extends object>(object: T): (keyof T)[] {
 	return allKeys;
 }
 
-function cloneArrayBuffer<T extends ArrayBuffer>(arrayBuffer: T): T {
+function cloneArrayBuffer<T extends ArrayBuffer | ArrayBufferLike>(
+	arrayBuffer: T,
+): T {
 	const result: ArrayBuffer = new ArrayBuffer(arrayBuffer.byteLength);
 	new Uint8Array(result).set(new Uint8Array(arrayBuffer));
 	return result as T;

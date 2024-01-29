@@ -1,4 +1,4 @@
-import { arrayLikeToArray, sortCompare } from "./utils.ts";
+import { arrayLikeToArray, sortCompare } from "./utils";
 
 function merge<T>(
 	array1: T[],

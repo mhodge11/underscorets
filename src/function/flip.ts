@@ -23,7 +23,7 @@ import type { GenericFunction } from "../type/GenericFunction";
 export function flip<T extends GenericFunction<T>>(
 	func: T,
 ): (
-	this: any,
+	this: unknown,
 	...unknown: [...Parameters<T>]
 ) => ReturnType<(...args: ArrayReverse<[...Parameters<T>]>) => ReturnType<T>> {
 	if (typeof func !== "function")
@@ -33,6 +33,6 @@ export function flip<T extends GenericFunction<T>>(
 		this: unknown,
 		...args: [...Parameters<T>]
 	): ReturnType<(...args: ArrayReverse<[...Parameters<T>]>) => ReturnType<T>> {
-		return func.apply(this, args.reverse() as any);
+		return func.apply(this, args.reverse() as Parameters<T>);
 	};
 }

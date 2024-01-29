@@ -1,5 +1,5 @@
 import { findIndex } from "./findIndex";
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * This method is like `{@link findIndex}` except that it iterates over elements of `array` from right to left.

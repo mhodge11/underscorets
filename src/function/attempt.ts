@@ -30,6 +30,6 @@ export function attempt<T extends GenericFunction<T>>(
 		return [func(...args), undefined];
 	} catch (error) {
 		if (error instanceof Error) return [undefined, error];
-		return [undefined, new Error(error as any)];
+		return [undefined, new Error(String(error))];
 	}
 }

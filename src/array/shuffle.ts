@@ -1,4 +1,4 @@
-import { arrayLikeToArray } from "./utils.ts";
+import { arrayLikeToArray } from "./utils";
 
 /**
  * Creates a new array of shuffled values, using the Fisher-Yates-Durstenfeld Shuffle algorithm.

@@ -357,7 +357,9 @@ export class XYZ {
 	 * @returns The XYZ as a string.
 	 */
 	toString(
-		replacer?: ((this: any, key: string, value: any) => any) | undefined,
+		replacer?:
+			| ((this: unknown, key: string, value: unknown) => unknown)
+			| undefined,
 		space?: string | number | undefined,
 	) {
 		return `${this[Symbol.toStringTag]} ${JSON.stringify(
