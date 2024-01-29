@@ -34,7 +34,6 @@ export function range(start: number, end: number, step?: number): number[] {
 	step = start > end ? -step : step;
 
 	const length = Math.floor(Math.abs((end - start) / step)) + 1;
-	console.log(length);
 	const result = new Array(length) as number[];
 
 	for (let i = 0; i < length; i++) result[i] = start + i * step;
